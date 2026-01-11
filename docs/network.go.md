@@ -1,28 +1,28 @@
-# `network` Submodule <a name="`network` Submodule" id="@cdktf/provider-docker.network"></a>
+# `network` Submodule <a name="`network` Submodule" id="@cdktn/provider-docker.network"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### Network <a name="Network" id="@cdktf/provider-docker.network.Network"></a>
+### Network <a name="Network" id="@cdktn/provider-docker.network.Network"></a>
 
 Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network docker_network}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.network.Network.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.Network.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.NewNetwork(scope Construct, id *string, config NetworkConfig) Network
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.Network.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-docker.network.Network.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-docker.network.Network.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-docker.network.NetworkConfig">NetworkConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktn/provider-docker.network.Network.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
+| <code><a href="#@cdktn/provider-docker.network.Network.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktn/provider-docker.network.NetworkConfig">NetworkConfig</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.network.Network.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.network.Network.Initializer.parameter.scope"></a>
 
 - *Type:* github.com/aws/constructs-go/constructs/v10.Construct
 
@@ -30,7 +30,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.network.Network.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.network.Network.Initializer.parameter.id"></a>
 
 - *Type:* *string
 
@@ -40,9 +40,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@cdktf/provider-docker.network.Network.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@cdktn/provider-docker.network.Network.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.network.NetworkConfig">NetworkConfig</a>
+- *Type:* <a href="#@cdktn/provider-docker.network.NetworkConfig">NetworkConfig</a>
 
 ---
 
@@ -50,47 +50,47 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.Network.toString">ToString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-docker.network.Network.addOverride">AddOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-docker.network.Network.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.toMetadata">ToMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-docker.network.Network.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
-| <code><a href="#@cdktf/provider-docker.network.Network.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.hasResourceMove">HasResourceMove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.importFrom">ImportFrom</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
-| <code><a href="#@cdktf/provider-docker.network.Network.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
-| <code><a href="#@cdktf/provider-docker.network.Network.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
-| <code><a href="#@cdktf/provider-docker.network.Network.putIpamConfig">PutIpamConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.putLabels">PutLabels</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetAttachable">ResetAttachable</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetCheckDuplicate">ResetCheckDuplicate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetDriver">ResetDriver</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetId">ResetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetIngress">ResetIngress</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetInternal">ResetInternal</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetIpamConfig">ResetIpamConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetIpamDriver">ResetIpamDriver</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetIpamOptions">ResetIpamOptions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetIpv6">ResetIpv6</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetLabels">ResetLabels</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.resetOptions">ResetOptions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktn/provider-docker.network.Network.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktn/provider-docker.network.Network.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktn/provider-docker.network.Network.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#@cdktn/provider-docker.network.Network.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.hasResourceMove">HasResourceMove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.importFrom">ImportFrom</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#@cdktn/provider-docker.network.Network.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#@cdktn/provider-docker.network.Network.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktn/provider-docker.network.Network.putIpamConfig">PutIpamConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.putLabels">PutLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetAttachable">ResetAttachable</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetCheckDuplicate">ResetCheckDuplicate</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetDriver">ResetDriver</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetIngress">ResetIngress</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetInternal">ResetInternal</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetIpamConfig">ResetIpamConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetIpamDriver">ResetIpamDriver</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetIpamOptions">ResetIpamOptions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetIpv6">ResetIpv6</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetLabels">ResetLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.resetOptions">ResetOptions</a></code> | *No description.* |
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.network.Network.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.network.Network.toString"></a>
 
 ```go
 func ToString() *string
@@ -98,25 +98,25 @@ func ToString() *string
 
 Returns a string representation of this construct.
 
-##### `AddOverride` <a name="AddOverride" id="@cdktf/provider-docker.network.Network.addOverride"></a>
+##### `AddOverride` <a name="AddOverride" id="@cdktn/provider-docker.network.Network.addOverride"></a>
 
 ```go
 func AddOverride(path *string, value interface{})
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-docker.network.Network.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.network.Network.addOverride.parameter.path"></a>
 
 - *Type:* *string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.network.Network.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.network.Network.addOverride.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktf/provider-docker.network.Network.overrideLogicalId"></a>
+##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktn/provider-docker.network.Network.overrideLogicalId"></a>
 
 ```go
 func OverrideLogicalId(newLogicalId *string)
@@ -124,7 +124,7 @@ func OverrideLogicalId(newLogicalId *string)
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-docker.network.Network.overrideLogicalId.parameter.newLogicalId"></a>
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktn/provider-docker.network.Network.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* *string
 
@@ -132,7 +132,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktf/provider-docker.network.Network.resetOverrideLogicalId"></a>
+##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktn/provider-docker.network.Network.resetOverrideLogicalId"></a>
 
 ```go
 func ResetOverrideLogicalId()
@@ -140,19 +140,19 @@ func ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-docker.network.Network.toHclTerraform"></a>
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktn/provider-docker.network.Network.toHclTerraform"></a>
 
 ```go
 func ToHclTerraform() interface{}
 ```
 
-##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-docker.network.Network.toMetadata"></a>
+##### `ToMetadata` <a name="ToMetadata" id="@cdktn/provider-docker.network.Network.toMetadata"></a>
 
 ```go
 func ToMetadata() interface{}
 ```
 
-##### `ToTerraform` <a name="ToTerraform" id="@cdktf/provider-docker.network.Network.toTerraform"></a>
+##### `ToTerraform` <a name="ToTerraform" id="@cdktn/provider-docker.network.Network.toTerraform"></a>
 
 ```go
 func ToTerraform() interface{}
@@ -160,7 +160,7 @@ func ToTerraform() interface{}
 
 Adds this resource to the terraform JSON output.
 
-##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-docker.network.Network.addMoveTarget"></a>
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktn/provider-docker.network.Network.addMoveTarget"></a>
 
 ```go
 func AddMoveTarget(moveTarget *string)
@@ -168,7 +168,7 @@ func AddMoveTarget(moveTarget *string)
 
 Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.network.Network.addMoveTarget.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.network.Network.addMoveTarget.parameter.moveTarget"></a>
 
 - *Type:* *string
 
@@ -176,151 +176,151 @@ The string move target that will correspond to this resource.
 
 ---
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.network.Network.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.network.Network.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.network.Network.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.network.Network.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.network.Network.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.network.Network.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.network.Network.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.network.Network.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.network.Network.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.network.Network.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.network.Network.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.network.Network.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.network.Network.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.network.Network.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.network.Network.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.network.Network.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.network.Network.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.network.Network.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-docker.network.Network.hasResourceMove"></a>
+##### `HasResourceMove` <a name="HasResourceMove" id="@cdktn/provider-docker.network.Network.hasResourceMove"></a>
 
 ```go
 func HasResourceMove() interface{}
 ```
 
-##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-docker.network.Network.importFrom"></a>
+##### `ImportFrom` <a name="ImportFrom" id="@cdktn/provider-docker.network.Network.importFrom"></a>
 
 ```go
 func ImportFrom(id *string, provider TerraformProvider)
 ```
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.network.Network.importFrom.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.network.Network.importFrom.parameter.id"></a>
 
 - *Type:* *string
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.network.Network.importFrom.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.network.Network.importFrom.parameter.provider"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.network.Network.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.network.Network.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.Network.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.Network.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `MoveFromId` <a name="MoveFromId" id="@cdktf/provider-docker.network.Network.moveFromId"></a>
+##### `MoveFromId` <a name="MoveFromId" id="@cdktn/provider-docker.network.Network.moveFromId"></a>
 
 ```go
 func MoveFromId(id *string)
@@ -330,7 +330,7 @@ Move the resource corresponding to "id" to this resource.
 
 Note that the resource being moved from must be marked as moved using it's instance function.
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.network.Network.moveFromId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.network.Network.moveFromId.parameter.id"></a>
 
 - *Type:* *string
 
@@ -338,7 +338,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-docker.network.Network.moveTo"></a>
+##### `MoveTo` <a name="MoveTo" id="@cdktn/provider-docker.network.Network.moveTo"></a>
 
 ```go
 func MoveTo(moveTarget *string, index interface{})
@@ -346,7 +346,7 @@ func MoveTo(moveTarget *string, index interface{})
 
 Moves this resource to the target resource given by moveTarget.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.network.Network.moveTo.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.network.Network.moveTo.parameter.moveTarget"></a>
 
 - *Type:* *string
 
@@ -354,7 +354,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ---
 
-###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-docker.network.Network.moveTo.parameter.index"></a>
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktn/provider-docker.network.Network.moveTo.parameter.index"></a>
 
 - *Type:* interface{}
 
@@ -362,7 +362,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 
 ---
 
-##### `MoveToId` <a name="MoveToId" id="@cdktf/provider-docker.network.Network.moveToId"></a>
+##### `MoveToId` <a name="MoveToId" id="@cdktn/provider-docker.network.Network.moveToId"></a>
 
 ```go
 func MoveToId(id *string)
@@ -370,7 +370,7 @@ func MoveToId(id *string)
 
 Moves this resource to the resource corresponding to "id".
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.network.Network.moveToId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.network.Network.moveToId.parameter.id"></a>
 
 - *Type:* *string
 
@@ -378,97 +378,97 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `PutIpamConfig` <a name="PutIpamConfig" id="@cdktf/provider-docker.network.Network.putIpamConfig"></a>
+##### `PutIpamConfig` <a name="PutIpamConfig" id="@cdktn/provider-docker.network.Network.putIpamConfig"></a>
 
 ```go
 func PutIpamConfig(value interface{})
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.network.Network.putIpamConfig.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.network.Network.putIpamConfig.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `PutLabels` <a name="PutLabels" id="@cdktf/provider-docker.network.Network.putLabels"></a>
+##### `PutLabels` <a name="PutLabels" id="@cdktn/provider-docker.network.Network.putLabels"></a>
 
 ```go
 func PutLabels(value interface{})
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.network.Network.putLabels.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.network.Network.putLabels.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `ResetAttachable` <a name="ResetAttachable" id="@cdktf/provider-docker.network.Network.resetAttachable"></a>
+##### `ResetAttachable` <a name="ResetAttachable" id="@cdktn/provider-docker.network.Network.resetAttachable"></a>
 
 ```go
 func ResetAttachable()
 ```
 
-##### `ResetCheckDuplicate` <a name="ResetCheckDuplicate" id="@cdktf/provider-docker.network.Network.resetCheckDuplicate"></a>
+##### `ResetCheckDuplicate` <a name="ResetCheckDuplicate" id="@cdktn/provider-docker.network.Network.resetCheckDuplicate"></a>
 
 ```go
 func ResetCheckDuplicate()
 ```
 
-##### `ResetDriver` <a name="ResetDriver" id="@cdktf/provider-docker.network.Network.resetDriver"></a>
+##### `ResetDriver` <a name="ResetDriver" id="@cdktn/provider-docker.network.Network.resetDriver"></a>
 
 ```go
 func ResetDriver()
 ```
 
-##### `ResetId` <a name="ResetId" id="@cdktf/provider-docker.network.Network.resetId"></a>
+##### `ResetId` <a name="ResetId" id="@cdktn/provider-docker.network.Network.resetId"></a>
 
 ```go
 func ResetId()
 ```
 
-##### `ResetIngress` <a name="ResetIngress" id="@cdktf/provider-docker.network.Network.resetIngress"></a>
+##### `ResetIngress` <a name="ResetIngress" id="@cdktn/provider-docker.network.Network.resetIngress"></a>
 
 ```go
 func ResetIngress()
 ```
 
-##### `ResetInternal` <a name="ResetInternal" id="@cdktf/provider-docker.network.Network.resetInternal"></a>
+##### `ResetInternal` <a name="ResetInternal" id="@cdktn/provider-docker.network.Network.resetInternal"></a>
 
 ```go
 func ResetInternal()
 ```
 
-##### `ResetIpamConfig` <a name="ResetIpamConfig" id="@cdktf/provider-docker.network.Network.resetIpamConfig"></a>
+##### `ResetIpamConfig` <a name="ResetIpamConfig" id="@cdktn/provider-docker.network.Network.resetIpamConfig"></a>
 
 ```go
 func ResetIpamConfig()
 ```
 
-##### `ResetIpamDriver` <a name="ResetIpamDriver" id="@cdktf/provider-docker.network.Network.resetIpamDriver"></a>
+##### `ResetIpamDriver` <a name="ResetIpamDriver" id="@cdktn/provider-docker.network.Network.resetIpamDriver"></a>
 
 ```go
 func ResetIpamDriver()
 ```
 
-##### `ResetIpamOptions` <a name="ResetIpamOptions" id="@cdktf/provider-docker.network.Network.resetIpamOptions"></a>
+##### `ResetIpamOptions` <a name="ResetIpamOptions" id="@cdktn/provider-docker.network.Network.resetIpamOptions"></a>
 
 ```go
 func ResetIpamOptions()
 ```
 
-##### `ResetIpv6` <a name="ResetIpv6" id="@cdktf/provider-docker.network.Network.resetIpv6"></a>
+##### `ResetIpv6` <a name="ResetIpv6" id="@cdktn/provider-docker.network.Network.resetIpv6"></a>
 
 ```go
 func ResetIpv6()
 ```
 
-##### `ResetLabels` <a name="ResetLabels" id="@cdktf/provider-docker.network.Network.resetLabels"></a>
+##### `ResetLabels` <a name="ResetLabels" id="@cdktn/provider-docker.network.Network.resetLabels"></a>
 
 ```go
 func ResetLabels()
 ```
 
-##### `ResetOptions` <a name="ResetOptions" id="@cdktf/provider-docker.network.Network.resetOptions"></a>
+##### `ResetOptions` <a name="ResetOptions" id="@cdktn/provider-docker.network.Network.resetOptions"></a>
 
 ```go
 func ResetOptions()
@@ -478,17 +478,17 @@ func ResetOptions()
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.Network.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-docker.network.Network.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.network.Network.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktn/provider-docker.network.Network.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>". |
 
 ---
 
-##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-docker.network.Network.isConstruct"></a>
+##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.network.Network.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.Network_IsConstruct(x interface{}) *bool
 ```
@@ -509,7 +509,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.network.Network.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.network.Network.isConstruct.parameter.x"></a>
 
 - *Type:* interface{}
 
@@ -517,45 +517,45 @@ Any object.
 
 ---
 
-##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-docker.network.Network.isTerraformElement"></a>
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.network.Network.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.Network_IsTerraformElement(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.network.Network.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.network.Network.isTerraformElement.parameter.x"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-docker.network.Network.isTerraformResource"></a>
+##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.network.Network.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.Network_IsTerraformResource(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.network.Network.isTerraformResource.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.network.Network.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-docker.network.Network.generateConfigForImport"></a>
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.network.Network.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.Network_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
 
 Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>".
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.network.Network.generateConfigForImport.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.scope"></a>
 
 - *Type:* github.com/aws/constructs-go/constructs/v10.Construct
 
@@ -563,7 +563,7 @@ The scope in which to define this construct.
 
 ---
 
-###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-docker.network.Network.generateConfigForImport.parameter.importToId"></a>
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.importToId"></a>
 
 - *Type:* *string
 
@@ -571,7 +571,7 @@ The construct id used in the generated config for the Network to import.
 
 ---
 
-###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-docker.network.Network.generateConfigForImport.parameter.importFromId"></a>
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.importFromId"></a>
 
 - *Type:* *string
 
@@ -581,7 +581,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.network.Network.generateConfigForImport.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.provider"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
 
@@ -593,51 +593,51 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamConfig">IpamConfig</a></code> | <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList">NetworkIpamConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.labels">Labels</a></code> | <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList">NetworkLabelsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.scope">Scope</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.attachableInput">AttachableInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.checkDuplicateInput">CheckDuplicateInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.driverInput">DriverInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ingressInput">IngressInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.internalInput">InternalInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamConfigInput">IpamConfigInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamDriverInput">IpamDriverInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamOptionsInput">IpamOptionsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipv6Input">Ipv6Input</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.labelsInput">LabelsInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.optionsInput">OptionsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.attachable">Attachable</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.checkDuplicate">CheckDuplicate</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.driver">Driver</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.id">Id</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ingress">Ingress</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.internal">Internal</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamDriver">IpamDriver</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipamOptions">IpamOptions</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.ipv6">Ipv6</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.name">Name</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.options">Options</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamConfig">IpamConfig</a></code> | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList">NetworkIpamConfigList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.labels">Labels</a></code> | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList">NetworkLabelsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.scope">Scope</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.attachableInput">AttachableInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicateInput">CheckDuplicateInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.driverInput">DriverInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ingressInput">IngressInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.internalInput">InternalInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamConfigInput">IpamConfigInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamDriverInput">IpamDriverInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamOptionsInput">IpamOptionsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6Input">Ipv6Input</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.labelsInput">LabelsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.optionsInput">OptionsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.attachable">Attachable</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicate">CheckDuplicate</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.driver">Driver</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ingress">Ingress</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.internal">Internal</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamDriver">IpamDriver</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamOptions">IpamOptions</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6">Ipv6</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.options">Options</a></code> | <code>*map[string]*string</code> | *No description.* |
 
 ---
 
-##### `Node`<sup>Required</sup> <a name="Node" id="@cdktf/provider-docker.network.Network.property.node"></a>
+##### `Node`<sup>Required</sup> <a name="Node" id="@cdktn/provider-docker.network.Network.property.node"></a>
 
 ```go
 func Node() Node
@@ -649,7 +649,7 @@ The tree node.
 
 ---
 
-##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktf/provider-docker.network.Network.property.cdktfStack"></a>
+##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktn/provider-docker.network.Network.property.cdktfStack"></a>
 
 ```go
 func CdktfStack() TerraformStack
@@ -659,7 +659,7 @@ func CdktfStack() TerraformStack
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.network.Network.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.network.Network.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -669,7 +669,7 @@ func Fqn() *string
 
 ---
 
-##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktf/provider-docker.network.Network.property.friendlyUniqueId"></a>
+##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktn/provider-docker.network.Network.property.friendlyUniqueId"></a>
 
 ```go
 func FriendlyUniqueId() *string
@@ -679,7 +679,7 @@ func FriendlyUniqueId() *string
 
 ---
 
-##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="@cdktf/provider-docker.network.Network.property.terraformMetaArguments"></a>
+##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="@cdktn/provider-docker.network.Network.property.terraformMetaArguments"></a>
 
 ```go
 func TerraformMetaArguments() *map[string]interface{}
@@ -689,7 +689,7 @@ func TerraformMetaArguments() *map[string]interface{}
 
 ---
 
-##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktf/provider-docker.network.Network.property.terraformResourceType"></a>
+##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktn/provider-docker.network.Network.property.terraformResourceType"></a>
 
 ```go
 func TerraformResourceType() *string
@@ -699,7 +699,7 @@ func TerraformResourceType() *string
 
 ---
 
-##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktf/provider-docker.network.Network.property.terraformGeneratorMetadata"></a>
+##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktn/provider-docker.network.Network.property.terraformGeneratorMetadata"></a>
 
 ```go
 func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
@@ -709,7 +709,7 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-docker.network.Network.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktn/provider-docker.network.Network.property.connection"></a>
 
 ```go
 func Connection() interface{}
@@ -719,7 +719,7 @@ func Connection() interface{}
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-docker.network.Network.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktn/provider-docker.network.Network.property.count"></a>
 
 ```go
 func Count() interface{}
@@ -729,7 +729,7 @@ func Count() interface{}
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-docker.network.Network.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktn/provider-docker.network.Network.property.dependsOn"></a>
 
 ```go
 func DependsOn() *[]*string
@@ -739,7 +739,7 @@ func DependsOn() *[]*string
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-docker.network.Network.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktn/provider-docker.network.Network.property.forEach"></a>
 
 ```go
 func ForEach() ITerraformIterator
@@ -749,7 +749,7 @@ func ForEach() ITerraformIterator
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-docker.network.Network.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktn/provider-docker.network.Network.property.lifecycle"></a>
 
 ```go
 func Lifecycle() TerraformResourceLifecycle
@@ -759,7 +759,7 @@ func Lifecycle() TerraformResourceLifecycle
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-docker.network.Network.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktn/provider-docker.network.Network.property.provider"></a>
 
 ```go
 func Provider() TerraformProvider
@@ -769,7 +769,7 @@ func Provider() TerraformProvider
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-docker.network.Network.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktn/provider-docker.network.Network.property.provisioners"></a>
 
 ```go
 func Provisioners() *[]interface{}
@@ -779,27 +779,27 @@ func Provisioners() *[]interface{}
 
 ---
 
-##### `IpamConfig`<sup>Required</sup> <a name="IpamConfig" id="@cdktf/provider-docker.network.Network.property.ipamConfig"></a>
+##### `IpamConfig`<sup>Required</sup> <a name="IpamConfig" id="@cdktn/provider-docker.network.Network.property.ipamConfig"></a>
 
 ```go
 func IpamConfig() NetworkIpamConfigList
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.network.NetworkIpamConfigList">NetworkIpamConfigList</a>
+- *Type:* <a href="#@cdktn/provider-docker.network.NetworkIpamConfigList">NetworkIpamConfigList</a>
 
 ---
 
-##### `Labels`<sup>Required</sup> <a name="Labels" id="@cdktf/provider-docker.network.Network.property.labels"></a>
+##### `Labels`<sup>Required</sup> <a name="Labels" id="@cdktn/provider-docker.network.Network.property.labels"></a>
 
 ```go
 func Labels() NetworkLabelsList
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.network.NetworkLabelsList">NetworkLabelsList</a>
+- *Type:* <a href="#@cdktn/provider-docker.network.NetworkLabelsList">NetworkLabelsList</a>
 
 ---
 
-##### `Scope`<sup>Required</sup> <a name="Scope" id="@cdktf/provider-docker.network.Network.property.scope"></a>
+##### `Scope`<sup>Required</sup> <a name="Scope" id="@cdktn/provider-docker.network.Network.property.scope"></a>
 
 ```go
 func Scope() *string
@@ -809,7 +809,7 @@ func Scope() *string
 
 ---
 
-##### `AttachableInput`<sup>Optional</sup> <a name="AttachableInput" id="@cdktf/provider-docker.network.Network.property.attachableInput"></a>
+##### `AttachableInput`<sup>Optional</sup> <a name="AttachableInput" id="@cdktn/provider-docker.network.Network.property.attachableInput"></a>
 
 ```go
 func AttachableInput() interface{}
@@ -819,7 +819,7 @@ func AttachableInput() interface{}
 
 ---
 
-##### `CheckDuplicateInput`<sup>Optional</sup> <a name="CheckDuplicateInput" id="@cdktf/provider-docker.network.Network.property.checkDuplicateInput"></a>
+##### `CheckDuplicateInput`<sup>Optional</sup> <a name="CheckDuplicateInput" id="@cdktn/provider-docker.network.Network.property.checkDuplicateInput"></a>
 
 ```go
 func CheckDuplicateInput() interface{}
@@ -829,7 +829,7 @@ func CheckDuplicateInput() interface{}
 
 ---
 
-##### `DriverInput`<sup>Optional</sup> <a name="DriverInput" id="@cdktf/provider-docker.network.Network.property.driverInput"></a>
+##### `DriverInput`<sup>Optional</sup> <a name="DriverInput" id="@cdktn/provider-docker.network.Network.property.driverInput"></a>
 
 ```go
 func DriverInput() *string
@@ -839,7 +839,7 @@ func DriverInput() *string
 
 ---
 
-##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-docker.network.Network.property.idInput"></a>
+##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktn/provider-docker.network.Network.property.idInput"></a>
 
 ```go
 func IdInput() *string
@@ -849,7 +849,7 @@ func IdInput() *string
 
 ---
 
-##### `IngressInput`<sup>Optional</sup> <a name="IngressInput" id="@cdktf/provider-docker.network.Network.property.ingressInput"></a>
+##### `IngressInput`<sup>Optional</sup> <a name="IngressInput" id="@cdktn/provider-docker.network.Network.property.ingressInput"></a>
 
 ```go
 func IngressInput() interface{}
@@ -859,7 +859,7 @@ func IngressInput() interface{}
 
 ---
 
-##### `InternalInput`<sup>Optional</sup> <a name="InternalInput" id="@cdktf/provider-docker.network.Network.property.internalInput"></a>
+##### `InternalInput`<sup>Optional</sup> <a name="InternalInput" id="@cdktn/provider-docker.network.Network.property.internalInput"></a>
 
 ```go
 func InternalInput() interface{}
@@ -869,7 +869,7 @@ func InternalInput() interface{}
 
 ---
 
-##### `IpamConfigInput`<sup>Optional</sup> <a name="IpamConfigInput" id="@cdktf/provider-docker.network.Network.property.ipamConfigInput"></a>
+##### `IpamConfigInput`<sup>Optional</sup> <a name="IpamConfigInput" id="@cdktn/provider-docker.network.Network.property.ipamConfigInput"></a>
 
 ```go
 func IpamConfigInput() interface{}
@@ -879,7 +879,7 @@ func IpamConfigInput() interface{}
 
 ---
 
-##### `IpamDriverInput`<sup>Optional</sup> <a name="IpamDriverInput" id="@cdktf/provider-docker.network.Network.property.ipamDriverInput"></a>
+##### `IpamDriverInput`<sup>Optional</sup> <a name="IpamDriverInput" id="@cdktn/provider-docker.network.Network.property.ipamDriverInput"></a>
 
 ```go
 func IpamDriverInput() *string
@@ -889,7 +889,7 @@ func IpamDriverInput() *string
 
 ---
 
-##### `IpamOptionsInput`<sup>Optional</sup> <a name="IpamOptionsInput" id="@cdktf/provider-docker.network.Network.property.ipamOptionsInput"></a>
+##### `IpamOptionsInput`<sup>Optional</sup> <a name="IpamOptionsInput" id="@cdktn/provider-docker.network.Network.property.ipamOptionsInput"></a>
 
 ```go
 func IpamOptionsInput() *map[string]*string
@@ -899,7 +899,7 @@ func IpamOptionsInput() *map[string]*string
 
 ---
 
-##### `Ipv6Input`<sup>Optional</sup> <a name="Ipv6Input" id="@cdktf/provider-docker.network.Network.property.ipv6Input"></a>
+##### `Ipv6Input`<sup>Optional</sup> <a name="Ipv6Input" id="@cdktn/provider-docker.network.Network.property.ipv6Input"></a>
 
 ```go
 func Ipv6Input() interface{}
@@ -909,7 +909,7 @@ func Ipv6Input() interface{}
 
 ---
 
-##### `LabelsInput`<sup>Optional</sup> <a name="LabelsInput" id="@cdktf/provider-docker.network.Network.property.labelsInput"></a>
+##### `LabelsInput`<sup>Optional</sup> <a name="LabelsInput" id="@cdktn/provider-docker.network.Network.property.labelsInput"></a>
 
 ```go
 func LabelsInput() interface{}
@@ -919,7 +919,7 @@ func LabelsInput() interface{}
 
 ---
 
-##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-docker.network.Network.property.nameInput"></a>
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktn/provider-docker.network.Network.property.nameInput"></a>
 
 ```go
 func NameInput() *string
@@ -929,7 +929,7 @@ func NameInput() *string
 
 ---
 
-##### `OptionsInput`<sup>Optional</sup> <a name="OptionsInput" id="@cdktf/provider-docker.network.Network.property.optionsInput"></a>
+##### `OptionsInput`<sup>Optional</sup> <a name="OptionsInput" id="@cdktn/provider-docker.network.Network.property.optionsInput"></a>
 
 ```go
 func OptionsInput() *map[string]*string
@@ -939,7 +939,7 @@ func OptionsInput() *map[string]*string
 
 ---
 
-##### `Attachable`<sup>Required</sup> <a name="Attachable" id="@cdktf/provider-docker.network.Network.property.attachable"></a>
+##### `Attachable`<sup>Required</sup> <a name="Attachable" id="@cdktn/provider-docker.network.Network.property.attachable"></a>
 
 ```go
 func Attachable() interface{}
@@ -949,7 +949,7 @@ func Attachable() interface{}
 
 ---
 
-##### `CheckDuplicate`<sup>Required</sup> <a name="CheckDuplicate" id="@cdktf/provider-docker.network.Network.property.checkDuplicate"></a>
+##### `CheckDuplicate`<sup>Required</sup> <a name="CheckDuplicate" id="@cdktn/provider-docker.network.Network.property.checkDuplicate"></a>
 
 ```go
 func CheckDuplicate() interface{}
@@ -959,7 +959,7 @@ func CheckDuplicate() interface{}
 
 ---
 
-##### `Driver`<sup>Required</sup> <a name="Driver" id="@cdktf/provider-docker.network.Network.property.driver"></a>
+##### `Driver`<sup>Required</sup> <a name="Driver" id="@cdktn/provider-docker.network.Network.property.driver"></a>
 
 ```go
 func Driver() *string
@@ -969,7 +969,7 @@ func Driver() *string
 
 ---
 
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-docker.network.Network.property.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktn/provider-docker.network.Network.property.id"></a>
 
 ```go
 func Id() *string
@@ -979,7 +979,7 @@ func Id() *string
 
 ---
 
-##### `Ingress`<sup>Required</sup> <a name="Ingress" id="@cdktf/provider-docker.network.Network.property.ingress"></a>
+##### `Ingress`<sup>Required</sup> <a name="Ingress" id="@cdktn/provider-docker.network.Network.property.ingress"></a>
 
 ```go
 func Ingress() interface{}
@@ -989,7 +989,7 @@ func Ingress() interface{}
 
 ---
 
-##### `Internal`<sup>Required</sup> <a name="Internal" id="@cdktf/provider-docker.network.Network.property.internal"></a>
+##### `Internal`<sup>Required</sup> <a name="Internal" id="@cdktn/provider-docker.network.Network.property.internal"></a>
 
 ```go
 func Internal() interface{}
@@ -999,7 +999,7 @@ func Internal() interface{}
 
 ---
 
-##### `IpamDriver`<sup>Required</sup> <a name="IpamDriver" id="@cdktf/provider-docker.network.Network.property.ipamDriver"></a>
+##### `IpamDriver`<sup>Required</sup> <a name="IpamDriver" id="@cdktn/provider-docker.network.Network.property.ipamDriver"></a>
 
 ```go
 func IpamDriver() *string
@@ -1009,7 +1009,7 @@ func IpamDriver() *string
 
 ---
 
-##### `IpamOptions`<sup>Required</sup> <a name="IpamOptions" id="@cdktf/provider-docker.network.Network.property.ipamOptions"></a>
+##### `IpamOptions`<sup>Required</sup> <a name="IpamOptions" id="@cdktn/provider-docker.network.Network.property.ipamOptions"></a>
 
 ```go
 func IpamOptions() *map[string]*string
@@ -1019,7 +1019,7 @@ func IpamOptions() *map[string]*string
 
 ---
 
-##### `Ipv6`<sup>Required</sup> <a name="Ipv6" id="@cdktf/provider-docker.network.Network.property.ipv6"></a>
+##### `Ipv6`<sup>Required</sup> <a name="Ipv6" id="@cdktn/provider-docker.network.Network.property.ipv6"></a>
 
 ```go
 func Ipv6() interface{}
@@ -1029,7 +1029,7 @@ func Ipv6() interface{}
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.network.Network.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.network.Network.property.name"></a>
 
 ```go
 func Name() *string
@@ -1039,7 +1039,7 @@ func Name() *string
 
 ---
 
-##### `Options`<sup>Required</sup> <a name="Options" id="@cdktf/provider-docker.network.Network.property.options"></a>
+##### `Options`<sup>Required</sup> <a name="Options" id="@cdktn/provider-docker.network.Network.property.options"></a>
 
 ```go
 func Options() *map[string]*string
@@ -1053,11 +1053,11 @@ func Options() *map[string]*string
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.Network.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
-##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktf/provider-docker.network.Network.property.tfResourceType"></a>
+##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktn/provider-docker.network.Network.property.tfResourceType"></a>
 
 ```go
 func TfResourceType() *string
@@ -1069,12 +1069,12 @@ func TfResourceType() *string
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### NetworkConfig <a name="NetworkConfig" id="@cdktf/provider-docker.network.NetworkConfig"></a>
+### NetworkConfig <a name="NetworkConfig" id="@cdktn/provider-docker.network.NetworkConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.network.NetworkConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 &network.NetworkConfig {
 	Connection: interface{},
@@ -1104,30 +1104,30 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker network. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.attachable">Attachable</a></code> | <code>interface{}</code> | Enable manual container attachment to the network. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.checkDuplicate">CheckDuplicate</a></code> | <code>interface{}</code> | Requests daemon to check for networks with same name. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.driver">Driver</a></code> | <code>*string</code> | The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#id Network#id}. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.ingress">Ingress</a></code> | <code>interface{}</code> | Create swarm routing-mesh network. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.internal">Internal</a></code> | <code>interface{}</code> | Whether the network is internal. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.ipamConfig">IpamConfig</a></code> | <code>interface{}</code> | ipam_config block. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.ipamDriver">IpamDriver</a></code> | <code>*string</code> | Driver used by the custom IP scheme of the network. Defaults to `default`. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.ipamOptions">IpamOptions</a></code> | <code>*map[string]*string</code> | Provide explicit options to the IPAM driver. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.ipv6">Ipv6</a></code> | <code>interface{}</code> | Enable IPv6 networking. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.labels">Labels</a></code> | <code>interface{}</code> | labels block. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkConfig.property.options">Options</a></code> | <code>*map[string]*string</code> | Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker network. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.attachable">Attachable</a></code> | <code>interface{}</code> | Enable manual container attachment to the network. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.checkDuplicate">CheckDuplicate</a></code> | <code>interface{}</code> | Requests daemon to check for networks with same name. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.driver">Driver</a></code> | <code>*string</code> | The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#id Network#id}. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ingress">Ingress</a></code> | <code>interface{}</code> | Create swarm routing-mesh network. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.internal">Internal</a></code> | <code>interface{}</code> | Whether the network is internal. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamConfig">IpamConfig</a></code> | <code>interface{}</code> | ipam_config block. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamDriver">IpamDriver</a></code> | <code>*string</code> | Driver used by the custom IP scheme of the network. Defaults to `default`. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamOptions">IpamOptions</a></code> | <code>*map[string]*string</code> | Provide explicit options to the IPAM driver. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipv6">Ipv6</a></code> | <code>interface{}</code> | Enable IPv6 networking. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.labels">Labels</a></code> | <code>interface{}</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.options">Options</a></code> | <code>*map[string]*string</code> | Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details. |
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-docker.network.NetworkConfig.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktn/provider-docker.network.NetworkConfig.property.connection"></a>
 
 ```go
 Connection interface{}
@@ -1137,7 +1137,7 @@ Connection interface{}
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-docker.network.NetworkConfig.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktn/provider-docker.network.NetworkConfig.property.count"></a>
 
 ```go
 Count interface{}
@@ -1147,7 +1147,7 @@ Count interface{}
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-docker.network.NetworkConfig.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktn/provider-docker.network.NetworkConfig.property.dependsOn"></a>
 
 ```go
 DependsOn *[]ITerraformDependable
@@ -1157,7 +1157,7 @@ DependsOn *[]ITerraformDependable
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-docker.network.NetworkConfig.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktn/provider-docker.network.NetworkConfig.property.forEach"></a>
 
 ```go
 ForEach ITerraformIterator
@@ -1167,7 +1167,7 @@ ForEach ITerraformIterator
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-docker.network.NetworkConfig.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktn/provider-docker.network.NetworkConfig.property.lifecycle"></a>
 
 ```go
 Lifecycle TerraformResourceLifecycle
@@ -1177,7 +1177,7 @@ Lifecycle TerraformResourceLifecycle
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-docker.network.NetworkConfig.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktn/provider-docker.network.NetworkConfig.property.provider"></a>
 
 ```go
 Provider TerraformProvider
@@ -1187,7 +1187,7 @@ Provider TerraformProvider
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-docker.network.NetworkConfig.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktn/provider-docker.network.NetworkConfig.property.provisioners"></a>
 
 ```go
 Provisioners *[]interface{}
@@ -1197,7 +1197,7 @@ Provisioners *[]interface{}
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.network.NetworkConfig.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.network.NetworkConfig.property.name"></a>
 
 ```go
 Name *string
@@ -1211,7 +1211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Attachable`<sup>Optional</sup> <a name="Attachable" id="@cdktf/provider-docker.network.NetworkConfig.property.attachable"></a>
+##### `Attachable`<sup>Optional</sup> <a name="Attachable" id="@cdktn/provider-docker.network.NetworkConfig.property.attachable"></a>
 
 ```go
 Attachable interface{}
@@ -1225,7 +1225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CheckDuplicate`<sup>Optional</sup> <a name="CheckDuplicate" id="@cdktf/provider-docker.network.NetworkConfig.property.checkDuplicate"></a>
+##### `CheckDuplicate`<sup>Optional</sup> <a name="CheckDuplicate" id="@cdktn/provider-docker.network.NetworkConfig.property.checkDuplicate"></a>
 
 ```go
 CheckDuplicate interface{}
@@ -1239,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Driver`<sup>Optional</sup> <a name="Driver" id="@cdktf/provider-docker.network.NetworkConfig.property.driver"></a>
+##### `Driver`<sup>Optional</sup> <a name="Driver" id="@cdktn/provider-docker.network.NetworkConfig.property.driver"></a>
 
 ```go
 Driver *string
@@ -1253,7 +1253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktf/provider-docker.network.NetworkConfig.property.id"></a>
+##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktn/provider-docker.network.NetworkConfig.property.id"></a>
 
 ```go
 Id *string
@@ -1268,7 +1268,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
-##### `Ingress`<sup>Optional</sup> <a name="Ingress" id="@cdktf/provider-docker.network.NetworkConfig.property.ingress"></a>
+##### `Ingress`<sup>Optional</sup> <a name="Ingress" id="@cdktn/provider-docker.network.NetworkConfig.property.ingress"></a>
 
 ```go
 Ingress interface{}
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Internal`<sup>Optional</sup> <a name="Internal" id="@cdktf/provider-docker.network.NetworkConfig.property.internal"></a>
+##### `Internal`<sup>Optional</sup> <a name="Internal" id="@cdktn/provider-docker.network.NetworkConfig.property.internal"></a>
 
 ```go
 Internal interface{}
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `IpamConfig`<sup>Optional</sup> <a name="IpamConfig" id="@cdktf/provider-docker.network.NetworkConfig.property.ipamConfig"></a>
+##### `IpamConfig`<sup>Optional</sup> <a name="IpamConfig" id="@cdktn/provider-docker.network.NetworkConfig.property.ipamConfig"></a>
 
 ```go
 IpamConfig interface{}
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `IpamDriver`<sup>Optional</sup> <a name="IpamDriver" id="@cdktf/provider-docker.network.NetworkConfig.property.ipamDriver"></a>
+##### `IpamDriver`<sup>Optional</sup> <a name="IpamDriver" id="@cdktn/provider-docker.network.NetworkConfig.property.ipamDriver"></a>
 
 ```go
 IpamDriver *string
@@ -1324,7 +1324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `IpamOptions`<sup>Optional</sup> <a name="IpamOptions" id="@cdktf/provider-docker.network.NetworkConfig.property.ipamOptions"></a>
+##### `IpamOptions`<sup>Optional</sup> <a name="IpamOptions" id="@cdktn/provider-docker.network.NetworkConfig.property.ipamOptions"></a>
 
 ```go
 IpamOptions *map[string]*string
@@ -1340,7 +1340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Ipv6`<sup>Optional</sup> <a name="Ipv6" id="@cdktf/provider-docker.network.NetworkConfig.property.ipv6"></a>
+##### `Ipv6`<sup>Optional</sup> <a name="Ipv6" id="@cdktn/provider-docker.network.NetworkConfig.property.ipv6"></a>
 
 ```go
 Ipv6 interface{}
@@ -1354,7 +1354,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Labels`<sup>Optional</sup> <a name="Labels" id="@cdktf/provider-docker.network.NetworkConfig.property.labels"></a>
+##### `Labels`<sup>Optional</sup> <a name="Labels" id="@cdktn/provider-docker.network.NetworkConfig.property.labels"></a>
 
 ```go
 Labels interface{}
@@ -1368,7 +1368,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Options`<sup>Optional</sup> <a name="Options" id="@cdktf/provider-docker.network.NetworkConfig.property.options"></a>
+##### `Options`<sup>Optional</sup> <a name="Options" id="@cdktn/provider-docker.network.NetworkConfig.property.options"></a>
 
 ```go
 Options *map[string]*string
@@ -1382,12 +1382,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### NetworkIpamConfig <a name="NetworkIpamConfig" id="@cdktf/provider-docker.network.NetworkIpamConfig"></a>
+### NetworkIpamConfig <a name="NetworkIpamConfig" id="@cdktn/provider-docker.network.NetworkIpamConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.network.NetworkIpamConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkIpamConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 &network.NetworkIpamConfig {
 	AuxAddress: *map[string]*string,
@@ -1401,14 +1401,14 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfig.property.auxAddress">AuxAddress</a></code> | <code>*map[string]*string</code> | Auxiliary IPv4 or IPv6 addresses used by Network driver. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfig.property.gateway">Gateway</a></code> | <code>*string</code> | The IP address of the gateway. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfig.property.ipRange">IpRange</a></code> | <code>*string</code> | The ip range in CIDR form. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfig.property.subnet">Subnet</a></code> | <code>*string</code> | The subnet in CIDR form. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfig.property.auxAddress">AuxAddress</a></code> | <code>*map[string]*string</code> | Auxiliary IPv4 or IPv6 addresses used by Network driver. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfig.property.gateway">Gateway</a></code> | <code>*string</code> | The IP address of the gateway. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfig.property.ipRange">IpRange</a></code> | <code>*string</code> | The ip range in CIDR form. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfig.property.subnet">Subnet</a></code> | <code>*string</code> | The subnet in CIDR form. |
 
 ---
 
-##### `AuxAddress`<sup>Optional</sup> <a name="AuxAddress" id="@cdktf/provider-docker.network.NetworkIpamConfig.property.auxAddress"></a>
+##### `AuxAddress`<sup>Optional</sup> <a name="AuxAddress" id="@cdktn/provider-docker.network.NetworkIpamConfig.property.auxAddress"></a>
 
 ```go
 AuxAddress *map[string]*string
@@ -1422,7 +1422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Gateway`<sup>Optional</sup> <a name="Gateway" id="@cdktf/provider-docker.network.NetworkIpamConfig.property.gateway"></a>
+##### `Gateway`<sup>Optional</sup> <a name="Gateway" id="@cdktn/provider-docker.network.NetworkIpamConfig.property.gateway"></a>
 
 ```go
 Gateway *string
@@ -1436,7 +1436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `IpRange`<sup>Optional</sup> <a name="IpRange" id="@cdktf/provider-docker.network.NetworkIpamConfig.property.ipRange"></a>
+##### `IpRange`<sup>Optional</sup> <a name="IpRange" id="@cdktn/provider-docker.network.NetworkIpamConfig.property.ipRange"></a>
 
 ```go
 IpRange *string
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Subnet`<sup>Optional</sup> <a name="Subnet" id="@cdktf/provider-docker.network.NetworkIpamConfig.property.subnet"></a>
+##### `Subnet`<sup>Optional</sup> <a name="Subnet" id="@cdktn/provider-docker.network.NetworkIpamConfig.property.subnet"></a>
 
 ```go
 Subnet *string
@@ -1464,12 +1464,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### NetworkLabels <a name="NetworkLabels" id="@cdktf/provider-docker.network.NetworkLabels"></a>
+### NetworkLabels <a name="NetworkLabels" id="@cdktn/provider-docker.network.NetworkLabels"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.network.NetworkLabels.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 &network.NetworkLabels {
 	Label: *string,
@@ -1481,12 +1481,12 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabels.property.label">Label</a></code> | <code>*string</code> | Name of the label. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabels.property.value">Value</a></code> | <code>*string</code> | Value of the label. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabels.property.label">Label</a></code> | <code>*string</code> | Name of the label. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabels.property.value">Value</a></code> | <code>*string</code> | Value of the label. |
 
 ---
 
-##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-docker.network.NetworkLabels.property.label"></a>
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktn/provider-docker.network.NetworkLabels.property.label"></a>
 
 ```go
 Label *string
@@ -1500,7 +1500,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-docker.network.NetworkLabels.property.value"></a>
+##### `Value`<sup>Required</sup> <a name="Value" id="@cdktn/provider-docker.network.NetworkLabels.property.value"></a>
 
 ```go
 Value *string
@@ -1516,25 +1516,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ## Classes <a name="Classes" id="Classes"></a>
 
-### NetworkIpamConfigList <a name="NetworkIpamConfigList" id="@cdktf/provider-docker.network.NetworkIpamConfigList"></a>
+### NetworkIpamConfigList <a name="NetworkIpamConfigList" id="@cdktn/provider-docker.network.NetworkIpamConfigList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.NewNetworkIpamConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkIpamConfigList
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -1542,7 +1542,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -1550,7 +1550,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* *bool
 
@@ -1562,15 +1562,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.get">Get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.get">Get</a></code> | *No description.* |
 
 ---
 
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-docker.network.NetworkIpamConfigList.allWithMapKey"></a>
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktn/provider-docker.network.NetworkIpamConfigList.allWithMapKey"></a>
 
 ```go
 func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
@@ -1580,19 +1580,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.network.NetworkIpamConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.network.NetworkIpamConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* *string
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.network.NetworkIpamConfigList.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.network.NetworkIpamConfigList.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.network.NetworkIpamConfigList.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.network.NetworkIpamConfigList.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -1600,13 +1600,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.network.NetworkIpamConfigList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkIpamConfigList.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.network.NetworkIpamConfigList.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.network.NetworkIpamConfigList.toString"></a>
 
 ```go
 func ToString() *string
@@ -1616,13 +1616,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `Get` <a name="Get" id="@cdktf/provider-docker.network.NetworkIpamConfigList.get"></a>
+##### `Get` <a name="Get" id="@cdktn/provider-docker.network.NetworkIpamConfigList.get"></a>
 
 ```go
 func Get(index *f64) NetworkIpamConfigOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.network.NetworkIpamConfigList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.network.NetworkIpamConfigList.get.parameter.index"></a>
 
 - *Type:* *f64
 
@@ -1635,13 +1635,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.network.NetworkIpamConfigList.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.network.NetworkIpamConfigList.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -1655,7 +1655,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.network.NetworkIpamConfigList.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.network.NetworkIpamConfigList.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -1665,7 +1665,7 @@ func Fqn() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.network.NetworkIpamConfigList.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.network.NetworkIpamConfigList.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -1676,26 +1676,26 @@ func InternalValue() interface{}
 ---
 
 
-### NetworkIpamConfigOutputReference <a name="NetworkIpamConfigOutputReference" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference"></a>
+### NetworkIpamConfigOutputReference <a name="NetworkIpamConfigOutputReference" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.NewNetworkIpamConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkIpamConfigOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -1703,7 +1703,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -1711,7 +1711,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* *f64
 
@@ -1719,7 +1719,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* *bool
 
@@ -1731,153 +1731,153 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetAuxAddress">ResetAuxAddress</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetGateway">ResetGateway</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetIpRange">ResetIpRange</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetSubnet">ResetSubnet</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetAuxAddress">ResetAuxAddress</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetGateway">ResetGateway</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetIpRange">ResetIpRange</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetSubnet">ResetSubnet</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -1885,13 +1885,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -1901,25 +1901,25 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetAuxAddress` <a name="ResetAuxAddress" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetAuxAddress"></a>
+##### `ResetAuxAddress` <a name="ResetAuxAddress" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetAuxAddress"></a>
 
 ```go
 func ResetAuxAddress()
 ```
 
-##### `ResetGateway` <a name="ResetGateway" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetGateway"></a>
+##### `ResetGateway` <a name="ResetGateway" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetGateway"></a>
 
 ```go
 func ResetGateway()
 ```
 
-##### `ResetIpRange` <a name="ResetIpRange" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetIpRange"></a>
+##### `ResetIpRange` <a name="ResetIpRange" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetIpRange"></a>
 
 ```go
 func ResetIpRange()
 ```
 
-##### `ResetSubnet` <a name="ResetSubnet" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.resetSubnet"></a>
+##### `ResetSubnet` <a name="ResetSubnet" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resetSubnet"></a>
 
 ```go
 func ResetSubnet()
@@ -1930,21 +1930,21 @@ func ResetSubnet()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddressInput">AuxAddressInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.gatewayInput">GatewayInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRangeInput">IpRangeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.subnetInput">SubnetInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddress">AuxAddress</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.gateway">Gateway</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRange">IpRange</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.subnet">Subnet</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddressInput">AuxAddressInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.gatewayInput">GatewayInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRangeInput">IpRangeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.subnetInput">SubnetInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddress">AuxAddress</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.gateway">Gateway</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRange">IpRange</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.subnet">Subnet</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -1958,7 +1958,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -1968,7 +1968,7 @@ func Fqn() *string
 
 ---
 
-##### `AuxAddressInput`<sup>Optional</sup> <a name="AuxAddressInput" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddressInput"></a>
+##### `AuxAddressInput`<sup>Optional</sup> <a name="AuxAddressInput" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddressInput"></a>
 
 ```go
 func AuxAddressInput() *map[string]*string
@@ -1978,7 +1978,7 @@ func AuxAddressInput() *map[string]*string
 
 ---
 
-##### `GatewayInput`<sup>Optional</sup> <a name="GatewayInput" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.gatewayInput"></a>
+##### `GatewayInput`<sup>Optional</sup> <a name="GatewayInput" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.gatewayInput"></a>
 
 ```go
 func GatewayInput() *string
@@ -1988,7 +1988,7 @@ func GatewayInput() *string
 
 ---
 
-##### `IpRangeInput`<sup>Optional</sup> <a name="IpRangeInput" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRangeInput"></a>
+##### `IpRangeInput`<sup>Optional</sup> <a name="IpRangeInput" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRangeInput"></a>
 
 ```go
 func IpRangeInput() *string
@@ -1998,7 +1998,7 @@ func IpRangeInput() *string
 
 ---
 
-##### `SubnetInput`<sup>Optional</sup> <a name="SubnetInput" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.subnetInput"></a>
+##### `SubnetInput`<sup>Optional</sup> <a name="SubnetInput" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.subnetInput"></a>
 
 ```go
 func SubnetInput() *string
@@ -2008,7 +2008,7 @@ func SubnetInput() *string
 
 ---
 
-##### `AuxAddress`<sup>Required</sup> <a name="AuxAddress" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddress"></a>
+##### `AuxAddress`<sup>Required</sup> <a name="AuxAddress" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.auxAddress"></a>
 
 ```go
 func AuxAddress() *map[string]*string
@@ -2018,7 +2018,7 @@ func AuxAddress() *map[string]*string
 
 ---
 
-##### `Gateway`<sup>Required</sup> <a name="Gateway" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.gateway"></a>
+##### `Gateway`<sup>Required</sup> <a name="Gateway" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.gateway"></a>
 
 ```go
 func Gateway() *string
@@ -2028,7 +2028,7 @@ func Gateway() *string
 
 ---
 
-##### `IpRange`<sup>Required</sup> <a name="IpRange" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRange"></a>
+##### `IpRange`<sup>Required</sup> <a name="IpRange" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRange"></a>
 
 ```go
 func IpRange() *string
@@ -2038,7 +2038,7 @@ func IpRange() *string
 
 ---
 
-##### `Subnet`<sup>Required</sup> <a name="Subnet" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.subnet"></a>
+##### `Subnet`<sup>Required</sup> <a name="Subnet" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.subnet"></a>
 
 ```go
 func Subnet() *string
@@ -2048,7 +2048,7 @@ func Subnet() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -2059,25 +2059,25 @@ func InternalValue() interface{}
 ---
 
 
-### NetworkLabelsList <a name="NetworkLabelsList" id="@cdktf/provider-docker.network.NetworkLabelsList"></a>
+### NetworkLabelsList <a name="NetworkLabelsList" id="@cdktn/provider-docker.network.NetworkLabelsList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.network.NetworkLabelsList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.NewNetworkLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkLabelsList
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -2085,7 +2085,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -2093,7 +2093,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.network.NetworkLabelsList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* *bool
 
@@ -2105,15 +2105,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.get">Get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.get">Get</a></code> | *No description.* |
 
 ---
 
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-docker.network.NetworkLabelsList.allWithMapKey"></a>
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktn/provider-docker.network.NetworkLabelsList.allWithMapKey"></a>
 
 ```go
 func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
@@ -2123,19 +2123,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.network.NetworkLabelsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.network.NetworkLabelsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* *string
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.network.NetworkLabelsList.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.network.NetworkLabelsList.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.network.NetworkLabelsList.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.network.NetworkLabelsList.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -2143,13 +2143,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.network.NetworkLabelsList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkLabelsList.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.network.NetworkLabelsList.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.network.NetworkLabelsList.toString"></a>
 
 ```go
 func ToString() *string
@@ -2159,13 +2159,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `Get` <a name="Get" id="@cdktf/provider-docker.network.NetworkLabelsList.get"></a>
+##### `Get` <a name="Get" id="@cdktn/provider-docker.network.NetworkLabelsList.get"></a>
 
 ```go
 func Get(index *f64) NetworkLabelsOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.network.NetworkLabelsList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.network.NetworkLabelsList.get.parameter.index"></a>
 
 - *Type:* *f64
 
@@ -2178,13 +2178,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.network.NetworkLabelsList.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.network.NetworkLabelsList.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -2198,7 +2198,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.network.NetworkLabelsList.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.network.NetworkLabelsList.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -2208,7 +2208,7 @@ func Fqn() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.network.NetworkLabelsList.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.network.NetworkLabelsList.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -2219,26 +2219,26 @@ func InternalValue() interface{}
 ---
 
 
-### NetworkLabelsOutputReference <a name="NetworkLabelsOutputReference" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference"></a>
+### NetworkLabelsOutputReference <a name="NetworkLabelsOutputReference" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
 
 network.NewNetworkLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkLabelsOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -2246,7 +2246,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -2254,7 +2254,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* *f64
 
@@ -2262,7 +2262,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* *bool
 
@@ -2274,149 +2274,149 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -2424,13 +2424,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -2445,17 +2445,17 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.labelInput">LabelInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.valueInput">ValueInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.label">Label</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.value">Value</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.labelInput">LabelInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.valueInput">ValueInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.label">Label</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.value">Value</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -2469,7 +2469,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -2479,7 +2479,7 @@ func Fqn() *string
 
 ---
 
-##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.labelInput"></a>
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.labelInput"></a>
 
 ```go
 func LabelInput() *string
@@ -2489,7 +2489,7 @@ func LabelInput() *string
 
 ---
 
-##### `ValueInput`<sup>Optional</sup> <a name="ValueInput" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.valueInput"></a>
+##### `ValueInput`<sup>Optional</sup> <a name="ValueInput" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.valueInput"></a>
 
 ```go
 func ValueInput() *string
@@ -2499,7 +2499,7 @@ func ValueInput() *string
 
 ---
 
-##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.label"></a>
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.label"></a>
 
 ```go
 func Label() *string
@@ -2509,7 +2509,7 @@ func Label() *string
 
 ---
 
-##### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.value"></a>
+##### `Value`<sup>Required</sup> <a name="Value" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.value"></a>
 
 ```go
 func Value() *string
@@ -2519,7 +2519,7 @@ func Value() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.network.NetworkLabelsOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}

@@ -1,28 +1,28 @@
-# `image` Submodule <a name="`image` Submodule" id="@cdktf/provider-docker.image"></a>
+# `image` Submodule <a name="`image` Submodule" id="@cdktn/provider-docker.image"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### Image <a name="Image" id="@cdktf/provider-docker.image.Image"></a>
+### Image <a name="Image" id="@cdktn/provider-docker.image.Image"></a>
 
 Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image docker_image}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.Image.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.Image.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImage(scope Construct, id *string, config ImageConfig) Image
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.Image.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-docker.image.Image.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-docker.image.Image.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageConfig">ImageConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageConfig">ImageConfig</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.image.Image.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.image.Image.Initializer.parameter.scope"></a>
 
 - *Type:* github.com/aws/constructs-go/constructs/v10.Construct
 
@@ -30,7 +30,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.image.Image.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.image.Image.Initializer.parameter.id"></a>
 
 - *Type:* *string
 
@@ -40,9 +40,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@cdktf/provider-docker.image.Image.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@cdktn/provider-docker.image.Image.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageConfig">ImageConfig</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageConfig">ImageConfig</a>
 
 ---
 
@@ -50,42 +50,42 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.Image.toString">ToString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-docker.image.Image.addOverride">AddOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-docker.image.Image.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.toMetadata">ToMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-docker.image.Image.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
-| <code><a href="#@cdktf/provider-docker.image.Image.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.hasResourceMove">HasResourceMove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.importFrom">ImportFrom</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
-| <code><a href="#@cdktf/provider-docker.image.Image.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
-| <code><a href="#@cdktf/provider-docker.image.Image.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
-| <code><a href="#@cdktf/provider-docker.image.Image.putBuildAttribute">PutBuildAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.putTimeouts">PutTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetBuildAttribute">ResetBuildAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetForceRemove">ResetForceRemove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetKeepLocally">ResetKeepLocally</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetPlatform">ResetPlatform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetPullTriggers">ResetPullTriggers</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.resetTriggers">ResetTriggers</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktn/provider-docker.image.Image.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktn/provider-docker.image.Image.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktn/provider-docker.image.Image.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#@cdktn/provider-docker.image.Image.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.hasResourceMove">HasResourceMove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.importFrom">ImportFrom</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#@cdktn/provider-docker.image.Image.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#@cdktn/provider-docker.image.Image.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktn/provider-docker.image.Image.putBuildAttribute">PutBuildAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetBuildAttribute">ResetBuildAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetForceRemove">ResetForceRemove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetKeepLocally">ResetKeepLocally</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetPlatform">ResetPlatform</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetPullTriggers">ResetPullTriggers</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.resetTriggers">ResetTriggers</a></code> | *No description.* |
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.Image.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.Image.toString"></a>
 
 ```go
 func ToString() *string
@@ -93,25 +93,25 @@ func ToString() *string
 
 Returns a string representation of this construct.
 
-##### `AddOverride` <a name="AddOverride" id="@cdktf/provider-docker.image.Image.addOverride"></a>
+##### `AddOverride` <a name="AddOverride" id="@cdktn/provider-docker.image.Image.addOverride"></a>
 
 ```go
 func AddOverride(path *string, value interface{})
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-docker.image.Image.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.image.Image.addOverride.parameter.path"></a>
 
 - *Type:* *string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.Image.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.Image.addOverride.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktf/provider-docker.image.Image.overrideLogicalId"></a>
+##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktn/provider-docker.image.Image.overrideLogicalId"></a>
 
 ```go
 func OverrideLogicalId(newLogicalId *string)
@@ -119,7 +119,7 @@ func OverrideLogicalId(newLogicalId *string)
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-docker.image.Image.overrideLogicalId.parameter.newLogicalId"></a>
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktn/provider-docker.image.Image.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* *string
 
@@ -127,7 +127,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktf/provider-docker.image.Image.resetOverrideLogicalId"></a>
+##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktn/provider-docker.image.Image.resetOverrideLogicalId"></a>
 
 ```go
 func ResetOverrideLogicalId()
@@ -135,19 +135,19 @@ func ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-docker.image.Image.toHclTerraform"></a>
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktn/provider-docker.image.Image.toHclTerraform"></a>
 
 ```go
 func ToHclTerraform() interface{}
 ```
 
-##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-docker.image.Image.toMetadata"></a>
+##### `ToMetadata` <a name="ToMetadata" id="@cdktn/provider-docker.image.Image.toMetadata"></a>
 
 ```go
 func ToMetadata() interface{}
 ```
 
-##### `ToTerraform` <a name="ToTerraform" id="@cdktf/provider-docker.image.Image.toTerraform"></a>
+##### `ToTerraform` <a name="ToTerraform" id="@cdktn/provider-docker.image.Image.toTerraform"></a>
 
 ```go
 func ToTerraform() interface{}
@@ -155,7 +155,7 @@ func ToTerraform() interface{}
 
 Adds this resource to the terraform JSON output.
 
-##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-docker.image.Image.addMoveTarget"></a>
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktn/provider-docker.image.Image.addMoveTarget"></a>
 
 ```go
 func AddMoveTarget(moveTarget *string)
@@ -163,7 +163,7 @@ func AddMoveTarget(moveTarget *string)
 
 Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.image.Image.addMoveTarget.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.image.Image.addMoveTarget.parameter.moveTarget"></a>
 
 - *Type:* *string
 
@@ -171,151 +171,151 @@ The string move target that will correspond to this resource.
 
 ---
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.Image.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.Image.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.Image.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.Image.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.Image.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.Image.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.Image.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.Image.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.Image.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.Image.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.Image.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.Image.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.Image.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.Image.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.Image.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.Image.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.Image.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.Image.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-docker.image.Image.hasResourceMove"></a>
+##### `HasResourceMove` <a name="HasResourceMove" id="@cdktn/provider-docker.image.Image.hasResourceMove"></a>
 
 ```go
 func HasResourceMove() interface{}
 ```
 
-##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-docker.image.Image.importFrom"></a>
+##### `ImportFrom` <a name="ImportFrom" id="@cdktn/provider-docker.image.Image.importFrom"></a>
 
 ```go
 func ImportFrom(id *string, provider TerraformProvider)
 ```
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.image.Image.importFrom.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.image.Image.importFrom.parameter.id"></a>
 
 - *Type:* *string
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.image.Image.importFrom.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.image.Image.importFrom.parameter.provider"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.Image.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.Image.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.Image.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.Image.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `MoveFromId` <a name="MoveFromId" id="@cdktf/provider-docker.image.Image.moveFromId"></a>
+##### `MoveFromId` <a name="MoveFromId" id="@cdktn/provider-docker.image.Image.moveFromId"></a>
 
 ```go
 func MoveFromId(id *string)
@@ -325,7 +325,7 @@ Move the resource corresponding to "id" to this resource.
 
 Note that the resource being moved from must be marked as moved using it's instance function.
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.image.Image.moveFromId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.image.Image.moveFromId.parameter.id"></a>
 
 - *Type:* *string
 
@@ -333,7 +333,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-docker.image.Image.moveTo"></a>
+##### `MoveTo` <a name="MoveTo" id="@cdktn/provider-docker.image.Image.moveTo"></a>
 
 ```go
 func MoveTo(moveTarget *string, index interface{})
@@ -341,7 +341,7 @@ func MoveTo(moveTarget *string, index interface{})
 
 Moves this resource to the target resource given by moveTarget.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.image.Image.moveTo.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.image.Image.moveTo.parameter.moveTarget"></a>
 
 - *Type:* *string
 
@@ -349,7 +349,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ---
 
-###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-docker.image.Image.moveTo.parameter.index"></a>
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktn/provider-docker.image.Image.moveTo.parameter.index"></a>
 
 - *Type:* interface{}
 
@@ -357,7 +357,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 
 ---
 
-##### `MoveToId` <a name="MoveToId" id="@cdktf/provider-docker.image.Image.moveToId"></a>
+##### `MoveToId` <a name="MoveToId" id="@cdktn/provider-docker.image.Image.moveToId"></a>
 
 ```go
 func MoveToId(id *string)
@@ -365,7 +365,7 @@ func MoveToId(id *string)
 
 Moves this resource to the resource corresponding to "id".
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.image.Image.moveToId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.image.Image.moveToId.parameter.id"></a>
 
 - *Type:* *string
 
@@ -373,67 +373,67 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `PutBuildAttribute` <a name="PutBuildAttribute" id="@cdktf/provider-docker.image.Image.putBuildAttribute"></a>
+##### `PutBuildAttribute` <a name="PutBuildAttribute" id="@cdktn/provider-docker.image.Image.putBuildAttribute"></a>
 
 ```go
 func PutBuildAttribute(value ImageBuild)
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.Image.putBuildAttribute.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a>
 
 ---
 
-##### `PutTimeouts` <a name="PutTimeouts" id="@cdktf/provider-docker.image.Image.putTimeouts"></a>
+##### `PutTimeouts` <a name="PutTimeouts" id="@cdktn/provider-docker.image.Image.putTimeouts"></a>
 
 ```go
 func PutTimeouts(value ImageTimeouts)
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.Image.putTimeouts.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.Image.putTimeouts.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
 
 ---
 
-##### `ResetBuildAttribute` <a name="ResetBuildAttribute" id="@cdktf/provider-docker.image.Image.resetBuildAttribute"></a>
+##### `ResetBuildAttribute` <a name="ResetBuildAttribute" id="@cdktn/provider-docker.image.Image.resetBuildAttribute"></a>
 
 ```go
 func ResetBuildAttribute()
 ```
 
-##### `ResetForceRemove` <a name="ResetForceRemove" id="@cdktf/provider-docker.image.Image.resetForceRemove"></a>
+##### `ResetForceRemove` <a name="ResetForceRemove" id="@cdktn/provider-docker.image.Image.resetForceRemove"></a>
 
 ```go
 func ResetForceRemove()
 ```
 
-##### `ResetKeepLocally` <a name="ResetKeepLocally" id="@cdktf/provider-docker.image.Image.resetKeepLocally"></a>
+##### `ResetKeepLocally` <a name="ResetKeepLocally" id="@cdktn/provider-docker.image.Image.resetKeepLocally"></a>
 
 ```go
 func ResetKeepLocally()
 ```
 
-##### `ResetPlatform` <a name="ResetPlatform" id="@cdktf/provider-docker.image.Image.resetPlatform"></a>
+##### `ResetPlatform` <a name="ResetPlatform" id="@cdktn/provider-docker.image.Image.resetPlatform"></a>
 
 ```go
 func ResetPlatform()
 ```
 
-##### `ResetPullTriggers` <a name="ResetPullTriggers" id="@cdktf/provider-docker.image.Image.resetPullTriggers"></a>
+##### `ResetPullTriggers` <a name="ResetPullTriggers" id="@cdktn/provider-docker.image.Image.resetPullTriggers"></a>
 
 ```go
 func ResetPullTriggers()
 ```
 
-##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-docker.image.Image.resetTimeouts"></a>
+##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktn/provider-docker.image.Image.resetTimeouts"></a>
 
 ```go
 func ResetTimeouts()
 ```
 
-##### `ResetTriggers` <a name="ResetTriggers" id="@cdktf/provider-docker.image.Image.resetTriggers"></a>
+##### `ResetTriggers` <a name="ResetTriggers" id="@cdktn/provider-docker.image.Image.resetTriggers"></a>
 
 ```go
 func ResetTriggers()
@@ -443,17 +443,17 @@ func ResetTriggers()
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.Image.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-docker.image.Image.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.image.Image.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktn/provider-docker.image.Image.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>". |
 
 ---
 
-##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-docker.image.Image.isConstruct"></a>
+##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.image.Image.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.Image_IsConstruct(x interface{}) *bool
 ```
@@ -474,7 +474,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.image.Image.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.image.Image.isConstruct.parameter.x"></a>
 
 - *Type:* interface{}
 
@@ -482,45 +482,45 @@ Any object.
 
 ---
 
-##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-docker.image.Image.isTerraformElement"></a>
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.image.Image.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.Image_IsTerraformElement(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.image.Image.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.image.Image.isTerraformElement.parameter.x"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-docker.image.Image.isTerraformResource"></a>
+##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.image.Image.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.Image_IsTerraformResource(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.image.Image.isTerraformResource.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.image.Image.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-docker.image.Image.generateConfigForImport"></a>
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.image.Image.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.Image_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
 
 Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>".
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.image.Image.generateConfigForImport.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.scope"></a>
 
 - *Type:* github.com/aws/constructs-go/constructs/v10.Construct
 
@@ -528,7 +528,7 @@ The scope in which to define this construct.
 
 ---
 
-###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-docker.image.Image.generateConfigForImport.parameter.importToId"></a>
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.importToId"></a>
 
 - *Type:* *string
 
@@ -536,7 +536,7 @@ The construct id used in the generated config for the Image to import.
 
 ---
 
-###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-docker.image.Image.generateConfigForImport.parameter.importFromId"></a>
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.importFromId"></a>
 
 - *Type:* *string
 
@@ -546,7 +546,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.image.Image.generateConfigForImport.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.provider"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
 
@@ -558,43 +558,43 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.buildAttribute">BuildAttribute</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference">ImageBuildOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.id">Id</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.imageId">ImageId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.repoDigest">RepoDigest</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference">ImageTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.buildAttributeInput">BuildAttributeInput</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.forceRemoveInput">ForceRemoveInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.keepLocallyInput">KeepLocallyInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.platformInput">PlatformInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.pullTriggersInput">PullTriggersInput</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.triggersInput">TriggersInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.keepLocally">KeepLocally</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.name">Name</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.platform">Platform</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.pullTriggers">PullTriggers</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.triggers">Triggers</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.buildAttribute">BuildAttribute</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference">ImageBuildOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.imageId">ImageId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.repoDigest">RepoDigest</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference">ImageTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.buildAttributeInput">BuildAttributeInput</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemoveInput">ForceRemoveInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocallyInput">KeepLocallyInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.platformInput">PlatformInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.pullTriggersInput">PullTriggersInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.triggersInput">TriggersInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocally">KeepLocally</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.platform">Platform</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.pullTriggers">PullTriggers</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.triggers">Triggers</a></code> | <code>*map[string]*string</code> | *No description.* |
 
 ---
 
-##### `Node`<sup>Required</sup> <a name="Node" id="@cdktf/provider-docker.image.Image.property.node"></a>
+##### `Node`<sup>Required</sup> <a name="Node" id="@cdktn/provider-docker.image.Image.property.node"></a>
 
 ```go
 func Node() Node
@@ -606,7 +606,7 @@ The tree node.
 
 ---
 
-##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktf/provider-docker.image.Image.property.cdktfStack"></a>
+##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktn/provider-docker.image.Image.property.cdktfStack"></a>
 
 ```go
 func CdktfStack() TerraformStack
@@ -616,7 +616,7 @@ func CdktfStack() TerraformStack
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.Image.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.Image.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -626,7 +626,7 @@ func Fqn() *string
 
 ---
 
-##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktf/provider-docker.image.Image.property.friendlyUniqueId"></a>
+##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktn/provider-docker.image.Image.property.friendlyUniqueId"></a>
 
 ```go
 func FriendlyUniqueId() *string
@@ -636,7 +636,7 @@ func FriendlyUniqueId() *string
 
 ---
 
-##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="@cdktf/provider-docker.image.Image.property.terraformMetaArguments"></a>
+##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="@cdktn/provider-docker.image.Image.property.terraformMetaArguments"></a>
 
 ```go
 func TerraformMetaArguments() *map[string]interface{}
@@ -646,7 +646,7 @@ func TerraformMetaArguments() *map[string]interface{}
 
 ---
 
-##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktf/provider-docker.image.Image.property.terraformResourceType"></a>
+##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktn/provider-docker.image.Image.property.terraformResourceType"></a>
 
 ```go
 func TerraformResourceType() *string
@@ -656,7 +656,7 @@ func TerraformResourceType() *string
 
 ---
 
-##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktf/provider-docker.image.Image.property.terraformGeneratorMetadata"></a>
+##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktn/provider-docker.image.Image.property.terraformGeneratorMetadata"></a>
 
 ```go
 func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
@@ -666,7 +666,7 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-docker.image.Image.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktn/provider-docker.image.Image.property.connection"></a>
 
 ```go
 func Connection() interface{}
@@ -676,7 +676,7 @@ func Connection() interface{}
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-docker.image.Image.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktn/provider-docker.image.Image.property.count"></a>
 
 ```go
 func Count() interface{}
@@ -686,7 +686,7 @@ func Count() interface{}
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-docker.image.Image.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktn/provider-docker.image.Image.property.dependsOn"></a>
 
 ```go
 func DependsOn() *[]*string
@@ -696,7 +696,7 @@ func DependsOn() *[]*string
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-docker.image.Image.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktn/provider-docker.image.Image.property.forEach"></a>
 
 ```go
 func ForEach() ITerraformIterator
@@ -706,7 +706,7 @@ func ForEach() ITerraformIterator
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-docker.image.Image.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktn/provider-docker.image.Image.property.lifecycle"></a>
 
 ```go
 func Lifecycle() TerraformResourceLifecycle
@@ -716,7 +716,7 @@ func Lifecycle() TerraformResourceLifecycle
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-docker.image.Image.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktn/provider-docker.image.Image.property.provider"></a>
 
 ```go
 func Provider() TerraformProvider
@@ -726,7 +726,7 @@ func Provider() TerraformProvider
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-docker.image.Image.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktn/provider-docker.image.Image.property.provisioners"></a>
 
 ```go
 func Provisioners() *[]interface{}
@@ -736,17 +736,17 @@ func Provisioners() *[]interface{}
 
 ---
 
-##### `BuildAttribute`<sup>Required</sup> <a name="BuildAttribute" id="@cdktf/provider-docker.image.Image.property.buildAttribute"></a>
+##### `BuildAttribute`<sup>Required</sup> <a name="BuildAttribute" id="@cdktn/provider-docker.image.Image.property.buildAttribute"></a>
 
 ```go
 func BuildAttribute() ImageBuildOutputReference
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuildOutputReference">ImageBuildOutputReference</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuildOutputReference">ImageBuildOutputReference</a>
 
 ---
 
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-docker.image.Image.property.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktn/provider-docker.image.Image.property.id"></a>
 
 ```go
 func Id() *string
@@ -756,7 +756,7 @@ func Id() *string
 
 ---
 
-##### `ImageId`<sup>Required</sup> <a name="ImageId" id="@cdktf/provider-docker.image.Image.property.imageId"></a>
+##### `ImageId`<sup>Required</sup> <a name="ImageId" id="@cdktn/provider-docker.image.Image.property.imageId"></a>
 
 ```go
 func ImageId() *string
@@ -766,7 +766,7 @@ func ImageId() *string
 
 ---
 
-##### `RepoDigest`<sup>Required</sup> <a name="RepoDigest" id="@cdktf/provider-docker.image.Image.property.repoDigest"></a>
+##### `RepoDigest`<sup>Required</sup> <a name="RepoDigest" id="@cdktn/provider-docker.image.Image.property.repoDigest"></a>
 
 ```go
 func RepoDigest() *string
@@ -776,27 +776,27 @@ func RepoDigest() *string
 
 ---
 
-##### `Timeouts`<sup>Required</sup> <a name="Timeouts" id="@cdktf/provider-docker.image.Image.property.timeouts"></a>
+##### `Timeouts`<sup>Required</sup> <a name="Timeouts" id="@cdktn/provider-docker.image.Image.property.timeouts"></a>
 
 ```go
 func Timeouts() ImageTimeoutsOutputReference
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference">ImageTimeoutsOutputReference</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference">ImageTimeoutsOutputReference</a>
 
 ---
 
-##### `BuildAttributeInput`<sup>Optional</sup> <a name="BuildAttributeInput" id="@cdktf/provider-docker.image.Image.property.buildAttributeInput"></a>
+##### `BuildAttributeInput`<sup>Optional</sup> <a name="BuildAttributeInput" id="@cdktn/provider-docker.image.Image.property.buildAttributeInput"></a>
 
 ```go
 func BuildAttributeInput() ImageBuild
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a>
 
 ---
 
-##### `ForceRemoveInput`<sup>Optional</sup> <a name="ForceRemoveInput" id="@cdktf/provider-docker.image.Image.property.forceRemoveInput"></a>
+##### `ForceRemoveInput`<sup>Optional</sup> <a name="ForceRemoveInput" id="@cdktn/provider-docker.image.Image.property.forceRemoveInput"></a>
 
 ```go
 func ForceRemoveInput() interface{}
@@ -806,7 +806,7 @@ func ForceRemoveInput() interface{}
 
 ---
 
-##### `KeepLocallyInput`<sup>Optional</sup> <a name="KeepLocallyInput" id="@cdktf/provider-docker.image.Image.property.keepLocallyInput"></a>
+##### `KeepLocallyInput`<sup>Optional</sup> <a name="KeepLocallyInput" id="@cdktn/provider-docker.image.Image.property.keepLocallyInput"></a>
 
 ```go
 func KeepLocallyInput() interface{}
@@ -816,7 +816,7 @@ func KeepLocallyInput() interface{}
 
 ---
 
-##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-docker.image.Image.property.nameInput"></a>
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktn/provider-docker.image.Image.property.nameInput"></a>
 
 ```go
 func NameInput() *string
@@ -826,7 +826,7 @@ func NameInput() *string
 
 ---
 
-##### `PlatformInput`<sup>Optional</sup> <a name="PlatformInput" id="@cdktf/provider-docker.image.Image.property.platformInput"></a>
+##### `PlatformInput`<sup>Optional</sup> <a name="PlatformInput" id="@cdktn/provider-docker.image.Image.property.platformInput"></a>
 
 ```go
 func PlatformInput() *string
@@ -836,7 +836,7 @@ func PlatformInput() *string
 
 ---
 
-##### `PullTriggersInput`<sup>Optional</sup> <a name="PullTriggersInput" id="@cdktf/provider-docker.image.Image.property.pullTriggersInput"></a>
+##### `PullTriggersInput`<sup>Optional</sup> <a name="PullTriggersInput" id="@cdktn/provider-docker.image.Image.property.pullTriggersInput"></a>
 
 ```go
 func PullTriggersInput() *[]*string
@@ -846,7 +846,7 @@ func PullTriggersInput() *[]*string
 
 ---
 
-##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-docker.image.Image.property.timeoutsInput"></a>
+##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktn/provider-docker.image.Image.property.timeoutsInput"></a>
 
 ```go
 func TimeoutsInput() interface{}
@@ -856,7 +856,7 @@ func TimeoutsInput() interface{}
 
 ---
 
-##### `TriggersInput`<sup>Optional</sup> <a name="TriggersInput" id="@cdktf/provider-docker.image.Image.property.triggersInput"></a>
+##### `TriggersInput`<sup>Optional</sup> <a name="TriggersInput" id="@cdktn/provider-docker.image.Image.property.triggersInput"></a>
 
 ```go
 func TriggersInput() *map[string]*string
@@ -866,7 +866,7 @@ func TriggersInput() *map[string]*string
 
 ---
 
-##### `ForceRemove`<sup>Required</sup> <a name="ForceRemove" id="@cdktf/provider-docker.image.Image.property.forceRemove"></a>
+##### `ForceRemove`<sup>Required</sup> <a name="ForceRemove" id="@cdktn/provider-docker.image.Image.property.forceRemove"></a>
 
 ```go
 func ForceRemove() interface{}
@@ -876,7 +876,7 @@ func ForceRemove() interface{}
 
 ---
 
-##### `KeepLocally`<sup>Required</sup> <a name="KeepLocally" id="@cdktf/provider-docker.image.Image.property.keepLocally"></a>
+##### `KeepLocally`<sup>Required</sup> <a name="KeepLocally" id="@cdktn/provider-docker.image.Image.property.keepLocally"></a>
 
 ```go
 func KeepLocally() interface{}
@@ -886,7 +886,7 @@ func KeepLocally() interface{}
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.image.Image.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.image.Image.property.name"></a>
 
 ```go
 func Name() *string
@@ -896,7 +896,7 @@ func Name() *string
 
 ---
 
-##### `Platform`<sup>Required</sup> <a name="Platform" id="@cdktf/provider-docker.image.Image.property.platform"></a>
+##### `Platform`<sup>Required</sup> <a name="Platform" id="@cdktn/provider-docker.image.Image.property.platform"></a>
 
 ```go
 func Platform() *string
@@ -906,7 +906,7 @@ func Platform() *string
 
 ---
 
-##### `PullTriggers`<sup>Required</sup> <a name="PullTriggers" id="@cdktf/provider-docker.image.Image.property.pullTriggers"></a>
+##### `PullTriggers`<sup>Required</sup> <a name="PullTriggers" id="@cdktn/provider-docker.image.Image.property.pullTriggers"></a>
 
 ```go
 func PullTriggers() *[]*string
@@ -916,7 +916,7 @@ func PullTriggers() *[]*string
 
 ---
 
-##### `Triggers`<sup>Required</sup> <a name="Triggers" id="@cdktf/provider-docker.image.Image.property.triggers"></a>
+##### `Triggers`<sup>Required</sup> <a name="Triggers" id="@cdktn/provider-docker.image.Image.property.triggers"></a>
 
 ```go
 func Triggers() *map[string]*string
@@ -930,11 +930,11 @@ func Triggers() *map[string]*string
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.Image.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
-##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktf/provider-docker.image.Image.property.tfResourceType"></a>
+##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktn/provider-docker.image.Image.property.tfResourceType"></a>
 
 ```go
 func TfResourceType() *string
@@ -946,12 +946,12 @@ func TfResourceType() *string
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### ImageBuild <a name="ImageBuild" id="@cdktf/provider-docker.image.ImageBuild"></a>
+### ImageBuild <a name="ImageBuild" id="@cdktn/provider-docker.image.ImageBuild"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageBuild.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuild.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageBuild {
 	Context: *string,
@@ -998,47 +998,47 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.context">Context</a></code> | <code>*string</code> | Value to specify the build context. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.authConfig">AuthConfig</a></code> | <code>interface{}</code> | auth_config block. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.buildArgs">BuildArgs</a></code> | <code>*map[string]*string</code> | Pairs for build-time variables in the form of `ENDPOINT : "https://example.com"`. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.builder">Builder</a></code> | <code>*string</code> | Set the name of the buildx builder to use. If not set, the legacy builder is used. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.buildId">BuildId</a></code> | <code>*string</code> | BuildID is an optional identifier that can be passed together with the build request. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.buildLogFile">BuildLogFile</a></code> | <code>*string</code> | Path to a file where the buildx log are written to. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cacheFrom">CacheFrom</a></code> | <code>*[]*string</code> | Images to consider as cache sources. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cgroupParent">CgroupParent</a></code> | <code>*string</code> | Optional parent cgroup for the container. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cpuPeriod">CpuPeriod</a></code> | <code>*f64</code> | The length of a CPU period in microseconds. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cpuQuota">CpuQuota</a></code> | <code>*f64</code> | Microseconds of CPU time that the container can get in a CPU period. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cpuSetCpus">CpuSetCpus</a></code> | <code>*string</code> | CPUs in which to allow execution (e.g., `0-3`, `0`, `1`). |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cpuSetMems">CpuSetMems</a></code> | <code>*string</code> | MEMs in which to allow execution (`0-3`, `0`, `1`). |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.cpuShares">CpuShares</a></code> | <code>*f64</code> | CPU shares (relative weight). |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.dockerfile">Dockerfile</a></code> | <code>*string</code> | Name of the Dockerfile. Defaults to `Dockerfile`. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.extraHosts">ExtraHosts</a></code> | <code>*[]*string</code> | A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | Always remove intermediate containers. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.isolation">Isolation</a></code> | <code>*string</code> | Isolation represents the isolation technology of a container. The supported values are. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.label">Label</a></code> | <code>*map[string]*string</code> | Set metadata for an image. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined key/value metadata. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.memory">Memory</a></code> | <code>*f64</code> | Set memory limit for build. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.memorySwap">MemorySwap</a></code> | <code>*f64</code> | Total memory (memory + swap), -1 to enable unlimited swap. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.networkMode">NetworkMode</a></code> | <code>*string</code> | Set the networking mode for the RUN instructions during build. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.noCache">NoCache</a></code> | <code>interface{}</code> | Do not use the cache when building the image. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.platform">Platform</a></code> | <code>*string</code> | Set the target platform for the build. Defaults to `GOOS/GOARCH`. For more information see the [docker documentation](https://github.com/docker/buildx/blob/master/docs/reference/buildx.md#-set-the-target-platforms-for-the-build---platform). |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.pullParent">PullParent</a></code> | <code>interface{}</code> | Attempt to pull the image even if an older image exists locally. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.remoteContext">RemoteContext</a></code> | <code>*string</code> | A Git repository URI or HTTP/HTTPS context URI. Will be ignored if `builder` is set. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.remove">Remove</a></code> | <code>interface{}</code> | Remove intermediate containers after a successful build. Defaults to `true`. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.secrets">Secrets</a></code> | <code>interface{}</code> | secrets block. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.securityOpt">SecurityOpt</a></code> | <code>*[]*string</code> | The security options. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.sessionId">SessionId</a></code> | <code>*string</code> | Set an ID for the build session. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.shmSize">ShmSize</a></code> | <code>*f64</code> | Size of /dev/shm in bytes. The size must be greater than 0. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.squash">Squash</a></code> | <code>interface{}</code> | If true the new layers are squashed into a new image with a single new layer. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.suppressOutput">SuppressOutput</a></code> | <code>interface{}</code> | Suppress the build output and print image ID on success. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.tag">Tag</a></code> | <code>*[]*string</code> | Name and optionally a tag in the 'name:tag' format. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.target">Target</a></code> | <code>*string</code> | Set the target build stage to build. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.ulimit">Ulimit</a></code> | <code>interface{}</code> | ulimit block. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuild.property.version">Version</a></code> | <code>*string</code> | Version of the underlying builder to use. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.context">Context</a></code> | <code>*string</code> | Value to specify the build context. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.authConfig">AuthConfig</a></code> | <code>interface{}</code> | auth_config block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildArgs">BuildArgs</a></code> | <code>*map[string]*string</code> | Pairs for build-time variables in the form of `ENDPOINT : "https://example.com"`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.builder">Builder</a></code> | <code>*string</code> | Set the name of the buildx builder to use. If not set, the legacy builder is used. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildId">BuildId</a></code> | <code>*string</code> | BuildID is an optional identifier that can be passed together with the build request. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildLogFile">BuildLogFile</a></code> | <code>*string</code> | Path to a file where the buildx log are written to. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cacheFrom">CacheFrom</a></code> | <code>*[]*string</code> | Images to consider as cache sources. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cgroupParent">CgroupParent</a></code> | <code>*string</code> | Optional parent cgroup for the container. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuPeriod">CpuPeriod</a></code> | <code>*f64</code> | The length of a CPU period in microseconds. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuQuota">CpuQuota</a></code> | <code>*f64</code> | Microseconds of CPU time that the container can get in a CPU period. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuSetCpus">CpuSetCpus</a></code> | <code>*string</code> | CPUs in which to allow execution (e.g., `0-3`, `0`, `1`). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuSetMems">CpuSetMems</a></code> | <code>*string</code> | MEMs in which to allow execution (`0-3`, `0`, `1`). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuShares">CpuShares</a></code> | <code>*f64</code> | CPU shares (relative weight). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.dockerfile">Dockerfile</a></code> | <code>*string</code> | Name of the Dockerfile. Defaults to `Dockerfile`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.extraHosts">ExtraHosts</a></code> | <code>*[]*string</code> | A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | Always remove intermediate containers. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.isolation">Isolation</a></code> | <code>*string</code> | Isolation represents the isolation technology of a container. The supported values are. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.label">Label</a></code> | <code>*map[string]*string</code> | Set metadata for an image. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined key/value metadata. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.memory">Memory</a></code> | <code>*f64</code> | Set memory limit for build. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.memorySwap">MemorySwap</a></code> | <code>*f64</code> | Total memory (memory + swap), -1 to enable unlimited swap. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.networkMode">NetworkMode</a></code> | <code>*string</code> | Set the networking mode for the RUN instructions during build. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.noCache">NoCache</a></code> | <code>interface{}</code> | Do not use the cache when building the image. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.platform">Platform</a></code> | <code>*string</code> | Set the target platform for the build. Defaults to `GOOS/GOARCH`. For more information see the [docker documentation](https://github.com/docker/buildx/blob/master/docs/reference/buildx.md#-set-the-target-platforms-for-the-build---platform). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.pullParent">PullParent</a></code> | <code>interface{}</code> | Attempt to pull the image even if an older image exists locally. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.remoteContext">RemoteContext</a></code> | <code>*string</code> | A Git repository URI or HTTP/HTTPS context URI. Will be ignored if `builder` is set. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.remove">Remove</a></code> | <code>interface{}</code> | Remove intermediate containers after a successful build. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.secrets">Secrets</a></code> | <code>interface{}</code> | secrets block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.securityOpt">SecurityOpt</a></code> | <code>*[]*string</code> | The security options. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.sessionId">SessionId</a></code> | <code>*string</code> | Set an ID for the build session. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.shmSize">ShmSize</a></code> | <code>*f64</code> | Size of /dev/shm in bytes. The size must be greater than 0. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.squash">Squash</a></code> | <code>interface{}</code> | If true the new layers are squashed into a new image with a single new layer. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.suppressOutput">SuppressOutput</a></code> | <code>interface{}</code> | Suppress the build output and print image ID on success. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.tag">Tag</a></code> | <code>*[]*string</code> | Name and optionally a tag in the 'name:tag' format. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.target">Target</a></code> | <code>*string</code> | Set the target build stage to build. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.ulimit">Ulimit</a></code> | <code>interface{}</code> | ulimit block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.version">Version</a></code> | <code>*string</code> | Version of the underlying builder to use. |
 
 ---
 
-##### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-docker.image.ImageBuild.property.context"></a>
+##### `Context`<sup>Required</sup> <a name="Context" id="@cdktn/provider-docker.image.ImageBuild.property.context"></a>
 
 ```go
 Context *string
@@ -1054,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `AuthConfig`<sup>Optional</sup> <a name="AuthConfig" id="@cdktf/provider-docker.image.ImageBuild.property.authConfig"></a>
+##### `AuthConfig`<sup>Optional</sup> <a name="AuthConfig" id="@cdktn/provider-docker.image.ImageBuild.property.authConfig"></a>
 
 ```go
 AuthConfig interface{}
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `BuildArgs`<sup>Optional</sup> <a name="BuildArgs" id="@cdktf/provider-docker.image.ImageBuild.property.buildArgs"></a>
+##### `BuildArgs`<sup>Optional</sup> <a name="BuildArgs" id="@cdktn/provider-docker.image.ImageBuild.property.buildArgs"></a>
 
 ```go
 BuildArgs *map[string]*string
@@ -1082,7 +1082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Builder`<sup>Optional</sup> <a name="Builder" id="@cdktf/provider-docker.image.ImageBuild.property.builder"></a>
+##### `Builder`<sup>Optional</sup> <a name="Builder" id="@cdktn/provider-docker.image.ImageBuild.property.builder"></a>
 
 ```go
 Builder *string
@@ -1096,7 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `BuildId`<sup>Optional</sup> <a name="BuildId" id="@cdktf/provider-docker.image.ImageBuild.property.buildId"></a>
+##### `BuildId`<sup>Optional</sup> <a name="BuildId" id="@cdktn/provider-docker.image.ImageBuild.property.buildId"></a>
 
 ```go
 BuildId *string
@@ -1112,7 +1112,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `BuildLogFile`<sup>Optional</sup> <a name="BuildLogFile" id="@cdktf/provider-docker.image.ImageBuild.property.buildLogFile"></a>
+##### `BuildLogFile`<sup>Optional</sup> <a name="BuildLogFile" id="@cdktn/provider-docker.image.ImageBuild.property.buildLogFile"></a>
 
 ```go
 BuildLogFile *string
@@ -1128,7 +1128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CacheFrom`<sup>Optional</sup> <a name="CacheFrom" id="@cdktf/provider-docker.image.ImageBuild.property.cacheFrom"></a>
+##### `CacheFrom`<sup>Optional</sup> <a name="CacheFrom" id="@cdktn/provider-docker.image.ImageBuild.property.cacheFrom"></a>
 
 ```go
 CacheFrom *[]*string
@@ -1142,7 +1142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CgroupParent`<sup>Optional</sup> <a name="CgroupParent" id="@cdktf/provider-docker.image.ImageBuild.property.cgroupParent"></a>
+##### `CgroupParent`<sup>Optional</sup> <a name="CgroupParent" id="@cdktn/provider-docker.image.ImageBuild.property.cgroupParent"></a>
 
 ```go
 CgroupParent *string
@@ -1156,7 +1156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CpuPeriod`<sup>Optional</sup> <a name="CpuPeriod" id="@cdktf/provider-docker.image.ImageBuild.property.cpuPeriod"></a>
+##### `CpuPeriod`<sup>Optional</sup> <a name="CpuPeriod" id="@cdktn/provider-docker.image.ImageBuild.property.cpuPeriod"></a>
 
 ```go
 CpuPeriod *f64
@@ -1170,7 +1170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CpuQuota`<sup>Optional</sup> <a name="CpuQuota" id="@cdktf/provider-docker.image.ImageBuild.property.cpuQuota"></a>
+##### `CpuQuota`<sup>Optional</sup> <a name="CpuQuota" id="@cdktn/provider-docker.image.ImageBuild.property.cpuQuota"></a>
 
 ```go
 CpuQuota *f64
@@ -1184,7 +1184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CpuSetCpus`<sup>Optional</sup> <a name="CpuSetCpus" id="@cdktf/provider-docker.image.ImageBuild.property.cpuSetCpus"></a>
+##### `CpuSetCpus`<sup>Optional</sup> <a name="CpuSetCpus" id="@cdktn/provider-docker.image.ImageBuild.property.cpuSetCpus"></a>
 
 ```go
 CpuSetCpus *string
@@ -1198,7 +1198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CpuSetMems`<sup>Optional</sup> <a name="CpuSetMems" id="@cdktf/provider-docker.image.ImageBuild.property.cpuSetMems"></a>
+##### `CpuSetMems`<sup>Optional</sup> <a name="CpuSetMems" id="@cdktn/provider-docker.image.ImageBuild.property.cpuSetMems"></a>
 
 ```go
 CpuSetMems *string
@@ -1212,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `CpuShares`<sup>Optional</sup> <a name="CpuShares" id="@cdktf/provider-docker.image.ImageBuild.property.cpuShares"></a>
+##### `CpuShares`<sup>Optional</sup> <a name="CpuShares" id="@cdktn/provider-docker.image.ImageBuild.property.cpuShares"></a>
 
 ```go
 CpuShares *f64
@@ -1226,7 +1226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Dockerfile`<sup>Optional</sup> <a name="Dockerfile" id="@cdktf/provider-docker.image.ImageBuild.property.dockerfile"></a>
+##### `Dockerfile`<sup>Optional</sup> <a name="Dockerfile" id="@cdktn/provider-docker.image.ImageBuild.property.dockerfile"></a>
 
 ```go
 Dockerfile *string
@@ -1240,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `ExtraHosts`<sup>Optional</sup> <a name="ExtraHosts" id="@cdktf/provider-docker.image.ImageBuild.property.extraHosts"></a>
+##### `ExtraHosts`<sup>Optional</sup> <a name="ExtraHosts" id="@cdktn/provider-docker.image.ImageBuild.property.extraHosts"></a>
 
 ```go
 ExtraHosts *[]*string
@@ -1254,7 +1254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `ForceRemove`<sup>Optional</sup> <a name="ForceRemove" id="@cdktf/provider-docker.image.ImageBuild.property.forceRemove"></a>
+##### `ForceRemove`<sup>Optional</sup> <a name="ForceRemove" id="@cdktn/provider-docker.image.ImageBuild.property.forceRemove"></a>
 
 ```go
 ForceRemove interface{}
@@ -1268,7 +1268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Isolation`<sup>Optional</sup> <a name="Isolation" id="@cdktf/provider-docker.image.ImageBuild.property.isolation"></a>
+##### `Isolation`<sup>Optional</sup> <a name="Isolation" id="@cdktn/provider-docker.image.ImageBuild.property.isolation"></a>
 
 ```go
 Isolation *string
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktf/provider-docker.image.ImageBuild.property.label"></a>
+##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktn/provider-docker.image.ImageBuild.property.label"></a>
 
 ```go
 Label *map[string]*string
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Labels`<sup>Optional</sup> <a name="Labels" id="@cdktf/provider-docker.image.ImageBuild.property.labels"></a>
+##### `Labels`<sup>Optional</sup> <a name="Labels" id="@cdktn/provider-docker.image.ImageBuild.property.labels"></a>
 
 ```go
 Labels *map[string]*string
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Memory`<sup>Optional</sup> <a name="Memory" id="@cdktf/provider-docker.image.ImageBuild.property.memory"></a>
+##### `Memory`<sup>Optional</sup> <a name="Memory" id="@cdktn/provider-docker.image.ImageBuild.property.memory"></a>
 
 ```go
 Memory *f64
@@ -1324,7 +1324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `MemorySwap`<sup>Optional</sup> <a name="MemorySwap" id="@cdktf/provider-docker.image.ImageBuild.property.memorySwap"></a>
+##### `MemorySwap`<sup>Optional</sup> <a name="MemorySwap" id="@cdktn/provider-docker.image.ImageBuild.property.memorySwap"></a>
 
 ```go
 MemorySwap *f64
@@ -1338,7 +1338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `NetworkMode`<sup>Optional</sup> <a name="NetworkMode" id="@cdktf/provider-docker.image.ImageBuild.property.networkMode"></a>
+##### `NetworkMode`<sup>Optional</sup> <a name="NetworkMode" id="@cdktn/provider-docker.image.ImageBuild.property.networkMode"></a>
 
 ```go
 NetworkMode *string
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `NoCache`<sup>Optional</sup> <a name="NoCache" id="@cdktf/provider-docker.image.ImageBuild.property.noCache"></a>
+##### `NoCache`<sup>Optional</sup> <a name="NoCache" id="@cdktn/provider-docker.image.ImageBuild.property.noCache"></a>
 
 ```go
 NoCache interface{}
@@ -1366,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Platform`<sup>Optional</sup> <a name="Platform" id="@cdktf/provider-docker.image.ImageBuild.property.platform"></a>
+##### `Platform`<sup>Optional</sup> <a name="Platform" id="@cdktn/provider-docker.image.ImageBuild.property.platform"></a>
 
 ```go
 Platform *string
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `PullParent`<sup>Optional</sup> <a name="PullParent" id="@cdktf/provider-docker.image.ImageBuild.property.pullParent"></a>
+##### `PullParent`<sup>Optional</sup> <a name="PullParent" id="@cdktn/provider-docker.image.ImageBuild.property.pullParent"></a>
 
 ```go
 PullParent interface{}
@@ -1394,7 +1394,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `RemoteContext`<sup>Optional</sup> <a name="RemoteContext" id="@cdktf/provider-docker.image.ImageBuild.property.remoteContext"></a>
+##### `RemoteContext`<sup>Optional</sup> <a name="RemoteContext" id="@cdktn/provider-docker.image.ImageBuild.property.remoteContext"></a>
 
 ```go
 RemoteContext *string
@@ -1408,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Remove`<sup>Optional</sup> <a name="Remove" id="@cdktf/provider-docker.image.ImageBuild.property.remove"></a>
+##### `Remove`<sup>Optional</sup> <a name="Remove" id="@cdktn/provider-docker.image.ImageBuild.property.remove"></a>
 
 ```go
 Remove interface{}
@@ -1422,7 +1422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Secrets`<sup>Optional</sup> <a name="Secrets" id="@cdktf/provider-docker.image.ImageBuild.property.secrets"></a>
+##### `Secrets`<sup>Optional</sup> <a name="Secrets" id="@cdktn/provider-docker.image.ImageBuild.property.secrets"></a>
 
 ```go
 Secrets interface{}
@@ -1436,7 +1436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `SecurityOpt`<sup>Optional</sup> <a name="SecurityOpt" id="@cdktf/provider-docker.image.ImageBuild.property.securityOpt"></a>
+##### `SecurityOpt`<sup>Optional</sup> <a name="SecurityOpt" id="@cdktn/provider-docker.image.ImageBuild.property.securityOpt"></a>
 
 ```go
 SecurityOpt *[]*string
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `SessionId`<sup>Optional</sup> <a name="SessionId" id="@cdktf/provider-docker.image.ImageBuild.property.sessionId"></a>
+##### `SessionId`<sup>Optional</sup> <a name="SessionId" id="@cdktn/provider-docker.image.ImageBuild.property.sessionId"></a>
 
 ```go
 SessionId *string
@@ -1464,7 +1464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `ShmSize`<sup>Optional</sup> <a name="ShmSize" id="@cdktf/provider-docker.image.ImageBuild.property.shmSize"></a>
+##### `ShmSize`<sup>Optional</sup> <a name="ShmSize" id="@cdktn/provider-docker.image.ImageBuild.property.shmSize"></a>
 
 ```go
 ShmSize *f64
@@ -1478,7 +1478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Squash`<sup>Optional</sup> <a name="Squash" id="@cdktf/provider-docker.image.ImageBuild.property.squash"></a>
+##### `Squash`<sup>Optional</sup> <a name="Squash" id="@cdktn/provider-docker.image.ImageBuild.property.squash"></a>
 
 ```go
 Squash interface{}
@@ -1492,7 +1492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `SuppressOutput`<sup>Optional</sup> <a name="SuppressOutput" id="@cdktf/provider-docker.image.ImageBuild.property.suppressOutput"></a>
+##### `SuppressOutput`<sup>Optional</sup> <a name="SuppressOutput" id="@cdktn/provider-docker.image.ImageBuild.property.suppressOutput"></a>
 
 ```go
 SuppressOutput interface{}
@@ -1506,7 +1506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Tag`<sup>Optional</sup> <a name="Tag" id="@cdktf/provider-docker.image.ImageBuild.property.tag"></a>
+##### `Tag`<sup>Optional</sup> <a name="Tag" id="@cdktn/provider-docker.image.ImageBuild.property.tag"></a>
 
 ```go
 Tag *[]*string
@@ -1520,7 +1520,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Target`<sup>Optional</sup> <a name="Target" id="@cdktf/provider-docker.image.ImageBuild.property.target"></a>
+##### `Target`<sup>Optional</sup> <a name="Target" id="@cdktn/provider-docker.image.ImageBuild.property.target"></a>
 
 ```go
 Target *string
@@ -1534,7 +1534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Ulimit`<sup>Optional</sup> <a name="Ulimit" id="@cdktf/provider-docker.image.ImageBuild.property.ulimit"></a>
+##### `Ulimit`<sup>Optional</sup> <a name="Ulimit" id="@cdktn/provider-docker.image.ImageBuild.property.ulimit"></a>
 
 ```go
 Ulimit interface{}
@@ -1548,7 +1548,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Version`<sup>Optional</sup> <a name="Version" id="@cdktf/provider-docker.image.ImageBuild.property.version"></a>
+##### `Version`<sup>Optional</sup> <a name="Version" id="@cdktn/provider-docker.image.ImageBuild.property.version"></a>
 
 ```go
 Version *string
@@ -1562,12 +1562,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### ImageBuildAuthConfig <a name="ImageBuildAuthConfig" id="@cdktf/provider-docker.image.ImageBuildAuthConfig"></a>
+### ImageBuildAuthConfig <a name="ImageBuildAuthConfig" id="@cdktn/provider-docker.image.ImageBuildAuthConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageBuildAuthConfig {
 	HostName: *string,
@@ -1585,18 +1585,18 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.hostName">HostName</a></code> | <code>*string</code> | hostname of the registry. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.auth">Auth</a></code> | <code>*string</code> | the auth token. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.email">Email</a></code> | <code>*string</code> | the user emal. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.identityToken">IdentityToken</a></code> | <code>*string</code> | the identity token. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.password">Password</a></code> | <code>*string</code> | the registry password. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.registryToken">RegistryToken</a></code> | <code>*string</code> | the registry token. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.serverAddress">ServerAddress</a></code> | <code>*string</code> | the server address. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfig.property.userName">UserName</a></code> | <code>*string</code> | the registry user name. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.hostName">HostName</a></code> | <code>*string</code> | hostname of the registry. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.auth">Auth</a></code> | <code>*string</code> | the auth token. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.email">Email</a></code> | <code>*string</code> | the user emal. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.identityToken">IdentityToken</a></code> | <code>*string</code> | the identity token. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.password">Password</a></code> | <code>*string</code> | the registry password. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.registryToken">RegistryToken</a></code> | <code>*string</code> | the registry token. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.serverAddress">ServerAddress</a></code> | <code>*string</code> | the server address. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig.property.userName">UserName</a></code> | <code>*string</code> | the registry user name. |
 
 ---
 
-##### `HostName`<sup>Required</sup> <a name="HostName" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.hostName"></a>
+##### `HostName`<sup>Required</sup> <a name="HostName" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.hostName"></a>
 
 ```go
 HostName *string
@@ -1610,7 +1610,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Auth`<sup>Optional</sup> <a name="Auth" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.auth"></a>
+##### `Auth`<sup>Optional</sup> <a name="Auth" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.auth"></a>
 
 ```go
 Auth *string
@@ -1624,7 +1624,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Email`<sup>Optional</sup> <a name="Email" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.email"></a>
+##### `Email`<sup>Optional</sup> <a name="Email" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.email"></a>
 
 ```go
 Email *string
@@ -1638,7 +1638,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `IdentityToken`<sup>Optional</sup> <a name="IdentityToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.identityToken"></a>
+##### `IdentityToken`<sup>Optional</sup> <a name="IdentityToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.identityToken"></a>
 
 ```go
 IdentityToken *string
@@ -1652,7 +1652,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.password"></a>
+##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.password"></a>
 
 ```go
 Password *string
@@ -1666,7 +1666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `RegistryToken`<sup>Optional</sup> <a name="RegistryToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.registryToken"></a>
+##### `RegistryToken`<sup>Optional</sup> <a name="RegistryToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.registryToken"></a>
 
 ```go
 RegistryToken *string
@@ -1680,7 +1680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `ServerAddress`<sup>Optional</sup> <a name="ServerAddress" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.serverAddress"></a>
+##### `ServerAddress`<sup>Optional</sup> <a name="ServerAddress" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.serverAddress"></a>
 
 ```go
 ServerAddress *string
@@ -1694,7 +1694,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `UserName`<sup>Optional</sup> <a name="UserName" id="@cdktf/provider-docker.image.ImageBuildAuthConfig.property.userName"></a>
+##### `UserName`<sup>Optional</sup> <a name="UserName" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.property.userName"></a>
 
 ```go
 UserName *string
@@ -1708,12 +1708,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### ImageBuildSecrets <a name="ImageBuildSecrets" id="@cdktf/provider-docker.image.ImageBuildSecrets"></a>
+### ImageBuildSecrets <a name="ImageBuildSecrets" id="@cdktn/provider-docker.image.ImageBuildSecrets"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageBuildSecrets.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildSecrets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageBuildSecrets {
 	Id: *string,
@@ -1726,13 +1726,13 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecrets.property.id">Id</a></code> | <code>*string</code> | ID of the secret. By default, secrets are mounted to /run/secrets/<id>. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecrets.property.env">Env</a></code> | <code>*string</code> | Environment variable source of the secret. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecrets.property.src">Src</a></code> | <code>*string</code> | File source of the secret. Takes precedence over `env`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecrets.property.id">Id</a></code> | <code>*string</code> | ID of the secret. By default, secrets are mounted to /run/secrets/<id>. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecrets.property.env">Env</a></code> | <code>*string</code> | Environment variable source of the secret. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecrets.property.src">Src</a></code> | <code>*string</code> | File source of the secret. Takes precedence over `env`. |
 
 ---
 
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-docker.image.ImageBuildSecrets.property.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktn/provider-docker.image.ImageBuildSecrets.property.id"></a>
 
 ```go
 Id *string
@@ -1749,7 +1749,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
-##### `Env`<sup>Optional</sup> <a name="Env" id="@cdktf/provider-docker.image.ImageBuildSecrets.property.env"></a>
+##### `Env`<sup>Optional</sup> <a name="Env" id="@cdktn/provider-docker.image.ImageBuildSecrets.property.env"></a>
 
 ```go
 Env *string
@@ -1763,7 +1763,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Src`<sup>Optional</sup> <a name="Src" id="@cdktf/provider-docker.image.ImageBuildSecrets.property.src"></a>
+##### `Src`<sup>Optional</sup> <a name="Src" id="@cdktn/provider-docker.image.ImageBuildSecrets.property.src"></a>
 
 ```go
 Src *string
@@ -1777,12 +1777,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### ImageBuildUlimit <a name="ImageBuildUlimit" id="@cdktf/provider-docker.image.ImageBuildUlimit"></a>
+### ImageBuildUlimit <a name="ImageBuildUlimit" id="@cdktn/provider-docker.image.ImageBuildUlimit"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageBuildUlimit.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildUlimit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageBuildUlimit {
 	Hard: *f64,
@@ -1795,13 +1795,13 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimit.property.hard">Hard</a></code> | <code>*f64</code> | soft limit. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimit.property.name">Name</a></code> | <code>*string</code> | type of ulimit, e.g. `nofile`. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimit.property.soft">Soft</a></code> | <code>*f64</code> | hard limit. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimit.property.hard">Hard</a></code> | <code>*f64</code> | soft limit. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimit.property.name">Name</a></code> | <code>*string</code> | type of ulimit, e.g. `nofile`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimit.property.soft">Soft</a></code> | <code>*f64</code> | hard limit. |
 
 ---
 
-##### `Hard`<sup>Required</sup> <a name="Hard" id="@cdktf/provider-docker.image.ImageBuildUlimit.property.hard"></a>
+##### `Hard`<sup>Required</sup> <a name="Hard" id="@cdktn/provider-docker.image.ImageBuildUlimit.property.hard"></a>
 
 ```go
 Hard *f64
@@ -1815,7 +1815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.image.ImageBuildUlimit.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.image.ImageBuildUlimit.property.name"></a>
 
 ```go
 Name *string
@@ -1829,7 +1829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Soft`<sup>Required</sup> <a name="Soft" id="@cdktf/provider-docker.image.ImageBuildUlimit.property.soft"></a>
+##### `Soft`<sup>Required</sup> <a name="Soft" id="@cdktn/provider-docker.image.ImageBuildUlimit.property.soft"></a>
 
 ```go
 Soft *f64
@@ -1843,12 +1843,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### ImageConfig <a name="ImageConfig" id="@cdktf/provider-docker.image.ImageConfig"></a>
+### ImageConfig <a name="ImageConfig" id="@cdktn/provider-docker.image.ImageConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageConfig {
 	Connection: interface{},
@@ -1859,12 +1859,12 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	BuildAttribute: github.com/cdktf/cdktf-provider-docker-go/docker/v12.image.ImageBuild,
+	BuildAttribute: github.com/cdktn-io/cdktn-provider-docker-go/docker.image.ImageBuild,
 	ForceRemove: interface{},
 	KeepLocally: interface{},
 	Platform: *string,
 	PullTriggers: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-docker-go/docker/v12.image.ImageTimeouts,
+	Timeouts: github.com/cdktn-io/cdktn-provider-docker-go/docker.image.ImageTimeouts,
 	Triggers: *map[string]*string,
 }
 ```
@@ -1873,25 +1873,25 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker image, including any tags or SHA256 repo digests. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.buildAttribute">BuildAttribute</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a></code> | build block. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | If true, then the image is removed forcibly when the resource is destroyed. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.keepLocally">KeepLocally</a></code> | <code>interface{}</code> | If true, then the Docker image won't be deleted on destroy operation. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.platform">Platform</a></code> | <code>*string</code> | The platform to use when pulling the image. Defaults to the platform of the current machine. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.pullTriggers">PullTriggers</a></code> | <code>*[]*string</code> | List of values which cause an image pull when changed. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-docker.image.ImageConfig.property.triggers">Triggers</a></code> | <code>*map[string]*string</code> | A map of arbitrary strings that, when changed, will force the `docker_image` resource to be replaced. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker image, including any tags or SHA256 repo digests. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.buildAttribute">BuildAttribute</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | build block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | If true, then the image is removed forcibly when the resource is destroyed. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.keepLocally">KeepLocally</a></code> | <code>interface{}</code> | If true, then the Docker image won't be deleted on destroy operation. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.platform">Platform</a></code> | <code>*string</code> | The platform to use when pulling the image. Defaults to the platform of the current machine. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.pullTriggers">PullTriggers</a></code> | <code>*[]*string</code> | List of values which cause an image pull when changed. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.triggers">Triggers</a></code> | <code>*map[string]*string</code> | A map of arbitrary strings that, when changed, will force the `docker_image` resource to be replaced. |
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-docker.image.ImageConfig.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktn/provider-docker.image.ImageConfig.property.connection"></a>
 
 ```go
 Connection interface{}
@@ -1901,7 +1901,7 @@ Connection interface{}
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-docker.image.ImageConfig.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktn/provider-docker.image.ImageConfig.property.count"></a>
 
 ```go
 Count interface{}
@@ -1911,7 +1911,7 @@ Count interface{}
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-docker.image.ImageConfig.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktn/provider-docker.image.ImageConfig.property.dependsOn"></a>
 
 ```go
 DependsOn *[]ITerraformDependable
@@ -1921,7 +1921,7 @@ DependsOn *[]ITerraformDependable
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-docker.image.ImageConfig.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktn/provider-docker.image.ImageConfig.property.forEach"></a>
 
 ```go
 ForEach ITerraformIterator
@@ -1931,7 +1931,7 @@ ForEach ITerraformIterator
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-docker.image.ImageConfig.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktn/provider-docker.image.ImageConfig.property.lifecycle"></a>
 
 ```go
 Lifecycle TerraformResourceLifecycle
@@ -1941,7 +1941,7 @@ Lifecycle TerraformResourceLifecycle
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-docker.image.ImageConfig.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktn/provider-docker.image.ImageConfig.property.provider"></a>
 
 ```go
 Provider TerraformProvider
@@ -1951,7 +1951,7 @@ Provider TerraformProvider
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-docker.image.ImageConfig.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktn/provider-docker.image.ImageConfig.property.provisioners"></a>
 
 ```go
 Provisioners *[]interface{}
@@ -1961,7 +1961,7 @@ Provisioners *[]interface{}
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.image.ImageConfig.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.image.ImageConfig.property.name"></a>
 
 ```go
 Name *string
@@ -1975,13 +1975,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `BuildAttribute`<sup>Optional</sup> <a name="BuildAttribute" id="@cdktf/provider-docker.image.ImageConfig.property.buildAttribute"></a>
+##### `BuildAttribute`<sup>Optional</sup> <a name="BuildAttribute" id="@cdktn/provider-docker.image.ImageConfig.property.buildAttribute"></a>
 
 ```go
 BuildAttribute ImageBuild
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a>
 
 build block.
 
@@ -1989,7 +1989,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `ForceRemove`<sup>Optional</sup> <a name="ForceRemove" id="@cdktf/provider-docker.image.ImageConfig.property.forceRemove"></a>
+##### `ForceRemove`<sup>Optional</sup> <a name="ForceRemove" id="@cdktn/provider-docker.image.ImageConfig.property.forceRemove"></a>
 
 ```go
 ForceRemove interface{}
@@ -2003,7 +2003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `KeepLocally`<sup>Optional</sup> <a name="KeepLocally" id="@cdktf/provider-docker.image.ImageConfig.property.keepLocally"></a>
+##### `KeepLocally`<sup>Optional</sup> <a name="KeepLocally" id="@cdktn/provider-docker.image.ImageConfig.property.keepLocally"></a>
 
 ```go
 KeepLocally interface{}
@@ -2019,7 +2019,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Platform`<sup>Optional</sup> <a name="Platform" id="@cdktf/provider-docker.image.ImageConfig.property.platform"></a>
+##### `Platform`<sup>Optional</sup> <a name="Platform" id="@cdktn/provider-docker.image.ImageConfig.property.platform"></a>
 
 ```go
 Platform *string
@@ -2033,7 +2033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `PullTriggers`<sup>Optional</sup> <a name="PullTriggers" id="@cdktf/provider-docker.image.ImageConfig.property.pullTriggers"></a>
+##### `PullTriggers`<sup>Optional</sup> <a name="PullTriggers" id="@cdktn/provider-docker.image.ImageConfig.property.pullTriggers"></a>
 
 ```go
 PullTriggers *[]*string
@@ -2049,13 +2049,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Timeouts`<sup>Optional</sup> <a name="Timeouts" id="@cdktf/provider-docker.image.ImageConfig.property.timeouts"></a>
+##### `Timeouts`<sup>Optional</sup> <a name="Timeouts" id="@cdktn/provider-docker.image.ImageConfig.property.timeouts"></a>
 
 ```go
 Timeouts ImageTimeouts
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
 
 timeouts block.
 
@@ -2063,7 +2063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Triggers`<sup>Optional</sup> <a name="Triggers" id="@cdktf/provider-docker.image.ImageConfig.property.triggers"></a>
+##### `Triggers`<sup>Optional</sup> <a name="Triggers" id="@cdktn/provider-docker.image.ImageConfig.property.triggers"></a>
 
 ```go
 Triggers *map[string]*string
@@ -2079,12 +2079,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-### ImageTimeouts <a name="ImageTimeouts" id="@cdktf/provider-docker.image.ImageTimeouts"></a>
+### ImageTimeouts <a name="ImageTimeouts" id="@cdktn/provider-docker.image.ImageTimeouts"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.image.ImageTimeouts.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 &image.ImageTimeouts {
 	Create: *string,
@@ -2097,13 +2097,13 @@ import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#create Image#create}. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#delete Image#delete}. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#update Image#update}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#create Image#create}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#delete Image#delete}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/image#update Image#update}. |
 
 ---
 
-##### `Create`<sup>Optional</sup> <a name="Create" id="@cdktf/provider-docker.image.ImageTimeouts.property.create"></a>
+##### `Create`<sup>Optional</sup> <a name="Create" id="@cdktn/provider-docker.image.ImageTimeouts.property.create"></a>
 
 ```go
 Create *string
@@ -2115,7 +2115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Delete`<sup>Optional</sup> <a name="Delete" id="@cdktf/provider-docker.image.ImageTimeouts.property.delete"></a>
+##### `Delete`<sup>Optional</sup> <a name="Delete" id="@cdktn/provider-docker.image.ImageTimeouts.property.delete"></a>
 
 ```go
 Delete *string
@@ -2127,7 +2127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `Update`<sup>Optional</sup> <a name="Update" id="@cdktf/provider-docker.image.ImageTimeouts.property.update"></a>
+##### `Update`<sup>Optional</sup> <a name="Update" id="@cdktn/provider-docker.image.ImageTimeouts.property.update"></a>
 
 ```go
 Update *string
@@ -2141,25 +2141,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ## Classes <a name="Classes" id="Classes"></a>
 
-### ImageBuildAuthConfigList <a name="ImageBuildAuthConfigList" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList"></a>
+### ImageBuildAuthConfigList <a name="ImageBuildAuthConfigList" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildAuthConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildAuthConfigList
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -2167,7 +2167,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -2175,7 +2175,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* *bool
 
@@ -2187,15 +2187,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.get">Get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.get">Get</a></code> | *No description.* |
 
 ---
 
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey"></a>
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey"></a>
 
 ```go
 func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
@@ -2205,19 +2205,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* *string
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -2225,13 +2225,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.toString"></a>
 
 ```go
 func ToString() *string
@@ -2241,13 +2241,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `Get` <a name="Get" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.get"></a>
+##### `Get` <a name="Get" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.get"></a>
 
 ```go
 func Get(index *f64) ImageBuildAuthConfigOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.get.parameter.index"></a>
 
 - *Type:* *f64
 
@@ -2260,13 +2260,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -2280,7 +2280,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -2290,7 +2290,7 @@ func Fqn() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildAuthConfigList.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -2301,26 +2301,26 @@ func InternalValue() interface{}
 ---
 
 
-### ImageBuildAuthConfigOutputReference <a name="ImageBuildAuthConfigOutputReference" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference"></a>
+### ImageBuildAuthConfigOutputReference <a name="ImageBuildAuthConfigOutputReference" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildAuthConfigOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -2328,7 +2328,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -2336,7 +2336,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* *f64
 
@@ -2344,7 +2344,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* *bool
 
@@ -2356,156 +2356,156 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetAuth">ResetAuth</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetEmail">ResetEmail</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetIdentityToken">ResetIdentityToken</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetRegistryToken">ResetRegistryToken</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetServerAddress">ResetServerAddress</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetUserName">ResetUserName</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetAuth">ResetAuth</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetEmail">ResetEmail</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetIdentityToken">ResetIdentityToken</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetRegistryToken">ResetRegistryToken</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetServerAddress">ResetServerAddress</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetUserName">ResetUserName</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -2513,13 +2513,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -2529,43 +2529,43 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetAuth` <a name="ResetAuth" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetAuth"></a>
+##### `ResetAuth` <a name="ResetAuth" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetAuth"></a>
 
 ```go
 func ResetAuth()
 ```
 
-##### `ResetEmail` <a name="ResetEmail" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetEmail"></a>
+##### `ResetEmail` <a name="ResetEmail" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetEmail"></a>
 
 ```go
 func ResetEmail()
 ```
 
-##### `ResetIdentityToken` <a name="ResetIdentityToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetIdentityToken"></a>
+##### `ResetIdentityToken` <a name="ResetIdentityToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetIdentityToken"></a>
 
 ```go
 func ResetIdentityToken()
 ```
 
-##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetPassword"></a>
+##### `ResetPassword` <a name="ResetPassword" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetPassword"></a>
 
 ```go
 func ResetPassword()
 ```
 
-##### `ResetRegistryToken` <a name="ResetRegistryToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetRegistryToken"></a>
+##### `ResetRegistryToken` <a name="ResetRegistryToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetRegistryToken"></a>
 
 ```go
 func ResetRegistryToken()
 ```
 
-##### `ResetServerAddress` <a name="ResetServerAddress" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetServerAddress"></a>
+##### `ResetServerAddress` <a name="ResetServerAddress" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetServerAddress"></a>
 
 ```go
 func ResetServerAddress()
 ```
 
-##### `ResetUserName` <a name="ResetUserName" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.resetUserName"></a>
+##### `ResetUserName` <a name="ResetUserName" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resetUserName"></a>
 
 ```go
 func ResetUserName()
@@ -2576,29 +2576,29 @@ func ResetUserName()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.authInput">AuthInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.emailInput">EmailInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostNameInput">HostNameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityTokenInput">IdentityTokenInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.passwordInput">PasswordInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryTokenInput">RegistryTokenInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddressInput">ServerAddressInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userNameInput">UserNameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.auth">Auth</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.email">Email</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostName">HostName</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityToken">IdentityToken</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.password">Password</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryToken">RegistryToken</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddress">ServerAddress</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userName">UserName</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.authInput">AuthInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.emailInput">EmailInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostNameInput">HostNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityTokenInput">IdentityTokenInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.passwordInput">PasswordInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryTokenInput">RegistryTokenInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddressInput">ServerAddressInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userNameInput">UserNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.auth">Auth</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.email">Email</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostName">HostName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityToken">IdentityToken</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.password">Password</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryToken">RegistryToken</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddress">ServerAddress</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userName">UserName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -2612,7 +2612,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -2622,7 +2622,7 @@ func Fqn() *string
 
 ---
 
-##### `AuthInput`<sup>Optional</sup> <a name="AuthInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.authInput"></a>
+##### `AuthInput`<sup>Optional</sup> <a name="AuthInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.authInput"></a>
 
 ```go
 func AuthInput() *string
@@ -2632,7 +2632,7 @@ func AuthInput() *string
 
 ---
 
-##### `EmailInput`<sup>Optional</sup> <a name="EmailInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.emailInput"></a>
+##### `EmailInput`<sup>Optional</sup> <a name="EmailInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.emailInput"></a>
 
 ```go
 func EmailInput() *string
@@ -2642,7 +2642,7 @@ func EmailInput() *string
 
 ---
 
-##### `HostNameInput`<sup>Optional</sup> <a name="HostNameInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostNameInput"></a>
+##### `HostNameInput`<sup>Optional</sup> <a name="HostNameInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostNameInput"></a>
 
 ```go
 func HostNameInput() *string
@@ -2652,7 +2652,7 @@ func HostNameInput() *string
 
 ---
 
-##### `IdentityTokenInput`<sup>Optional</sup> <a name="IdentityTokenInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityTokenInput"></a>
+##### `IdentityTokenInput`<sup>Optional</sup> <a name="IdentityTokenInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityTokenInput"></a>
 
 ```go
 func IdentityTokenInput() *string
@@ -2662,7 +2662,7 @@ func IdentityTokenInput() *string
 
 ---
 
-##### `PasswordInput`<sup>Optional</sup> <a name="PasswordInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.passwordInput"></a>
+##### `PasswordInput`<sup>Optional</sup> <a name="PasswordInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.passwordInput"></a>
 
 ```go
 func PasswordInput() *string
@@ -2672,7 +2672,7 @@ func PasswordInput() *string
 
 ---
 
-##### `RegistryTokenInput`<sup>Optional</sup> <a name="RegistryTokenInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryTokenInput"></a>
+##### `RegistryTokenInput`<sup>Optional</sup> <a name="RegistryTokenInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryTokenInput"></a>
 
 ```go
 func RegistryTokenInput() *string
@@ -2682,7 +2682,7 @@ func RegistryTokenInput() *string
 
 ---
 
-##### `ServerAddressInput`<sup>Optional</sup> <a name="ServerAddressInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddressInput"></a>
+##### `ServerAddressInput`<sup>Optional</sup> <a name="ServerAddressInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddressInput"></a>
 
 ```go
 func ServerAddressInput() *string
@@ -2692,7 +2692,7 @@ func ServerAddressInput() *string
 
 ---
 
-##### `UserNameInput`<sup>Optional</sup> <a name="UserNameInput" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userNameInput"></a>
+##### `UserNameInput`<sup>Optional</sup> <a name="UserNameInput" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userNameInput"></a>
 
 ```go
 func UserNameInput() *string
@@ -2702,7 +2702,7 @@ func UserNameInput() *string
 
 ---
 
-##### `Auth`<sup>Required</sup> <a name="Auth" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.auth"></a>
+##### `Auth`<sup>Required</sup> <a name="Auth" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.auth"></a>
 
 ```go
 func Auth() *string
@@ -2712,7 +2712,7 @@ func Auth() *string
 
 ---
 
-##### `Email`<sup>Required</sup> <a name="Email" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.email"></a>
+##### `Email`<sup>Required</sup> <a name="Email" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.email"></a>
 
 ```go
 func Email() *string
@@ -2722,7 +2722,7 @@ func Email() *string
 
 ---
 
-##### `HostName`<sup>Required</sup> <a name="HostName" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostName"></a>
+##### `HostName`<sup>Required</sup> <a name="HostName" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.hostName"></a>
 
 ```go
 func HostName() *string
@@ -2732,7 +2732,7 @@ func HostName() *string
 
 ---
 
-##### `IdentityToken`<sup>Required</sup> <a name="IdentityToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityToken"></a>
+##### `IdentityToken`<sup>Required</sup> <a name="IdentityToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.identityToken"></a>
 
 ```go
 func IdentityToken() *string
@@ -2742,7 +2742,7 @@ func IdentityToken() *string
 
 ---
 
-##### `Password`<sup>Required</sup> <a name="Password" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.password"></a>
+##### `Password`<sup>Required</sup> <a name="Password" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.password"></a>
 
 ```go
 func Password() *string
@@ -2752,7 +2752,7 @@ func Password() *string
 
 ---
 
-##### `RegistryToken`<sup>Required</sup> <a name="RegistryToken" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryToken"></a>
+##### `RegistryToken`<sup>Required</sup> <a name="RegistryToken" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryToken"></a>
 
 ```go
 func RegistryToken() *string
@@ -2762,7 +2762,7 @@ func RegistryToken() *string
 
 ---
 
-##### `ServerAddress`<sup>Required</sup> <a name="ServerAddress" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddress"></a>
+##### `ServerAddress`<sup>Required</sup> <a name="ServerAddress" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddress"></a>
 
 ```go
 func ServerAddress() *string
@@ -2772,7 +2772,7 @@ func ServerAddress() *string
 
 ---
 
-##### `UserName`<sup>Required</sup> <a name="UserName" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userName"></a>
+##### `UserName`<sup>Required</sup> <a name="UserName" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userName"></a>
 
 ```go
 func UserName() *string
@@ -2782,7 +2782,7 @@ func UserName() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -2793,24 +2793,24 @@ func InternalValue() interface{}
 ---
 
 
-### ImageBuildOutputReference <a name="ImageBuildOutputReference" id="@cdktf/provider-docker.image.ImageBuildOutputReference"></a>
+### ImageBuildOutputReference <a name="ImageBuildOutputReference" id="@cdktn/provider-docker.image.ImageBuildOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ImageBuildOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -2818,7 +2818,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -2830,188 +2830,188 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.putAuthConfig">PutAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.putSecrets">PutSecrets</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.putUlimit">PutUlimit</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetAuthConfig">ResetAuthConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildArgs">ResetBuildArgs</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuilder">ResetBuilder</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildId">ResetBuildId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildLogFile">ResetBuildLogFile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCacheFrom">ResetCacheFrom</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCgroupParent">ResetCgroupParent</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuPeriod">ResetCpuPeriod</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuQuota">ResetCpuQuota</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuSetCpus">ResetCpuSetCpus</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuSetMems">ResetCpuSetMems</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuShares">ResetCpuShares</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetDockerfile">ResetDockerfile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetExtraHosts">ResetExtraHosts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetForceRemove">ResetForceRemove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetIsolation">ResetIsolation</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetLabels">ResetLabels</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetMemory">ResetMemory</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetMemorySwap">ResetMemorySwap</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetNetworkMode">ResetNetworkMode</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetNoCache">ResetNoCache</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetPlatform">ResetPlatform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetPullParent">ResetPullParent</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetRemoteContext">ResetRemoteContext</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetRemove">ResetRemove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetSecrets">ResetSecrets</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetSecurityOpt">ResetSecurityOpt</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetSessionId">ResetSessionId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetShmSize">ResetShmSize</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetSquash">ResetSquash</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetSuppressOutput">ResetSuppressOutput</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetTag">ResetTag</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetTarget">ResetTarget</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetUlimit">ResetUlimit</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.resetVersion">ResetVersion</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.putAuthConfig">PutAuthConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.putSecrets">PutSecrets</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.putUlimit">PutUlimit</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetAuthConfig">ResetAuthConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildArgs">ResetBuildArgs</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuilder">ResetBuilder</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildId">ResetBuildId</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildLogFile">ResetBuildLogFile</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCacheFrom">ResetCacheFrom</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCgroupParent">ResetCgroupParent</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuPeriod">ResetCpuPeriod</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuQuota">ResetCpuQuota</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuSetCpus">ResetCpuSetCpus</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuSetMems">ResetCpuSetMems</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuShares">ResetCpuShares</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetDockerfile">ResetDockerfile</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetExtraHosts">ResetExtraHosts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetForceRemove">ResetForceRemove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetIsolation">ResetIsolation</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetLabels">ResetLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetMemory">ResetMemory</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetMemorySwap">ResetMemorySwap</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetNetworkMode">ResetNetworkMode</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetNoCache">ResetNoCache</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetPlatform">ResetPlatform</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetPullParent">ResetPullParent</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetRemoteContext">ResetRemoteContext</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetRemove">ResetRemove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetSecrets">ResetSecrets</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetSecurityOpt">ResetSecurityOpt</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetSessionId">ResetSessionId</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetShmSize">ResetShmSize</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetSquash">ResetSquash</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetSuppressOutput">ResetSuppressOutput</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetTag">ResetTag</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetTarget">ResetTarget</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetUlimit">ResetUlimit</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetVersion">ResetVersion</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.image.ImageBuildOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -3019,13 +3019,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -3035,253 +3035,253 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `PutAuthConfig` <a name="PutAuthConfig" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putAuthConfig"></a>
+##### `PutAuthConfig` <a name="PutAuthConfig" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putAuthConfig"></a>
 
 ```go
 func PutAuthConfig(value interface{})
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putAuthConfig.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putAuthConfig.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `PutSecrets` <a name="PutSecrets" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putSecrets"></a>
+##### `PutSecrets` <a name="PutSecrets" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putSecrets"></a>
 
 ```go
 func PutSecrets(value interface{})
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putSecrets.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putSecrets.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `PutUlimit` <a name="PutUlimit" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putUlimit"></a>
+##### `PutUlimit` <a name="PutUlimit" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putUlimit"></a>
 
 ```go
 func PutUlimit(value interface{})
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.image.ImageBuildOutputReference.putUlimit.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putUlimit.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `ResetAuthConfig` <a name="ResetAuthConfig" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetAuthConfig"></a>
+##### `ResetAuthConfig` <a name="ResetAuthConfig" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetAuthConfig"></a>
 
 ```go
 func ResetAuthConfig()
 ```
 
-##### `ResetBuildArgs` <a name="ResetBuildArgs" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildArgs"></a>
+##### `ResetBuildArgs` <a name="ResetBuildArgs" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildArgs"></a>
 
 ```go
 func ResetBuildArgs()
 ```
 
-##### `ResetBuilder` <a name="ResetBuilder" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuilder"></a>
+##### `ResetBuilder` <a name="ResetBuilder" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuilder"></a>
 
 ```go
 func ResetBuilder()
 ```
 
-##### `ResetBuildId` <a name="ResetBuildId" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildId"></a>
+##### `ResetBuildId` <a name="ResetBuildId" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildId"></a>
 
 ```go
 func ResetBuildId()
 ```
 
-##### `ResetBuildLogFile` <a name="ResetBuildLogFile" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetBuildLogFile"></a>
+##### `ResetBuildLogFile` <a name="ResetBuildLogFile" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetBuildLogFile"></a>
 
 ```go
 func ResetBuildLogFile()
 ```
 
-##### `ResetCacheFrom` <a name="ResetCacheFrom" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCacheFrom"></a>
+##### `ResetCacheFrom` <a name="ResetCacheFrom" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCacheFrom"></a>
 
 ```go
 func ResetCacheFrom()
 ```
 
-##### `ResetCgroupParent` <a name="ResetCgroupParent" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCgroupParent"></a>
+##### `ResetCgroupParent` <a name="ResetCgroupParent" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCgroupParent"></a>
 
 ```go
 func ResetCgroupParent()
 ```
 
-##### `ResetCpuPeriod` <a name="ResetCpuPeriod" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuPeriod"></a>
+##### `ResetCpuPeriod` <a name="ResetCpuPeriod" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuPeriod"></a>
 
 ```go
 func ResetCpuPeriod()
 ```
 
-##### `ResetCpuQuota` <a name="ResetCpuQuota" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuQuota"></a>
+##### `ResetCpuQuota` <a name="ResetCpuQuota" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuQuota"></a>
 
 ```go
 func ResetCpuQuota()
 ```
 
-##### `ResetCpuSetCpus` <a name="ResetCpuSetCpus" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuSetCpus"></a>
+##### `ResetCpuSetCpus` <a name="ResetCpuSetCpus" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuSetCpus"></a>
 
 ```go
 func ResetCpuSetCpus()
 ```
 
-##### `ResetCpuSetMems` <a name="ResetCpuSetMems" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuSetMems"></a>
+##### `ResetCpuSetMems` <a name="ResetCpuSetMems" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuSetMems"></a>
 
 ```go
 func ResetCpuSetMems()
 ```
 
-##### `ResetCpuShares` <a name="ResetCpuShares" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetCpuShares"></a>
+##### `ResetCpuShares` <a name="ResetCpuShares" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetCpuShares"></a>
 
 ```go
 func ResetCpuShares()
 ```
 
-##### `ResetDockerfile` <a name="ResetDockerfile" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetDockerfile"></a>
+##### `ResetDockerfile` <a name="ResetDockerfile" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetDockerfile"></a>
 
 ```go
 func ResetDockerfile()
 ```
 
-##### `ResetExtraHosts` <a name="ResetExtraHosts" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetExtraHosts"></a>
+##### `ResetExtraHosts` <a name="ResetExtraHosts" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetExtraHosts"></a>
 
 ```go
 func ResetExtraHosts()
 ```
 
-##### `ResetForceRemove` <a name="ResetForceRemove" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetForceRemove"></a>
+##### `ResetForceRemove` <a name="ResetForceRemove" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetForceRemove"></a>
 
 ```go
 func ResetForceRemove()
 ```
 
-##### `ResetIsolation` <a name="ResetIsolation" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetIsolation"></a>
+##### `ResetIsolation` <a name="ResetIsolation" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetIsolation"></a>
 
 ```go
 func ResetIsolation()
 ```
 
-##### `ResetLabel` <a name="ResetLabel" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetLabel"></a>
+##### `ResetLabel` <a name="ResetLabel" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetLabel"></a>
 
 ```go
 func ResetLabel()
 ```
 
-##### `ResetLabels` <a name="ResetLabels" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetLabels"></a>
+##### `ResetLabels` <a name="ResetLabels" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetLabels"></a>
 
 ```go
 func ResetLabels()
 ```
 
-##### `ResetMemory` <a name="ResetMemory" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetMemory"></a>
+##### `ResetMemory` <a name="ResetMemory" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetMemory"></a>
 
 ```go
 func ResetMemory()
 ```
 
-##### `ResetMemorySwap` <a name="ResetMemorySwap" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetMemorySwap"></a>
+##### `ResetMemorySwap` <a name="ResetMemorySwap" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetMemorySwap"></a>
 
 ```go
 func ResetMemorySwap()
 ```
 
-##### `ResetNetworkMode` <a name="ResetNetworkMode" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetNetworkMode"></a>
+##### `ResetNetworkMode` <a name="ResetNetworkMode" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetNetworkMode"></a>
 
 ```go
 func ResetNetworkMode()
 ```
 
-##### `ResetNoCache` <a name="ResetNoCache" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetNoCache"></a>
+##### `ResetNoCache` <a name="ResetNoCache" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetNoCache"></a>
 
 ```go
 func ResetNoCache()
 ```
 
-##### `ResetPlatform` <a name="ResetPlatform" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetPlatform"></a>
+##### `ResetPlatform` <a name="ResetPlatform" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetPlatform"></a>
 
 ```go
 func ResetPlatform()
 ```
 
-##### `ResetPullParent` <a name="ResetPullParent" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetPullParent"></a>
+##### `ResetPullParent` <a name="ResetPullParent" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetPullParent"></a>
 
 ```go
 func ResetPullParent()
 ```
 
-##### `ResetRemoteContext` <a name="ResetRemoteContext" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetRemoteContext"></a>
+##### `ResetRemoteContext` <a name="ResetRemoteContext" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetRemoteContext"></a>
 
 ```go
 func ResetRemoteContext()
 ```
 
-##### `ResetRemove` <a name="ResetRemove" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetRemove"></a>
+##### `ResetRemove` <a name="ResetRemove" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetRemove"></a>
 
 ```go
 func ResetRemove()
 ```
 
-##### `ResetSecrets` <a name="ResetSecrets" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetSecrets"></a>
+##### `ResetSecrets` <a name="ResetSecrets" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetSecrets"></a>
 
 ```go
 func ResetSecrets()
 ```
 
-##### `ResetSecurityOpt` <a name="ResetSecurityOpt" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetSecurityOpt"></a>
+##### `ResetSecurityOpt` <a name="ResetSecurityOpt" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetSecurityOpt"></a>
 
 ```go
 func ResetSecurityOpt()
 ```
 
-##### `ResetSessionId` <a name="ResetSessionId" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetSessionId"></a>
+##### `ResetSessionId` <a name="ResetSessionId" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetSessionId"></a>
 
 ```go
 func ResetSessionId()
 ```
 
-##### `ResetShmSize` <a name="ResetShmSize" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetShmSize"></a>
+##### `ResetShmSize` <a name="ResetShmSize" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetShmSize"></a>
 
 ```go
 func ResetShmSize()
 ```
 
-##### `ResetSquash` <a name="ResetSquash" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetSquash"></a>
+##### `ResetSquash` <a name="ResetSquash" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetSquash"></a>
 
 ```go
 func ResetSquash()
 ```
 
-##### `ResetSuppressOutput` <a name="ResetSuppressOutput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetSuppressOutput"></a>
+##### `ResetSuppressOutput` <a name="ResetSuppressOutput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetSuppressOutput"></a>
 
 ```go
 func ResetSuppressOutput()
 ```
 
-##### `ResetTag` <a name="ResetTag" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetTag"></a>
+##### `ResetTag` <a name="ResetTag" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetTag"></a>
 
 ```go
 func ResetTag()
 ```
 
-##### `ResetTarget` <a name="ResetTarget" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetTarget"></a>
+##### `ResetTarget` <a name="ResetTarget" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetTarget"></a>
 
 ```go
 func ResetTarget()
 ```
 
-##### `ResetUlimit` <a name="ResetUlimit" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetUlimit"></a>
+##### `ResetUlimit` <a name="ResetUlimit" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetUlimit"></a>
 
 ```go
 func ResetUlimit()
 ```
 
-##### `ResetVersion` <a name="ResetVersion" id="@cdktf/provider-docker.image.ImageBuildOutputReference.resetVersion"></a>
+##### `ResetVersion` <a name="ResetVersion" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetVersion"></a>
 
 ```go
 func ResetVersion()
@@ -3292,87 +3292,87 @@ func ResetVersion()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.authConfig">AuthConfig</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList">ImageBuildAuthConfigList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.secrets">Secrets</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList">ImageBuildSecretsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.ulimit">Ulimit</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList">ImageBuildUlimitList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.authConfigInput">AuthConfigInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildArgsInput">BuildArgsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.builderInput">BuilderInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildIdInput">BuildIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildLogFileInput">BuildLogFileInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cacheFromInput">CacheFromInput</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cgroupParentInput">CgroupParentInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.contextInput">ContextInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuPeriodInput">CpuPeriodInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuQuotaInput">CpuQuotaInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpusInput">CpuSetCpusInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetMemsInput">CpuSetMemsInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSharesInput">CpuSharesInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.dockerfileInput">DockerfileInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.extraHostsInput">ExtraHostsInput</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput">ForceRemoveInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.isolationInput">IsolationInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.labelInput">LabelInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.labelsInput">LabelsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.memoryInput">MemoryInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.memorySwapInput">MemorySwapInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.networkModeInput">NetworkModeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.noCacheInput">NoCacheInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.platformInput">PlatformInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.pullParentInput">PullParentInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.remoteContextInput">RemoteContextInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.removeInput">RemoveInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.secretsInput">SecretsInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.securityOptInput">SecurityOptInput</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.sessionIdInput">SessionIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.shmSizeInput">ShmSizeInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.squashInput">SquashInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput">SuppressOutputInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.tagInput">TagInput</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.targetInput">TargetInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.ulimitInput">UlimitInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.versionInput">VersionInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildArgs">BuildArgs</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.builder">Builder</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildId">BuildId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildLogFile">BuildLogFile</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cacheFrom">CacheFrom</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cgroupParent">CgroupParent</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.context">Context</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuPeriod">CpuPeriod</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuQuota">CpuQuota</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpus">CpuSetCpus</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetMems">CpuSetMems</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuShares">CpuShares</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.dockerfile">Dockerfile</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.extraHosts">ExtraHosts</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.isolation">Isolation</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.label">Label</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.labels">Labels</a></code> | <code>*map[string]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.memory">Memory</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.memorySwap">MemorySwap</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.networkMode">NetworkMode</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.noCache">NoCache</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.platform">Platform</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.pullParent">PullParent</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.remoteContext">RemoteContext</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.remove">Remove</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.securityOpt">SecurityOpt</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.sessionId">SessionId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.shmSize">ShmSize</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.squash">Squash</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.suppressOutput">SuppressOutput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.tag">Tag</a></code> | <code>*[]*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.target">Target</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.version">Version</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfig">AuthConfig</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList">ImageBuildAuthConfigList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.secrets">Secrets</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList">ImageBuildSecretsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimit">Ulimit</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList">ImageBuildUlimitList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfigInput">AuthConfigInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgsInput">BuildArgsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.builderInput">BuilderInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildIdInput">BuildIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildLogFileInput">BuildLogFileInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cacheFromInput">CacheFromInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cgroupParentInput">CgroupParentInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.contextInput">ContextInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuPeriodInput">CpuPeriodInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuQuotaInput">CpuQuotaInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpusInput">CpuSetCpusInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetMemsInput">CpuSetMemsInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSharesInput">CpuSharesInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfileInput">DockerfileInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHostsInput">ExtraHostsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput">ForceRemoveInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolationInput">IsolationInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelInput">LabelInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelsInput">LabelsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memoryInput">MemoryInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwapInput">MemorySwapInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkModeInput">NetworkModeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCacheInput">NoCacheInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.platformInput">PlatformInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParentInput">PullParentInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContextInput">RemoteContextInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.removeInput">RemoveInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.secretsInput">SecretsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOptInput">SecurityOptInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionIdInput">SessionIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSizeInput">ShmSizeInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squashInput">SquashInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput">SuppressOutputInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tagInput">TagInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.targetInput">TargetInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimitInput">UlimitInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.versionInput">VersionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgs">BuildArgs</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.builder">Builder</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildId">BuildId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildLogFile">BuildLogFile</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cacheFrom">CacheFrom</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cgroupParent">CgroupParent</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.context">Context</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuPeriod">CpuPeriod</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuQuota">CpuQuota</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpus">CpuSetCpus</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetMems">CpuSetMems</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuShares">CpuShares</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfile">Dockerfile</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHosts">ExtraHosts</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemove">ForceRemove</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolation">Isolation</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.label">Label</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labels">Labels</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memory">Memory</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwap">MemorySwap</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkMode">NetworkMode</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCache">NoCache</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.platform">Platform</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParent">PullParent</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContext">RemoteContext</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remove">Remove</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOpt">SecurityOpt</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionId">SessionId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSize">ShmSize</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squash">Squash</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutput">SuppressOutput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tag">Tag</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.target">Target</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.version">Version</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -3386,7 +3386,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -3396,37 +3396,37 @@ func Fqn() *string
 
 ---
 
-##### `AuthConfig`<sup>Required</sup> <a name="AuthConfig" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.authConfig"></a>
+##### `AuthConfig`<sup>Required</sup> <a name="AuthConfig" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfig"></a>
 
 ```go
 func AuthConfig() ImageBuildAuthConfigList
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuildAuthConfigList">ImageBuildAuthConfigList</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList">ImageBuildAuthConfigList</a>
 
 ---
 
-##### `Secrets`<sup>Required</sup> <a name="Secrets" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.secrets"></a>
+##### `Secrets`<sup>Required</sup> <a name="Secrets" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.secrets"></a>
 
 ```go
 func Secrets() ImageBuildSecretsList
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuildSecretsList">ImageBuildSecretsList</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuildSecretsList">ImageBuildSecretsList</a>
 
 ---
 
-##### `Ulimit`<sup>Required</sup> <a name="Ulimit" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.ulimit"></a>
+##### `Ulimit`<sup>Required</sup> <a name="Ulimit" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimit"></a>
 
 ```go
 func Ulimit() ImageBuildUlimitList
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuildUlimitList">ImageBuildUlimitList</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuildUlimitList">ImageBuildUlimitList</a>
 
 ---
 
-##### `AuthConfigInput`<sup>Optional</sup> <a name="AuthConfigInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.authConfigInput"></a>
+##### `AuthConfigInput`<sup>Optional</sup> <a name="AuthConfigInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfigInput"></a>
 
 ```go
 func AuthConfigInput() interface{}
@@ -3436,7 +3436,7 @@ func AuthConfigInput() interface{}
 
 ---
 
-##### `BuildArgsInput`<sup>Optional</sup> <a name="BuildArgsInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildArgsInput"></a>
+##### `BuildArgsInput`<sup>Optional</sup> <a name="BuildArgsInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgsInput"></a>
 
 ```go
 func BuildArgsInput() *map[string]*string
@@ -3446,7 +3446,7 @@ func BuildArgsInput() *map[string]*string
 
 ---
 
-##### `BuilderInput`<sup>Optional</sup> <a name="BuilderInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.builderInput"></a>
+##### `BuilderInput`<sup>Optional</sup> <a name="BuilderInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.builderInput"></a>
 
 ```go
 func BuilderInput() *string
@@ -3456,7 +3456,7 @@ func BuilderInput() *string
 
 ---
 
-##### `BuildIdInput`<sup>Optional</sup> <a name="BuildIdInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildIdInput"></a>
+##### `BuildIdInput`<sup>Optional</sup> <a name="BuildIdInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildIdInput"></a>
 
 ```go
 func BuildIdInput() *string
@@ -3466,7 +3466,7 @@ func BuildIdInput() *string
 
 ---
 
-##### `BuildLogFileInput`<sup>Optional</sup> <a name="BuildLogFileInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildLogFileInput"></a>
+##### `BuildLogFileInput`<sup>Optional</sup> <a name="BuildLogFileInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildLogFileInput"></a>
 
 ```go
 func BuildLogFileInput() *string
@@ -3476,7 +3476,7 @@ func BuildLogFileInput() *string
 
 ---
 
-##### `CacheFromInput`<sup>Optional</sup> <a name="CacheFromInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cacheFromInput"></a>
+##### `CacheFromInput`<sup>Optional</sup> <a name="CacheFromInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cacheFromInput"></a>
 
 ```go
 func CacheFromInput() *[]*string
@@ -3486,7 +3486,7 @@ func CacheFromInput() *[]*string
 
 ---
 
-##### `CgroupParentInput`<sup>Optional</sup> <a name="CgroupParentInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cgroupParentInput"></a>
+##### `CgroupParentInput`<sup>Optional</sup> <a name="CgroupParentInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cgroupParentInput"></a>
 
 ```go
 func CgroupParentInput() *string
@@ -3496,7 +3496,7 @@ func CgroupParentInput() *string
 
 ---
 
-##### `ContextInput`<sup>Optional</sup> <a name="ContextInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.contextInput"></a>
+##### `ContextInput`<sup>Optional</sup> <a name="ContextInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.contextInput"></a>
 
 ```go
 func ContextInput() *string
@@ -3506,7 +3506,7 @@ func ContextInput() *string
 
 ---
 
-##### `CpuPeriodInput`<sup>Optional</sup> <a name="CpuPeriodInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuPeriodInput"></a>
+##### `CpuPeriodInput`<sup>Optional</sup> <a name="CpuPeriodInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuPeriodInput"></a>
 
 ```go
 func CpuPeriodInput() *f64
@@ -3516,7 +3516,7 @@ func CpuPeriodInput() *f64
 
 ---
 
-##### `CpuQuotaInput`<sup>Optional</sup> <a name="CpuQuotaInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuQuotaInput"></a>
+##### `CpuQuotaInput`<sup>Optional</sup> <a name="CpuQuotaInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuQuotaInput"></a>
 
 ```go
 func CpuQuotaInput() *f64
@@ -3526,7 +3526,7 @@ func CpuQuotaInput() *f64
 
 ---
 
-##### `CpuSetCpusInput`<sup>Optional</sup> <a name="CpuSetCpusInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpusInput"></a>
+##### `CpuSetCpusInput`<sup>Optional</sup> <a name="CpuSetCpusInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpusInput"></a>
 
 ```go
 func CpuSetCpusInput() *string
@@ -3536,7 +3536,7 @@ func CpuSetCpusInput() *string
 
 ---
 
-##### `CpuSetMemsInput`<sup>Optional</sup> <a name="CpuSetMemsInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetMemsInput"></a>
+##### `CpuSetMemsInput`<sup>Optional</sup> <a name="CpuSetMemsInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetMemsInput"></a>
 
 ```go
 func CpuSetMemsInput() *string
@@ -3546,7 +3546,7 @@ func CpuSetMemsInput() *string
 
 ---
 
-##### `CpuSharesInput`<sup>Optional</sup> <a name="CpuSharesInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSharesInput"></a>
+##### `CpuSharesInput`<sup>Optional</sup> <a name="CpuSharesInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSharesInput"></a>
 
 ```go
 func CpuSharesInput() *f64
@@ -3556,7 +3556,7 @@ func CpuSharesInput() *f64
 
 ---
 
-##### `DockerfileInput`<sup>Optional</sup> <a name="DockerfileInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.dockerfileInput"></a>
+##### `DockerfileInput`<sup>Optional</sup> <a name="DockerfileInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfileInput"></a>
 
 ```go
 func DockerfileInput() *string
@@ -3566,7 +3566,7 @@ func DockerfileInput() *string
 
 ---
 
-##### `ExtraHostsInput`<sup>Optional</sup> <a name="ExtraHostsInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.extraHostsInput"></a>
+##### `ExtraHostsInput`<sup>Optional</sup> <a name="ExtraHostsInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHostsInput"></a>
 
 ```go
 func ExtraHostsInput() *[]*string
@@ -3576,7 +3576,7 @@ func ExtraHostsInput() *[]*string
 
 ---
 
-##### `ForceRemoveInput`<sup>Optional</sup> <a name="ForceRemoveInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput"></a>
+##### `ForceRemoveInput`<sup>Optional</sup> <a name="ForceRemoveInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput"></a>
 
 ```go
 func ForceRemoveInput() interface{}
@@ -3586,7 +3586,7 @@ func ForceRemoveInput() interface{}
 
 ---
 
-##### `IsolationInput`<sup>Optional</sup> <a name="IsolationInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.isolationInput"></a>
+##### `IsolationInput`<sup>Optional</sup> <a name="IsolationInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolationInput"></a>
 
 ```go
 func IsolationInput() *string
@@ -3596,7 +3596,7 @@ func IsolationInput() *string
 
 ---
 
-##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.labelInput"></a>
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelInput"></a>
 
 ```go
 func LabelInput() *map[string]*string
@@ -3606,7 +3606,7 @@ func LabelInput() *map[string]*string
 
 ---
 
-##### `LabelsInput`<sup>Optional</sup> <a name="LabelsInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.labelsInput"></a>
+##### `LabelsInput`<sup>Optional</sup> <a name="LabelsInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelsInput"></a>
 
 ```go
 func LabelsInput() *map[string]*string
@@ -3616,7 +3616,7 @@ func LabelsInput() *map[string]*string
 
 ---
 
-##### `MemoryInput`<sup>Optional</sup> <a name="MemoryInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.memoryInput"></a>
+##### `MemoryInput`<sup>Optional</sup> <a name="MemoryInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.memoryInput"></a>
 
 ```go
 func MemoryInput() *f64
@@ -3626,7 +3626,7 @@ func MemoryInput() *f64
 
 ---
 
-##### `MemorySwapInput`<sup>Optional</sup> <a name="MemorySwapInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.memorySwapInput"></a>
+##### `MemorySwapInput`<sup>Optional</sup> <a name="MemorySwapInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwapInput"></a>
 
 ```go
 func MemorySwapInput() *f64
@@ -3636,7 +3636,7 @@ func MemorySwapInput() *f64
 
 ---
 
-##### `NetworkModeInput`<sup>Optional</sup> <a name="NetworkModeInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.networkModeInput"></a>
+##### `NetworkModeInput`<sup>Optional</sup> <a name="NetworkModeInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkModeInput"></a>
 
 ```go
 func NetworkModeInput() *string
@@ -3646,7 +3646,7 @@ func NetworkModeInput() *string
 
 ---
 
-##### `NoCacheInput`<sup>Optional</sup> <a name="NoCacheInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.noCacheInput"></a>
+##### `NoCacheInput`<sup>Optional</sup> <a name="NoCacheInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCacheInput"></a>
 
 ```go
 func NoCacheInput() interface{}
@@ -3656,7 +3656,7 @@ func NoCacheInput() interface{}
 
 ---
 
-##### `PlatformInput`<sup>Optional</sup> <a name="PlatformInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.platformInput"></a>
+##### `PlatformInput`<sup>Optional</sup> <a name="PlatformInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.platformInput"></a>
 
 ```go
 func PlatformInput() *string
@@ -3666,7 +3666,7 @@ func PlatformInput() *string
 
 ---
 
-##### `PullParentInput`<sup>Optional</sup> <a name="PullParentInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.pullParentInput"></a>
+##### `PullParentInput`<sup>Optional</sup> <a name="PullParentInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParentInput"></a>
 
 ```go
 func PullParentInput() interface{}
@@ -3676,7 +3676,7 @@ func PullParentInput() interface{}
 
 ---
 
-##### `RemoteContextInput`<sup>Optional</sup> <a name="RemoteContextInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.remoteContextInput"></a>
+##### `RemoteContextInput`<sup>Optional</sup> <a name="RemoteContextInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContextInput"></a>
 
 ```go
 func RemoteContextInput() *string
@@ -3686,7 +3686,7 @@ func RemoteContextInput() *string
 
 ---
 
-##### `RemoveInput`<sup>Optional</sup> <a name="RemoveInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.removeInput"></a>
+##### `RemoveInput`<sup>Optional</sup> <a name="RemoveInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.removeInput"></a>
 
 ```go
 func RemoveInput() interface{}
@@ -3696,7 +3696,7 @@ func RemoveInput() interface{}
 
 ---
 
-##### `SecretsInput`<sup>Optional</sup> <a name="SecretsInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.secretsInput"></a>
+##### `SecretsInput`<sup>Optional</sup> <a name="SecretsInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.secretsInput"></a>
 
 ```go
 func SecretsInput() interface{}
@@ -3706,7 +3706,7 @@ func SecretsInput() interface{}
 
 ---
 
-##### `SecurityOptInput`<sup>Optional</sup> <a name="SecurityOptInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.securityOptInput"></a>
+##### `SecurityOptInput`<sup>Optional</sup> <a name="SecurityOptInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOptInput"></a>
 
 ```go
 func SecurityOptInput() *[]*string
@@ -3716,7 +3716,7 @@ func SecurityOptInput() *[]*string
 
 ---
 
-##### `SessionIdInput`<sup>Optional</sup> <a name="SessionIdInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.sessionIdInput"></a>
+##### `SessionIdInput`<sup>Optional</sup> <a name="SessionIdInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionIdInput"></a>
 
 ```go
 func SessionIdInput() *string
@@ -3726,7 +3726,7 @@ func SessionIdInput() *string
 
 ---
 
-##### `ShmSizeInput`<sup>Optional</sup> <a name="ShmSizeInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.shmSizeInput"></a>
+##### `ShmSizeInput`<sup>Optional</sup> <a name="ShmSizeInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSizeInput"></a>
 
 ```go
 func ShmSizeInput() *f64
@@ -3736,7 +3736,7 @@ func ShmSizeInput() *f64
 
 ---
 
-##### `SquashInput`<sup>Optional</sup> <a name="SquashInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.squashInput"></a>
+##### `SquashInput`<sup>Optional</sup> <a name="SquashInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.squashInput"></a>
 
 ```go
 func SquashInput() interface{}
@@ -3746,7 +3746,7 @@ func SquashInput() interface{}
 
 ---
 
-##### `SuppressOutputInput`<sup>Optional</sup> <a name="SuppressOutputInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput"></a>
+##### `SuppressOutputInput`<sup>Optional</sup> <a name="SuppressOutputInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput"></a>
 
 ```go
 func SuppressOutputInput() interface{}
@@ -3756,7 +3756,7 @@ func SuppressOutputInput() interface{}
 
 ---
 
-##### `TagInput`<sup>Optional</sup> <a name="TagInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.tagInput"></a>
+##### `TagInput`<sup>Optional</sup> <a name="TagInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.tagInput"></a>
 
 ```go
 func TagInput() *[]*string
@@ -3766,7 +3766,7 @@ func TagInput() *[]*string
 
 ---
 
-##### `TargetInput`<sup>Optional</sup> <a name="TargetInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.targetInput"></a>
+##### `TargetInput`<sup>Optional</sup> <a name="TargetInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.targetInput"></a>
 
 ```go
 func TargetInput() *string
@@ -3776,7 +3776,7 @@ func TargetInput() *string
 
 ---
 
-##### `UlimitInput`<sup>Optional</sup> <a name="UlimitInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.ulimitInput"></a>
+##### `UlimitInput`<sup>Optional</sup> <a name="UlimitInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimitInput"></a>
 
 ```go
 func UlimitInput() interface{}
@@ -3786,7 +3786,7 @@ func UlimitInput() interface{}
 
 ---
 
-##### `VersionInput`<sup>Optional</sup> <a name="VersionInput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.versionInput"></a>
+##### `VersionInput`<sup>Optional</sup> <a name="VersionInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.versionInput"></a>
 
 ```go
 func VersionInput() *string
@@ -3796,7 +3796,7 @@ func VersionInput() *string
 
 ---
 
-##### `BuildArgs`<sup>Required</sup> <a name="BuildArgs" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildArgs"></a>
+##### `BuildArgs`<sup>Required</sup> <a name="BuildArgs" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgs"></a>
 
 ```go
 func BuildArgs() *map[string]*string
@@ -3806,7 +3806,7 @@ func BuildArgs() *map[string]*string
 
 ---
 
-##### `Builder`<sup>Required</sup> <a name="Builder" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.builder"></a>
+##### `Builder`<sup>Required</sup> <a name="Builder" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.builder"></a>
 
 ```go
 func Builder() *string
@@ -3816,7 +3816,7 @@ func Builder() *string
 
 ---
 
-##### `BuildId`<sup>Required</sup> <a name="BuildId" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildId"></a>
+##### `BuildId`<sup>Required</sup> <a name="BuildId" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildId"></a>
 
 ```go
 func BuildId() *string
@@ -3826,7 +3826,7 @@ func BuildId() *string
 
 ---
 
-##### `BuildLogFile`<sup>Required</sup> <a name="BuildLogFile" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.buildLogFile"></a>
+##### `BuildLogFile`<sup>Required</sup> <a name="BuildLogFile" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildLogFile"></a>
 
 ```go
 func BuildLogFile() *string
@@ -3836,7 +3836,7 @@ func BuildLogFile() *string
 
 ---
 
-##### `CacheFrom`<sup>Required</sup> <a name="CacheFrom" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cacheFrom"></a>
+##### `CacheFrom`<sup>Required</sup> <a name="CacheFrom" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cacheFrom"></a>
 
 ```go
 func CacheFrom() *[]*string
@@ -3846,7 +3846,7 @@ func CacheFrom() *[]*string
 
 ---
 
-##### `CgroupParent`<sup>Required</sup> <a name="CgroupParent" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cgroupParent"></a>
+##### `CgroupParent`<sup>Required</sup> <a name="CgroupParent" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cgroupParent"></a>
 
 ```go
 func CgroupParent() *string
@@ -3856,7 +3856,7 @@ func CgroupParent() *string
 
 ---
 
-##### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.context"></a>
+##### `Context`<sup>Required</sup> <a name="Context" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.context"></a>
 
 ```go
 func Context() *string
@@ -3866,7 +3866,7 @@ func Context() *string
 
 ---
 
-##### `CpuPeriod`<sup>Required</sup> <a name="CpuPeriod" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuPeriod"></a>
+##### `CpuPeriod`<sup>Required</sup> <a name="CpuPeriod" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuPeriod"></a>
 
 ```go
 func CpuPeriod() *f64
@@ -3876,7 +3876,7 @@ func CpuPeriod() *f64
 
 ---
 
-##### `CpuQuota`<sup>Required</sup> <a name="CpuQuota" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuQuota"></a>
+##### `CpuQuota`<sup>Required</sup> <a name="CpuQuota" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuQuota"></a>
 
 ```go
 func CpuQuota() *f64
@@ -3886,7 +3886,7 @@ func CpuQuota() *f64
 
 ---
 
-##### `CpuSetCpus`<sup>Required</sup> <a name="CpuSetCpus" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpus"></a>
+##### `CpuSetCpus`<sup>Required</sup> <a name="CpuSetCpus" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetCpus"></a>
 
 ```go
 func CpuSetCpus() *string
@@ -3896,7 +3896,7 @@ func CpuSetCpus() *string
 
 ---
 
-##### `CpuSetMems`<sup>Required</sup> <a name="CpuSetMems" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuSetMems"></a>
+##### `CpuSetMems`<sup>Required</sup> <a name="CpuSetMems" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSetMems"></a>
 
 ```go
 func CpuSetMems() *string
@@ -3906,7 +3906,7 @@ func CpuSetMems() *string
 
 ---
 
-##### `CpuShares`<sup>Required</sup> <a name="CpuShares" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.cpuShares"></a>
+##### `CpuShares`<sup>Required</sup> <a name="CpuShares" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuShares"></a>
 
 ```go
 func CpuShares() *f64
@@ -3916,7 +3916,7 @@ func CpuShares() *f64
 
 ---
 
-##### `Dockerfile`<sup>Required</sup> <a name="Dockerfile" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.dockerfile"></a>
+##### `Dockerfile`<sup>Required</sup> <a name="Dockerfile" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfile"></a>
 
 ```go
 func Dockerfile() *string
@@ -3926,7 +3926,7 @@ func Dockerfile() *string
 
 ---
 
-##### `ExtraHosts`<sup>Required</sup> <a name="ExtraHosts" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.extraHosts"></a>
+##### `ExtraHosts`<sup>Required</sup> <a name="ExtraHosts" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHosts"></a>
 
 ```go
 func ExtraHosts() *[]*string
@@ -3936,7 +3936,7 @@ func ExtraHosts() *[]*string
 
 ---
 
-##### `ForceRemove`<sup>Required</sup> <a name="ForceRemove" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.forceRemove"></a>
+##### `ForceRemove`<sup>Required</sup> <a name="ForceRemove" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemove"></a>
 
 ```go
 func ForceRemove() interface{}
@@ -3946,7 +3946,7 @@ func ForceRemove() interface{}
 
 ---
 
-##### `Isolation`<sup>Required</sup> <a name="Isolation" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.isolation"></a>
+##### `Isolation`<sup>Required</sup> <a name="Isolation" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolation"></a>
 
 ```go
 func Isolation() *string
@@ -3956,7 +3956,7 @@ func Isolation() *string
 
 ---
 
-##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.label"></a>
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.label"></a>
 
 ```go
 func Label() *map[string]*string
@@ -3966,7 +3966,7 @@ func Label() *map[string]*string
 
 ---
 
-##### `Labels`<sup>Required</sup> <a name="Labels" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.labels"></a>
+##### `Labels`<sup>Required</sup> <a name="Labels" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.labels"></a>
 
 ```go
 func Labels() *map[string]*string
@@ -3976,7 +3976,7 @@ func Labels() *map[string]*string
 
 ---
 
-##### `Memory`<sup>Required</sup> <a name="Memory" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.memory"></a>
+##### `Memory`<sup>Required</sup> <a name="Memory" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.memory"></a>
 
 ```go
 func Memory() *f64
@@ -3986,7 +3986,7 @@ func Memory() *f64
 
 ---
 
-##### `MemorySwap`<sup>Required</sup> <a name="MemorySwap" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.memorySwap"></a>
+##### `MemorySwap`<sup>Required</sup> <a name="MemorySwap" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwap"></a>
 
 ```go
 func MemorySwap() *f64
@@ -3996,7 +3996,7 @@ func MemorySwap() *f64
 
 ---
 
-##### `NetworkMode`<sup>Required</sup> <a name="NetworkMode" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.networkMode"></a>
+##### `NetworkMode`<sup>Required</sup> <a name="NetworkMode" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkMode"></a>
 
 ```go
 func NetworkMode() *string
@@ -4006,7 +4006,7 @@ func NetworkMode() *string
 
 ---
 
-##### `NoCache`<sup>Required</sup> <a name="NoCache" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.noCache"></a>
+##### `NoCache`<sup>Required</sup> <a name="NoCache" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCache"></a>
 
 ```go
 func NoCache() interface{}
@@ -4016,7 +4016,7 @@ func NoCache() interface{}
 
 ---
 
-##### `Platform`<sup>Required</sup> <a name="Platform" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.platform"></a>
+##### `Platform`<sup>Required</sup> <a name="Platform" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.platform"></a>
 
 ```go
 func Platform() *string
@@ -4026,7 +4026,7 @@ func Platform() *string
 
 ---
 
-##### `PullParent`<sup>Required</sup> <a name="PullParent" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.pullParent"></a>
+##### `PullParent`<sup>Required</sup> <a name="PullParent" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParent"></a>
 
 ```go
 func PullParent() interface{}
@@ -4036,7 +4036,7 @@ func PullParent() interface{}
 
 ---
 
-##### `RemoteContext`<sup>Required</sup> <a name="RemoteContext" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.remoteContext"></a>
+##### `RemoteContext`<sup>Required</sup> <a name="RemoteContext" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContext"></a>
 
 ```go
 func RemoteContext() *string
@@ -4046,7 +4046,7 @@ func RemoteContext() *string
 
 ---
 
-##### `Remove`<sup>Required</sup> <a name="Remove" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.remove"></a>
+##### `Remove`<sup>Required</sup> <a name="Remove" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.remove"></a>
 
 ```go
 func Remove() interface{}
@@ -4056,7 +4056,7 @@ func Remove() interface{}
 
 ---
 
-##### `SecurityOpt`<sup>Required</sup> <a name="SecurityOpt" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.securityOpt"></a>
+##### `SecurityOpt`<sup>Required</sup> <a name="SecurityOpt" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOpt"></a>
 
 ```go
 func SecurityOpt() *[]*string
@@ -4066,7 +4066,7 @@ func SecurityOpt() *[]*string
 
 ---
 
-##### `SessionId`<sup>Required</sup> <a name="SessionId" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.sessionId"></a>
+##### `SessionId`<sup>Required</sup> <a name="SessionId" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionId"></a>
 
 ```go
 func SessionId() *string
@@ -4076,7 +4076,7 @@ func SessionId() *string
 
 ---
 
-##### `ShmSize`<sup>Required</sup> <a name="ShmSize" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.shmSize"></a>
+##### `ShmSize`<sup>Required</sup> <a name="ShmSize" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSize"></a>
 
 ```go
 func ShmSize() *f64
@@ -4086,7 +4086,7 @@ func ShmSize() *f64
 
 ---
 
-##### `Squash`<sup>Required</sup> <a name="Squash" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.squash"></a>
+##### `Squash`<sup>Required</sup> <a name="Squash" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.squash"></a>
 
 ```go
 func Squash() interface{}
@@ -4096,7 +4096,7 @@ func Squash() interface{}
 
 ---
 
-##### `SuppressOutput`<sup>Required</sup> <a name="SuppressOutput" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.suppressOutput"></a>
+##### `SuppressOutput`<sup>Required</sup> <a name="SuppressOutput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutput"></a>
 
 ```go
 func SuppressOutput() interface{}
@@ -4106,7 +4106,7 @@ func SuppressOutput() interface{}
 
 ---
 
-##### `Tag`<sup>Required</sup> <a name="Tag" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.tag"></a>
+##### `Tag`<sup>Required</sup> <a name="Tag" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.tag"></a>
 
 ```go
 func Tag() *[]*string
@@ -4116,7 +4116,7 @@ func Tag() *[]*string
 
 ---
 
-##### `Target`<sup>Required</sup> <a name="Target" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.target"></a>
+##### `Target`<sup>Required</sup> <a name="Target" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.target"></a>
 
 ```go
 func Target() *string
@@ -4126,7 +4126,7 @@ func Target() *string
 
 ---
 
-##### `Version`<sup>Required</sup> <a name="Version" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.version"></a>
+##### `Version`<sup>Required</sup> <a name="Version" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.version"></a>
 
 ```go
 func Version() *string
@@ -4136,36 +4136,36 @@ func Version() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() ImageBuild
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.image.ImageBuild">ImageBuild</a>
+- *Type:* <a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a>
 
 ---
 
 
-### ImageBuildSecretsList <a name="ImageBuildSecretsList" id="@cdktf/provider-docker.image.ImageBuildSecretsList"></a>
+### ImageBuildSecretsList <a name="ImageBuildSecretsList" id="@cdktn/provider-docker.image.ImageBuildSecretsList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildSecretsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildSecretsList
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -4173,7 +4173,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -4181,7 +4181,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* *bool
 
@@ -4193,15 +4193,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.get">Get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.get">Get</a></code> | *No description.* |
 
 ---
 
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-docker.image.ImageBuildSecretsList.allWithMapKey"></a>
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktn/provider-docker.image.ImageBuildSecretsList.allWithMapKey"></a>
 
 ```go
 func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
@@ -4211,19 +4211,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.image.ImageBuildSecretsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.image.ImageBuildSecretsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* *string
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildSecretsList.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildSecretsList.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildSecretsList.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildSecretsList.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -4231,13 +4231,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildSecretsList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildSecretsList.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildSecretsList.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildSecretsList.toString"></a>
 
 ```go
 func ToString() *string
@@ -4247,13 +4247,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `Get` <a name="Get" id="@cdktf/provider-docker.image.ImageBuildSecretsList.get"></a>
+##### `Get` <a name="Get" id="@cdktn/provider-docker.image.ImageBuildSecretsList.get"></a>
 
 ```go
 func Get(index *f64) ImageBuildSecretsOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.image.ImageBuildSecretsList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.image.ImageBuildSecretsList.get.parameter.index"></a>
 
 - *Type:* *f64
 
@@ -4266,13 +4266,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildSecretsList.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildSecretsList.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -4286,7 +4286,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildSecretsList.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildSecretsList.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -4296,7 +4296,7 @@ func Fqn() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildSecretsList.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildSecretsList.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -4307,26 +4307,26 @@ func InternalValue() interface{}
 ---
 
 
-### ImageBuildSecretsOutputReference <a name="ImageBuildSecretsOutputReference" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference"></a>
+### ImageBuildSecretsOutputReference <a name="ImageBuildSecretsOutputReference" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildSecretsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildSecretsOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -4334,7 +4334,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -4342,7 +4342,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* *f64
 
@@ -4350,7 +4350,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* *bool
 
@@ -4362,151 +4362,151 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resetEnv">ResetEnv</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resetSrc">ResetSrc</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resetEnv">ResetEnv</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resetSrc">ResetSrc</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -4514,13 +4514,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -4530,13 +4530,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetEnv` <a name="ResetEnv" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resetEnv"></a>
+##### `ResetEnv` <a name="ResetEnv" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resetEnv"></a>
 
 ```go
 func ResetEnv()
 ```
 
-##### `ResetSrc` <a name="ResetSrc" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.resetSrc"></a>
+##### `ResetSrc` <a name="ResetSrc" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resetSrc"></a>
 
 ```go
 func ResetSrc()
@@ -4547,19 +4547,19 @@ func ResetSrc()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.envInput">EnvInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.srcInput">SrcInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.env">Env</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.id">Id</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.src">Src</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.envInput">EnvInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.srcInput">SrcInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.env">Env</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.src">Src</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -4573,7 +4573,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -4583,7 +4583,7 @@ func Fqn() *string
 
 ---
 
-##### `EnvInput`<sup>Optional</sup> <a name="EnvInput" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.envInput"></a>
+##### `EnvInput`<sup>Optional</sup> <a name="EnvInput" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.envInput"></a>
 
 ```go
 func EnvInput() *string
@@ -4593,7 +4593,7 @@ func EnvInput() *string
 
 ---
 
-##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.idInput"></a>
+##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.idInput"></a>
 
 ```go
 func IdInput() *string
@@ -4603,7 +4603,7 @@ func IdInput() *string
 
 ---
 
-##### `SrcInput`<sup>Optional</sup> <a name="SrcInput" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.srcInput"></a>
+##### `SrcInput`<sup>Optional</sup> <a name="SrcInput" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.srcInput"></a>
 
 ```go
 func SrcInput() *string
@@ -4613,7 +4613,7 @@ func SrcInput() *string
 
 ---
 
-##### `Env`<sup>Required</sup> <a name="Env" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.env"></a>
+##### `Env`<sup>Required</sup> <a name="Env" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.env"></a>
 
 ```go
 func Env() *string
@@ -4623,7 +4623,7 @@ func Env() *string
 
 ---
 
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.id"></a>
 
 ```go
 func Id() *string
@@ -4633,7 +4633,7 @@ func Id() *string
 
 ---
 
-##### `Src`<sup>Required</sup> <a name="Src" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.src"></a>
+##### `Src`<sup>Required</sup> <a name="Src" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.src"></a>
 
 ```go
 func Src() *string
@@ -4643,7 +4643,7 @@ func Src() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -4654,25 +4654,25 @@ func InternalValue() interface{}
 ---
 
 
-### ImageBuildUlimitList <a name="ImageBuildUlimitList" id="@cdktf/provider-docker.image.ImageBuildUlimitList"></a>
+### ImageBuildUlimitList <a name="ImageBuildUlimitList" id="@cdktn/provider-docker.image.ImageBuildUlimitList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildUlimitList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildUlimitList
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -4680,7 +4680,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -4688,7 +4688,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* *bool
 
@@ -4700,15 +4700,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.get">Get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.get">Get</a></code> | *No description.* |
 
 ---
 
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-docker.image.ImageBuildUlimitList.allWithMapKey"></a>
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktn/provider-docker.image.ImageBuildUlimitList.allWithMapKey"></a>
 
 ```go
 func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
@@ -4718,19 +4718,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.image.ImageBuildUlimitList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.image.ImageBuildUlimitList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* *string
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildUlimitList.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildUlimitList.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildUlimitList.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildUlimitList.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -4738,13 +4738,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildUlimitList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildUlimitList.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildUlimitList.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildUlimitList.toString"></a>
 
 ```go
 func ToString() *string
@@ -4754,13 +4754,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `Get` <a name="Get" id="@cdktf/provider-docker.image.ImageBuildUlimitList.get"></a>
+##### `Get` <a name="Get" id="@cdktn/provider-docker.image.ImageBuildUlimitList.get"></a>
 
 ```go
 func Get(index *f64) ImageBuildUlimitOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.image.ImageBuildUlimitList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.image.ImageBuildUlimitList.get.parameter.index"></a>
 
 - *Type:* *f64
 
@@ -4773,13 +4773,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildUlimitList.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildUlimitList.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -4793,7 +4793,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildUlimitList.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildUlimitList.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -4803,7 +4803,7 @@ func Fqn() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildUlimitList.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildUlimitList.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -4814,26 +4814,26 @@ func InternalValue() interface{}
 ---
 
 
-### ImageBuildUlimitOutputReference <a name="ImageBuildUlimitOutputReference" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference"></a>
+### ImageBuildUlimitOutputReference <a name="ImageBuildUlimitOutputReference" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageBuildUlimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildUlimitOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -4841,7 +4841,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -4849,7 +4849,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* *f64
 
@@ -4857,7 +4857,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* *bool
 
@@ -4869,149 +4869,149 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -5019,13 +5019,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -5040,19 +5040,19 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.hardInput">HardInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.softInput">SoftInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.hard">Hard</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.soft">Soft</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.hardInput">HardInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.softInput">SoftInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.hard">Hard</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.soft">Soft</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -5066,7 +5066,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -5076,7 +5076,7 @@ func Fqn() *string
 
 ---
 
-##### `HardInput`<sup>Optional</sup> <a name="HardInput" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.hardInput"></a>
+##### `HardInput`<sup>Optional</sup> <a name="HardInput" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.hardInput"></a>
 
 ```go
 func HardInput() *f64
@@ -5086,7 +5086,7 @@ func HardInput() *f64
 
 ---
 
-##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.nameInput"></a>
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.nameInput"></a>
 
 ```go
 func NameInput() *string
@@ -5096,7 +5096,7 @@ func NameInput() *string
 
 ---
 
-##### `SoftInput`<sup>Optional</sup> <a name="SoftInput" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.softInput"></a>
+##### `SoftInput`<sup>Optional</sup> <a name="SoftInput" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.softInput"></a>
 
 ```go
 func SoftInput() *f64
@@ -5106,7 +5106,7 @@ func SoftInput() *f64
 
 ---
 
-##### `Hard`<sup>Required</sup> <a name="Hard" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.hard"></a>
+##### `Hard`<sup>Required</sup> <a name="Hard" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.hard"></a>
 
 ```go
 func Hard() *f64
@@ -5116,7 +5116,7 @@ func Hard() *f64
 
 ---
 
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.name"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.name"></a>
 
 ```go
 func Name() *string
@@ -5126,7 +5126,7 @@ func Name() *string
 
 ---
 
-##### `Soft`<sup>Required</sup> <a name="Soft" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.soft"></a>
+##### `Soft`<sup>Required</sup> <a name="Soft" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.soft"></a>
 
 ```go
 func Soft() *f64
@@ -5136,7 +5136,7 @@ func Soft() *f64
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
@@ -5147,24 +5147,24 @@ func InternalValue() interface{}
 ---
 
 
-### ImageTimeoutsOutputReference <a name="ImageTimeoutsOutputReference" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference"></a>
+### ImageTimeoutsOutputReference <a name="ImageTimeoutsOutputReference" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-docker-go/docker/v12/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/image"
 
 image.NewImageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ImageTimeoutsOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -5172,7 +5172,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -5184,152 +5184,152 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetCreate">ResetCreate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetDelete">ResetDelete</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetUpdate">ResetUpdate</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetCreate">ResetCreate</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetDelete">ResetDelete</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetUpdate">ResetUpdate</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -5337,13 +5337,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -5353,19 +5353,19 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetCreate` <a name="ResetCreate" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetCreate"></a>
+##### `ResetCreate` <a name="ResetCreate" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetCreate"></a>
 
 ```go
 func ResetCreate()
 ```
 
-##### `ResetDelete` <a name="ResetDelete" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetDelete"></a>
+##### `ResetDelete` <a name="ResetDelete" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetDelete"></a>
 
 ```go
 func ResetDelete()
 ```
 
-##### `ResetUpdate` <a name="ResetUpdate" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.resetUpdate"></a>
+##### `ResetUpdate` <a name="ResetUpdate" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resetUpdate"></a>
 
 ```go
 func ResetUpdate()
@@ -5376,19 +5376,19 @@ func ResetUpdate()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.createInput">CreateInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.deleteInput">DeleteInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.updateInput">UpdateInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.create">Create</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.delete">Delete</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.update">Update</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.createInput">CreateInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.deleteInput">DeleteInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.updateInput">UpdateInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.create">Create</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.delete">Delete</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.update">Update</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -5402,7 +5402,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -5412,7 +5412,7 @@ func Fqn() *string
 
 ---
 
-##### `CreateInput`<sup>Optional</sup> <a name="CreateInput" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.createInput"></a>
+##### `CreateInput`<sup>Optional</sup> <a name="CreateInput" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.createInput"></a>
 
 ```go
 func CreateInput() *string
@@ -5422,7 +5422,7 @@ func CreateInput() *string
 
 ---
 
-##### `DeleteInput`<sup>Optional</sup> <a name="DeleteInput" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.deleteInput"></a>
+##### `DeleteInput`<sup>Optional</sup> <a name="DeleteInput" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.deleteInput"></a>
 
 ```go
 func DeleteInput() *string
@@ -5432,7 +5432,7 @@ func DeleteInput() *string
 
 ---
 
-##### `UpdateInput`<sup>Optional</sup> <a name="UpdateInput" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.updateInput"></a>
+##### `UpdateInput`<sup>Optional</sup> <a name="UpdateInput" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.updateInput"></a>
 
 ```go
 func UpdateInput() *string
@@ -5442,7 +5442,7 @@ func UpdateInput() *string
 
 ---
 
-##### `Create`<sup>Required</sup> <a name="Create" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.create"></a>
+##### `Create`<sup>Required</sup> <a name="Create" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.create"></a>
 
 ```go
 func Create() *string
@@ -5452,7 +5452,7 @@ func Create() *string
 
 ---
 
-##### `Delete`<sup>Required</sup> <a name="Delete" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.delete"></a>
+##### `Delete`<sup>Required</sup> <a name="Delete" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.delete"></a>
 
 ```go
 func Delete() *string
@@ -5462,7 +5462,7 @@ func Delete() *string
 
 ---
 
-##### `Update`<sup>Required</sup> <a name="Update" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.update"></a>
+##### `Update`<sup>Required</sup> <a name="Update" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.update"></a>
 
 ```go
 func Update() *string
@@ -5472,7 +5472,7 @@ func Update() *string
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue"></a>
 
 ```go
 func InternalValue() interface{}
