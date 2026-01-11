@@ -1,28 +1,28 @@
-# `plugin` Submodule <a name="`plugin` Submodule" id="@cdktf/provider-docker.plugin"></a>
+# `plugin` Submodule <a name="`plugin` Submodule" id="@cdktn/provider-docker.plugin"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### Plugin <a name="Plugin" id="@cdktf/provider-docker.plugin.Plugin"></a>
+### Plugin <a name="Plugin" id="@cdktn/provider-docker.plugin.Plugin"></a>
 
 Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin docker_plugin}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.plugin.Plugin.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.Plugin.Initializer"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 new plugin.Plugin(scope: Construct, id: string, config: PluginConfig)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-docker.plugin.PluginConfig">PluginConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig">PluginConfig</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -30,7 +30,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -40,9 +40,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@cdktf/provider-docker.plugin.Plugin.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.plugin.PluginConfig">PluginConfig</a>
+- *Type:* <a href="#@cdktn/provider-docker.plugin.PluginConfig">PluginConfig</a>
 
 ---
 
@@ -50,43 +50,43 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.addOverride">addOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.toHclTerraform">toHclTerraform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.toMetadata">toMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.hasResourceMove">hasResourceMove</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.importFrom">importFrom</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.putGrantPermissions">putGrantPermissions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetAlias">resetAlias</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetEnabled">resetEnabled</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetEnableTimeout">resetEnableTimeout</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetEnv">resetEnv</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetForceDestroy">resetForceDestroy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetForceDisable">resetForceDisable</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetGrantAllPermissions">resetGrantAllPermissions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetGrantPermissions">resetGrantPermissions</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.importFrom">importFrom</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.putGrantPermissions">putGrantPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetAlias">resetAlias</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetEnabled">resetEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetEnableTimeout">resetEnableTimeout</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetEnv">resetEnv</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetForceDestroy">resetForceDestroy</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetForceDisable">resetForceDisable</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetGrantAllPermissions">resetGrantAllPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetGrantPermissions">resetGrantPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.resetId">resetId</a></code> | *No description.* |
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-docker.plugin.Plugin.toString"></a>
+##### `toString` <a name="toString" id="@cdktn/provider-docker.plugin.Plugin.toString"></a>
 
 ```typescript
 public toString(): string
@@ -94,25 +94,25 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addOverride` <a name="addOverride" id="@cdktf/provider-docker.plugin.Plugin.addOverride"></a>
+##### `addOverride` <a name="addOverride" id="@cdktn/provider-docker.plugin.Plugin.addOverride"></a>
 
 ```typescript
 public addOverride(path: string, value: any): void
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-docker.plugin.Plugin.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.plugin.Plugin.addOverride.parameter.path"></a>
 
 - *Type:* string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.plugin.Plugin.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.plugin.Plugin.addOverride.parameter.value"></a>
 
 - *Type:* any
 
 ---
 
-##### `overrideLogicalId` <a name="overrideLogicalId" id="@cdktf/provider-docker.plugin.Plugin.overrideLogicalId"></a>
+##### `overrideLogicalId` <a name="overrideLogicalId" id="@cdktn/provider-docker.plugin.Plugin.overrideLogicalId"></a>
 
 ```typescript
 public overrideLogicalId(newLogicalId: string): void
@@ -120,7 +120,7 @@ public overrideLogicalId(newLogicalId: string): void
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-docker.plugin.Plugin.overrideLogicalId.parameter.newLogicalId"></a>
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktn/provider-docker.plugin.Plugin.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* string
 
@@ -128,7 +128,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="@cdktf/provider-docker.plugin.Plugin.resetOverrideLogicalId"></a>
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="@cdktn/provider-docker.plugin.Plugin.resetOverrideLogicalId"></a>
 
 ```typescript
 public resetOverrideLogicalId(): void
@@ -136,19 +136,19 @@ public resetOverrideLogicalId(): void
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/provider-docker.plugin.Plugin.toHclTerraform"></a>
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktn/provider-docker.plugin.Plugin.toHclTerraform"></a>
 
 ```typescript
 public toHclTerraform(): any
 ```
 
-##### `toMetadata` <a name="toMetadata" id="@cdktf/provider-docker.plugin.Plugin.toMetadata"></a>
+##### `toMetadata` <a name="toMetadata" id="@cdktn/provider-docker.plugin.Plugin.toMetadata"></a>
 
 ```typescript
 public toMetadata(): any
 ```
 
-##### `toTerraform` <a name="toTerraform" id="@cdktf/provider-docker.plugin.Plugin.toTerraform"></a>
+##### `toTerraform` <a name="toTerraform" id="@cdktn/provider-docker.plugin.Plugin.toTerraform"></a>
 
 ```typescript
 public toTerraform(): any
@@ -156,7 +156,7 @@ public toTerraform(): any
 
 Adds this resource to the terraform JSON output.
 
-##### `addMoveTarget` <a name="addMoveTarget" id="@cdktf/provider-docker.plugin.Plugin.addMoveTarget"></a>
+##### `addMoveTarget` <a name="addMoveTarget" id="@cdktn/provider-docker.plugin.Plugin.addMoveTarget"></a>
 
 ```typescript
 public addMoveTarget(moveTarget: string): void
@@ -164,7 +164,7 @@ public addMoveTarget(moveTarget: string): void
 
 Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.plugin.Plugin.addMoveTarget.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.plugin.Plugin.addMoveTarget.parameter.moveTarget"></a>
 
 - *Type:* string
 
@@ -172,151 +172,151 @@ The string move target that will correspond to this resource.
 
 ---
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-docker.plugin.Plugin.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.plugin.Plugin.getAnyMapAttribute"></a>
 
 ```typescript
 public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-docker.plugin.Plugin.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.plugin.Plugin.getBooleanAttribute"></a>
 
 ```typescript
 public getBooleanAttribute(terraformAttribute: string): IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-docker.plugin.Plugin.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.plugin.Plugin.getBooleanMapAttribute"></a>
 
 ```typescript
 public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-docker.plugin.Plugin.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.plugin.Plugin.getListAttribute"></a>
 
 ```typescript
 public getListAttribute(terraformAttribute: string): string[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberAttribute"></a>
 
 ```typescript
 public getNumberAttribute(terraformAttribute: string): number
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberListAttribute"></a>
 
 ```typescript
 public getNumberListAttribute(terraformAttribute: string): number[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberMapAttribute"></a>
 
 ```typescript
 public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-docker.plugin.Plugin.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.plugin.Plugin.getStringAttribute"></a>
 
 ```typescript
 public getStringAttribute(terraformAttribute: string): string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-docker.plugin.Plugin.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.plugin.Plugin.getStringMapAttribute"></a>
 
 ```typescript
 public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-docker.plugin.Plugin.hasResourceMove"></a>
+##### `hasResourceMove` <a name="hasResourceMove" id="@cdktn/provider-docker.plugin.Plugin.hasResourceMove"></a>
 
 ```typescript
 public hasResourceMove(): TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
-##### `importFrom` <a name="importFrom" id="@cdktf/provider-docker.plugin.Plugin.importFrom"></a>
+##### `importFrom` <a name="importFrom" id="@cdktn/provider-docker.plugin.Plugin.importFrom"></a>
 
 ```typescript
 public importFrom(id: string, provider?: TerraformProvider): void
 ```
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.plugin.Plugin.importFrom.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.plugin.Plugin.importFrom.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.plugin.Plugin.importFrom.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.importFrom.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-docker.plugin.Plugin.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.plugin.Plugin.interpolationForAttribute"></a>
 
 ```typescript
 public interpolationForAttribute(terraformAttribute: string): IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.Plugin.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.Plugin.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `moveFromId` <a name="moveFromId" id="@cdktf/provider-docker.plugin.Plugin.moveFromId"></a>
+##### `moveFromId` <a name="moveFromId" id="@cdktn/provider-docker.plugin.Plugin.moveFromId"></a>
 
 ```typescript
 public moveFromId(id: string): void
@@ -326,7 +326,7 @@ Move the resource corresponding to "id" to this resource.
 
 Note that the resource being moved from must be marked as moved using it's instance function.
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.plugin.Plugin.moveFromId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.plugin.Plugin.moveFromId.parameter.id"></a>
 
 - *Type:* string
 
@@ -334,7 +334,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `moveTo` <a name="moveTo" id="@cdktf/provider-docker.plugin.Plugin.moveTo"></a>
+##### `moveTo` <a name="moveTo" id="@cdktn/provider-docker.plugin.Plugin.moveTo"></a>
 
 ```typescript
 public moveTo(moveTarget: string, index?: string | number): void
@@ -342,7 +342,7 @@ public moveTo(moveTarget: string, index?: string | number): void
 
 Moves this resource to the target resource given by moveTarget.
 
-###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-docker.plugin.Plugin.moveTo.parameter.moveTarget"></a>
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktn/provider-docker.plugin.Plugin.moveTo.parameter.moveTarget"></a>
 
 - *Type:* string
 
@@ -350,7 +350,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ---
 
-###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-docker.plugin.Plugin.moveTo.parameter.index"></a>
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktn/provider-docker.plugin.Plugin.moveTo.parameter.index"></a>
 
 - *Type:* string | number
 
@@ -358,7 +358,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 
 ---
 
-##### `moveToId` <a name="moveToId" id="@cdktf/provider-docker.plugin.Plugin.moveToId"></a>
+##### `moveToId` <a name="moveToId" id="@cdktn/provider-docker.plugin.Plugin.moveToId"></a>
 
 ```typescript
 public moveToId(id: string): void
@@ -366,7 +366,7 @@ public moveToId(id: string): void
 
 Moves this resource to the resource corresponding to "id".
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.plugin.Plugin.moveToId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.plugin.Plugin.moveToId.parameter.id"></a>
 
 - *Type:* string
 
@@ -374,67 +374,67 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `putGrantPermissions` <a name="putGrantPermissions" id="@cdktf/provider-docker.plugin.Plugin.putGrantPermissions"></a>
+##### `putGrantPermissions` <a name="putGrantPermissions" id="@cdktn/provider-docker.plugin.Plugin.putGrantPermissions"></a>
 
 ```typescript
 public putGrantPermissions(value: IResolvable | PluginGrantPermissions[]): void
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.plugin.Plugin.putGrantPermissions.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.plugin.Plugin.putGrantPermissions.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
+- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
 
 ---
 
-##### `resetAlias` <a name="resetAlias" id="@cdktf/provider-docker.plugin.Plugin.resetAlias"></a>
+##### `resetAlias` <a name="resetAlias" id="@cdktn/provider-docker.plugin.Plugin.resetAlias"></a>
 
 ```typescript
 public resetAlias(): void
 ```
 
-##### `resetEnabled` <a name="resetEnabled" id="@cdktf/provider-docker.plugin.Plugin.resetEnabled"></a>
+##### `resetEnabled` <a name="resetEnabled" id="@cdktn/provider-docker.plugin.Plugin.resetEnabled"></a>
 
 ```typescript
 public resetEnabled(): void
 ```
 
-##### `resetEnableTimeout` <a name="resetEnableTimeout" id="@cdktf/provider-docker.plugin.Plugin.resetEnableTimeout"></a>
+##### `resetEnableTimeout` <a name="resetEnableTimeout" id="@cdktn/provider-docker.plugin.Plugin.resetEnableTimeout"></a>
 
 ```typescript
 public resetEnableTimeout(): void
 ```
 
-##### `resetEnv` <a name="resetEnv" id="@cdktf/provider-docker.plugin.Plugin.resetEnv"></a>
+##### `resetEnv` <a name="resetEnv" id="@cdktn/provider-docker.plugin.Plugin.resetEnv"></a>
 
 ```typescript
 public resetEnv(): void
 ```
 
-##### `resetForceDestroy` <a name="resetForceDestroy" id="@cdktf/provider-docker.plugin.Plugin.resetForceDestroy"></a>
+##### `resetForceDestroy` <a name="resetForceDestroy" id="@cdktn/provider-docker.plugin.Plugin.resetForceDestroy"></a>
 
 ```typescript
 public resetForceDestroy(): void
 ```
 
-##### `resetForceDisable` <a name="resetForceDisable" id="@cdktf/provider-docker.plugin.Plugin.resetForceDisable"></a>
+##### `resetForceDisable` <a name="resetForceDisable" id="@cdktn/provider-docker.plugin.Plugin.resetForceDisable"></a>
 
 ```typescript
 public resetForceDisable(): void
 ```
 
-##### `resetGrantAllPermissions` <a name="resetGrantAllPermissions" id="@cdktf/provider-docker.plugin.Plugin.resetGrantAllPermissions"></a>
+##### `resetGrantAllPermissions` <a name="resetGrantAllPermissions" id="@cdktn/provider-docker.plugin.Plugin.resetGrantAllPermissions"></a>
 
 ```typescript
 public resetGrantAllPermissions(): void
 ```
 
-##### `resetGrantPermissions` <a name="resetGrantPermissions" id="@cdktf/provider-docker.plugin.Plugin.resetGrantPermissions"></a>
+##### `resetGrantPermissions` <a name="resetGrantPermissions" id="@cdktn/provider-docker.plugin.Plugin.resetGrantPermissions"></a>
 
 ```typescript
 public resetGrantPermissions(): void
 ```
 
-##### `resetId` <a name="resetId" id="@cdktf/provider-docker.plugin.Plugin.resetId"></a>
+##### `resetId` <a name="resetId" id="@cdktn/provider-docker.plugin.Plugin.resetId"></a>
 
 ```typescript
 public resetId(): void
@@ -444,17 +444,17 @@ public resetId(): void
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.isTerraformElement">isTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.isTerraformResource">isTerraformResource</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>". |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="@cdktf/provider-docker.plugin.Plugin.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktn/provider-docker.plugin.Plugin.isConstruct"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 plugin.Plugin.isConstruct(x: any)
 ```
@@ -475,7 +475,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.plugin.Plugin.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.plugin.Plugin.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -483,45 +483,45 @@ Any object.
 
 ---
 
-##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/provider-docker.plugin.Plugin.isTerraformElement"></a>
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktn/provider-docker.plugin.Plugin.isTerraformElement"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 plugin.Plugin.isTerraformElement(x: any)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.plugin.Plugin.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.plugin.Plugin.isTerraformElement.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `isTerraformResource` <a name="isTerraformResource" id="@cdktf/provider-docker.plugin.Plugin.isTerraformResource"></a>
+##### `isTerraformResource` <a name="isTerraformResource" id="@cdktn/provider-docker.plugin.Plugin.isTerraformResource"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 plugin.Plugin.isTerraformResource(x: any)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.plugin.Plugin.isTerraformResource.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.plugin.Plugin.isTerraformResource.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktf/provider-docker.plugin.Plugin.generateConfigForImport"></a>
+##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 plugin.Plugin.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
 ```
 
 Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>".
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.plugin.Plugin.generateConfigForImport.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -529,7 +529,7 @@ The scope in which to define this construct.
 
 ---
 
-###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-docker.plugin.Plugin.generateConfigForImport.parameter.importToId"></a>
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.importToId"></a>
 
 - *Type:* string
 
@@ -537,7 +537,7 @@ The construct id used in the generated config for the Plugin to import.
 
 ---
 
-###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-docker.plugin.Plugin.generateConfigForImport.parameter.importFromId"></a>
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.importFromId"></a>
 
 - *Type:* string
 
@@ -547,7 +547,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.plugin.Plugin.generateConfigForImport.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
@@ -559,45 +559,45 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.grantPermissions">grantPermissions</a></code> | <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList">PluginGrantPermissionsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.pluginReference">pluginReference</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.aliasInput">aliasInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.enabledInput">enabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.enableTimeoutInput">enableTimeoutInput</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.envInput">envInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.forceDestroyInput">forceDestroyInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.forceDisableInput">forceDisableInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.grantAllPermissionsInput">grantAllPermissionsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.grantPermissionsInput">grantPermissionsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.alias">alias</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.enableTimeout">enableTimeout</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.env">env</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.forceDestroy">forceDestroy</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.forceDisable">forceDisable</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.grantAllPermissions">grantAllPermissions</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantPermissions">grantPermissions</a></code> | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList">PluginGrantPermissionsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.pluginReference">pluginReference</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.aliasInput">aliasInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabledInput">enabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enableTimeoutInput">enableTimeoutInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.envInput">envInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroyInput">forceDestroyInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisableInput">forceDisableInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissionsInput">grantAllPermissionsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantPermissionsInput">grantPermissionsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.alias">alias</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enableTimeout">enableTimeout</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.env">env</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroy">forceDestroy</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisable">forceDisable</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissions">grantAllPermissions</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.name">name</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-docker.plugin.Plugin.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@cdktn/provider-docker.plugin.Plugin.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -609,7 +609,7 @@ The tree node.
 
 ---
 
-##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="@cdktf/provider-docker.plugin.Plugin.property.cdktfStack"></a>
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="@cdktn/provider-docker.plugin.Plugin.property.cdktfStack"></a>
 
 ```typescript
 public readonly cdktfStack: TerraformStack;
@@ -619,7 +619,7 @@ public readonly cdktfStack: TerraformStack;
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-docker.plugin.Plugin.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.plugin.Plugin.property.fqn"></a>
 
 ```typescript
 public readonly fqn: string;
@@ -629,7 +629,7 @@ public readonly fqn: string;
 
 ---
 
-##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="@cdktf/provider-docker.plugin.Plugin.property.friendlyUniqueId"></a>
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="@cdktn/provider-docker.plugin.Plugin.property.friendlyUniqueId"></a>
 
 ```typescript
 public readonly friendlyUniqueId: string;
@@ -639,7 +639,7 @@ public readonly friendlyUniqueId: string;
 
 ---
 
-##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="@cdktf/provider-docker.plugin.Plugin.property.terraformMetaArguments"></a>
+##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="@cdktn/provider-docker.plugin.Plugin.property.terraformMetaArguments"></a>
 
 ```typescript
 public readonly terraformMetaArguments: {[ key: string ]: any};
@@ -649,7 +649,7 @@ public readonly terraformMetaArguments: {[ key: string ]: any};
 
 ---
 
-##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="@cdktf/provider-docker.plugin.Plugin.property.terraformResourceType"></a>
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="@cdktn/provider-docker.plugin.Plugin.property.terraformResourceType"></a>
 
 ```typescript
 public readonly terraformResourceType: string;
@@ -659,7 +659,7 @@ public readonly terraformResourceType: string;
 
 ---
 
-##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="@cdktf/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata"></a>
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="@cdktn/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata"></a>
 
 ```typescript
 public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
@@ -669,7 +669,7 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-docker.plugin.Plugin.property.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.plugin.Plugin.property.connection"></a>
 
 ```typescript
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
@@ -679,7 +679,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-docker.plugin.Plugin.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.plugin.Plugin.property.count"></a>
 
 ```typescript
 public readonly count: number | TerraformCount;
@@ -689,7 +689,7 @@ public readonly count: number | TerraformCount;
 
 ---
 
-##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-docker.plugin.Plugin.property.dependsOn"></a>
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktn/provider-docker.plugin.Plugin.property.dependsOn"></a>
 
 ```typescript
 public readonly dependsOn: string[];
@@ -699,7 +699,7 @@ public readonly dependsOn: string[];
 
 ---
 
-##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-docker.plugin.Plugin.property.forEach"></a>
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktn/provider-docker.plugin.Plugin.property.forEach"></a>
 
 ```typescript
 public readonly forEach: ITerraformIterator;
@@ -709,7 +709,7 @@ public readonly forEach: ITerraformIterator;
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-docker.plugin.Plugin.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.plugin.Plugin.property.lifecycle"></a>
 
 ```typescript
 public readonly lifecycle: TerraformResourceLifecycle;
@@ -719,7 +719,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.plugin.Plugin.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.property.provider"></a>
 
 ```typescript
 public readonly provider: TerraformProvider;
@@ -729,7 +729,7 @@ public readonly provider: TerraformProvider;
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-docker.plugin.Plugin.property.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.plugin.Plugin.property.provisioners"></a>
 
 ```typescript
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
@@ -739,17 +739,17 @@ public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteEx
 
 ---
 
-##### `grantPermissions`<sup>Required</sup> <a name="grantPermissions" id="@cdktf/provider-docker.plugin.Plugin.property.grantPermissions"></a>
+##### `grantPermissions`<sup>Required</sup> <a name="grantPermissions" id="@cdktn/provider-docker.plugin.Plugin.property.grantPermissions"></a>
 
 ```typescript
 public readonly grantPermissions: PluginGrantPermissionsList;
 ```
 
-- *Type:* <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList">PluginGrantPermissionsList</a>
+- *Type:* <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList">PluginGrantPermissionsList</a>
 
 ---
 
-##### `pluginReference`<sup>Required</sup> <a name="pluginReference" id="@cdktf/provider-docker.plugin.Plugin.property.pluginReference"></a>
+##### `pluginReference`<sup>Required</sup> <a name="pluginReference" id="@cdktn/provider-docker.plugin.Plugin.property.pluginReference"></a>
 
 ```typescript
 public readonly pluginReference: string;
@@ -759,7 +759,7 @@ public readonly pluginReference: string;
 
 ---
 
-##### `aliasInput`<sup>Optional</sup> <a name="aliasInput" id="@cdktf/provider-docker.plugin.Plugin.property.aliasInput"></a>
+##### `aliasInput`<sup>Optional</sup> <a name="aliasInput" id="@cdktn/provider-docker.plugin.Plugin.property.aliasInput"></a>
 
 ```typescript
 public readonly aliasInput: string;
@@ -769,7 +769,7 @@ public readonly aliasInput: string;
 
 ---
 
-##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktf/provider-docker.plugin.Plugin.property.enabledInput"></a>
+##### `enabledInput`<sup>Optional</sup> <a name="enabledInput" id="@cdktn/provider-docker.plugin.Plugin.property.enabledInput"></a>
 
 ```typescript
 public readonly enabledInput: boolean | IResolvable;
@@ -779,7 +779,7 @@ public readonly enabledInput: boolean | IResolvable;
 
 ---
 
-##### `enableTimeoutInput`<sup>Optional</sup> <a name="enableTimeoutInput" id="@cdktf/provider-docker.plugin.Plugin.property.enableTimeoutInput"></a>
+##### `enableTimeoutInput`<sup>Optional</sup> <a name="enableTimeoutInput" id="@cdktn/provider-docker.plugin.Plugin.property.enableTimeoutInput"></a>
 
 ```typescript
 public readonly enableTimeoutInput: number;
@@ -789,7 +789,7 @@ public readonly enableTimeoutInput: number;
 
 ---
 
-##### `envInput`<sup>Optional</sup> <a name="envInput" id="@cdktf/provider-docker.plugin.Plugin.property.envInput"></a>
+##### `envInput`<sup>Optional</sup> <a name="envInput" id="@cdktn/provider-docker.plugin.Plugin.property.envInput"></a>
 
 ```typescript
 public readonly envInput: string[];
@@ -799,7 +799,7 @@ public readonly envInput: string[];
 
 ---
 
-##### `forceDestroyInput`<sup>Optional</sup> <a name="forceDestroyInput" id="@cdktf/provider-docker.plugin.Plugin.property.forceDestroyInput"></a>
+##### `forceDestroyInput`<sup>Optional</sup> <a name="forceDestroyInput" id="@cdktn/provider-docker.plugin.Plugin.property.forceDestroyInput"></a>
 
 ```typescript
 public readonly forceDestroyInput: boolean | IResolvable;
@@ -809,7 +809,7 @@ public readonly forceDestroyInput: boolean | IResolvable;
 
 ---
 
-##### `forceDisableInput`<sup>Optional</sup> <a name="forceDisableInput" id="@cdktf/provider-docker.plugin.Plugin.property.forceDisableInput"></a>
+##### `forceDisableInput`<sup>Optional</sup> <a name="forceDisableInput" id="@cdktn/provider-docker.plugin.Plugin.property.forceDisableInput"></a>
 
 ```typescript
 public readonly forceDisableInput: boolean | IResolvable;
@@ -819,7 +819,7 @@ public readonly forceDisableInput: boolean | IResolvable;
 
 ---
 
-##### `grantAllPermissionsInput`<sup>Optional</sup> <a name="grantAllPermissionsInput" id="@cdktf/provider-docker.plugin.Plugin.property.grantAllPermissionsInput"></a>
+##### `grantAllPermissionsInput`<sup>Optional</sup> <a name="grantAllPermissionsInput" id="@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissionsInput"></a>
 
 ```typescript
 public readonly grantAllPermissionsInput: boolean | IResolvable;
@@ -829,17 +829,17 @@ public readonly grantAllPermissionsInput: boolean | IResolvable;
 
 ---
 
-##### `grantPermissionsInput`<sup>Optional</sup> <a name="grantPermissionsInput" id="@cdktf/provider-docker.plugin.Plugin.property.grantPermissionsInput"></a>
+##### `grantPermissionsInput`<sup>Optional</sup> <a name="grantPermissionsInput" id="@cdktn/provider-docker.plugin.Plugin.property.grantPermissionsInput"></a>
 
 ```typescript
 public readonly grantPermissionsInput: IResolvable | PluginGrantPermissions[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
+- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
 
 ---
 
-##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-docker.plugin.Plugin.property.idInput"></a>
+##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktn/provider-docker.plugin.Plugin.property.idInput"></a>
 
 ```typescript
 public readonly idInput: string;
@@ -849,7 +849,7 @@ public readonly idInput: string;
 
 ---
 
-##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-docker.plugin.Plugin.property.nameInput"></a>
+##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktn/provider-docker.plugin.Plugin.property.nameInput"></a>
 
 ```typescript
 public readonly nameInput: string;
@@ -859,7 +859,7 @@ public readonly nameInput: string;
 
 ---
 
-##### `alias`<sup>Required</sup> <a name="alias" id="@cdktf/provider-docker.plugin.Plugin.property.alias"></a>
+##### `alias`<sup>Required</sup> <a name="alias" id="@cdktn/provider-docker.plugin.Plugin.property.alias"></a>
 
 ```typescript
 public readonly alias: string;
@@ -869,7 +869,7 @@ public readonly alias: string;
 
 ---
 
-##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-docker.plugin.Plugin.property.enabled"></a>
+##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktn/provider-docker.plugin.Plugin.property.enabled"></a>
 
 ```typescript
 public readonly enabled: boolean | IResolvable;
@@ -879,7 +879,7 @@ public readonly enabled: boolean | IResolvable;
 
 ---
 
-##### `enableTimeout`<sup>Required</sup> <a name="enableTimeout" id="@cdktf/provider-docker.plugin.Plugin.property.enableTimeout"></a>
+##### `enableTimeout`<sup>Required</sup> <a name="enableTimeout" id="@cdktn/provider-docker.plugin.Plugin.property.enableTimeout"></a>
 
 ```typescript
 public readonly enableTimeout: number;
@@ -889,7 +889,7 @@ public readonly enableTimeout: number;
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="@cdktf/provider-docker.plugin.Plugin.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="@cdktn/provider-docker.plugin.Plugin.property.env"></a>
 
 ```typescript
 public readonly env: string[];
@@ -899,7 +899,7 @@ public readonly env: string[];
 
 ---
 
-##### `forceDestroy`<sup>Required</sup> <a name="forceDestroy" id="@cdktf/provider-docker.plugin.Plugin.property.forceDestroy"></a>
+##### `forceDestroy`<sup>Required</sup> <a name="forceDestroy" id="@cdktn/provider-docker.plugin.Plugin.property.forceDestroy"></a>
 
 ```typescript
 public readonly forceDestroy: boolean | IResolvable;
@@ -909,7 +909,7 @@ public readonly forceDestroy: boolean | IResolvable;
 
 ---
 
-##### `forceDisable`<sup>Required</sup> <a name="forceDisable" id="@cdktf/provider-docker.plugin.Plugin.property.forceDisable"></a>
+##### `forceDisable`<sup>Required</sup> <a name="forceDisable" id="@cdktn/provider-docker.plugin.Plugin.property.forceDisable"></a>
 
 ```typescript
 public readonly forceDisable: boolean | IResolvable;
@@ -919,7 +919,7 @@ public readonly forceDisable: boolean | IResolvable;
 
 ---
 
-##### `grantAllPermissions`<sup>Required</sup> <a name="grantAllPermissions" id="@cdktf/provider-docker.plugin.Plugin.property.grantAllPermissions"></a>
+##### `grantAllPermissions`<sup>Required</sup> <a name="grantAllPermissions" id="@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissions"></a>
 
 ```typescript
 public readonly grantAllPermissions: boolean | IResolvable;
@@ -929,7 +929,7 @@ public readonly grantAllPermissions: boolean | IResolvable;
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.plugin.Plugin.property.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.plugin.Plugin.property.id"></a>
 
 ```typescript
 public readonly id: string;
@@ -939,7 +939,7 @@ public readonly id: string;
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.plugin.Plugin.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.plugin.Plugin.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -953,11 +953,11 @@ public readonly name: string;
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.Plugin.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-docker.plugin.Plugin.property.tfResourceType"></a>
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktn/provider-docker.plugin.Plugin.property.tfResourceType"></a>
 
 ```typescript
 public readonly tfResourceType: string;
@@ -969,12 +969,12 @@ public readonly tfResourceType: string;
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### PluginConfig <a name="PluginConfig" id="@cdktf/provider-docker.plugin.PluginConfig"></a>
+### PluginConfig <a name="PluginConfig" id="@cdktn/provider-docker.plugin.PluginConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.plugin.PluginConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.plugin.PluginConfig.Initializer"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 const pluginConfig: plugin.PluginConfig = { ... }
 ```
@@ -983,27 +983,27 @@ const pluginConfig: plugin.PluginConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.name">name</a></code> | <code>string</code> | Docker Plugin name. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.alias">alias</a></code> | <code>string</code> | Docker Plugin alias. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.enableTimeout">enableTimeout</a></code> | <code>number</code> | HTTP client timeout to enable the plugin. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.env">env</a></code> | <code>string[]</code> | The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.forceDestroy">forceDestroy</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.forceDisable">forceDisable</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, then the plugin is disabled forcibly. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.grantAllPermissions">grantAllPermissions</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.grantPermissions">grantPermissions</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | grant_permissions block. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#id Plugin#id}. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.name">name</a></code> | <code>string</code> | Docker Plugin name. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.alias">alias</a></code> | <code>string</code> | Docker Plugin alias. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.enableTimeout">enableTimeout</a></code> | <code>number</code> | HTTP client timeout to enable the plugin. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.env">env</a></code> | <code>string[]</code> | The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDestroy">forceDestroy</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable">forceDisable</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, then the plugin is disabled forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions">grantAllPermissions</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions">grantPermissions</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | grant_permissions block. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#id Plugin#id}. |
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-docker.plugin.PluginConfig.property.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.plugin.PluginConfig.property.connection"></a>
 
 ```typescript
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
@@ -1013,7 +1013,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-docker.plugin.PluginConfig.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.plugin.PluginConfig.property.count"></a>
 
 ```typescript
 public readonly count: number | TerraformCount;
@@ -1023,7 +1023,7 @@ public readonly count: number | TerraformCount;
 
 ---
 
-##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-docker.plugin.PluginConfig.property.dependsOn"></a>
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktn/provider-docker.plugin.PluginConfig.property.dependsOn"></a>
 
 ```typescript
 public readonly dependsOn: ITerraformDependable[];
@@ -1033,7 +1033,7 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
-##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-docker.plugin.PluginConfig.property.forEach"></a>
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktn/provider-docker.plugin.PluginConfig.property.forEach"></a>
 
 ```typescript
 public readonly forEach: ITerraformIterator;
@@ -1043,7 +1043,7 @@ public readonly forEach: ITerraformIterator;
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-docker.plugin.PluginConfig.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.plugin.PluginConfig.property.lifecycle"></a>
 
 ```typescript
 public readonly lifecycle: TerraformResourceLifecycle;
@@ -1053,7 +1053,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.plugin.PluginConfig.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.PluginConfig.property.provider"></a>
 
 ```typescript
 public readonly provider: TerraformProvider;
@@ -1063,7 +1063,7 @@ public readonly provider: TerraformProvider;
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-docker.plugin.PluginConfig.property.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.plugin.PluginConfig.property.provisioners"></a>
 
 ```typescript
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
@@ -1073,7 +1073,7 @@ public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteEx
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.plugin.PluginConfig.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.plugin.PluginConfig.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -1087,7 +1087,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `alias`<sup>Optional</sup> <a name="alias" id="@cdktf/provider-docker.plugin.PluginConfig.property.alias"></a>
+##### `alias`<sup>Optional</sup> <a name="alias" id="@cdktn/provider-docker.plugin.PluginConfig.property.alias"></a>
 
 ```typescript
 public readonly alias: string;
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-docker.plugin.PluginConfig.property.enabled"></a>
+##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktn/provider-docker.plugin.PluginConfig.property.enabled"></a>
 
 ```typescript
 public readonly enabled: boolean | IResolvable;
@@ -1115,7 +1115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `enableTimeout`<sup>Optional</sup> <a name="enableTimeout" id="@cdktf/provider-docker.plugin.PluginConfig.property.enableTimeout"></a>
+##### `enableTimeout`<sup>Optional</sup> <a name="enableTimeout" id="@cdktn/provider-docker.plugin.PluginConfig.property.enableTimeout"></a>
 
 ```typescript
 public readonly enableTimeout: number;
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `env`<sup>Optional</sup> <a name="env" id="@cdktf/provider-docker.plugin.PluginConfig.property.env"></a>
+##### `env`<sup>Optional</sup> <a name="env" id="@cdktn/provider-docker.plugin.PluginConfig.property.env"></a>
 
 ```typescript
 public readonly env: string[];
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `forceDestroy`<sup>Optional</sup> <a name="forceDestroy" id="@cdktf/provider-docker.plugin.PluginConfig.property.forceDestroy"></a>
+##### `forceDestroy`<sup>Optional</sup> <a name="forceDestroy" id="@cdktn/provider-docker.plugin.PluginConfig.property.forceDestroy"></a>
 
 ```typescript
 public readonly forceDestroy: boolean | IResolvable;
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `forceDisable`<sup>Optional</sup> <a name="forceDisable" id="@cdktf/provider-docker.plugin.PluginConfig.property.forceDisable"></a>
+##### `forceDisable`<sup>Optional</sup> <a name="forceDisable" id="@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable"></a>
 
 ```typescript
 public readonly forceDisable: boolean | IResolvable;
@@ -1171,7 +1171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `grantAllPermissions`<sup>Optional</sup> <a name="grantAllPermissions" id="@cdktf/provider-docker.plugin.PluginConfig.property.grantAllPermissions"></a>
+##### `grantAllPermissions`<sup>Optional</sup> <a name="grantAllPermissions" id="@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions"></a>
 
 ```typescript
 public readonly grantAllPermissions: boolean | IResolvable;
@@ -1185,13 +1185,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `grantPermissions`<sup>Optional</sup> <a name="grantPermissions" id="@cdktf/provider-docker.plugin.PluginConfig.property.grantPermissions"></a>
+##### `grantPermissions`<sup>Optional</sup> <a name="grantPermissions" id="@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions"></a>
 
 ```typescript
 public readonly grantPermissions: IResolvable | PluginGrantPermissions[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
+- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
 
 grant_permissions block.
 
@@ -1199,7 +1199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-docker.plugin.PluginConfig.property.id"></a>
+##### `id`<sup>Optional</sup> <a name="id" id="@cdktn/provider-docker.plugin.PluginConfig.property.id"></a>
 
 ```typescript
 public readonly id: string;
@@ -1214,12 +1214,12 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
-### PluginGrantPermissions <a name="PluginGrantPermissions" id="@cdktf/provider-docker.plugin.PluginGrantPermissions"></a>
+### PluginGrantPermissions <a name="PluginGrantPermissions" id="@cdktn/provider-docker.plugin.PluginGrantPermissions"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.plugin.PluginGrantPermissions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.plugin.PluginGrantPermissions.Initializer"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 const pluginGrantPermissions: plugin.PluginGrantPermissions = { ... }
 ```
@@ -1228,12 +1228,12 @@ const pluginGrantPermissions: plugin.PluginGrantPermissions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions.property.name">name</a></code> | <code>string</code> | The name of the permission. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions.property.value">value</a></code> | <code>string[]</code> | The value of the permission. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions.property.name">name</a></code> | <code>string</code> | The name of the permission. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions.property.value">value</a></code> | <code>string[]</code> | The value of the permission. |
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.plugin.PluginGrantPermissions.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.plugin.PluginGrantPermissions.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -1247,7 +1247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.plugin.PluginGrantPermissions.property.value"></a>
+##### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.plugin.PluginGrantPermissions.property.value"></a>
 
 ```typescript
 public readonly value: string[];
@@ -1263,25 +1263,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ## Classes <a name="Classes" id="Classes"></a>
 
-### PluginGrantPermissionsList <a name="PluginGrantPermissionsList" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList"></a>
+### PluginGrantPermissionsList <a name="PluginGrantPermissionsList" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 new plugin.PluginGrantPermissionsList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource"></a>
 
 - *Type:* cdktf.IInterpolatingParent
 
@@ -1289,7 +1289,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
@@ -1297,7 +1297,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.wrapsSet"></a>
 
 - *Type:* boolean
 
@@ -1309,15 +1309,15 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.get">get</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.get">get</a></code> | *No description.* |
 
 ---
 
-##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey"></a>
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey"></a>
 
 ```typescript
 public allWithMapKey(mapKeyAttributeName: string): DynamicListTerraformIterator
@@ -1327,19 +1327,19 @@ Creating an iterator for this complex list.
 
 The list will be converted into a map with the mapKeyAttributeName as the key.
 
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
 
 - *Type:* string
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.computeFqn"></a>
 
 ```typescript
 public computeFqn(): string
 ```
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.resolve"></a>
 
 ```typescript
 public resolve(_context: IResolveContext): any
@@ -1347,13 +1347,13 @@ public resolve(_context: IResolveContext): any
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.resolve.parameter._context"></a>
 
 - *Type:* cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.toString"></a>
+##### `toString` <a name="toString" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1363,13 +1363,13 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `get` <a name="get" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.get"></a>
+##### `get` <a name="get" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.get"></a>
 
 ```typescript
 public get(index: number): PluginGrantPermissionsOutputReference
 ```
 
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.get.parameter.index"></a>
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.get.parameter.index"></a>
 
 - *Type:* number
 
@@ -1382,13 +1382,13 @@ the index of the item to return.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.creationStack"></a>
 
 ```typescript
 public readonly creationStack: string[];
@@ -1402,7 +1402,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.fqn"></a>
 
 ```typescript
 public readonly fqn: string;
@@ -1412,37 +1412,37 @@ public readonly fqn: string;
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue"></a>
 
 ```typescript
 public readonly internalValue: IResolvable | PluginGrantPermissions[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
+- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]
 
 ---
 
 
-### PluginGrantPermissionsOutputReference <a name="PluginGrantPermissionsOutputReference" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference"></a>
+### PluginGrantPermissionsOutputReference <a name="PluginGrantPermissionsOutputReference" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer"></a>
 
 ```typescript
-import { plugin } from '@cdktf/provider-docker'
+import { plugin } from '@cdktn/provider-docker'
 
 new plugin.PluginGrantPermissionsOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* cdktf.IInterpolatingParent
 
@@ -1450,7 +1450,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
@@ -1458,7 +1458,7 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIndex"></a>
 
 - *Type:* number
 
@@ -1466,7 +1466,7 @@ the index of this item in the list.
 
 ---
 
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
 
 - *Type:* boolean
 
@@ -1478,149 +1478,149 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.computeFqn"></a>
 
 ```typescript
 public computeFqn(): string
 ```
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute"></a>
 
 ```typescript
 public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute"></a>
 
 ```typescript
 public getBooleanAttribute(terraformAttribute: string): IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute"></a>
 
 ```typescript
 public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute"></a>
 
 ```typescript
 public getListAttribute(terraformAttribute: string): string[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute"></a>
 
 ```typescript
 public getNumberAttribute(terraformAttribute: string): number
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute"></a>
 
 ```typescript
 public getNumberListAttribute(terraformAttribute: string): number[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute"></a>
 
 ```typescript
 public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute"></a>
 
 ```typescript
 public getStringAttribute(terraformAttribute: string): string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute"></a>
 
 ```typescript
 public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute"></a>
 
 ```typescript
 public interpolationForAttribute(property: string): IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* string
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve"></a>
 
 ```typescript
 public resolve(_context: IResolveContext): any
@@ -1628,13 +1628,13 @@ public resolve(_context: IResolveContext): any
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve.parameter._context"></a>
 
 - *Type:* cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.toString"></a>
+##### `toString` <a name="toString" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1649,17 +1649,17 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.valueInput">valueInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.value">value</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.valueInput">valueInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.value">value</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a></code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.creationStack"></a>
 
 ```typescript
 public readonly creationStack: string[];
@@ -1673,7 +1673,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.fqn"></a>
 
 ```typescript
 public readonly fqn: string;
@@ -1683,7 +1683,7 @@ public readonly fqn: string;
 
 ---
 
-##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.nameInput"></a>
+##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.nameInput"></a>
 
 ```typescript
 public readonly nameInput: string;
@@ -1693,7 +1693,7 @@ public readonly nameInput: string;
 
 ---
 
-##### `valueInput`<sup>Optional</sup> <a name="valueInput" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.valueInput"></a>
+##### `valueInput`<sup>Optional</sup> <a name="valueInput" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.valueInput"></a>
 
 ```typescript
 public readonly valueInput: string[];
@@ -1703,7 +1703,7 @@ public readonly valueInput: string[];
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -1713,7 +1713,7 @@ public readonly name: string;
 
 ---
 
-##### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.value"></a>
+##### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.value"></a>
 
 ```typescript
 public readonly value: string[];
@@ -1723,13 +1723,13 @@ public readonly value: string[];
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue"></a>
 
 ```typescript
 public readonly internalValue: IResolvable | PluginGrantPermissions;
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>
+- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>
 
 ---
 

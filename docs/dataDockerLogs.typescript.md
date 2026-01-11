@@ -1,28 +1,28 @@
-# `dataDockerLogs` Submodule <a name="`dataDockerLogs` Submodule" id="@cdktf/provider-docker.dataDockerLogs"></a>
+# `dataDockerLogs` Submodule <a name="`dataDockerLogs` Submodule" id="@cdktn/provider-docker.dataDockerLogs"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### DataDockerLogs <a name="DataDockerLogs" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs"></a>
+### DataDockerLogs <a name="DataDockerLogs" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs"></a>
 
 Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs docker_logs}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 new dataDockerLogs.DataDockerLogs(scope: Construct, id: string, config: DataDockerLogsConfig)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig">DataDockerLogsConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig">DataDockerLogsConfig</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -30,7 +30,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -40,9 +40,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig">DataDockerLogsConfig</a>
+- *Type:* <a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig">DataDockerLogsConfig</a>
 
 ---
 
@@ -50,38 +50,38 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.addOverride">addOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toMetadata">toMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetDetails">resetDetails</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetDiscardHeaders">resetDiscardHeaders</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetFollow">resetFollow</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetId">resetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetLogsListStringEnabled">resetLogsListStringEnabled</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStderr">resetShowStderr</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStdout">resetShowStdout</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetSince">resetSince</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetTail">resetTail</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetTimestamps">resetTimestamps</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetUntil">resetUntil</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetDetails">resetDetails</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetDiscardHeaders">resetDiscardHeaders</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetFollow">resetFollow</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetLogsListStringEnabled">resetLogsListStringEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStderr">resetShowStderr</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStdout">resetShowStdout</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetSince">resetSince</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetTail">resetTail</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetTimestamps">resetTimestamps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetUntil">resetUntil</a></code> | *No description.* |
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toString"></a>
+##### `toString` <a name="toString" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toString"></a>
 
 ```typescript
 public toString(): string
@@ -89,25 +89,25 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addOverride` <a name="addOverride" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.addOverride"></a>
+##### `addOverride` <a name="addOverride" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.addOverride"></a>
 
 ```typescript
 public addOverride(path: string, value: any): void
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.addOverride.parameter.path"></a>
 
 - *Type:* string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.addOverride.parameter.value"></a>
 
 - *Type:* any
 
 ---
 
-##### `overrideLogicalId` <a name="overrideLogicalId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId"></a>
+##### `overrideLogicalId` <a name="overrideLogicalId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId"></a>
 
 ```typescript
 public overrideLogicalId(newLogicalId: string): void
@@ -115,7 +115,7 @@ public overrideLogicalId(newLogicalId: string): void
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId.parameter.newLogicalId"></a>
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* string
 
@@ -123,7 +123,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetOverrideLogicalId"></a>
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetOverrideLogicalId"></a>
 
 ```typescript
 public resetOverrideLogicalId(): void
@@ -131,7 +131,7 @@ public resetOverrideLogicalId(): void
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toHclTerraform"></a>
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toHclTerraform"></a>
 
 ```typescript
 public toHclTerraform(): any
@@ -139,13 +139,13 @@ public toHclTerraform(): any
 
 Adds this resource to the terraform JSON output.
 
-##### `toMetadata` <a name="toMetadata" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toMetadata"></a>
+##### `toMetadata` <a name="toMetadata" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toMetadata"></a>
 
 ```typescript
 public toMetadata(): any
 ```
 
-##### `toTerraform` <a name="toTerraform" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.toTerraform"></a>
+##### `toTerraform` <a name="toTerraform" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.toTerraform"></a>
 
 ```typescript
 public toTerraform(): any
@@ -153,187 +153,187 @@ public toTerraform(): any
 
 Adds this resource to the terraform JSON output.
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute"></a>
 
 ```typescript
 public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute"></a>
 
 ```typescript
 public getBooleanAttribute(terraformAttribute: string): IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute"></a>
 
 ```typescript
 public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute"></a>
 
 ```typescript
 public getListAttribute(terraformAttribute: string): string[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute"></a>
 
 ```typescript
 public getNumberAttribute(terraformAttribute: string): number
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute"></a>
 
 ```typescript
 public getNumberListAttribute(terraformAttribute: string): number[]
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute"></a>
 
 ```typescript
 public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute"></a>
 
 ```typescript
 public getStringAttribute(terraformAttribute: string): string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute"></a>
 
 ```typescript
 public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute"></a>
 
 ```typescript
 public interpolationForAttribute(terraformAttribute: string): IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `resetDetails` <a name="resetDetails" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetDetails"></a>
+##### `resetDetails` <a name="resetDetails" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetDetails"></a>
 
 ```typescript
 public resetDetails(): void
 ```
 
-##### `resetDiscardHeaders` <a name="resetDiscardHeaders" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetDiscardHeaders"></a>
+##### `resetDiscardHeaders` <a name="resetDiscardHeaders" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetDiscardHeaders"></a>
 
 ```typescript
 public resetDiscardHeaders(): void
 ```
 
-##### `resetFollow` <a name="resetFollow" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetFollow"></a>
+##### `resetFollow` <a name="resetFollow" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetFollow"></a>
 
 ```typescript
 public resetFollow(): void
 ```
 
-##### `resetId` <a name="resetId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetId"></a>
+##### `resetId` <a name="resetId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetId"></a>
 
 ```typescript
 public resetId(): void
 ```
 
-##### `resetLogsListStringEnabled` <a name="resetLogsListStringEnabled" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetLogsListStringEnabled"></a>
+##### `resetLogsListStringEnabled` <a name="resetLogsListStringEnabled" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetLogsListStringEnabled"></a>
 
 ```typescript
 public resetLogsListStringEnabled(): void
 ```
 
-##### `resetShowStderr` <a name="resetShowStderr" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStderr"></a>
+##### `resetShowStderr` <a name="resetShowStderr" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStderr"></a>
 
 ```typescript
 public resetShowStderr(): void
 ```
 
-##### `resetShowStdout` <a name="resetShowStdout" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStdout"></a>
+##### `resetShowStdout` <a name="resetShowStdout" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetShowStdout"></a>
 
 ```typescript
 public resetShowStdout(): void
 ```
 
-##### `resetSince` <a name="resetSince" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetSince"></a>
+##### `resetSince` <a name="resetSince" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetSince"></a>
 
 ```typescript
 public resetSince(): void
 ```
 
-##### `resetTail` <a name="resetTail" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetTail"></a>
+##### `resetTail` <a name="resetTail" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetTail"></a>
 
 ```typescript
 public resetTail(): void
 ```
 
-##### `resetTimestamps` <a name="resetTimestamps" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetTimestamps"></a>
+##### `resetTimestamps` <a name="resetTimestamps" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetTimestamps"></a>
 
 ```typescript
 public resetTimestamps(): void
 ```
 
-##### `resetUntil` <a name="resetUntil" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.resetUntil"></a>
+##### `resetUntil` <a name="resetUntil" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.resetUntil"></a>
 
 ```typescript
 public resetUntil(): void
@@ -343,17 +343,17 @@ public resetUntil(): void
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement">isTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataDockerLogs resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataDockerLogs resource upon running "cdktf plan <stack-name>". |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 dataDockerLogs.DataDockerLogs.isConstruct(x: any)
 ```
@@ -374,7 +374,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -382,45 +382,45 @@ Any object.
 
 ---
 
-##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement"></a>
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 dataDockerLogs.DataDockerLogs.isTerraformElement(x: any)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `isTerraformDataSource` <a name="isTerraformDataSource" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource"></a>
+##### `isTerraformDataSource` <a name="isTerraformDataSource" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 dataDockerLogs.DataDockerLogs.isTerraformDataSource(x: any)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport"></a>
+##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 dataDockerLogs.DataDockerLogs.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
 ```
 
 Generates CDKTF code for importing a DataDockerLogs resource upon running "cdktf plan <stack-name>".
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -428,7 +428,7 @@ The scope in which to define this construct.
 
 ---
 
-###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.importToId"></a>
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.importToId"></a>
 
 - *Type:* string
 
@@ -436,7 +436,7 @@ The construct id used in the generated config for the DataDockerLogs to import.
 
 ---
 
-###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.importFromId"></a>
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.importFromId"></a>
 
 - *Type:* string
 
@@ -446,7 +446,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
@@ -458,47 +458,47 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListString">logsListString</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput">detailsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput">discardHeadersInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput">followInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput">logsListStringEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput">showStderrInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput">showStdoutInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.sinceInput">sinceInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tailInput">tailInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput">timestampsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.untilInput">untilInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.details">details</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders">discardHeaders</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.follow">follow</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled">logsListStringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr">showStderr</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout">showStdout</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.since">since</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tail">tail</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps">timestamps</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.until">until</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListString">logsListString</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput">detailsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput">discardHeadersInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput">followInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput">logsListStringEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput">showStderrInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput">showStdoutInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.sinceInput">sinceInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tailInput">tailInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput">timestampsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.untilInput">untilInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.details">details</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders">discardHeaders</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.follow">follow</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled">logsListStringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr">showStderr</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout">showStdout</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.since">since</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tail">tail</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps">timestamps</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.until">until</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -510,7 +510,7 @@ The tree node.
 
 ---
 
-##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack"></a>
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack"></a>
 
 ```typescript
 public readonly cdktfStack: TerraformStack;
@@ -520,7 +520,7 @@ public readonly cdktfStack: TerraformStack;
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.fqn"></a>
 
 ```typescript
 public readonly fqn: string;
@@ -530,7 +530,7 @@ public readonly fqn: string;
 
 ---
 
-##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.friendlyUniqueId"></a>
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.friendlyUniqueId"></a>
 
 ```typescript
 public readonly friendlyUniqueId: string;
@@ -540,7 +540,7 @@ public readonly friendlyUniqueId: string;
 
 ---
 
-##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformMetaArguments"></a>
+##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformMetaArguments"></a>
 
 ```typescript
 public readonly terraformMetaArguments: {[ key: string ]: any};
@@ -550,7 +550,7 @@ public readonly terraformMetaArguments: {[ key: string ]: any};
 
 ---
 
-##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformResourceType"></a>
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformResourceType"></a>
 
 ```typescript
 public readonly terraformResourceType: string;
@@ -560,7 +560,7 @@ public readonly terraformResourceType: string;
 
 ---
 
-##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata"></a>
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata"></a>
 
 ```typescript
 public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
@@ -570,7 +570,7 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.count"></a>
 
 ```typescript
 public readonly count: number | TerraformCount;
@@ -580,7 +580,7 @@ public readonly count: number | TerraformCount;
 
 ---
 
-##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.dependsOn"></a>
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.dependsOn"></a>
 
 ```typescript
 public readonly dependsOn: string[];
@@ -590,7 +590,7 @@ public readonly dependsOn: string[];
 
 ---
 
-##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach"></a>
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach"></a>
 
 ```typescript
 public readonly forEach: ITerraformIterator;
@@ -600,7 +600,7 @@ public readonly forEach: ITerraformIterator;
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle"></a>
 
 ```typescript
 public readonly lifecycle: TerraformResourceLifecycle;
@@ -610,7 +610,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.provider"></a>
 
 ```typescript
 public readonly provider: TerraformProvider;
@@ -620,7 +620,7 @@ public readonly provider: TerraformProvider;
 
 ---
 
-##### `logsListString`<sup>Required</sup> <a name="logsListString" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListString"></a>
+##### `logsListString`<sup>Required</sup> <a name="logsListString" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListString"></a>
 
 ```typescript
 public readonly logsListString: string[];
@@ -630,7 +630,7 @@ public readonly logsListString: string[];
 
 ---
 
-##### `detailsInput`<sup>Optional</sup> <a name="detailsInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput"></a>
+##### `detailsInput`<sup>Optional</sup> <a name="detailsInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput"></a>
 
 ```typescript
 public readonly detailsInput: boolean | IResolvable;
@@ -640,7 +640,7 @@ public readonly detailsInput: boolean | IResolvable;
 
 ---
 
-##### `discardHeadersInput`<sup>Optional</sup> <a name="discardHeadersInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput"></a>
+##### `discardHeadersInput`<sup>Optional</sup> <a name="discardHeadersInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput"></a>
 
 ```typescript
 public readonly discardHeadersInput: boolean | IResolvable;
@@ -650,7 +650,7 @@ public readonly discardHeadersInput: boolean | IResolvable;
 
 ---
 
-##### `followInput`<sup>Optional</sup> <a name="followInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput"></a>
+##### `followInput`<sup>Optional</sup> <a name="followInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput"></a>
 
 ```typescript
 public readonly followInput: boolean | IResolvable;
@@ -660,7 +660,7 @@ public readonly followInput: boolean | IResolvable;
 
 ---
 
-##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.idInput"></a>
+##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.idInput"></a>
 
 ```typescript
 public readonly idInput: string;
@@ -670,7 +670,7 @@ public readonly idInput: string;
 
 ---
 
-##### `logsListStringEnabledInput`<sup>Optional</sup> <a name="logsListStringEnabledInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput"></a>
+##### `logsListStringEnabledInput`<sup>Optional</sup> <a name="logsListStringEnabledInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput"></a>
 
 ```typescript
 public readonly logsListStringEnabledInput: boolean | IResolvable;
@@ -680,7 +680,7 @@ public readonly logsListStringEnabledInput: boolean | IResolvable;
 
 ---
 
-##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.nameInput"></a>
+##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.nameInput"></a>
 
 ```typescript
 public readonly nameInput: string;
@@ -690,7 +690,7 @@ public readonly nameInput: string;
 
 ---
 
-##### `showStderrInput`<sup>Optional</sup> <a name="showStderrInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput"></a>
+##### `showStderrInput`<sup>Optional</sup> <a name="showStderrInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput"></a>
 
 ```typescript
 public readonly showStderrInput: boolean | IResolvable;
@@ -700,7 +700,7 @@ public readonly showStderrInput: boolean | IResolvable;
 
 ---
 
-##### `showStdoutInput`<sup>Optional</sup> <a name="showStdoutInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput"></a>
+##### `showStdoutInput`<sup>Optional</sup> <a name="showStdoutInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput"></a>
 
 ```typescript
 public readonly showStdoutInput: boolean | IResolvable;
@@ -710,7 +710,7 @@ public readonly showStdoutInput: boolean | IResolvable;
 
 ---
 
-##### `sinceInput`<sup>Optional</sup> <a name="sinceInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.sinceInput"></a>
+##### `sinceInput`<sup>Optional</sup> <a name="sinceInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.sinceInput"></a>
 
 ```typescript
 public readonly sinceInput: string;
@@ -720,7 +720,7 @@ public readonly sinceInput: string;
 
 ---
 
-##### `tailInput`<sup>Optional</sup> <a name="tailInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tailInput"></a>
+##### `tailInput`<sup>Optional</sup> <a name="tailInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tailInput"></a>
 
 ```typescript
 public readonly tailInput: string;
@@ -730,7 +730,7 @@ public readonly tailInput: string;
 
 ---
 
-##### `timestampsInput`<sup>Optional</sup> <a name="timestampsInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput"></a>
+##### `timestampsInput`<sup>Optional</sup> <a name="timestampsInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput"></a>
 
 ```typescript
 public readonly timestampsInput: boolean | IResolvable;
@@ -740,7 +740,7 @@ public readonly timestampsInput: boolean | IResolvable;
 
 ---
 
-##### `untilInput`<sup>Optional</sup> <a name="untilInput" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.untilInput"></a>
+##### `untilInput`<sup>Optional</sup> <a name="untilInput" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.untilInput"></a>
 
 ```typescript
 public readonly untilInput: string;
@@ -750,7 +750,7 @@ public readonly untilInput: string;
 
 ---
 
-##### `details`<sup>Required</sup> <a name="details" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.details"></a>
+##### `details`<sup>Required</sup> <a name="details" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.details"></a>
 
 ```typescript
 public readonly details: boolean | IResolvable;
@@ -760,7 +760,7 @@ public readonly details: boolean | IResolvable;
 
 ---
 
-##### `discardHeaders`<sup>Required</sup> <a name="discardHeaders" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders"></a>
+##### `discardHeaders`<sup>Required</sup> <a name="discardHeaders" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders"></a>
 
 ```typescript
 public readonly discardHeaders: boolean | IResolvable;
@@ -770,7 +770,7 @@ public readonly discardHeaders: boolean | IResolvable;
 
 ---
 
-##### `follow`<sup>Required</sup> <a name="follow" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.follow"></a>
+##### `follow`<sup>Required</sup> <a name="follow" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.follow"></a>
 
 ```typescript
 public readonly follow: boolean | IResolvable;
@@ -780,7 +780,7 @@ public readonly follow: boolean | IResolvable;
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.id"></a>
 
 ```typescript
 public readonly id: string;
@@ -790,7 +790,7 @@ public readonly id: string;
 
 ---
 
-##### `logsListStringEnabled`<sup>Required</sup> <a name="logsListStringEnabled" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled"></a>
+##### `logsListStringEnabled`<sup>Required</sup> <a name="logsListStringEnabled" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled"></a>
 
 ```typescript
 public readonly logsListStringEnabled: boolean | IResolvable;
@@ -800,7 +800,7 @@ public readonly logsListStringEnabled: boolean | IResolvable;
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -810,7 +810,7 @@ public readonly name: string;
 
 ---
 
-##### `showStderr`<sup>Required</sup> <a name="showStderr" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr"></a>
+##### `showStderr`<sup>Required</sup> <a name="showStderr" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr"></a>
 
 ```typescript
 public readonly showStderr: boolean | IResolvable;
@@ -820,7 +820,7 @@ public readonly showStderr: boolean | IResolvable;
 
 ---
 
-##### `showStdout`<sup>Required</sup> <a name="showStdout" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout"></a>
+##### `showStdout`<sup>Required</sup> <a name="showStdout" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout"></a>
 
 ```typescript
 public readonly showStdout: boolean | IResolvable;
@@ -830,7 +830,7 @@ public readonly showStdout: boolean | IResolvable;
 
 ---
 
-##### `since`<sup>Required</sup> <a name="since" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.since"></a>
+##### `since`<sup>Required</sup> <a name="since" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.since"></a>
 
 ```typescript
 public readonly since: string;
@@ -840,7 +840,7 @@ public readonly since: string;
 
 ---
 
-##### `tail`<sup>Required</sup> <a name="tail" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tail"></a>
+##### `tail`<sup>Required</sup> <a name="tail" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tail"></a>
 
 ```typescript
 public readonly tail: string;
@@ -850,7 +850,7 @@ public readonly tail: string;
 
 ---
 
-##### `timestamps`<sup>Required</sup> <a name="timestamps" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps"></a>
+##### `timestamps`<sup>Required</sup> <a name="timestamps" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps"></a>
 
 ```typescript
 public readonly timestamps: boolean | IResolvable;
@@ -860,7 +860,7 @@ public readonly timestamps: boolean | IResolvable;
 
 ---
 
-##### `until`<sup>Required</sup> <a name="until" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.until"></a>
+##### `until`<sup>Required</sup> <a name="until" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.until"></a>
 
 ```typescript
 public readonly until: string;
@@ -874,11 +874,11 @@ public readonly until: string;
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogs.property.tfResourceType"></a>
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tfResourceType"></a>
 
 ```typescript
 public readonly tfResourceType: string;
@@ -890,12 +890,12 @@ public readonly tfResourceType: string;
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### DataDockerLogsConfig <a name="DataDockerLogsConfig" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig"></a>
+### DataDockerLogsConfig <a name="DataDockerLogsConfig" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.Initializer"></a>
 
 ```typescript
-import { dataDockerLogs } from '@cdktf/provider-docker'
+import { dataDockerLogs } from '@cdktn/provider-docker'
 
 const dataDockerLogsConfig: dataDockerLogs.DataDockerLogsConfig = { ... }
 ```
@@ -904,29 +904,29 @@ const dataDockerLogsConfig: dataDockerLogs.DataDockerLogsConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.name">name</a></code> | <code>string</code> | The name of the Docker Container. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details">details</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders">discardHeaders</a></code> | <code>boolean \| cdktf.IResolvable</code> | Discard headers that docker appends to each log entry. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow">follow</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#id DataDockerLogs#id}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled">logsListStringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true populate computed value `logs_list_string`. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr">showStderr</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout">showStdout</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.since">since</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#since DataDockerLogs#since}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.tail">tail</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#tail DataDockerLogs#tail}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps">timestamps</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
-| <code><a href="#@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.until">until</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#until DataDockerLogs#until}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.name">name</a></code> | <code>string</code> | The name of the Docker Container. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details">details</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders">discardHeaders</a></code> | <code>boolean \| cdktf.IResolvable</code> | Discard headers that docker appends to each log entry. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow">follow</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#id DataDockerLogs#id}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled">logsListStringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true populate computed value `logs_list_string`. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr">showStderr</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout">showStdout</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.since">since</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#since DataDockerLogs#since}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.tail">tail</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#tail DataDockerLogs#tail}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps">timestamps</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.until">until</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#until DataDockerLogs#until}. |
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection"></a>
 
 ```typescript
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
@@ -936,7 +936,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count"></a>
 
 ```typescript
 public readonly count: number | TerraformCount;
@@ -946,7 +946,7 @@ public readonly count: number | TerraformCount;
 
 ---
 
-##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn"></a>
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn"></a>
 
 ```typescript
 public readonly dependsOn: ITerraformDependable[];
@@ -956,7 +956,7 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
-##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach"></a>
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach"></a>
 
 ```typescript
 public readonly forEach: ITerraformIterator;
@@ -966,7 +966,7 @@ public readonly forEach: ITerraformIterator;
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle"></a>
 
 ```typescript
 public readonly lifecycle: TerraformResourceLifecycle;
@@ -976,7 +976,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider"></a>
 
 ```typescript
 public readonly provider: TerraformProvider;
@@ -986,7 +986,7 @@ public readonly provider: TerraformProvider;
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners"></a>
 
 ```typescript
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
@@ -996,7 +996,7 @@ public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteEx
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -1010,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `details`<sup>Optional</sup> <a name="details" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details"></a>
+##### `details`<sup>Optional</sup> <a name="details" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details"></a>
 
 ```typescript
 public readonly details: boolean | IResolvable;
@@ -1022,7 +1022,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `discardHeaders`<sup>Optional</sup> <a name="discardHeaders" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders"></a>
+##### `discardHeaders`<sup>Optional</sup> <a name="discardHeaders" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders"></a>
 
 ```typescript
 public readonly discardHeaders: boolean | IResolvable;
@@ -1036,7 +1036,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `follow`<sup>Optional</sup> <a name="follow" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow"></a>
+##### `follow`<sup>Optional</sup> <a name="follow" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow"></a>
 
 ```typescript
 public readonly follow: boolean | IResolvable;
@@ -1048,7 +1048,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.id"></a>
+##### `id`<sup>Optional</sup> <a name="id" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.id"></a>
 
 ```typescript
 public readonly id: string;
@@ -1063,7 +1063,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
-##### `logsListStringEnabled`<sup>Optional</sup> <a name="logsListStringEnabled" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled"></a>
+##### `logsListStringEnabled`<sup>Optional</sup> <a name="logsListStringEnabled" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled"></a>
 
 ```typescript
 public readonly logsListStringEnabled: boolean | IResolvable;
@@ -1077,7 +1077,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `showStderr`<sup>Optional</sup> <a name="showStderr" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr"></a>
+##### `showStderr`<sup>Optional</sup> <a name="showStderr" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr"></a>
 
 ```typescript
 public readonly showStderr: boolean | IResolvable;
@@ -1089,7 +1089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `showStdout`<sup>Optional</sup> <a name="showStdout" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout"></a>
+##### `showStdout`<sup>Optional</sup> <a name="showStdout" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout"></a>
 
 ```typescript
 public readonly showStdout: boolean | IResolvable;
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `since`<sup>Optional</sup> <a name="since" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.since"></a>
+##### `since`<sup>Optional</sup> <a name="since" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.since"></a>
 
 ```typescript
 public readonly since: string;
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `tail`<sup>Optional</sup> <a name="tail" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.tail"></a>
+##### `tail`<sup>Optional</sup> <a name="tail" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.tail"></a>
 
 ```typescript
 public readonly tail: string;
@@ -1125,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `timestamps`<sup>Optional</sup> <a name="timestamps" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps"></a>
+##### `timestamps`<sup>Optional</sup> <a name="timestamps" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps"></a>
 
 ```typescript
 public readonly timestamps: boolean | IResolvable;
@@ -1137,7 +1137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ---
 
-##### `until`<sup>Optional</sup> <a name="until" id="@cdktf/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.until"></a>
+##### `until`<sup>Optional</sup> <a name="until" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.until"></a>
 
 ```typescript
 public readonly until: string;
