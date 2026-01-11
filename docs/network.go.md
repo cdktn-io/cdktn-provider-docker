@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.Network.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.NewNetwork(scope Construct, id *string, config NetworkConfig) Network
 ```
@@ -488,7 +488,7 @@ func ResetOptions()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.network.Network.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.Network_IsConstruct(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.network.Network.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.Network_IsTerraformElement(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ network.Network_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.network.Network.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.Network_IsTerraformResource(x interface{}) *bool
 ```
@@ -548,7 +548,7 @@ network.Network_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.network.Network.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.Network_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1074,7 +1074,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 &network.NetworkConfig {
 	Connection: interface{},
@@ -1387,7 +1387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkIpamConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 &network.NetworkIpamConfig {
 	AuxAddress: *map[string]*string,
@@ -1469,7 +1469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.network.NetworkLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 &network.NetworkLabels {
 	Label: *string,
@@ -1521,7 +1521,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.NewNetworkIpamConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkIpamConfigList
 ```
@@ -1681,7 +1681,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.NewNetworkIpamConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkIpamConfigOutputReference
 ```
@@ -2064,7 +2064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.NewNetworkLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkLabelsList
 ```
@@ -2224,7 +2224,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/network"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/network"
 
 network.NewNetworkLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkLabelsOutputReference
 ```

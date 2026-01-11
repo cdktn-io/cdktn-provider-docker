@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPlugin.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 datadockerplugin.NewDataDockerPlugin(scope Construct, id *string, config DataDockerPluginConfig) DataDockerPlugin
 ```
@@ -290,7 +290,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPlugin.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 datadockerplugin.DataDockerPlugin_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPlugin.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 datadockerplugin.DataDockerPlugin_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datadockerplugin.DataDockerPlugin_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPlugin.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 datadockerplugin.DataDockerPlugin_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datadockerplugin.DataDockerPlugin_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPlugin.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 datadockerplugin.DataDockerPlugin_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -656,7 +656,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerPlugin.DataDockerPluginConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/datadockerplugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/datadockerplugin"
 
 &datadockerplugin.DataDockerPluginConfig {
 	Connection: interface{},
