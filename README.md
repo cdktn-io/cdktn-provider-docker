@@ -19,17 +19,17 @@ The PyPI package is available at [https://pypi.org/project/cdktn-provider-docker
 
 ### Nuget
 
-The Nuget package is available at [https://www.nuget.org/packages/Io.Cdktn.Cdktn.Providers.Docker](https://www.nuget.org/packages/Io.Cdktn.Cdktn.Providers.Docker).
+The Nuget package is available at [https://www.nuget.org/packages/Io.Cdktn.Providers.Docker](https://www.nuget.org/packages/Io.Cdktn.Providers.Docker).
 
-`dotnet add package Io.Cdktn.Cdktn.Providers.Docker`
+`dotnet add package Io.Cdktn.Providers.Docker`
 
 ### Maven
 
-The Maven package is available at [https://mvnrepository.com/artifact/com.Io.Cdktn/cdktn-provider-docker](https://mvnrepository.com/artifact/com.Io.Cdktn/cdktn-provider-docker).
+The Maven package is available at [https://mvnrepository.com/artifact/io.cdktn/cdktn-provider-docker](https://mvnrepository.com/artifact/io.cdktn/cdktn-provider-docker).
 
 ```
 <dependency>
-    <groupId>com.Io.Cdktn</groupId>
+    <groupId>io.cdktn</groupId>
     <artifactId>cdktn-provider-docker</artifactId>
     <version>[REPLACE WITH DESIRED VERSION]</version>
 </dependency>
