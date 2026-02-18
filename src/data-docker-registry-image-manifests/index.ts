@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface DataDockerRegistryImageManifestsConfig extends cdktf.TerraformMetaArguments {
+export interface DataDockerRegistryImageManifestsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image_manifests#id DataDockerRegistryImageManifests#id}
   *
@@ -24,7 +24,7 @@ export interface DataDockerRegistryImageManifestsConfig extends cdktf.TerraformM
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image_manifests#insecure_skip_verify DataDockerRegistryImageManifests#insecure_skip_verify}
   */
-  readonly insecureSkipVerify?: boolean | cdktf.IResolvable;
+  readonly insecureSkipVerify?: boolean | cdktn.IResolvable;
   /**
   * The name of the Docker image, including any tags. e.g. `alpine:latest`
   *
@@ -42,8 +42,8 @@ export interface DataDockerRegistryImageManifestsManifests {
 }
 
 export function dataDockerRegistryImageManifestsManifestsToTerraform(struct?: DataDockerRegistryImageManifestsManifests): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
@@ -52,8 +52,8 @@ export function dataDockerRegistryImageManifestsManifestsToTerraform(struct?: Da
 
 
 export function dataDockerRegistryImageManifestsManifestsToHclTerraform(struct?: DataDockerRegistryImageManifestsManifests): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
@@ -61,7 +61,7 @@ export function dataDockerRegistryImageManifestsManifestsToHclTerraform(struct?:
   return attrs;
 }
 
-export class DataDockerRegistryImageManifestsManifestsOutputReference extends cdktf.ComplexObject {
+export class DataDockerRegistryImageManifestsManifestsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -70,7 +70,7 @@ export class DataDockerRegistryImageManifestsManifestsOutputReference extends cd
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
@@ -110,14 +110,14 @@ export class DataDockerRegistryImageManifestsManifestsOutputReference extends cd
   }
 }
 
-export class DataDockerRegistryImageManifestsManifestsList extends cdktf.ComplexList {
+export class DataDockerRegistryImageManifestsManifestsList extends cdktn.ComplexList {
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -150,38 +150,38 @@ export interface DataDockerRegistryImageManifestsAuthConfig {
 }
 
 export function dataDockerRegistryImageManifestsAuthConfigToTerraform(struct?: DataDockerRegistryImageManifestsAuthConfigOutputReference | DataDockerRegistryImageManifestsAuthConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address: cdktf.stringToTerraform(struct!.address),
-    password: cdktf.stringToTerraform(struct!.password),
-    username: cdktf.stringToTerraform(struct!.username),
+    address: cdktn.stringToTerraform(struct!.address),
+    password: cdktn.stringToTerraform(struct!.password),
+    username: cdktn.stringToTerraform(struct!.username),
   }
 }
 
 
 export function dataDockerRegistryImageManifestsAuthConfigToHclTerraform(struct?: DataDockerRegistryImageManifestsAuthConfigOutputReference | DataDockerRegistryImageManifestsAuthConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     address: {
-      value: cdktf.stringToHclTerraform(struct!.address),
+      value: cdktn.stringToHclTerraform(struct!.address),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     password: {
-      value: cdktf.stringToHclTerraform(struct!.password),
+      value: cdktn.stringToHclTerraform(struct!.password),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     username: {
-      value: cdktf.stringToHclTerraform(struct!.username),
+      value: cdktn.stringToHclTerraform(struct!.username),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -192,14 +192,14 @@ export function dataDockerRegistryImageManifestsAuthConfigToHclTerraform(struct?
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class DataDockerRegistryImageManifestsAuthConfigOutputReference extends cdktf.ComplexObject {
+export class DataDockerRegistryImageManifestsAuthConfigOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -279,7 +279,7 @@ export class DataDockerRegistryImageManifestsAuthConfigOutputReference extends c
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image_manifests docker_registry_image_manifests}
 */
-export class DataDockerRegistryImageManifests extends cdktf.TerraformDataSource {
+export class DataDockerRegistryImageManifests extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -290,14 +290,14 @@ export class DataDockerRegistryImageManifests extends cdktf.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a DataDockerRegistryImageManifests resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a DataDockerRegistryImageManifests resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataDockerRegistryImageManifests to import
   * @param importFromId The id of the existing DataDockerRegistryImageManifests that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image_manifests#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataDockerRegistryImageManifests to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image_manifests", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image_manifests", importId: importFromId, provider });
       }
 
   // ===========
@@ -354,11 +354,11 @@ export class DataDockerRegistryImageManifests extends cdktf.TerraformDataSource 
   }
 
   // insecure_skip_verify - computed: false, optional: true, required: false
-  private _insecureSkipVerify?: boolean | cdktf.IResolvable; 
+  private _insecureSkipVerify?: boolean | cdktn.IResolvable; 
   public get insecureSkipVerify() {
     return this.getBooleanAttribute('insecure_skip_verify');
   }
-  public set insecureSkipVerify(value: boolean | cdktf.IResolvable) {
+  public set insecureSkipVerify(value: boolean | cdktn.IResolvable) {
     this._insecureSkipVerify = value;
   }
   public resetInsecureSkipVerify() {
@@ -410,9 +410,9 @@ export class DataDockerRegistryImageManifests extends cdktf.TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id: cdktf.stringToTerraform(this._id),
-      insecure_skip_verify: cdktf.booleanToTerraform(this._insecureSkipVerify),
-      name: cdktf.stringToTerraform(this._name),
+      id: cdktn.stringToTerraform(this._id),
+      insecure_skip_verify: cdktn.booleanToTerraform(this._insecureSkipVerify),
+      name: cdktn.stringToTerraform(this._name),
       auth_config: dataDockerRegistryImageManifestsAuthConfigToTerraform(this._authConfig.internalValue),
     };
   }
@@ -420,19 +420,19 @@ export class DataDockerRegistryImageManifests extends cdktf.TerraformDataSource 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       insecure_skip_verify: {
-        value: cdktf.booleanToHclTerraform(this._insecureSkipVerify),
+        value: cdktn.booleanToHclTerraform(this._insecureSkipVerify),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

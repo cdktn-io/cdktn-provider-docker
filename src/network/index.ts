@@ -7,23 +7,23 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface NetworkConfig extends cdktf.TerraformMetaArguments {
+export interface NetworkConfig extends cdktn.TerraformMetaArguments {
   /**
   * Enable manual container attachment to the network.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#attachable Network#attachable}
   */
-  readonly attachable?: boolean | cdktf.IResolvable;
+  readonly attachable?: boolean | cdktn.IResolvable;
   /**
   * Requests daemon to check for networks with same name.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#check_duplicate Network#check_duplicate}
   */
-  readonly checkDuplicate?: boolean | cdktf.IResolvable;
+  readonly checkDuplicate?: boolean | cdktn.IResolvable;
   /**
   * The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
   *
@@ -42,13 +42,13 @@ export interface NetworkConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#ingress Network#ingress}
   */
-  readonly ingress?: boolean | cdktf.IResolvable;
+  readonly ingress?: boolean | cdktn.IResolvable;
   /**
   * Whether the network is internal.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#internal Network#internal}
   */
-  readonly internal?: boolean | cdktf.IResolvable;
+  readonly internal?: boolean | cdktn.IResolvable;
   /**
   * Driver used by the custom IP scheme of the network. Defaults to `default`
   *
@@ -66,7 +66,7 @@ export interface NetworkConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#ipv6 Network#ipv6}
   */
-  readonly ipv6?: boolean | cdktf.IResolvable;
+  readonly ipv6?: boolean | cdktn.IResolvable;
   /**
   * The name of the Docker network.
   *
@@ -84,13 +84,13 @@ export interface NetworkConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#ipam_config Network#ipam_config}
   */
-  readonly ipamConfig?: NetworkIpamConfig[] | cdktf.IResolvable;
+  readonly ipamConfig?: NetworkIpamConfig[] | cdktn.IResolvable;
   /**
   * labels block
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#labels Network#labels}
   */
-  readonly labels?: NetworkLabels[] | cdktf.IResolvable;
+  readonly labels?: NetworkLabels[] | cdktn.IResolvable;
 }
 export interface NetworkIpamConfig {
   /**
@@ -119,46 +119,46 @@ export interface NetworkIpamConfig {
   readonly subnet?: string;
 }
 
-export function networkIpamConfigToTerraform(struct?: NetworkIpamConfig | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function networkIpamConfigToTerraform(struct?: NetworkIpamConfig | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    aux_address: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.auxAddress),
-    gateway: cdktf.stringToTerraform(struct!.gateway),
-    ip_range: cdktf.stringToTerraform(struct!.ipRange),
-    subnet: cdktf.stringToTerraform(struct!.subnet),
+    aux_address: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.auxAddress),
+    gateway: cdktn.stringToTerraform(struct!.gateway),
+    ip_range: cdktn.stringToTerraform(struct!.ipRange),
+    subnet: cdktn.stringToTerraform(struct!.subnet),
   }
 }
 
 
-export function networkIpamConfigToHclTerraform(struct?: NetworkIpamConfig | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function networkIpamConfigToHclTerraform(struct?: NetworkIpamConfig | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     aux_address: {
-      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.auxAddress),
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.auxAddress),
       isBlock: false,
       type: "map",
       storageClassType: "stringMap",
     },
     gateway: {
-      value: cdktf.stringToHclTerraform(struct!.gateway),
+      value: cdktn.stringToHclTerraform(struct!.gateway),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     ip_range: {
-      value: cdktf.stringToHclTerraform(struct!.ipRange),
+      value: cdktn.stringToHclTerraform(struct!.ipRange),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     subnet: {
-      value: cdktf.stringToHclTerraform(struct!.subnet),
+      value: cdktn.stringToHclTerraform(struct!.subnet),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -169,9 +169,9 @@ export function networkIpamConfigToHclTerraform(struct?: NetworkIpamConfig | cdk
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class NetworkIpamConfigOutputReference extends cdktf.ComplexObject {
+export class NetworkIpamConfigOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
+  private resolvableValue?: cdktn.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -179,11 +179,11 @@ export class NetworkIpamConfigOutputReference extends cdktf.ComplexObject {
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): NetworkIpamConfig | cdktf.IResolvable | undefined {
+  public get internalValue(): NetworkIpamConfig | cdktn.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -208,7 +208,7 @@ export class NetworkIpamConfigOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkIpamConfig | cdktf.IResolvable | undefined) {
+  public set internalValue(value: NetworkIpamConfig | cdktn.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
@@ -217,7 +217,7 @@ export class NetworkIpamConfigOutputReference extends cdktf.ComplexObject {
       this._ipRange = undefined;
       this._subnet = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
+    else if (cdktn.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
       this.resolvableValue = value;
     }
@@ -296,15 +296,15 @@ export class NetworkIpamConfigOutputReference extends cdktf.ComplexObject {
   }
 }
 
-export class NetworkIpamConfigList extends cdktf.ComplexList {
-  public internalValue? : NetworkIpamConfig[] | cdktf.IResolvable
+export class NetworkIpamConfigList extends cdktn.ComplexList {
+  public internalValue? : NetworkIpamConfig[] | cdktn.IResolvable
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -330,32 +330,32 @@ export interface NetworkLabels {
   readonly value: string;
 }
 
-export function networkLabelsToTerraform(struct?: NetworkLabels | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function networkLabelsToTerraform(struct?: NetworkLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    label: cdktf.stringToTerraform(struct!.label),
-    value: cdktf.stringToTerraform(struct!.value),
+    label: cdktn.stringToTerraform(struct!.label),
+    value: cdktn.stringToTerraform(struct!.value),
   }
 }
 
 
-export function networkLabelsToHclTerraform(struct?: NetworkLabels | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function networkLabelsToHclTerraform(struct?: NetworkLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     label: {
-      value: cdktf.stringToHclTerraform(struct!.label),
+      value: cdktn.stringToHclTerraform(struct!.label),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     value: {
-      value: cdktf.stringToHclTerraform(struct!.value),
+      value: cdktn.stringToHclTerraform(struct!.value),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -366,9 +366,9 @@ export function networkLabelsToHclTerraform(struct?: NetworkLabels | cdktf.IReso
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class NetworkLabelsOutputReference extends cdktf.ComplexObject {
+export class NetworkLabelsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
+  private resolvableValue?: cdktn.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -376,11 +376,11 @@ export class NetworkLabelsOutputReference extends cdktf.ComplexObject {
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): NetworkLabels | cdktf.IResolvable | undefined {
+  public get internalValue(): NetworkLabels | cdktn.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -397,14 +397,14 @@ export class NetworkLabelsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkLabels | cdktf.IResolvable | undefined) {
+  public set internalValue(value: NetworkLabels | cdktn.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._label = undefined;
       this._value = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
+    else if (cdktn.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
       this.resolvableValue = value;
     }
@@ -443,15 +443,15 @@ export class NetworkLabelsOutputReference extends cdktf.ComplexObject {
   }
 }
 
-export class NetworkLabelsList extends cdktf.ComplexList {
-  public internalValue? : NetworkLabels[] | cdktf.IResolvable
+export class NetworkLabelsList extends cdktn.ComplexList {
+  public internalValue? : NetworkLabels[] | cdktn.IResolvable
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -466,7 +466,7 @@ export class NetworkLabelsList extends cdktf.ComplexList {
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network docker_network}
 */
-export class Network extends cdktf.TerraformResource {
+export class Network extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -477,14 +477,14 @@ export class Network extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a Network resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Network to import
   * @param importFromId The id of the existing Network that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Network to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_network", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_network", importId: importFromId, provider });
       }
 
   // ===========
@@ -534,11 +534,11 @@ export class Network extends cdktf.TerraformResource {
   // ==========
 
   // attachable - computed: false, optional: true, required: false
-  private _attachable?: boolean | cdktf.IResolvable; 
+  private _attachable?: boolean | cdktn.IResolvable; 
   public get attachable() {
     return this.getBooleanAttribute('attachable');
   }
-  public set attachable(value: boolean | cdktf.IResolvable) {
+  public set attachable(value: boolean | cdktn.IResolvable) {
     this._attachable = value;
   }
   public resetAttachable() {
@@ -550,11 +550,11 @@ export class Network extends cdktf.TerraformResource {
   }
 
   // check_duplicate - computed: false, optional: true, required: false
-  private _checkDuplicate?: boolean | cdktf.IResolvable; 
+  private _checkDuplicate?: boolean | cdktn.IResolvable; 
   public get checkDuplicate() {
     return this.getBooleanAttribute('check_duplicate');
   }
-  public set checkDuplicate(value: boolean | cdktf.IResolvable) {
+  public set checkDuplicate(value: boolean | cdktn.IResolvable) {
     this._checkDuplicate = value;
   }
   public resetCheckDuplicate() {
@@ -598,11 +598,11 @@ export class Network extends cdktf.TerraformResource {
   }
 
   // ingress - computed: false, optional: true, required: false
-  private _ingress?: boolean | cdktf.IResolvable; 
+  private _ingress?: boolean | cdktn.IResolvable; 
   public get ingress() {
     return this.getBooleanAttribute('ingress');
   }
-  public set ingress(value: boolean | cdktf.IResolvable) {
+  public set ingress(value: boolean | cdktn.IResolvable) {
     this._ingress = value;
   }
   public resetIngress() {
@@ -614,11 +614,11 @@ export class Network extends cdktf.TerraformResource {
   }
 
   // internal - computed: true, optional: true, required: false
-  private _internal?: boolean | cdktf.IResolvable; 
+  private _internal?: boolean | cdktn.IResolvable; 
   public get internal() {
     return this.getBooleanAttribute('internal');
   }
-  public set internal(value: boolean | cdktf.IResolvable) {
+  public set internal(value: boolean | cdktn.IResolvable) {
     this._internal = value;
   }
   public resetInternal() {
@@ -662,11 +662,11 @@ export class Network extends cdktf.TerraformResource {
   }
 
   // ipv6 - computed: false, optional: true, required: false
-  private _ipv6?: boolean | cdktf.IResolvable; 
+  private _ipv6?: boolean | cdktn.IResolvable; 
   public get ipv6() {
     return this.getBooleanAttribute('ipv6');
   }
-  public set ipv6(value: boolean | cdktf.IResolvable) {
+  public set ipv6(value: boolean | cdktn.IResolvable) {
     this._ipv6 = value;
   }
   public resetIpv6() {
@@ -716,7 +716,7 @@ export class Network extends cdktf.TerraformResource {
   public get ipamConfig() {
     return this._ipamConfig;
   }
-  public putIpamConfig(value: NetworkIpamConfig[] | cdktf.IResolvable) {
+  public putIpamConfig(value: NetworkIpamConfig[] | cdktn.IResolvable) {
     this._ipamConfig.internalValue = value;
   }
   public resetIpamConfig() {
@@ -732,7 +732,7 @@ export class Network extends cdktf.TerraformResource {
   public get labels() {
     return this._labels;
   }
-  public putLabels(value: NetworkLabels[] | cdktf.IResolvable) {
+  public putLabels(value: NetworkLabels[] | cdktn.IResolvable) {
     this._labels.internalValue = value;
   }
   public resetLabels() {
@@ -749,98 +749,98 @@ export class Network extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      attachable: cdktf.booleanToTerraform(this._attachable),
-      check_duplicate: cdktf.booleanToTerraform(this._checkDuplicate),
-      driver: cdktf.stringToTerraform(this._driver),
-      id: cdktf.stringToTerraform(this._id),
-      ingress: cdktf.booleanToTerraform(this._ingress),
-      internal: cdktf.booleanToTerraform(this._internal),
-      ipam_driver: cdktf.stringToTerraform(this._ipamDriver),
-      ipam_options: cdktf.hashMapper(cdktf.stringToTerraform)(this._ipamOptions),
-      ipv6: cdktf.booleanToTerraform(this._ipv6),
-      name: cdktf.stringToTerraform(this._name),
-      options: cdktf.hashMapper(cdktf.stringToTerraform)(this._options),
-      ipam_config: cdktf.listMapper(networkIpamConfigToTerraform, true)(this._ipamConfig.internalValue),
-      labels: cdktf.listMapper(networkLabelsToTerraform, true)(this._labels.internalValue),
+      attachable: cdktn.booleanToTerraform(this._attachable),
+      check_duplicate: cdktn.booleanToTerraform(this._checkDuplicate),
+      driver: cdktn.stringToTerraform(this._driver),
+      id: cdktn.stringToTerraform(this._id),
+      ingress: cdktn.booleanToTerraform(this._ingress),
+      internal: cdktn.booleanToTerraform(this._internal),
+      ipam_driver: cdktn.stringToTerraform(this._ipamDriver),
+      ipam_options: cdktn.hashMapper(cdktn.stringToTerraform)(this._ipamOptions),
+      ipv6: cdktn.booleanToTerraform(this._ipv6),
+      name: cdktn.stringToTerraform(this._name),
+      options: cdktn.hashMapper(cdktn.stringToTerraform)(this._options),
+      ipam_config: cdktn.listMapper(networkIpamConfigToTerraform, true)(this._ipamConfig.internalValue),
+      labels: cdktn.listMapper(networkLabelsToTerraform, true)(this._labels.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       attachable: {
-        value: cdktf.booleanToHclTerraform(this._attachable),
+        value: cdktn.booleanToHclTerraform(this._attachable),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       check_duplicate: {
-        value: cdktf.booleanToHclTerraform(this._checkDuplicate),
+        value: cdktn.booleanToHclTerraform(this._checkDuplicate),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       driver: {
-        value: cdktf.stringToHclTerraform(this._driver),
+        value: cdktn.stringToHclTerraform(this._driver),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       ingress: {
-        value: cdktf.booleanToHclTerraform(this._ingress),
+        value: cdktn.booleanToHclTerraform(this._ingress),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       internal: {
-        value: cdktf.booleanToHclTerraform(this._internal),
+        value: cdktn.booleanToHclTerraform(this._internal),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       ipam_driver: {
-        value: cdktf.stringToHclTerraform(this._ipamDriver),
+        value: cdktn.stringToHclTerraform(this._ipamDriver),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       ipam_options: {
-        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._ipamOptions),
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._ipamOptions),
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
       },
       ipv6: {
-        value: cdktf.booleanToHclTerraform(this._ipv6),
+        value: cdktn.booleanToHclTerraform(this._ipv6),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       options: {
-        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._options),
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._options),
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
       },
       ipam_config: {
-        value: cdktf.listMapperHcl(networkIpamConfigToHclTerraform, true)(this._ipamConfig.internalValue),
+        value: cdktn.listMapperHcl(networkIpamConfigToHclTerraform, true)(this._ipamConfig.internalValue),
         isBlock: true,
         type: "set",
         storageClassType: "NetworkIpamConfigList",
       },
       labels: {
-        value: cdktf.listMapperHcl(networkLabelsToHclTerraform, true)(this._labels.internalValue),
+        value: cdktn.listMapperHcl(networkLabelsToHclTerraform, true)(this._labels.internalValue),
         isBlock: true,
         type: "set",
         storageClassType: "NetworkLabelsList",

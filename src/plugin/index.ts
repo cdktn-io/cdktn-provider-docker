@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface PluginConfig extends cdktf.TerraformMetaArguments {
+export interface PluginConfig extends cdktn.TerraformMetaArguments {
   /**
   * Docker Plugin alias
   *
@@ -29,7 +29,7 @@ export interface PluginConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#enabled Plugin#enabled}
   */
-  readonly enabled?: boolean | cdktf.IResolvable;
+  readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`
   *
@@ -41,19 +41,19 @@ export interface PluginConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#force_destroy Plugin#force_destroy}
   */
-  readonly forceDestroy?: boolean | cdktf.IResolvable;
+  readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
   * If true, then the plugin is disabled forcibly
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#force_disable Plugin#force_disable}
   */
-  readonly forceDisable?: boolean | cdktf.IResolvable;
+  readonly forceDisable?: boolean | cdktn.IResolvable;
   /**
   * If true, grant all permissions necessary to run the plugin
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#grant_all_permissions Plugin#grant_all_permissions}
   */
-  readonly grantAllPermissions?: boolean | cdktf.IResolvable;
+  readonly grantAllPermissions?: boolean | cdktn.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#id Plugin#id}
   *
@@ -72,7 +72,7 @@ export interface PluginConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#grant_permissions Plugin#grant_permissions}
   */
-  readonly grantPermissions?: PluginGrantPermissions[] | cdktf.IResolvable;
+  readonly grantPermissions?: PluginGrantPermissions[] | cdktn.IResolvable;
 }
 export interface PluginGrantPermissions {
   /**
@@ -89,32 +89,32 @@ export interface PluginGrantPermissions {
   readonly value: string[];
 }
 
-export function pluginGrantPermissionsToTerraform(struct?: PluginGrantPermissions | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function pluginGrantPermissionsToTerraform(struct?: PluginGrantPermissions | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    name: cdktf.stringToTerraform(struct!.name),
-    value: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.value),
+    name: cdktn.stringToTerraform(struct!.name),
+    value: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.value),
   }
 }
 
 
-export function pluginGrantPermissionsToHclTerraform(struct?: PluginGrantPermissions | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function pluginGrantPermissionsToHclTerraform(struct?: PluginGrantPermissions | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     name: {
-      value: cdktf.stringToHclTerraform(struct!.name),
+      value: cdktn.stringToHclTerraform(struct!.name),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     value: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.value),
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.value),
       isBlock: false,
       type: "set",
       storageClassType: "stringList",
@@ -125,9 +125,9 @@ export function pluginGrantPermissionsToHclTerraform(struct?: PluginGrantPermiss
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class PluginGrantPermissionsOutputReference extends cdktf.ComplexObject {
+export class PluginGrantPermissionsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
+  private resolvableValue?: cdktn.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -135,11 +135,11 @@ export class PluginGrantPermissionsOutputReference extends cdktf.ComplexObject {
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): PluginGrantPermissions | cdktf.IResolvable | undefined {
+  public get internalValue(): PluginGrantPermissions | cdktn.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -156,14 +156,14 @@ export class PluginGrantPermissionsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PluginGrantPermissions | cdktf.IResolvable | undefined) {
+  public set internalValue(value: PluginGrantPermissions | cdktn.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._name = undefined;
       this._value = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
+    else if (cdktn.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
       this.resolvableValue = value;
     }
@@ -191,7 +191,7 @@ export class PluginGrantPermissionsOutputReference extends cdktf.ComplexObject {
   // value - computed: false, optional: false, required: true
   private _value?: string[]; 
   public get value() {
-    return cdktf.Fn.tolist(this.getListAttribute('value'));
+    return cdktn.Fn.tolist(this.getListAttribute('value'));
   }
   public set value(value: string[]) {
     this._value = value;
@@ -202,15 +202,15 @@ export class PluginGrantPermissionsOutputReference extends cdktf.ComplexObject {
   }
 }
 
-export class PluginGrantPermissionsList extends cdktf.ComplexList {
-  public internalValue? : PluginGrantPermissions[] | cdktf.IResolvable
+export class PluginGrantPermissionsList extends cdktn.ComplexList {
+  public internalValue? : PluginGrantPermissions[] | cdktn.IResolvable
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -225,7 +225,7 @@ export class PluginGrantPermissionsList extends cdktf.ComplexList {
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin docker_plugin}
 */
-export class Plugin extends cdktf.TerraformResource {
+export class Plugin extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -236,14 +236,14 @@ export class Plugin extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a Plugin resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Plugin to import
   * @param importFromId The id of the existing Plugin that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Plugin to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_plugin", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_plugin", importId: importFromId, provider });
       }
 
   // ===========
@@ -322,11 +322,11 @@ export class Plugin extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
+  private _enabled?: boolean | cdktn.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | cdktf.IResolvable) {
+  public set enabled(value: boolean | cdktn.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -340,7 +340,7 @@ export class Plugin extends cdktf.TerraformResource {
   // env - computed: true, optional: true, required: false
   private _env?: string[]; 
   public get env() {
-    return cdktf.Fn.tolist(this.getListAttribute('env'));
+    return cdktn.Fn.tolist(this.getListAttribute('env'));
   }
   public set env(value: string[]) {
     this._env = value;
@@ -354,11 +354,11 @@ export class Plugin extends cdktf.TerraformResource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable; 
+  private _forceDestroy?: boolean | cdktn.IResolvable; 
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable) {
+  public set forceDestroy(value: boolean | cdktn.IResolvable) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -370,11 +370,11 @@ export class Plugin extends cdktf.TerraformResource {
   }
 
   // force_disable - computed: false, optional: true, required: false
-  private _forceDisable?: boolean | cdktf.IResolvable; 
+  private _forceDisable?: boolean | cdktn.IResolvable; 
   public get forceDisable() {
     return this.getBooleanAttribute('force_disable');
   }
-  public set forceDisable(value: boolean | cdktf.IResolvable) {
+  public set forceDisable(value: boolean | cdktn.IResolvable) {
     this._forceDisable = value;
   }
   public resetForceDisable() {
@@ -386,11 +386,11 @@ export class Plugin extends cdktf.TerraformResource {
   }
 
   // grant_all_permissions - computed: false, optional: true, required: false
-  private _grantAllPermissions?: boolean | cdktf.IResolvable; 
+  private _grantAllPermissions?: boolean | cdktn.IResolvable; 
   public get grantAllPermissions() {
     return this.getBooleanAttribute('grant_all_permissions');
   }
-  public set grantAllPermissions(value: boolean | cdktf.IResolvable) {
+  public set grantAllPermissions(value: boolean | cdktn.IResolvable) {
     this._grantAllPermissions = value;
   }
   public resetGrantAllPermissions() {
@@ -440,7 +440,7 @@ export class Plugin extends cdktf.TerraformResource {
   public get grantPermissions() {
     return this._grantPermissions;
   }
-  public putGrantPermissions(value: PluginGrantPermissions[] | cdktf.IResolvable) {
+  public putGrantPermissions(value: PluginGrantPermissions[] | cdktn.IResolvable) {
     this._grantPermissions.internalValue = value;
   }
   public resetGrantPermissions() {
@@ -457,77 +457,77 @@ export class Plugin extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      alias: cdktf.stringToTerraform(this._alias),
-      enable_timeout: cdktf.numberToTerraform(this._enableTimeout),
-      enabled: cdktf.booleanToTerraform(this._enabled),
-      env: cdktf.listMapper(cdktf.stringToTerraform, false)(this._env),
-      force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      force_disable: cdktf.booleanToTerraform(this._forceDisable),
-      grant_all_permissions: cdktf.booleanToTerraform(this._grantAllPermissions),
-      id: cdktf.stringToTerraform(this._id),
-      name: cdktf.stringToTerraform(this._name),
-      grant_permissions: cdktf.listMapper(pluginGrantPermissionsToTerraform, true)(this._grantPermissions.internalValue),
+      alias: cdktn.stringToTerraform(this._alias),
+      enable_timeout: cdktn.numberToTerraform(this._enableTimeout),
+      enabled: cdktn.booleanToTerraform(this._enabled),
+      env: cdktn.listMapper(cdktn.stringToTerraform, false)(this._env),
+      force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
+      force_disable: cdktn.booleanToTerraform(this._forceDisable),
+      grant_all_permissions: cdktn.booleanToTerraform(this._grantAllPermissions),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      grant_permissions: cdktn.listMapper(pluginGrantPermissionsToTerraform, true)(this._grantPermissions.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       alias: {
-        value: cdktf.stringToHclTerraform(this._alias),
+        value: cdktn.stringToHclTerraform(this._alias),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       enable_timeout: {
-        value: cdktf.numberToHclTerraform(this._enableTimeout),
+        value: cdktn.numberToHclTerraform(this._enableTimeout),
         isBlock: false,
         type: "simple",
         storageClassType: "number",
       },
       enabled: {
-        value: cdktf.booleanToHclTerraform(this._enabled),
+        value: cdktn.booleanToHclTerraform(this._enabled),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       env: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._env),
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._env),
         isBlock: false,
         type: "set",
         storageClassType: "stringList",
       },
       force_destroy: {
-        value: cdktf.booleanToHclTerraform(this._forceDestroy),
+        value: cdktn.booleanToHclTerraform(this._forceDestroy),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       force_disable: {
-        value: cdktf.booleanToHclTerraform(this._forceDisable),
+        value: cdktn.booleanToHclTerraform(this._forceDisable),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       grant_all_permissions: {
-        value: cdktf.booleanToHclTerraform(this._grantAllPermissions),
+        value: cdktn.booleanToHclTerraform(this._grantAllPermissions),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       grant_permissions: {
-        value: cdktf.listMapperHcl(pluginGrantPermissionsToHclTerraform, true)(this._grantPermissions.internalValue),
+        value: cdktn.listMapperHcl(pluginGrantPermissionsToHclTerraform, true)(this._grantPermissions.internalValue),
         isBlock: true,
         type: "set",
         storageClassType: "PluginGrantPermissionsList",

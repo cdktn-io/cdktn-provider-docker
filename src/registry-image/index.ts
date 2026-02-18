@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface RegistryImageConfig extends cdktf.TerraformMetaArguments {
+export interface RegistryImageConfig extends cdktn.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/registry_image#id RegistryImage#id}
   *
@@ -24,13 +24,13 @@ export interface RegistryImageConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/registry_image#insecure_skip_verify RegistryImage#insecure_skip_verify}
   */
-  readonly insecureSkipVerify?: boolean | cdktf.IResolvable;
+  readonly insecureSkipVerify?: boolean | cdktn.IResolvable;
   /**
   * If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker registry on destroy operation. Defaults to `false`
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/registry_image#keep_remotely RegistryImage#keep_remotely}
   */
-  readonly keepRemotely?: boolean | cdktf.IResolvable;
+  readonly keepRemotely?: boolean | cdktn.IResolvable;
   /**
   * The name of the Docker image.
   *
@@ -72,38 +72,38 @@ export interface RegistryImageAuthConfig {
 }
 
 export function registryImageAuthConfigToTerraform(struct?: RegistryImageAuthConfigOutputReference | RegistryImageAuthConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address: cdktf.stringToTerraform(struct!.address),
-    password: cdktf.stringToTerraform(struct!.password),
-    username: cdktf.stringToTerraform(struct!.username),
+    address: cdktn.stringToTerraform(struct!.address),
+    password: cdktn.stringToTerraform(struct!.password),
+    username: cdktn.stringToTerraform(struct!.username),
   }
 }
 
 
 export function registryImageAuthConfigToHclTerraform(struct?: RegistryImageAuthConfigOutputReference | RegistryImageAuthConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     address: {
-      value: cdktf.stringToHclTerraform(struct!.address),
+      value: cdktn.stringToHclTerraform(struct!.address),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     password: {
-      value: cdktf.stringToHclTerraform(struct!.password),
+      value: cdktn.stringToHclTerraform(struct!.password),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     username: {
-      value: cdktf.stringToHclTerraform(struct!.username),
+      value: cdktn.stringToHclTerraform(struct!.username),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -114,14 +114,14 @@ export function registryImageAuthConfigToHclTerraform(struct?: RegistryImageAuth
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class RegistryImageAuthConfigOutputReference extends cdktf.ComplexObject {
+export class RegistryImageAuthConfigOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -201,7 +201,7 @@ export class RegistryImageAuthConfigOutputReference extends cdktf.ComplexObject 
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/registry_image docker_registry_image}
 */
-export class RegistryImage extends cdktf.TerraformResource {
+export class RegistryImage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -212,14 +212,14 @@ export class RegistryImage extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a RegistryImage resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a RegistryImage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RegistryImage to import
   * @param importFromId The id of the existing RegistryImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/registry_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RegistryImage to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image", importId: importFromId, provider });
       }
 
   // ===========
@@ -278,11 +278,11 @@ export class RegistryImage extends cdktf.TerraformResource {
   }
 
   // insecure_skip_verify - computed: false, optional: true, required: false
-  private _insecureSkipVerify?: boolean | cdktf.IResolvable; 
+  private _insecureSkipVerify?: boolean | cdktn.IResolvable; 
   public get insecureSkipVerify() {
     return this.getBooleanAttribute('insecure_skip_verify');
   }
-  public set insecureSkipVerify(value: boolean | cdktf.IResolvable) {
+  public set insecureSkipVerify(value: boolean | cdktn.IResolvable) {
     this._insecureSkipVerify = value;
   }
   public resetInsecureSkipVerify() {
@@ -294,11 +294,11 @@ export class RegistryImage extends cdktf.TerraformResource {
   }
 
   // keep_remotely - computed: false, optional: true, required: false
-  private _keepRemotely?: boolean | cdktf.IResolvable; 
+  private _keepRemotely?: boolean | cdktn.IResolvable; 
   public get keepRemotely() {
     return this.getBooleanAttribute('keep_remotely');
   }
-  public set keepRemotely(value: boolean | cdktf.IResolvable) {
+  public set keepRemotely(value: boolean | cdktn.IResolvable) {
     this._keepRemotely = value;
   }
   public resetKeepRemotely() {
@@ -365,11 +365,11 @@ export class RegistryImage extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id: cdktf.stringToTerraform(this._id),
-      insecure_skip_verify: cdktf.booleanToTerraform(this._insecureSkipVerify),
-      keep_remotely: cdktf.booleanToTerraform(this._keepRemotely),
-      name: cdktf.stringToTerraform(this._name),
-      triggers: cdktf.hashMapper(cdktf.stringToTerraform)(this._triggers),
+      id: cdktn.stringToTerraform(this._id),
+      insecure_skip_verify: cdktn.booleanToTerraform(this._insecureSkipVerify),
+      keep_remotely: cdktn.booleanToTerraform(this._keepRemotely),
+      name: cdktn.stringToTerraform(this._name),
+      triggers: cdktn.hashMapper(cdktn.stringToTerraform)(this._triggers),
       auth_config: registryImageAuthConfigToTerraform(this._authConfig.internalValue),
     };
   }
@@ -377,31 +377,31 @@ export class RegistryImage extends cdktf.TerraformResource {
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       insecure_skip_verify: {
-        value: cdktf.booleanToHclTerraform(this._insecureSkipVerify),
+        value: cdktn.booleanToHclTerraform(this._insecureSkipVerify),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       keep_remotely: {
-        value: cdktf.booleanToHclTerraform(this._keepRemotely),
+        value: cdktn.booleanToHclTerraform(this._keepRemotely),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       triggers: {
-        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._triggers),
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._triggers),
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",

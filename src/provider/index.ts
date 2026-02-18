@@ -7,7 +7,7 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
@@ -41,7 +41,7 @@ export interface DockerProviderConfig {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs#disable_docker_daemon_check DockerProvider#disable_docker_daemon_check}
   */
-  readonly disableDockerDaemonCheck?: boolean | cdktf.IResolvable;
+  readonly disableDockerDaemonCheck?: boolean | cdktn.IResolvable;
   /**
   * The Docker daemon address
   *
@@ -71,7 +71,7 @@ export interface DockerProviderConfig {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs#registry_auth DockerProvider#registry_auth}
   */
-  readonly registryAuth?: DockerProviderRegistryAuth[] | cdktf.IResolvable;
+  readonly registryAuth?: DockerProviderRegistryAuth[] | cdktn.IResolvable;
 }
 export interface DockerProviderRegistryAuth {
   /**
@@ -85,7 +85,7 @@ export interface DockerProviderRegistryAuth {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs#auth_disabled DockerProvider#auth_disabled}
   */
-  readonly authDisabled?: boolean | cdktf.IResolvable;
+  readonly authDisabled?: boolean | cdktn.IResolvable;
   /**
   * Path to docker json file for registry auth. Defaults to `~/.docker/config.json`. If `DOCKER_CONFIG` is set, the value of `DOCKER_CONFIG` is used as the path. `config_file` has predencen over all other options.
   *
@@ -112,60 +112,60 @@ export interface DockerProviderRegistryAuth {
   readonly username?: string;
 }
 
-export function dockerProviderRegistryAuthToTerraform(struct?: DockerProviderRegistryAuth | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function dockerProviderRegistryAuthToTerraform(struct?: DockerProviderRegistryAuth | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address: cdktf.stringToTerraform(struct!.address),
-    auth_disabled: cdktf.booleanToTerraform(struct!.authDisabled),
-    config_file: cdktf.stringToTerraform(struct!.configFile),
-    config_file_content: cdktf.stringToTerraform(struct!.configFileContent),
-    password: cdktf.stringToTerraform(struct!.password),
-    username: cdktf.stringToTerraform(struct!.username),
+    address: cdktn.stringToTerraform(struct!.address),
+    auth_disabled: cdktn.booleanToTerraform(struct!.authDisabled),
+    config_file: cdktn.stringToTerraform(struct!.configFile),
+    config_file_content: cdktn.stringToTerraform(struct!.configFileContent),
+    password: cdktn.stringToTerraform(struct!.password),
+    username: cdktn.stringToTerraform(struct!.username),
   }
 }
 
 
-export function dockerProviderRegistryAuthToHclTerraform(struct?: DockerProviderRegistryAuth | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function dockerProviderRegistryAuthToHclTerraform(struct?: DockerProviderRegistryAuth | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     address: {
-      value: cdktf.stringToHclTerraform(struct!.address),
+      value: cdktn.stringToHclTerraform(struct!.address),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     auth_disabled: {
-      value: cdktf.booleanToHclTerraform(struct!.authDisabled),
+      value: cdktn.booleanToHclTerraform(struct!.authDisabled),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
     },
     config_file: {
-      value: cdktf.stringToHclTerraform(struct!.configFile),
+      value: cdktn.stringToHclTerraform(struct!.configFile),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     config_file_content: {
-      value: cdktf.stringToHclTerraform(struct!.configFileContent),
+      value: cdktn.stringToHclTerraform(struct!.configFileContent),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     password: {
-      value: cdktf.stringToHclTerraform(struct!.password),
+      value: cdktn.stringToHclTerraform(struct!.password),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     username: {
-      value: cdktf.stringToHclTerraform(struct!.username),
+      value: cdktn.stringToHclTerraform(struct!.username),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -180,7 +180,7 @@ export function dockerProviderRegistryAuthToHclTerraform(struct?: DockerProvider
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs docker}
 */
-export class DockerProvider extends cdktf.TerraformProvider {
+export class DockerProvider extends cdktn.TerraformProvider {
 
   // =================
   // STATIC PROPERTIES
@@ -191,14 +191,14 @@ export class DockerProvider extends cdktf.TerraformProvider {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a DockerProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DockerProvider to import
   * @param importFromId The id of the existing DockerProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DockerProvider to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker", importId: importFromId, provider });
       }
 
   // ===========
@@ -303,11 +303,11 @@ export class DockerProvider extends cdktf.TerraformProvider {
   }
 
   // disable_docker_daemon_check - computed: false, optional: true, required: false
-  private _disableDockerDaemonCheck?: boolean | cdktf.IResolvable; 
+  private _disableDockerDaemonCheck?: boolean | cdktn.IResolvable; 
   public get disableDockerDaemonCheck() {
     return this._disableDockerDaemonCheck;
   }
-  public set disableDockerDaemonCheck(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableDockerDaemonCheck(value: boolean | cdktn.IResolvable | undefined) {
     this._disableDockerDaemonCheck = value;
   }
   public resetDisableDockerDaemonCheck() {
@@ -383,11 +383,11 @@ export class DockerProvider extends cdktf.TerraformProvider {
   }
 
   // registry_auth - computed: false, optional: true, required: false
-  private _registryAuth?: DockerProviderRegistryAuth[] | cdktf.IResolvable; 
+  private _registryAuth?: DockerProviderRegistryAuth[] | cdktn.IResolvable; 
   public get registryAuth() {
     return this._registryAuth;
   }
-  public set registryAuth(value: DockerProviderRegistryAuth[] | cdktf.IResolvable | undefined) {
+  public set registryAuth(value: DockerProviderRegistryAuth[] | cdktn.IResolvable | undefined) {
     this._registryAuth = value;
   }
   public resetRegistryAuth() {
@@ -404,77 +404,77 @@ export class DockerProvider extends cdktf.TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ca_material: cdktf.stringToTerraform(this._caMaterial),
-      cert_material: cdktf.stringToTerraform(this._certMaterial),
-      cert_path: cdktf.stringToTerraform(this._certPath),
-      context: cdktf.stringToTerraform(this._context),
-      disable_docker_daemon_check: cdktf.booleanToTerraform(this._disableDockerDaemonCheck),
-      host: cdktf.stringToTerraform(this._host),
-      key_material: cdktf.stringToTerraform(this._keyMaterial),
-      ssh_opts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sshOpts),
-      alias: cdktf.stringToTerraform(this._alias),
-      registry_auth: cdktf.listMapper(dockerProviderRegistryAuthToTerraform, true)(this._registryAuth),
+      ca_material: cdktn.stringToTerraform(this._caMaterial),
+      cert_material: cdktn.stringToTerraform(this._certMaterial),
+      cert_path: cdktn.stringToTerraform(this._certPath),
+      context: cdktn.stringToTerraform(this._context),
+      disable_docker_daemon_check: cdktn.booleanToTerraform(this._disableDockerDaemonCheck),
+      host: cdktn.stringToTerraform(this._host),
+      key_material: cdktn.stringToTerraform(this._keyMaterial),
+      ssh_opts: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sshOpts),
+      alias: cdktn.stringToTerraform(this._alias),
+      registry_auth: cdktn.listMapper(dockerProviderRegistryAuthToTerraform, true)(this._registryAuth),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       ca_material: {
-        value: cdktf.stringToHclTerraform(this._caMaterial),
+        value: cdktn.stringToHclTerraform(this._caMaterial),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       cert_material: {
-        value: cdktf.stringToHclTerraform(this._certMaterial),
+        value: cdktn.stringToHclTerraform(this._certMaterial),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       cert_path: {
-        value: cdktf.stringToHclTerraform(this._certPath),
+        value: cdktn.stringToHclTerraform(this._certPath),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       context: {
-        value: cdktf.stringToHclTerraform(this._context),
+        value: cdktn.stringToHclTerraform(this._context),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       disable_docker_daemon_check: {
-        value: cdktf.booleanToHclTerraform(this._disableDockerDaemonCheck),
+        value: cdktn.booleanToHclTerraform(this._disableDockerDaemonCheck),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       host: {
-        value: cdktf.stringToHclTerraform(this._host),
+        value: cdktn.stringToHclTerraform(this._host),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       key_material: {
-        value: cdktf.stringToHclTerraform(this._keyMaterial),
+        value: cdktn.stringToHclTerraform(this._keyMaterial),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       ssh_opts: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sshOpts),
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._sshOpts),
         isBlock: false,
         type: "list",
         storageClassType: "stringList",
       },
       alias: {
-        value: cdktf.stringToHclTerraform(this._alias),
+        value: cdktn.stringToHclTerraform(this._alias),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       registry_auth: {
-        value: cdktf.listMapperHcl(dockerProviderRegistryAuthToHclTerraform, true)(this._registryAuth),
+        value: cdktn.listMapperHcl(dockerProviderRegistryAuthToHclTerraform, true)(this._registryAuth),
         isBlock: true,
         type: "set",
         storageClassType: "DockerProviderRegistryAuthList",

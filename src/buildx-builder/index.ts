@@ -7,23 +7,23 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface BuildxBuilderConfig extends cdktf.TerraformMetaArguments {
+export interface BuildxBuilderConfig extends cdktn.TerraformMetaArguments {
   /**
   * Append a node to builder instead of changing it
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#append BuildxBuilder#append}
   */
-  readonly append?: boolean | cdktf.IResolvable;
+  readonly append?: boolean | cdktn.IResolvable;
   /**
   * Automatically boot the builder after creation. Defaults to `false`
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#bootstrap BuildxBuilder#bootstrap}
   */
-  readonly bootstrap?: boolean | cdktf.IResolvable;
+  readonly bootstrap?: boolean | cdktn.IResolvable;
   /**
   * BuildKit daemon config file
   *
@@ -84,7 +84,7 @@ export interface BuildxBuilderConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#use BuildxBuilder#use}
   */
-  readonly use?: boolean | cdktf.IResolvable;
+  readonly use?: boolean | cdktn.IResolvable;
   /**
   * docker_container block
   *
@@ -146,7 +146,7 @@ export interface BuildxBuilderDockerContainer {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
   */
-  readonly defaultLoad?: boolean | cdktf.IResolvable;
+  readonly defaultLoad?: boolean | cdktn.IResolvable;
   /**
   * Sets environment variables in the container.
   *
@@ -186,108 +186,108 @@ export interface BuildxBuilderDockerContainer {
 }
 
 export function buildxBuilderDockerContainerToTerraform(struct?: BuildxBuilderDockerContainerOutputReference | BuildxBuilderDockerContainer): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cgroup_parent: cdktf.stringToTerraform(struct!.cgroupParent),
-    cpu_period: cdktf.stringToTerraform(struct!.cpuPeriod),
-    cpu_quota: cdktf.stringToTerraform(struct!.cpuQuota),
-    cpu_shares: cdktf.stringToTerraform(struct!.cpuShares),
-    cpuset_cpus: cdktf.stringToTerraform(struct!.cpusetCpus),
-    cpuset_mems: cdktf.stringToTerraform(struct!.cpusetMems),
-    default_load: cdktf.booleanToTerraform(struct!.defaultLoad),
-    env: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.env),
-    image: cdktf.stringToTerraform(struct!.image),
-    memory: cdktf.stringToTerraform(struct!.memory),
-    memory_swap: cdktf.stringToTerraform(struct!.memorySwap),
-    network: cdktf.stringToTerraform(struct!.network),
-    restart_policy: cdktf.stringToTerraform(struct!.restartPolicy),
+    cgroup_parent: cdktn.stringToTerraform(struct!.cgroupParent),
+    cpu_period: cdktn.stringToTerraform(struct!.cpuPeriod),
+    cpu_quota: cdktn.stringToTerraform(struct!.cpuQuota),
+    cpu_shares: cdktn.stringToTerraform(struct!.cpuShares),
+    cpuset_cpus: cdktn.stringToTerraform(struct!.cpusetCpus),
+    cpuset_mems: cdktn.stringToTerraform(struct!.cpusetMems),
+    default_load: cdktn.booleanToTerraform(struct!.defaultLoad),
+    env: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.env),
+    image: cdktn.stringToTerraform(struct!.image),
+    memory: cdktn.stringToTerraform(struct!.memory),
+    memory_swap: cdktn.stringToTerraform(struct!.memorySwap),
+    network: cdktn.stringToTerraform(struct!.network),
+    restart_policy: cdktn.stringToTerraform(struct!.restartPolicy),
   }
 }
 
 
 export function buildxBuilderDockerContainerToHclTerraform(struct?: BuildxBuilderDockerContainerOutputReference | BuildxBuilderDockerContainer): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     cgroup_parent: {
-      value: cdktf.stringToHclTerraform(struct!.cgroupParent),
+      value: cdktn.stringToHclTerraform(struct!.cgroupParent),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cpu_period: {
-      value: cdktf.stringToHclTerraform(struct!.cpuPeriod),
+      value: cdktn.stringToHclTerraform(struct!.cpuPeriod),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cpu_quota: {
-      value: cdktf.stringToHclTerraform(struct!.cpuQuota),
+      value: cdktn.stringToHclTerraform(struct!.cpuQuota),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cpu_shares: {
-      value: cdktf.stringToHclTerraform(struct!.cpuShares),
+      value: cdktn.stringToHclTerraform(struct!.cpuShares),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cpuset_cpus: {
-      value: cdktf.stringToHclTerraform(struct!.cpusetCpus),
+      value: cdktn.stringToHclTerraform(struct!.cpusetCpus),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cpuset_mems: {
-      value: cdktf.stringToHclTerraform(struct!.cpusetMems),
+      value: cdktn.stringToHclTerraform(struct!.cpusetMems),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     default_load: {
-      value: cdktf.booleanToHclTerraform(struct!.defaultLoad),
+      value: cdktn.booleanToHclTerraform(struct!.defaultLoad),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
     },
     env: {
-      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.env),
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.env),
       isBlock: false,
       type: "map",
       storageClassType: "stringMap",
     },
     image: {
-      value: cdktf.stringToHclTerraform(struct!.image),
+      value: cdktn.stringToHclTerraform(struct!.image),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     memory: {
-      value: cdktf.stringToHclTerraform(struct!.memory),
+      value: cdktn.stringToHclTerraform(struct!.memory),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     memory_swap: {
-      value: cdktf.stringToHclTerraform(struct!.memorySwap),
+      value: cdktn.stringToHclTerraform(struct!.memorySwap),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     network: {
-      value: cdktf.stringToHclTerraform(struct!.network),
+      value: cdktn.stringToHclTerraform(struct!.network),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     restart_policy: {
-      value: cdktf.stringToHclTerraform(struct!.restartPolicy),
+      value: cdktn.stringToHclTerraform(struct!.restartPolicy),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -298,14 +298,14 @@ export function buildxBuilderDockerContainerToHclTerraform(struct?: BuildxBuilde
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderDockerContainerOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderDockerContainerOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -499,11 +499,11 @@ export class BuildxBuilderDockerContainerOutputReference extends cdktf.ComplexOb
   }
 
   // default_load - computed: false, optional: true, required: false
-  private _defaultLoad?: boolean | cdktf.IResolvable; 
+  private _defaultLoad?: boolean | cdktn.IResolvable; 
   public get defaultLoad() {
     return this.getBooleanAttribute('default_load');
   }
-  public set defaultLoad(value: boolean | cdktf.IResolvable) {
+  public set defaultLoad(value: boolean | cdktn.IResolvable) {
     this._defaultLoad = value;
   }
   public resetDefaultLoad() {
@@ -632,38 +632,38 @@ export interface BuildxBuilderKubernetesLimits {
 }
 
 export function buildxBuilderKubernetesLimitsToTerraform(struct?: BuildxBuilderKubernetesLimitsOutputReference | BuildxBuilderKubernetesLimits): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cpu: cdktf.stringToTerraform(struct!.cpu),
-    ephemeral_storage: cdktf.stringToTerraform(struct!.ephemeralStorage),
-    memory: cdktf.stringToTerraform(struct!.memory),
+    cpu: cdktn.stringToTerraform(struct!.cpu),
+    ephemeral_storage: cdktn.stringToTerraform(struct!.ephemeralStorage),
+    memory: cdktn.stringToTerraform(struct!.memory),
   }
 }
 
 
 export function buildxBuilderKubernetesLimitsToHclTerraform(struct?: BuildxBuilderKubernetesLimitsOutputReference | BuildxBuilderKubernetesLimits): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     cpu: {
-      value: cdktf.stringToHclTerraform(struct!.cpu),
+      value: cdktn.stringToHclTerraform(struct!.cpu),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     ephemeral_storage: {
-      value: cdktf.stringToHclTerraform(struct!.ephemeralStorage),
+      value: cdktn.stringToHclTerraform(struct!.ephemeralStorage),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     memory: {
-      value: cdktf.stringToHclTerraform(struct!.memory),
+      value: cdktn.stringToHclTerraform(struct!.memory),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -674,14 +674,14 @@ export function buildxBuilderKubernetesLimitsToHclTerraform(struct?: BuildxBuild
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderKubernetesLimitsOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderKubernetesLimitsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -778,35 +778,35 @@ export interface BuildxBuilderKubernetesQemu {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#install BuildxBuilder#install}
   */
-  readonly install?: boolean | cdktf.IResolvable;
+  readonly install?: boolean | cdktn.IResolvable;
 }
 
 export function buildxBuilderKubernetesQemuToTerraform(struct?: BuildxBuilderKubernetesQemuOutputReference | BuildxBuilderKubernetesQemu): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    image: cdktf.stringToTerraform(struct!.image),
-    install: cdktf.booleanToTerraform(struct!.install),
+    image: cdktn.stringToTerraform(struct!.image),
+    install: cdktn.booleanToTerraform(struct!.install),
   }
 }
 
 
 export function buildxBuilderKubernetesQemuToHclTerraform(struct?: BuildxBuilderKubernetesQemuOutputReference | BuildxBuilderKubernetesQemu): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     image: {
-      value: cdktf.stringToHclTerraform(struct!.image),
+      value: cdktn.stringToHclTerraform(struct!.image),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     install: {
-      value: cdktf.booleanToHclTerraform(struct!.install),
+      value: cdktn.booleanToHclTerraform(struct!.install),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
@@ -817,14 +817,14 @@ export function buildxBuilderKubernetesQemuToHclTerraform(struct?: BuildxBuilder
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderKubernetesQemuOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderKubernetesQemuOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -872,11 +872,11 @@ export class BuildxBuilderKubernetesQemuOutputReference extends cdktf.ComplexObj
   }
 
   // install - computed: false, optional: true, required: false
-  private _install?: boolean | cdktf.IResolvable; 
+  private _install?: boolean | cdktn.IResolvable; 
   public get install() {
     return this.getBooleanAttribute('install');
   }
-  public set install(value: boolean | cdktf.IResolvable) {
+  public set install(value: boolean | cdktn.IResolvable) {
     this._install = value;
   }
   public resetInstall() {
@@ -909,38 +909,38 @@ export interface BuildxBuilderKubernetesRequests {
 }
 
 export function buildxBuilderKubernetesRequestsToTerraform(struct?: BuildxBuilderKubernetesRequestsOutputReference | BuildxBuilderKubernetesRequests): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cpu: cdktf.stringToTerraform(struct!.cpu),
-    ephemeral_storage: cdktf.stringToTerraform(struct!.ephemeralStorage),
-    memory: cdktf.stringToTerraform(struct!.memory),
+    cpu: cdktn.stringToTerraform(struct!.cpu),
+    ephemeral_storage: cdktn.stringToTerraform(struct!.ephemeralStorage),
+    memory: cdktn.stringToTerraform(struct!.memory),
   }
 }
 
 
 export function buildxBuilderKubernetesRequestsToHclTerraform(struct?: BuildxBuilderKubernetesRequestsOutputReference | BuildxBuilderKubernetesRequests): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     cpu: {
-      value: cdktf.stringToHclTerraform(struct!.cpu),
+      value: cdktn.stringToHclTerraform(struct!.cpu),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     ephemeral_storage: {
-      value: cdktf.stringToHclTerraform(struct!.ephemeralStorage),
+      value: cdktn.stringToHclTerraform(struct!.ephemeralStorage),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     memory: {
-      value: cdktf.stringToHclTerraform(struct!.memory),
+      value: cdktn.stringToHclTerraform(struct!.memory),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -951,14 +951,14 @@ export function buildxBuilderKubernetesRequestsToHclTerraform(struct?: BuildxBui
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderKubernetesRequestsOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderKubernetesRequestsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -1055,7 +1055,7 @@ export interface BuildxBuilderKubernetes {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
   */
-  readonly defaultLoad?: boolean | cdktf.IResolvable;
+  readonly defaultLoad?: boolean | cdktn.IResolvable;
   /**
   * Sets the image to use for running BuildKit.
   *
@@ -1097,7 +1097,7 @@ export interface BuildxBuilderKubernetes {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#rootless BuildxBuilder#rootless}
   */
-  readonly rootless?: boolean | cdktf.IResolvable;
+  readonly rootless?: boolean | cdktn.IResolvable;
   /**
   * Sets the scheduler responsible for scheduling the pod.
   *
@@ -1143,24 +1143,24 @@ export interface BuildxBuilderKubernetes {
 }
 
 export function buildxBuilderKubernetesToTerraform(struct?: BuildxBuilderKubernetesOutputReference | BuildxBuilderKubernetes): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    annotations: cdktf.stringToTerraform(struct!.annotations),
-    default_load: cdktf.booleanToTerraform(struct!.defaultLoad),
-    image: cdktf.stringToTerraform(struct!.image),
-    labels: cdktf.stringToTerraform(struct!.labels),
-    loadbalance: cdktf.stringToTerraform(struct!.loadbalance),
-    namespace: cdktf.stringToTerraform(struct!.namespace),
-    nodeselector: cdktf.stringToTerraform(struct!.nodeselector),
-    replicas: cdktf.numberToTerraform(struct!.replicas),
-    rootless: cdktf.booleanToTerraform(struct!.rootless),
-    schedulername: cdktf.stringToTerraform(struct!.schedulername),
-    serviceaccount: cdktf.stringToTerraform(struct!.serviceaccount),
-    timeout: cdktf.stringToTerraform(struct!.timeout),
-    tolerations: cdktf.stringToTerraform(struct!.tolerations),
+    annotations: cdktn.stringToTerraform(struct!.annotations),
+    default_load: cdktn.booleanToTerraform(struct!.defaultLoad),
+    image: cdktn.stringToTerraform(struct!.image),
+    labels: cdktn.stringToTerraform(struct!.labels),
+    loadbalance: cdktn.stringToTerraform(struct!.loadbalance),
+    namespace: cdktn.stringToTerraform(struct!.namespace),
+    nodeselector: cdktn.stringToTerraform(struct!.nodeselector),
+    replicas: cdktn.numberToTerraform(struct!.replicas),
+    rootless: cdktn.booleanToTerraform(struct!.rootless),
+    schedulername: cdktn.stringToTerraform(struct!.schedulername),
+    serviceaccount: cdktn.stringToTerraform(struct!.serviceaccount),
+    timeout: cdktn.stringToTerraform(struct!.timeout),
+    tolerations: cdktn.stringToTerraform(struct!.tolerations),
     limits: buildxBuilderKubernetesLimitsToTerraform(struct!.limits),
     qemu: buildxBuilderKubernetesQemuToTerraform(struct!.qemu),
     requests: buildxBuilderKubernetesRequestsToTerraform(struct!.requests),
@@ -1169,85 +1169,85 @@ export function buildxBuilderKubernetesToTerraform(struct?: BuildxBuilderKuberne
 
 
 export function buildxBuilderKubernetesToHclTerraform(struct?: BuildxBuilderKubernetesOutputReference | BuildxBuilderKubernetes): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     annotations: {
-      value: cdktf.stringToHclTerraform(struct!.annotations),
+      value: cdktn.stringToHclTerraform(struct!.annotations),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     default_load: {
-      value: cdktf.booleanToHclTerraform(struct!.defaultLoad),
+      value: cdktn.booleanToHclTerraform(struct!.defaultLoad),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
     },
     image: {
-      value: cdktf.stringToHclTerraform(struct!.image),
+      value: cdktn.stringToHclTerraform(struct!.image),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     labels: {
-      value: cdktf.stringToHclTerraform(struct!.labels),
+      value: cdktn.stringToHclTerraform(struct!.labels),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     loadbalance: {
-      value: cdktf.stringToHclTerraform(struct!.loadbalance),
+      value: cdktn.stringToHclTerraform(struct!.loadbalance),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     namespace: {
-      value: cdktf.stringToHclTerraform(struct!.namespace),
+      value: cdktn.stringToHclTerraform(struct!.namespace),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     nodeselector: {
-      value: cdktf.stringToHclTerraform(struct!.nodeselector),
+      value: cdktn.stringToHclTerraform(struct!.nodeselector),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     replicas: {
-      value: cdktf.numberToHclTerraform(struct!.replicas),
+      value: cdktn.numberToHclTerraform(struct!.replicas),
       isBlock: false,
       type: "simple",
       storageClassType: "number",
     },
     rootless: {
-      value: cdktf.booleanToHclTerraform(struct!.rootless),
+      value: cdktn.booleanToHclTerraform(struct!.rootless),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
     },
     schedulername: {
-      value: cdktf.stringToHclTerraform(struct!.schedulername),
+      value: cdktn.stringToHclTerraform(struct!.schedulername),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     serviceaccount: {
-      value: cdktf.stringToHclTerraform(struct!.serviceaccount),
+      value: cdktn.stringToHclTerraform(struct!.serviceaccount),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     timeout: {
-      value: cdktf.stringToHclTerraform(struct!.timeout),
+      value: cdktn.stringToHclTerraform(struct!.timeout),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     tolerations: {
-      value: cdktf.stringToHclTerraform(struct!.tolerations),
+      value: cdktn.stringToHclTerraform(struct!.tolerations),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -1276,14 +1276,14 @@ export function buildxBuilderKubernetesToHclTerraform(struct?: BuildxBuilderKube
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderKubernetesOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderKubernetesOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -1415,11 +1415,11 @@ export class BuildxBuilderKubernetesOutputReference extends cdktf.ComplexObject 
   }
 
   // default_load - computed: false, optional: true, required: false
-  private _defaultLoad?: boolean | cdktf.IResolvable; 
+  private _defaultLoad?: boolean | cdktn.IResolvable; 
   public get defaultLoad() {
     return this.getBooleanAttribute('default_load');
   }
-  public set defaultLoad(value: boolean | cdktf.IResolvable) {
+  public set defaultLoad(value: boolean | cdktn.IResolvable) {
     this._defaultLoad = value;
   }
   public resetDefaultLoad() {
@@ -1527,11 +1527,11 @@ export class BuildxBuilderKubernetesOutputReference extends cdktf.ComplexObject 
   }
 
   // rootless - computed: false, optional: true, required: false
-  private _rootless?: boolean | cdktf.IResolvable; 
+  private _rootless?: boolean | cdktn.IResolvable; 
   public get rootless() {
     return this.getBooleanAttribute('rootless');
   }
-  public set rootless(value: boolean | cdktf.IResolvable) {
+  public set rootless(value: boolean | cdktn.IResolvable) {
     this._rootless = value;
   }
   public resetRootless() {
@@ -1672,7 +1672,7 @@ export interface BuildxBuilderRemote {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
   */
-  readonly defaultLoad?: boolean | cdktf.IResolvable;
+  readonly defaultLoad?: boolean | cdktn.IResolvable;
   /**
   * Sets the TLS client key.
   *
@@ -1688,52 +1688,52 @@ export interface BuildxBuilderRemote {
 }
 
 export function buildxBuilderRemoteToTerraform(struct?: BuildxBuilderRemoteOutputReference | BuildxBuilderRemote): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cacert: cdktf.stringToTerraform(struct!.cacert),
-    cert: cdktf.stringToTerraform(struct!.cert),
-    default_load: cdktf.booleanToTerraform(struct!.defaultLoad),
-    key: cdktf.stringToTerraform(struct!.key),
-    servername: cdktf.stringToTerraform(struct!.servername),
+    cacert: cdktn.stringToTerraform(struct!.cacert),
+    cert: cdktn.stringToTerraform(struct!.cert),
+    default_load: cdktn.booleanToTerraform(struct!.defaultLoad),
+    key: cdktn.stringToTerraform(struct!.key),
+    servername: cdktn.stringToTerraform(struct!.servername),
   }
 }
 
 
 export function buildxBuilderRemoteToHclTerraform(struct?: BuildxBuilderRemoteOutputReference | BuildxBuilderRemote): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     cacert: {
-      value: cdktf.stringToHclTerraform(struct!.cacert),
+      value: cdktn.stringToHclTerraform(struct!.cacert),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     cert: {
-      value: cdktf.stringToHclTerraform(struct!.cert),
+      value: cdktn.stringToHclTerraform(struct!.cert),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     default_load: {
-      value: cdktf.booleanToHclTerraform(struct!.defaultLoad),
+      value: cdktn.booleanToHclTerraform(struct!.defaultLoad),
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
     },
     key: {
-      value: cdktf.stringToHclTerraform(struct!.key),
+      value: cdktn.stringToHclTerraform(struct!.key),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     servername: {
-      value: cdktf.stringToHclTerraform(struct!.servername),
+      value: cdktn.stringToHclTerraform(struct!.servername),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -1744,14 +1744,14 @@ export function buildxBuilderRemoteToHclTerraform(struct?: BuildxBuilderRemoteOu
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class BuildxBuilderRemoteOutputReference extends cdktf.ComplexObject {
+export class BuildxBuilderRemoteOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
@@ -1833,11 +1833,11 @@ export class BuildxBuilderRemoteOutputReference extends cdktf.ComplexObject {
   }
 
   // default_load - computed: false, optional: true, required: false
-  private _defaultLoad?: boolean | cdktf.IResolvable; 
+  private _defaultLoad?: boolean | cdktn.IResolvable; 
   public get defaultLoad() {
     return this.getBooleanAttribute('default_load');
   }
-  public set defaultLoad(value: boolean | cdktf.IResolvable) {
+  public set defaultLoad(value: boolean | cdktn.IResolvable) {
     this._defaultLoad = value;
   }
   public resetDefaultLoad() {
@@ -1884,7 +1884,7 @@ export class BuildxBuilderRemoteOutputReference extends cdktf.ComplexObject {
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder docker_buildx_builder}
 */
-export class BuildxBuilder extends cdktf.TerraformResource {
+export class BuildxBuilder extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -1895,14 +1895,14 @@ export class BuildxBuilder extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a BuildxBuilder resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a BuildxBuilder resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BuildxBuilder to import
   * @param importFromId The id of the existing BuildxBuilder that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BuildxBuilder to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_buildx_builder", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_buildx_builder", importId: importFromId, provider });
       }
 
   // ===========
@@ -1954,11 +1954,11 @@ export class BuildxBuilder extends cdktf.TerraformResource {
   // ==========
 
   // append - computed: false, optional: true, required: false
-  private _append?: boolean | cdktf.IResolvable; 
+  private _append?: boolean | cdktn.IResolvable; 
   public get append() {
     return this.getBooleanAttribute('append');
   }
-  public set append(value: boolean | cdktf.IResolvable) {
+  public set append(value: boolean | cdktn.IResolvable) {
     this._append = value;
   }
   public resetAppend() {
@@ -1970,11 +1970,11 @@ export class BuildxBuilder extends cdktf.TerraformResource {
   }
 
   // bootstrap - computed: false, optional: true, required: false
-  private _bootstrap?: boolean | cdktf.IResolvable; 
+  private _bootstrap?: boolean | cdktn.IResolvable; 
   public get bootstrap() {
     return this.getBooleanAttribute('bootstrap');
   }
-  public set bootstrap(value: boolean | cdktf.IResolvable) {
+  public set bootstrap(value: boolean | cdktn.IResolvable) {
     this._bootstrap = value;
   }
   public resetBootstrap() {
@@ -2130,11 +2130,11 @@ export class BuildxBuilder extends cdktf.TerraformResource {
   }
 
   // use - computed: false, optional: true, required: false
-  private _use?: boolean | cdktf.IResolvable; 
+  private _use?: boolean | cdktn.IResolvable; 
   public get use() {
     return this.getBooleanAttribute('use');
   }
-  public set use(value: boolean | cdktf.IResolvable) {
+  public set use(value: boolean | cdktn.IResolvable) {
     this._use = value;
   }
   public resetUse() {
@@ -2199,18 +2199,18 @@ export class BuildxBuilder extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      append: cdktf.booleanToTerraform(this._append),
-      bootstrap: cdktf.booleanToTerraform(this._bootstrap),
-      buildkit_config: cdktf.stringToTerraform(this._buildkitConfig),
-      buildkit_flags: cdktf.stringToTerraform(this._buildkitFlags),
-      driver: cdktf.stringToTerraform(this._driver),
-      driver_options: cdktf.hashMapper(cdktf.stringToTerraform)(this._driverOptions),
-      endpoint: cdktf.stringToTerraform(this._endpoint),
-      id: cdktf.stringToTerraform(this._id),
-      name: cdktf.stringToTerraform(this._name),
-      node: cdktf.stringToTerraform(this._node),
-      platform: cdktf.listMapper(cdktf.stringToTerraform, false)(this._platform),
-      use: cdktf.booleanToTerraform(this._use),
+      append: cdktn.booleanToTerraform(this._append),
+      bootstrap: cdktn.booleanToTerraform(this._bootstrap),
+      buildkit_config: cdktn.stringToTerraform(this._buildkitConfig),
+      buildkit_flags: cdktn.stringToTerraform(this._buildkitFlags),
+      driver: cdktn.stringToTerraform(this._driver),
+      driver_options: cdktn.hashMapper(cdktn.stringToTerraform)(this._driverOptions),
+      endpoint: cdktn.stringToTerraform(this._endpoint),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      node: cdktn.stringToTerraform(this._node),
+      platform: cdktn.listMapper(cdktn.stringToTerraform, false)(this._platform),
+      use: cdktn.booleanToTerraform(this._use),
       docker_container: buildxBuilderDockerContainerToTerraform(this._dockerContainer.internalValue),
       kubernetes: buildxBuilderKubernetesToTerraform(this._kubernetes.internalValue),
       remote: buildxBuilderRemoteToTerraform(this._remote.internalValue),
@@ -2220,73 +2220,73 @@ export class BuildxBuilder extends cdktf.TerraformResource {
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       append: {
-        value: cdktf.booleanToHclTerraform(this._append),
+        value: cdktn.booleanToHclTerraform(this._append),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       bootstrap: {
-        value: cdktf.booleanToHclTerraform(this._bootstrap),
+        value: cdktn.booleanToHclTerraform(this._bootstrap),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       buildkit_config: {
-        value: cdktf.stringToHclTerraform(this._buildkitConfig),
+        value: cdktn.stringToHclTerraform(this._buildkitConfig),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       buildkit_flags: {
-        value: cdktf.stringToHclTerraform(this._buildkitFlags),
+        value: cdktn.stringToHclTerraform(this._buildkitFlags),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       driver: {
-        value: cdktf.stringToHclTerraform(this._driver),
+        value: cdktn.stringToHclTerraform(this._driver),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       driver_options: {
-        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._driverOptions),
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._driverOptions),
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
       },
       endpoint: {
-        value: cdktf.stringToHclTerraform(this._endpoint),
+        value: cdktn.stringToHclTerraform(this._endpoint),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       node: {
-        value: cdktf.stringToHclTerraform(this._node),
+        value: cdktn.stringToHclTerraform(this._node),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       platform: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._platform),
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._platform),
         isBlock: false,
         type: "list",
         storageClassType: "stringList",
       },
       use: {
-        value: cdktf.booleanToHclTerraform(this._use),
+        value: cdktn.booleanToHclTerraform(this._use),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
