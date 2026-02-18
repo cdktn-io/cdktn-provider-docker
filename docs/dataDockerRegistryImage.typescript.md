@@ -283,7 +283,7 @@ public resetInsecureSkipVerify(): void
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataDockerRegistryImage resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTN code for importing a DataDockerRegistryImage resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -355,7 +355,7 @@ import { dataDockerRegistryImage } from '@cdktn/provider-docker'
 dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
 ```
 
-Generates CDKTF code for importing a DataDockerRegistryImage resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a DataDockerRegistryImage resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport.parameter.scope"></a>
 
@@ -385,7 +385,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the DataDockerRegistryImage to import is found.
 
@@ -396,23 +396,23 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.cdktfStack">cdktfStack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.count">count</a></code> | <code>number \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.forEach">forEach</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.sha256Digest">sha256Digest</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.insecureSkipVerifyInput">insecureSkipVerifyInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.insecureSkipVerifyInput">insecureSkipVerifyInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.insecureSkipVerify">insecureSkipVerify</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.insecureSkipVerify">insecureSkipVerify</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.property.name">name</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -435,7 +435,7 @@ The tree node.
 public readonly cdktfStack: TerraformStack;
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -485,7 +485,7 @@ public readonly terraformResourceType: string;
 public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -495,7 +495,7 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number | cdktf.TerraformCount
+- *Type:* number | cdktn.TerraformCount
 
 ---
 
@@ -515,7 +515,7 @@ public readonly dependsOn: string[];
 public readonly forEach: ITerraformIterator;
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -525,7 +525,7 @@ public readonly forEach: ITerraformIterator;
 public readonly lifecycle: TerraformResourceLifecycle;
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -535,7 +535,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 public readonly provider: TerraformProvider;
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -565,7 +565,7 @@ public readonly idInput: string;
 public readonly insecureSkipVerifyInput: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -595,7 +595,7 @@ public readonly id: string;
 public readonly insecureSkipVerify: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -643,16 +643,16 @@ const dataDockerRegistryImageConfig: dataDockerRegistryImage.DataDockerRegistryI
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.count">count</a></code> | <code>number \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.dependsOn">dependsOn</a></code> | <code>cdktn.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.forEach">forEach</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.provisioners">provisioners</a></code> | <code>cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.name">name</a></code> | <code>string</code> | The name of the Docker image, including any tags. e.g. `alpine:latest`. You can also specify a digest, e.g. `nginx:1.28.0@sha256:eaa7e36decc3421fc04478c586dfea0d931cebe47d5bc0b15d758a32ba51126f`. |
 | <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image#id DataDockerRegistryImage#id}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.insecureSkipVerify">insecureSkipVerify</a></code> | <code>boolean \| cdktf.IResolvable</code> | If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.property.insecureSkipVerify">insecureSkipVerify</a></code> | <code>boolean \| cdktn.IResolvable</code> | If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`. |
 
 ---
 
@@ -662,7 +662,7 @@ const dataDockerRegistryImageConfig: dataDockerRegistryImage.DataDockerRegistryI
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -672,7 +672,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number | cdktf.TerraformCount
+- *Type:* number | cdktn.TerraformCount
 
 ---
 
@@ -682,7 +682,7 @@ public readonly count: number | TerraformCount;
 public readonly dependsOn: ITerraformDependable[];
 ```
 
-- *Type:* cdktf.ITerraformDependable[]
+- *Type:* cdktn.ITerraformDependable[]
 
 ---
 
@@ -692,7 +692,7 @@ public readonly dependsOn: ITerraformDependable[];
 public readonly forEach: ITerraformIterator;
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -702,7 +702,7 @@ public readonly forEach: ITerraformIterator;
 public readonly lifecycle: TerraformResourceLifecycle;
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -712,7 +712,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 public readonly provider: TerraformProvider;
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -722,7 +722,7 @@ public readonly provider: TerraformProvider;
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
-- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+- *Type:* cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner[]
 
 ---
 
@@ -761,7 +761,7 @@ If you experience problems setting this value it might not be settable. Please t
 public readonly insecureSkipVerify: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`.
 

@@ -36,10 +36,10 @@ provider.DockerProvider(
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.certMaterial">cert_material</a></code> | <code>str</code> | PEM-encoded content of Docker client certificate. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.certPath">cert_path</a></code> | <code>str</code> | Path to directory with Docker TLS config. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.context">context</a></code> | <code>str</code> | The name of the Docker context to use. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktf.IResolvable</code> | If set to `true`, the provider will not check if the Docker daemon is running. |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktn.IResolvable</code> | If set to `true`, the provider will not check if the Docker daemon is running. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.host">host</a></code> | <code>str</code> | The Docker daemon address. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.keyMaterial">key_material</a></code> | <code>str</code> | PEM-encoded content of Docker client private key. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.registryAuth">registry_auth</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | registry_auth block. |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.registryAuth">registry_auth</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | registry_auth block. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.sshOpts">ssh_opts</a></code> | <code>typing.List[str]</code> | Additional SSH option flags to be appended when using `ssh://` protocol. |
 
 ---
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `disable_docker_daemon_check`<sup>Optional</sup> <a name="disable_docker_daemon_check" id="@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.disableDockerDaemonCheck"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If set to `true`, the provider will not check if the Docker daemon is running.
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `registry_auth`<sup>Optional</sup> <a name="registry_auth" id="@cdktn/provider-docker.provider.DockerProvider.Initializer.parameter.registryAuth"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
 
 registry_auth block.
 
@@ -332,7 +332,7 @@ def reset_ssh_opts() -> None
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isTerraformProvider">is_terraform_provider</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a DockerProvider resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -415,7 +415,7 @@ provider.DockerProvider.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a DockerProvider resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport.parameter.scope"></a>
 
@@ -445,7 +445,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the DockerProvider to import is found.
 
@@ -456,12 +456,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.metaAttributes">meta_attributes</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformProviderSource">terraform_provider_source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
@@ -469,19 +469,19 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.certMaterialInput">cert_material_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.certPathInput">cert_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.contextInput">context_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.disableDockerDaemonCheckInput">disable_docker_daemon_check_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.disableDockerDaemonCheckInput">disable_docker_daemon_check_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.hostInput">host_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.keyMaterialInput">key_material_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.registryAuthInput">registry_auth_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.registryAuthInput">registry_auth_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.sshOptsInput">ssh_opts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.caMaterial">ca_material</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.certMaterial">cert_material</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.certPath">cert_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.context">context</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.keyMaterial">key_material</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.registryAuth">registry_auth</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.registryAuth">registry_auth</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.sshOpts">ssh_opts</a></code> | <code>typing.List[str]</code> | *No description.* |
 
 ---
@@ -504,7 +504,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -554,7 +554,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -634,7 +634,7 @@ context_input: str
 disable_docker_daemon_check_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -664,7 +664,7 @@ key_material_input: str
 registry_auth_input: IResolvable | typing.List[DockerProviderRegistryAuth]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
 
 ---
 
@@ -724,7 +724,7 @@ context: str
 disable_docker_daemon_check: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -754,7 +754,7 @@ key_material: str
 registry_auth: IResolvable | typing.List[DockerProviderRegistryAuth]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
 
 ---
 
@@ -818,10 +818,10 @@ provider.DockerProviderConfig(
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.certMaterial">cert_material</a></code> | <code>str</code> | PEM-encoded content of Docker client certificate. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.certPath">cert_path</a></code> | <code>str</code> | Path to directory with Docker TLS config. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.context">context</a></code> | <code>str</code> | The name of the Docker context to use. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktf.IResolvable</code> | If set to `true`, the provider will not check if the Docker daemon is running. |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.disableDockerDaemonCheck">disable_docker_daemon_check</a></code> | <code>bool \| cdktn.IResolvable</code> | If set to `true`, the provider will not check if the Docker daemon is running. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.host">host</a></code> | <code>str</code> | The Docker daemon address. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.keyMaterial">key_material</a></code> | <code>str</code> | PEM-encoded content of Docker client private key. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.registryAuth">registry_auth</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | registry_auth block. |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.registryAuth">registry_auth</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]</code> | registry_auth block. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderConfig.property.sshOpts">ssh_opts</a></code> | <code>typing.List[str]</code> | Additional SSH option flags to be appended when using `ssh://` protocol. |
 
 ---
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 disable_docker_daemon_check: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If set to `true`, the provider will not check if the Docker daemon is running.
 
@@ -948,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 registry_auth: IResolvable | typing.List[DockerProviderRegistryAuth]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth">DockerProviderRegistryAuth</a>]
 
 registry_auth block.
 
@@ -992,7 +992,7 @@ provider.DockerProviderRegistryAuth(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.address">address</a></code> | <code>str</code> | Address of the registry. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.authDisabled">auth_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Setting this to `true` will tell the provider that this registry does not need authentication. |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.authDisabled">auth_disabled</a></code> | <code>bool \| cdktn.IResolvable</code> | Setting this to `true` will tell the provider that this registry does not need authentication. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.configFile">config_file</a></code> | <code>str</code> | Path to docker json file for registry auth. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.configFileContent">config_file_content</a></code> | <code>str</code> | Plain content of the docker json file for registry auth. `config_file_content` has precedence over username/password. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProviderRegistryAuth.property.password">password</a></code> | <code>str</code> | Password for the registry. Defaults to `DOCKER_REGISTRY_PASS` env variable if set. |
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 auth_disabled: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Setting this to `true` will tell the provider that this registry does not need authentication.
 

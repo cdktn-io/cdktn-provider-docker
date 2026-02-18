@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface DataDockerRegistryImageConfig extends cdktf.TerraformMetaArguments {
+export interface DataDockerRegistryImageConfig extends cdktn.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image#id DataDockerRegistryImage#id}
   *
@@ -24,7 +24,7 @@ export interface DataDockerRegistryImageConfig extends cdktf.TerraformMetaArgume
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image#insecure_skip_verify DataDockerRegistryImage#insecure_skip_verify}
   */
-  readonly insecureSkipVerify?: boolean | cdktf.IResolvable;
+  readonly insecureSkipVerify?: boolean | cdktn.IResolvable;
   /**
   * The name of the Docker image, including any tags. e.g. `alpine:latest`. You can also specify a digest, e.g. `nginx:1.28.0@sha256:eaa7e36decc3421fc04478c586dfea0d931cebe47d5bc0b15d758a32ba51126f`.
   *
@@ -36,7 +36,7 @@ export interface DataDockerRegistryImageConfig extends cdktf.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image docker_registry_image}
 */
-export class DataDockerRegistryImage extends cdktf.TerraformDataSource {
+export class DataDockerRegistryImage extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,14 +47,14 @@ export class DataDockerRegistryImage extends cdktf.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a DataDockerRegistryImage resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a DataDockerRegistryImage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataDockerRegistryImage to import
   * @param importFromId The id of the existing DataDockerRegistryImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/registry_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataDockerRegistryImage to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_registry_image", importId: importFromId, provider });
       }
 
   // ===========
@@ -110,11 +110,11 @@ export class DataDockerRegistryImage extends cdktf.TerraformDataSource {
   }
 
   // insecure_skip_verify - computed: false, optional: true, required: false
-  private _insecureSkipVerify?: boolean | cdktf.IResolvable; 
+  private _insecureSkipVerify?: boolean | cdktn.IResolvable; 
   public get insecureSkipVerify() {
     return this.getBooleanAttribute('insecure_skip_verify');
   }
-  public set insecureSkipVerify(value: boolean | cdktf.IResolvable) {
+  public set insecureSkipVerify(value: boolean | cdktn.IResolvable) {
     this._insecureSkipVerify = value;
   }
   public resetInsecureSkipVerify() {
@@ -149,28 +149,28 @@ export class DataDockerRegistryImage extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id: cdktf.stringToTerraform(this._id),
-      insecure_skip_verify: cdktf.booleanToTerraform(this._insecureSkipVerify),
-      name: cdktf.stringToTerraform(this._name),
+      id: cdktn.stringToTerraform(this._id),
+      insecure_skip_verify: cdktn.booleanToTerraform(this._insecureSkipVerify),
+      name: cdktn.stringToTerraform(this._name),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       insecure_skip_verify: {
-        value: cdktf.booleanToHclTerraform(this._insecureSkipVerify),
+        value: cdktn.booleanToHclTerraform(this._insecureSkipVerify),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

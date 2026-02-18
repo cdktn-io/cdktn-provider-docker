@@ -40,24 +40,24 @@ dataDockerLogs.DataDockerLogs(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the Docker Container. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.details">details</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.discardHeaders">discard_headers</a></code> | <code>bool \| cdktf.IResolvable</code> | Discard headers that docker appends to each log entry. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.follow">follow</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.details">details</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.discardHeaders">discard_headers</a></code> | <code>bool \| cdktn.IResolvable</code> | Discard headers that docker appends to each log entry. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.follow">follow</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#id DataDockerLogs#id}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If true populate computed value `logs_list_string`. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStderr">show_stderr</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStdout">show_stdout</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | If true populate computed value `logs_list_string`. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStderr">show_stderr</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStdout">show_stdout</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.since">since</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#since DataDockerLogs#since}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.tail">tail</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#tail DataDockerLogs#tail}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.timestamps">timestamps</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.timestamps">timestamps</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.until">until</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#until DataDockerLogs#until}. |
 
 ---
@@ -82,43 +82,43 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.connection"></a>
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
 ##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.dependsOn"></a>
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
 ##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.forEach"></a>
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
 ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.lifecycle"></a>
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
 ##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `details`<sup>Optional</sup> <a name="details" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.details"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}.
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `discard_headers`<sup>Optional</sup> <a name="discard_headers" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.discardHeaders"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Discard headers that docker appends to each log entry.
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `follow`<sup>Optional</sup> <a name="follow" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.follow"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}.
 
@@ -171,7 +171,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `logs_list_string_enabled`<sup>Optional</sup> <a name="logs_list_string_enabled" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.logsListStringEnabled"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true populate computed value `logs_list_string`.
 
@@ -181,7 +181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `show_stderr`<sup>Optional</sup> <a name="show_stderr" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStderr"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}.
 
@@ -189,7 +189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `show_stdout`<sup>Optional</sup> <a name="show_stdout" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.showStdout"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}.
 
@@ -213,7 +213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `timestamps`<sup>Optional</sup> <a name="timestamps" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.Initializer.parameter.timestamps"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}.
 
@@ -552,7 +552,7 @@ def reset_until() -> None
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.isTerraformDataSource">is_terraform_data_source</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a DataDockerLogs resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a DataDockerLogs resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -635,7 +635,7 @@ dataDockerLogs.DataDockerLogs.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a DataDockerLogs resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a DataDockerLogs resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.scope"></a>
 
@@ -665,7 +665,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the DataDockerLogs to import is found.
 
@@ -676,41 +676,41 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListString">logs_list_string</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput">details_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput">discard_headers_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput">follow_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.detailsInput">details_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeadersInput">discard_headers_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.followInput">follow_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput">logs_list_string_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabledInput">logs_list_string_enabled_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput">show_stderr_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput">show_stdout_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderrInput">show_stderr_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdoutInput">show_stdout_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.sinceInput">since_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tailInput">tail_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput">timestamps_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestampsInput">timestamps_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.untilInput">until_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.details">details</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders">discard_headers</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.follow">follow</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.details">details</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.discardHeaders">discard_headers</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.follow">follow</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr">show_stderr</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout">show_stdout</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStderr">show_stderr</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.showStdout">show_stdout</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.since">since</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.tail">tail</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps">timestamps</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.timestamps">timestamps</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogs.property.until">until</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -733,7 +733,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -783,7 +783,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -793,7 +793,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -813,7 +813,7 @@ depends_on: typing.List[str]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -823,7 +823,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -833,7 +833,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -853,7 +853,7 @@ logs_list_string: typing.List[str]
 details_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -863,7 +863,7 @@ details_input: bool | IResolvable
 discard_headers_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -873,7 +873,7 @@ discard_headers_input: bool | IResolvable
 follow_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -893,7 +893,7 @@ id_input: str
 logs_list_string_enabled_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -913,7 +913,7 @@ name_input: str
 show_stderr_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -923,7 +923,7 @@ show_stderr_input: bool | IResolvable
 show_stdout_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -953,7 +953,7 @@ tail_input: str
 timestamps_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -973,7 +973,7 @@ until_input: str
 details: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -983,7 +983,7 @@ details: bool | IResolvable
 discard_headers: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -993,7 +993,7 @@ discard_headers: bool | IResolvable
 follow: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1013,7 +1013,7 @@ id: str
 logs_list_string_enabled: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1033,7 +1033,7 @@ name: str
 show_stderr: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1043,7 +1043,7 @@ show_stderr: bool | IResolvable
 show_stdout: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1073,7 +1073,7 @@ tail: str
 timestamps: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1141,24 +1141,24 @@ dataDockerLogs.DataDockerLogsConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.name">name</a></code> | <code>str</code> | The name of the Docker Container. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details">details</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders">discard_headers</a></code> | <code>bool \| cdktf.IResolvable</code> | Discard headers that docker appends to each log entry. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow">follow</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.details">details</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.discardHeaders">discard_headers</a></code> | <code>bool \| cdktn.IResolvable</code> | Discard headers that docker appends to each log entry. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.follow">follow</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#id DataDockerLogs#id}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If true populate computed value `logs_list_string`. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr">show_stderr</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout">show_stdout</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.logsListStringEnabled">logs_list_string_enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | If true populate computed value `logs_list_string`. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStderr">show_stderr</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.showStdout">show_stdout</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.since">since</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#since DataDockerLogs#since}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.tail">tail</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#tail DataDockerLogs#tail}. |
-| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps">timestamps</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
+| <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.timestamps">timestamps</a></code> | <code>bool \| cdktn.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}. |
 | <code><a href="#@cdktn/provider-docker.dataDockerLogs.DataDockerLogsConfig.property.until">until</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#until DataDockerLogs#until}. |
 
 ---
@@ -1169,7 +1169,7 @@ dataDockerLogs.DataDockerLogsConfig(
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1179,7 +1179,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -1189,7 +1189,7 @@ count: typing.Union[int, float] | TerraformCount
 depends_on: typing.List[ITerraformDependable]
 ```
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
@@ -1199,7 +1199,7 @@ depends_on: typing.List[ITerraformDependable]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1209,7 +1209,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1219,7 +1219,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1229,7 +1229,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -1253,7 +1253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 details: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#details DataDockerLogs#details}.
 
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 discard_headers: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Discard headers that docker appends to each log entry.
 
@@ -1279,7 +1279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 follow: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#follow DataDockerLogs#follow}.
 
@@ -1306,7 +1306,7 @@ If you experience problems setting this value it might not be settable. Please t
 logs_list_string_enabled: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true populate computed value `logs_list_string`.
 
@@ -1320,7 +1320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 show_stderr: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stderr DataDockerLogs#show_stderr}.
 
@@ -1332,7 +1332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 show_stdout: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#show_stdout DataDockerLogs#show_stdout}.
 
@@ -1368,7 +1368,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 timestamps: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/logs#timestamps DataDockerLogs#timestamps}.
 

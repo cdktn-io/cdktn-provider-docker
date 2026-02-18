@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface DataDockerPluginConfig extends cdktf.TerraformMetaArguments {
+export interface DataDockerPluginConfig extends cdktn.TerraformMetaArguments {
   /**
   * The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
   *
@@ -32,7 +32,7 @@ export interface DataDockerPluginConfig extends cdktf.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/plugin docker_plugin}
 */
-export class DataDockerPlugin extends cdktf.TerraformDataSource {
+export class DataDockerPlugin extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,14 +43,14 @@ export class DataDockerPlugin extends cdktf.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a DataDockerPlugin resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a DataDockerPlugin resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataDockerPlugin to import
   * @param importFromId The id of the existing DataDockerPlugin that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/data-sources/plugin#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataDockerPlugin to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_plugin", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_plugin", importId: importFromId, provider });
       }
 
   // ===========
@@ -111,7 +111,7 @@ export class DataDockerPlugin extends cdktf.TerraformDataSource {
 
   // env - computed: true, optional: false, required: false
   public get env() {
-    return cdktf.Fn.tolist(this.getListAttribute('env'));
+    return cdktn.Fn.tolist(this.getListAttribute('env'));
   }
 
   // grant_all_permissions - computed: true, optional: false, required: false
@@ -151,21 +151,21 @@ export class DataDockerPlugin extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      alias: cdktf.stringToTerraform(this._alias),
-      id: cdktf.stringToTerraform(this._id),
+      alias: cdktn.stringToTerraform(this._alias),
+      id: cdktn.stringToTerraform(this._id),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       alias: {
-        value: cdktf.stringToHclTerraform(this._alias),
+        value: cdktn.stringToHclTerraform(this._alias),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

@@ -304,7 +304,7 @@ public importFrom(id: string, provider?: TerraformProvider): void
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.network.Network.importFrom.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -386,7 +386,7 @@ public putIpamConfig(value: IResolvable | NetworkIpamConfig[]): void
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.network.Network.putIpamConfig.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
 
 ---
 
@@ -398,7 +398,7 @@ public putLabels(value: IResolvable | NetworkLabels[]): void
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.network.Network.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
 
 ---
 
@@ -481,7 +481,7 @@ public resetOptions(): void
 | <code><a href="#@cdktn/provider-docker.network.Network.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.network.Network.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.isTerraformResource">isTerraformResource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.network.Network.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTN code for importing a Network resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -553,7 +553,7 @@ import { network } from '@cdktn/provider-docker'
 network.Network.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
 ```
 
-Generates CDKTF code for importing a Network resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a Network resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.scope"></a>
 
@@ -583,7 +583,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.network.Network.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the Network to import is found.
 
@@ -594,44 +594,44 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.cdktfStack">cdktfStack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.count">count</a></code> | <code>number \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.forEach">forEach</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.provisioners">provisioners</a></code> | <code>cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.ipamConfig">ipamConfig</a></code> | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList">NetworkIpamConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.labels">labels</a></code> | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList">NetworkLabelsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.scope">scope</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.attachableInput">attachableInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicateInput">checkDuplicateInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.attachableInput">attachableInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicateInput">checkDuplicateInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.driverInput">driverInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.ingressInput">ingressInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.internalInput">internalInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamConfigInput">ipamConfigInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ingressInput">ingressInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.internalInput">internalInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipamConfigInput">ipamConfigInput</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.ipamDriverInput">ipamDriverInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.ipamOptionsInput">ipamOptionsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6Input">ipv6Input</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.labelsInput">labelsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6Input">ipv6Input</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.labelsInput">labelsInput</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.optionsInput">optionsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.attachable">attachable</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicate">checkDuplicate</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.attachable">attachable</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.checkDuplicate">checkDuplicate</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.driver">driver</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.ingress">ingress</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.internal">internal</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ingress">ingress</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.internal">internal</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.ipamDriver">ipamDriver</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.ipamOptions">ipamOptions</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6">ipv6</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.Network.property.ipv6">ipv6</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.Network.property.options">options</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 
@@ -655,7 +655,7 @@ The tree node.
 public readonly cdktfStack: TerraformStack;
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -705,7 +705,7 @@ public readonly terraformResourceType: string;
 public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -715,7 +715,7 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -725,7 +725,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number | cdktf.TerraformCount
+- *Type:* number | cdktn.TerraformCount
 
 ---
 
@@ -745,7 +745,7 @@ public readonly dependsOn: string[];
 public readonly forEach: ITerraformIterator;
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -755,7 +755,7 @@ public readonly forEach: ITerraformIterator;
 public readonly lifecycle: TerraformResourceLifecycle;
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -765,7 +765,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 public readonly provider: TerraformProvider;
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -775,7 +775,7 @@ public readonly provider: TerraformProvider;
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
-- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+- *Type:* cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner[]
 
 ---
 
@@ -815,7 +815,7 @@ public readonly scope: string;
 public readonly attachableInput: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -825,7 +825,7 @@ public readonly attachableInput: boolean | IResolvable;
 public readonly checkDuplicateInput: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -855,7 +855,7 @@ public readonly idInput: string;
 public readonly ingressInput: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -865,7 +865,7 @@ public readonly ingressInput: boolean | IResolvable;
 public readonly internalInput: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -875,7 +875,7 @@ public readonly internalInput: boolean | IResolvable;
 public readonly ipamConfigInput: IResolvable | NetworkIpamConfig[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
 
 ---
 
@@ -905,7 +905,7 @@ public readonly ipamOptionsInput: {[ key: string ]: string};
 public readonly ipv6Input: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -915,7 +915,7 @@ public readonly ipv6Input: boolean | IResolvable;
 public readonly labelsInput: IResolvable | NetworkLabels[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
 
 ---
 
@@ -945,7 +945,7 @@ public readonly optionsInput: {[ key: string ]: string};
 public readonly attachable: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -955,7 +955,7 @@ public readonly attachable: boolean | IResolvable;
 public readonly checkDuplicate: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -985,7 +985,7 @@ public readonly id: string;
 public readonly ingress: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -995,7 +995,7 @@ public readonly ingress: boolean | IResolvable;
 public readonly internal: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -1025,7 +1025,7 @@ public readonly ipamOptions: {[ key: string ]: string};
 public readonly ipv6: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 
@@ -1083,25 +1083,25 @@ const networkConfig: network.NetworkConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.count">count</a></code> | <code>number \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.dependsOn">dependsOn</a></code> | <code>cdktn.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.forEach">forEach</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.provisioners">provisioners</a></code> | <code>cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.name">name</a></code> | <code>string</code> | The name of the Docker network. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.attachable">attachable</a></code> | <code>boolean \| cdktf.IResolvable</code> | Enable manual container attachment to the network. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.checkDuplicate">checkDuplicate</a></code> | <code>boolean \| cdktf.IResolvable</code> | Requests daemon to check for networks with same name. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.attachable">attachable</a></code> | <code>boolean \| cdktn.IResolvable</code> | Enable manual container attachment to the network. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.checkDuplicate">checkDuplicate</a></code> | <code>boolean \| cdktn.IResolvable</code> | Requests daemon to check for networks with same name. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.driver">driver</a></code> | <code>string</code> | The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/network#id Network#id}. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ingress">ingress</a></code> | <code>boolean \| cdktf.IResolvable</code> | Create swarm routing-mesh network. Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.internal">internal</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the network is internal. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamConfig">ipamConfig</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | ipam_config block. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ingress">ingress</a></code> | <code>boolean \| cdktn.IResolvable</code> | Create swarm routing-mesh network. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.internal">internal</a></code> | <code>boolean \| cdktn.IResolvable</code> | Whether the network is internal. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamConfig">ipamConfig</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | ipam_config block. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamDriver">ipamDriver</a></code> | <code>string</code> | Driver used by the custom IP scheme of the network. Defaults to `default`. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamOptions">ipamOptions</a></code> | <code>{[ key: string ]: string}</code> | Provide explicit options to the IPAM driver. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipv6">ipv6</a></code> | <code>boolean \| cdktf.IResolvable</code> | Enable IPv6 networking. Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.labels">labels</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipv6">ipv6</a></code> | <code>boolean \| cdktn.IResolvable</code> | Enable IPv6 networking. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.options">options</a></code> | <code>{[ key: string ]: string}</code> | Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details. |
 
 ---
@@ -1112,7 +1112,7 @@ const networkConfig: network.NetworkConfig = { ... }
 public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1122,7 +1122,7 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number | cdktf.TerraformCount
+- *Type:* number | cdktn.TerraformCount
 
 ---
 
@@ -1132,7 +1132,7 @@ public readonly count: number | TerraformCount;
 public readonly dependsOn: ITerraformDependable[];
 ```
 
-- *Type:* cdktf.ITerraformDependable[]
+- *Type:* cdktn.ITerraformDependable[]
 
 ---
 
@@ -1142,7 +1142,7 @@ public readonly dependsOn: ITerraformDependable[];
 public readonly forEach: ITerraformIterator;
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1152,7 +1152,7 @@ public readonly forEach: ITerraformIterator;
 public readonly lifecycle: TerraformResourceLifecycle;
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1162,7 +1162,7 @@ public readonly lifecycle: TerraformResourceLifecycle;
 public readonly provider: TerraformProvider;
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1172,7 +1172,7 @@ public readonly provider: TerraformProvider;
 public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
 ```
 
-- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+- *Type:* cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner[]
 
 ---
 
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly attachable: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 Enable manual container attachment to the network.
 
@@ -1210,7 +1210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly checkDuplicate: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 Requests daemon to check for networks with same name.
 
@@ -1253,7 +1253,7 @@ If you experience problems setting this value it might not be settable. Please t
 public readonly ingress: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 Create swarm routing-mesh network. Defaults to `false`.
 
@@ -1267,7 +1267,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly internal: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 Whether the network is internal.
 
@@ -1281,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly ipamConfig: IResolvable | NetworkIpamConfig[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
 
 ipam_config block.
 
@@ -1325,7 +1325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly ipv6: boolean | IResolvable;
 ```
 
-- *Type:* boolean | cdktf.IResolvable
+- *Type:* boolean | cdktn.IResolvable
 
 Enable IPv6 networking. Defaults to `false`.
 
@@ -1339,7 +1339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 public readonly labels: IResolvable | NetworkLabels[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
 
 labels block.
 
@@ -1499,7 +1499,7 @@ new network.NetworkIpamConfigList(terraformResource: IInterpolatingParent, terra
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -1507,7 +1507,7 @@ new network.NetworkIpamConfigList(terraformResource: IInterpolatingParent, terra
 
 ##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkIpamConfigList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -1573,7 +1573,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkIpamConfigList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -1608,7 +1608,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigList.property.internalValue">internalValue</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | *No description.* |
 
 ---
 
@@ -1642,7 +1642,7 @@ public readonly fqn: string;
 public readonly internalValue: IResolvable | NetworkIpamConfig[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]
 
 ---
 
@@ -1659,7 +1659,7 @@ new network.NetworkIpamConfigOutputReference(terraformResource: IInterpolatingPa
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -1668,7 +1668,7 @@ new network.NetworkIpamConfigOutputReference(terraformResource: IInterpolatingPa
 
 ##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -1858,7 +1858,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -1911,7 +1911,7 @@ public resetSubnet(): void
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.gateway">gateway</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.ipRange">ipRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.subnet">subnet</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkIpamConfigOutputReference.property.internalValue">internalValue</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a></code> | *No description.* |
 
 ---
 
@@ -2025,7 +2025,7 @@ public readonly subnet: string;
 public readonly internalValue: IResolvable | NetworkIpamConfig;
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>
 
 ---
 
@@ -2042,7 +2042,7 @@ new network.NetworkLabelsList(terraformResource: IInterpolatingParent, terraform
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -2050,7 +2050,7 @@ new network.NetworkLabelsList(terraformResource: IInterpolatingParent, terraform
 
 ##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -2116,7 +2116,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -2151,7 +2151,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsList.property.internalValue">internalValue</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]</code> | *No description.* |
 
 ---
 
@@ -2185,7 +2185,7 @@ public readonly fqn: string;
 public readonly internalValue: IResolvable | NetworkLabels[];
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>[]
 
 ---
 
@@ -2202,7 +2202,7 @@ new network.NetworkLabelsOutputReference(terraformResource: IInterpolatingParent
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -2211,7 +2211,7 @@ new network.NetworkLabelsOutputReference(terraformResource: IInterpolatingParent
 
 ##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -2397,7 +2397,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.network.NetworkLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -2422,7 +2422,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.valueInput">valueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.label">label</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.network.NetworkLabelsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a></code> | *No description.* |
 
 ---
 
@@ -2496,7 +2496,7 @@ public readonly value: string;
 public readonly internalValue: IResolvable | NetworkLabels;
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.network.NetworkLabels">NetworkLabels</a>
 
 ---
 

@@ -7,11 +7,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface VolumeConfig extends cdktf.TerraformMetaArguments {
+export interface VolumeConfig extends cdktn.TerraformMetaArguments {
   /**
   * Driver type for the volume. Defaults to `local`.
   *
@@ -42,7 +42,7 @@ export interface VolumeConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#labels Volume#labels}
   */
-  readonly labels?: VolumeLabels[] | cdktf.IResolvable;
+  readonly labels?: VolumeLabels[] | cdktn.IResolvable;
 }
 export interface VolumeLabels {
   /**
@@ -59,32 +59,32 @@ export interface VolumeLabels {
   readonly value: string;
 }
 
-export function volumeLabelsToTerraform(struct?: VolumeLabels | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function volumeLabelsToTerraform(struct?: VolumeLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    label: cdktf.stringToTerraform(struct!.label),
-    value: cdktf.stringToTerraform(struct!.value),
+    label: cdktn.stringToTerraform(struct!.label),
+    value: cdktn.stringToTerraform(struct!.value),
   }
 }
 
 
-export function volumeLabelsToHclTerraform(struct?: VolumeLabels | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function volumeLabelsToHclTerraform(struct?: VolumeLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     label: {
-      value: cdktf.stringToHclTerraform(struct!.label),
+      value: cdktn.stringToHclTerraform(struct!.label),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     value: {
-      value: cdktf.stringToHclTerraform(struct!.value),
+      value: cdktn.stringToHclTerraform(struct!.value),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -95,9 +95,9 @@ export function volumeLabelsToHclTerraform(struct?: VolumeLabels | cdktf.IResolv
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class VolumeLabelsOutputReference extends cdktf.ComplexObject {
+export class VolumeLabelsOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
+  private resolvableValue?: cdktn.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -105,11 +105,11 @@ export class VolumeLabelsOutputReference extends cdktf.ComplexObject {
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): VolumeLabels | cdktf.IResolvable | undefined {
+  public get internalValue(): VolumeLabels | cdktn.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -126,14 +126,14 @@ export class VolumeLabelsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VolumeLabels | cdktf.IResolvable | undefined) {
+  public set internalValue(value: VolumeLabels | cdktn.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._label = undefined;
       this._value = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
+    else if (cdktn.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
       this.resolvableValue = value;
     }
@@ -172,15 +172,15 @@ export class VolumeLabelsOutputReference extends cdktf.ComplexObject {
   }
 }
 
-export class VolumeLabelsList extends cdktf.ComplexList {
-  public internalValue? : VolumeLabels[] | cdktf.IResolvable
+export class VolumeLabelsList extends cdktn.ComplexList {
+  public internalValue? : VolumeLabels[] | cdktn.IResolvable
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -195,7 +195,7 @@ export class VolumeLabelsList extends cdktf.ComplexList {
 /**
 * Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume docker_volume}
 */
-export class Volume extends cdktf.TerraformResource {
+export class Volume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -206,14 +206,14 @@ export class Volume extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a Volume resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a Volume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Volume to import
   * @param importFromId The id of the existing Volume that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Volume to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "docker_volume", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "docker_volume", importId: importFromId, provider });
       }
 
   // ===========
@@ -328,7 +328,7 @@ export class Volume extends cdktf.TerraformResource {
   public get labels() {
     return this._labels;
   }
-  public putLabels(value: VolumeLabels[] | cdktf.IResolvable) {
+  public putLabels(value: VolumeLabels[] | cdktn.IResolvable) {
     this._labels.internalValue = value;
   }
   public resetLabels() {
@@ -345,42 +345,42 @@ export class Volume extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      driver: cdktf.stringToTerraform(this._driver),
-      driver_opts: cdktf.hashMapper(cdktf.stringToTerraform)(this._driverOpts),
-      id: cdktf.stringToTerraform(this._id),
-      name: cdktf.stringToTerraform(this._name),
-      labels: cdktf.listMapper(volumeLabelsToTerraform, true)(this._labels.internalValue),
+      driver: cdktn.stringToTerraform(this._driver),
+      driver_opts: cdktn.hashMapper(cdktn.stringToTerraform)(this._driverOpts),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      labels: cdktn.listMapper(volumeLabelsToTerraform, true)(this._labels.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       driver: {
-        value: cdktf.stringToHclTerraform(this._driver),
+        value: cdktn.stringToHclTerraform(this._driver),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       driver_opts: {
-        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._driverOpts),
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._driverOpts),
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
       },
       id: {
-        value: cdktf.stringToHclTerraform(this._id),
+        value: cdktn.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       name: {
-        value: cdktf.stringToHclTerraform(this._name),
+        value: cdktn.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       labels: {
-        value: cdktf.listMapperHcl(volumeLabelsToHclTerraform, true)(this._labels.internalValue),
+        value: cdktn.listMapperHcl(volumeLabelsToHclTerraform, true)(this._labels.internalValue),
         isBlock: true,
         type: "set",
         storageClassType: "VolumeLabelsList",

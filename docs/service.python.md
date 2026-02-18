@@ -38,20 +38,20 @@ service.Service(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.name">name</a></code> | <code>str</code> | Name of the service. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.taskSpec">task_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec">ServiceTaskSpec</a></code> | task_spec block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.auth">auth</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceAuth">ServiceAuth</a></code> | auth block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.convergeConfig">converge_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfig">ServiceConvergeConfig</a></code> | converge_config block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.endpointSpec">endpoint_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec">ServiceEndpointSpec</a></code> | endpoint_spec block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/service#id Service#id}. |
-| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.mode">mode</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceMode">ServiceMode</a></code> | mode block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.rollbackConfig">rollback_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfig">ServiceRollbackConfig</a></code> | rollback_config block. |
 | <code><a href="#@cdktn/provider-docker.service.Service.Initializer.parameter.updateConfig">update_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceUpdateConfig">ServiceUpdateConfig</a></code> | update_config block. |
@@ -78,43 +78,43 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.service.Service.Initializer.parameter.connection"></a>
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.service.Service.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
 ##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktn/provider-docker.service.Service.Initializer.parameter.dependsOn"></a>
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
 ##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktn/provider-docker.service.Service.Initializer.parameter.forEach"></a>
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
 ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.service.Service.Initializer.parameter.lifecycle"></a>
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
 ##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.service.Service.Initializer.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.service.Service.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -181,7 +181,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `labels`<sup>Optional</sup> <a name="labels" id="@cdktn/provider-docker.service.Service.Initializer.parameter.labels"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
 
 labels block.
 
@@ -507,7 +507,7 @@ def import_from(
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.service.Service.importFrom.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -680,7 +680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `ports`<sup>Optional</sup> <a name="ports" id="@cdktn/provider-docker.service.Service.putEndpointSpec.parameter.ports"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
 
 ports block.
 
@@ -698,7 +698,7 @@ def put_labels(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.Service.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
 
 ---
 
@@ -713,7 +713,7 @@ def put_mode(
 
 ###### `global`<sup>Optional</sup> <a name="global" id="@cdktn/provider-docker.service.Service.putMode.parameter.global"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 The global service mode. Defaults to `false`.
 
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `networks_advanced`<sup>Optional</sup> <a name="networks_advanced" id="@cdktn/provider-docker.service.Service.putTaskSpec.parameter.networksAdvanced"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
 
 networks_advanced block.
 
@@ -1027,7 +1027,7 @@ def reset_update_config() -> None
 | <code><a href="#@cdktn/provider-docker.service.Service.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.service.Service.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Service resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.service.Service.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a Service resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -1110,7 +1110,7 @@ service.Service.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a Service resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a Service resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.service.Service.generateConfigForImport.parameter.scope"></a>
 
@@ -1140,7 +1140,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.service.Service.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the Service to import is found.
 
@@ -1151,19 +1151,19 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.auth">auth</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceAuthOutputReference">ServiceAuthOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.convergeConfig">converge_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference">ServiceConvergeConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.endpointSpec">endpoint_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference">ServiceEndpointSpecOutputReference</a></code> | *No description.* |
@@ -1176,7 +1176,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.service.Service.property.convergeConfigInput">converge_config_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfig">ServiceConvergeConfig</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.endpointSpecInput">endpoint_spec_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec">ServiceEndpointSpec</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.Service.property.labelsInput">labels_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.Service.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.modeInput">mode_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceMode">ServiceMode</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.Service.property.rollbackConfigInput">rollback_config_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfig">ServiceRollbackConfig</a></code> | *No description.* |
@@ -1205,7 +1205,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -1255,7 +1255,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -1265,7 +1265,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1275,7 +1275,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -1295,7 +1295,7 @@ depends_on: typing.List[str]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1305,7 +1305,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1315,7 +1315,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1325,7 +1325,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -1455,7 +1455,7 @@ id_input: str
 labels_input: IResolvable | typing.List[ServiceLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
 
 ---
 
@@ -1647,20 +1647,20 @@ service.ServiceConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.name">name</a></code> | <code>str</code> | Name of the service. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.taskSpec">task_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec">ServiceTaskSpec</a></code> | task_spec block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.auth">auth</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceAuth">ServiceAuth</a></code> | auth block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.convergeConfig">converge_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfig">ServiceConvergeConfig</a></code> | converge_config block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.endpointSpec">endpoint_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec">ServiceEndpointSpec</a></code> | endpoint_spec block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/service#id Service#id}. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.mode">mode</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceMode">ServiceMode</a></code> | mode block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.rollbackConfig">rollback_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfig">ServiceRollbackConfig</a></code> | rollback_config block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConfig.property.updateConfig">update_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceUpdateConfig">ServiceUpdateConfig</a></code> | update_config block. |
@@ -1673,7 +1673,7 @@ service.ServiceConfig(
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1683,7 +1683,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -1693,7 +1693,7 @@ count: typing.Union[int, float] | TerraformCount
 depends_on: typing.List[ITerraformDependable]
 ```
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
@@ -1703,7 +1703,7 @@ depends_on: typing.List[ITerraformDependable]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1713,7 +1713,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1723,7 +1723,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1733,7 +1733,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -1828,7 +1828,7 @@ If you experience problems setting this value it might not be settable. Please t
 labels: IResolvable | typing.List[ServiceLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
 
 labels block.
 
@@ -1946,7 +1946,7 @@ service.ServiceEndpointSpec(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec.property.mode">mode</a></code> | <code>str</code> | The mode of resolution to use for internal load balancing between tasks. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec.property.ports">ports</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | ports block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec.property.ports">ports</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | ports block. |
 
 ---
 
@@ -1970,7 +1970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 ports: IResolvable | typing.List[ServiceEndpointSpecPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
 
 ports block.
 
@@ -2143,7 +2143,7 @@ service.ServiceMode(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceMode.property.global">global</a></code> | <code>bool \| cdktf.IResolvable</code> | The global service mode. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceMode.property.global">global</a></code> | <code>bool \| cdktn.IResolvable</code> | The global service mode. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceMode.property.replicated">replicated</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicated">ServiceModeReplicated</a></code> | replicated block. |
 
 ---
@@ -2154,7 +2154,7 @@ service.ServiceMode(
 global: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 The global service mode. Defaults to `false`.
 
@@ -2350,7 +2350,7 @@ service.ServiceTaskSpec(
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.containerSpec">container_spec</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec">ServiceTaskSpecContainerSpec</a></code> | container_spec block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.forceUpdate">force_update</a></code> | <code>typing.Union[int, float]</code> | A counter that triggers an update even if no relevant parameters have been changed. See the [spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126). |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.logDriver">log_driver</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecLogDriver">ServiceTaskSpecLogDriver</a></code> | log_driver block. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.networksAdvanced">networks_advanced</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | networks_advanced block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.networksAdvanced">networks_advanced</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | networks_advanced block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.placement">placement</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement">ServiceTaskSpecPlacement</a></code> | placement block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.resources">resources</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResources">ServiceTaskSpecResources</a></code> | resources block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpec.property.restartPolicy">restart_policy</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicy">ServiceTaskSpecRestartPolicy</a></code> | restart_policy block. |
@@ -2406,7 +2406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 networks_advanced: IResolvable | typing.List[ServiceTaskSpecNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
 
 networks_advanced block.
 
@@ -2513,20 +2513,20 @@ service.ServiceTaskSpecContainerSpec(
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.capAdd">cap_add</a></code> | <code>typing.List[str]</code> | List of Linux capabilities to add to the container. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.capDrop">cap_drop</a></code> | <code>typing.List[str]</code> | List of Linux capabilities to drop from the container. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.command">command</a></code> | <code>typing.List[str]</code> | The command/entrypoint to be run in the image. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.configs">configs</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | configs block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.configs">configs</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | configs block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.dir">dir</a></code> | <code>str</code> | The working directory for commands to run in. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.dnsConfig">dns_config</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfig">ServiceTaskSpecContainerSpecDnsConfig</a></code> | dns_config block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.env">env</a></code> | <code>typing.Mapping[str]</code> | A list of environment variables in the form VAR="value". |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.groups">groups</a></code> | <code>typing.List[str]</code> | A list of additional groups that the container process will run as. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheck">ServiceTaskSpecContainerSpecHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.hostname">hostname</a></code> | <code>str</code> | The hostname to use for the container, as a valid RFC 1123 hostname. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.hosts">hosts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | hosts block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.hosts">hosts</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | hosts block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.isolation">isolation</a></code> | <code>str</code> | Isolation technology of the containers running the service. (Windows only). Defaults to `default`. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | labels block. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.mounts">mounts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | mounts block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.mounts">mounts</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | mounts block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.privileges">privileges</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivileges">ServiceTaskSpecContainerSpecPrivileges</a></code> | privileges block. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Mount the container's root filesystem as read only. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.secrets">secrets</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | secrets block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | Mount the container's root filesystem as read only. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.secrets">secrets</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | secrets block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.stopGracePeriod">stop_grace_period</a></code> | <code>str</code> | Amount of time to wait for the container to terminate before forcefully removing it (ms\|s\|m\|h). |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.stopSignal">stop_signal</a></code> | <code>str</code> | Signal to stop the container. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec.property.sysctl">sysctl</a></code> | <code>typing.Mapping[str]</code> | Sysctls config (Linux only). |
@@ -2612,7 +2612,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 configs: IResolvable | typing.List[ServiceTaskSpecContainerSpecConfigs]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
 
 configs block.
 
@@ -2710,7 +2710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 hosts: IResolvable | typing.List[ServiceTaskSpecContainerSpecHosts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
 
 hosts block.
 
@@ -2738,7 +2738,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 labels: IResolvable | typing.List[ServiceTaskSpecContainerSpecLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
 
 labels block.
 
@@ -2752,7 +2752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 mounts: IResolvable | typing.List[ServiceTaskSpecContainerSpecMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
 
 mounts block.
 
@@ -2780,7 +2780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Mount the container's root filesystem as read only.
 
@@ -2794,7 +2794,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 secrets: IResolvable | typing.List[ServiceTaskSpecContainerSpecSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
 
 secrets block.
 
@@ -3265,7 +3265,7 @@ service.ServiceTaskSpecContainerSpecMounts(
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.target">target</a></code> | <code>str</code> | Container path. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.type">type</a></code> | <code>str</code> | The mount type. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.bindOptions">bind_options</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptions">ServiceTaskSpecContainerSpecMountsBindOptions</a></code> | bind_options block. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether the mount should be read-only. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | Whether the mount should be read-only. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.source">source</a></code> | <code>str</code> | Mount source (e.g. a volume name, a host path). |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.tmpfsOptions">tmpfs_options</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptions">ServiceTaskSpecContainerSpecMountsTmpfsOptions</a></code> | tmpfs_options block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts.property.volumeOptions">volume_options</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions">ServiceTaskSpecContainerSpecMountsVolumeOptions</a></code> | volume_options block. |
@@ -3320,7 +3320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Whether the mount should be read-only.
 
@@ -3477,8 +3477,8 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptions(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.driverName">driver_name</a></code> | <code>str</code> | Name of the driver to use to create the volume. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.driverOptions">driver_options</a></code> | <code>typing.Mapping[str]</code> | key/value map of driver specific options. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | labels block. |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.noCopy">no_copy</a></code> | <code>bool \| cdktf.IResolvable</code> | Populate volume with data from the target. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions.property.noCopy">no_copy</a></code> | <code>bool \| cdktn.IResolvable</code> | Populate volume with data from the target. |
 
 ---
 
@@ -3516,7 +3516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 labels: IResolvable | typing.List[ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
 
 labels block.
 
@@ -3530,7 +3530,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 no_copy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Populate volume with data from the target.
 
@@ -3708,7 +3708,7 @@ service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.property.disable">disable</a></code> | <code>bool \| cdktf.IResolvable</code> | Disable SELinux. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.property.disable">disable</a></code> | <code>bool \| cdktn.IResolvable</code> | Disable SELinux. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.property.level">level</a></code> | <code>str</code> | SELinux level label. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.property.role">role</a></code> | <code>str</code> | SELinux role label. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.property.type">type</a></code> | <code>str</code> | SELinux type label. |
@@ -3722,7 +3722,7 @@ service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext(
 disable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Disable SELinux.
 
@@ -4039,7 +4039,7 @@ service.ServiceTaskSpecPlacement(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement.property.constraints">constraints</a></code> | <code>typing.List[str]</code> | An array of constraints. e.g.: `node.role==manager`. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement.property.maxReplicas">max_replicas</a></code> | <code>typing.Union[int, float]</code> | Maximum number of replicas for per node (default value is `0`, which is unlimited). |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement.property.platforms">platforms</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | platforms block. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement.property.platforms">platforms</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | platforms block. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement.property.prefs">prefs</a></code> | <code>typing.List[str]</code> | Preferences provide a way to make the scheduler aware of factors such as topology. |
 
 ---
@@ -4078,7 +4078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 platforms: IResolvable | typing.List[ServiceTaskSpecPlacementPlatforms]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
 
 platforms block.
 
@@ -4581,14 +4581,14 @@ service.ServiceAuthOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceAuthOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceAuthOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceAuthOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceAuthOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -4782,7 +4782,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceAuthOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -4935,14 +4935,14 @@ service.ServiceConvergeConfigOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5136,7 +5136,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceConvergeConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5267,14 +5267,14 @@ service.ServiceEndpointSpecOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5469,7 +5469,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5493,7 +5493,7 @@ def put_ports(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.putPorts.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
 
 ---
 
@@ -5518,7 +5518,7 @@ def reset_ports() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.ports">ports</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList">ServiceEndpointSpecPortsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.modeInput">mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.portsInput">ports_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.portsInput">ports_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.mode">mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpec">ServiceEndpointSpec</a></code> | *No description.* |
 
@@ -5574,7 +5574,7 @@ mode_input: str
 ports_input: IResolvable | typing.List[ServiceEndpointSpecPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
 
 ---
 
@@ -5615,7 +5615,7 @@ service.ServiceEndpointSpecPortsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -5623,7 +5623,7 @@ service.ServiceEndpointSpecPortsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5693,7 +5693,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5730,7 +5730,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]</code> | *No description.* |
 
 ---
 
@@ -5764,7 +5764,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceEndpointSpecPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>]
 
 ---
 
@@ -5786,7 +5786,7 @@ service.ServiceEndpointSpecPortsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -5795,7 +5795,7 @@ service.ServiceEndpointSpecPortsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6007,7 +6007,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6062,7 +6062,7 @@ def reset_publish_mode() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.property.publishedPort">published_port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.property.publishMode">publish_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.property.targetPort">target_port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPortsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a></code> | *No description.* |
 
 ---
 
@@ -6196,7 +6196,7 @@ target_port: typing.Union[int, float]
 internal_value: IResolvable | ServiceEndpointSpecPorts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceEndpointSpecPorts">ServiceEndpointSpecPorts</a>
 
 ---
 
@@ -6217,7 +6217,7 @@ service.ServiceLabelsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -6225,7 +6225,7 @@ service.ServiceLabelsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6295,7 +6295,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6332,7 +6332,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -6366,7 +6366,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>]
 
 ---
 
@@ -6388,7 +6388,7 @@ service.ServiceLabelsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -6397,7 +6397,7 @@ service.ServiceLabelsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6605,7 +6605,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6630,7 +6630,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a></code> | *No description.* |
 
 ---
 
@@ -6704,7 +6704,7 @@ value: str
 internal_value: IResolvable | ServiceLabels
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceLabels">ServiceLabels</a>
 
 ---
 
@@ -6724,14 +6724,14 @@ service.ServiceModeOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceModeOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6926,7 +6926,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceModeOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6978,9 +6978,9 @@ def reset_replicated() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.replicated">replicated</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference">ServiceModeReplicatedOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.globalInput">global_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.globalInput">global_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.replicatedInput">replicated_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicated">ServiceModeReplicated</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.global">global</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.global">global</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceMode">ServiceMode</a></code> | *No description.* |
 
 ---
@@ -7025,7 +7025,7 @@ replicated: ServiceModeReplicatedOutputReference
 global_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -7045,7 +7045,7 @@ replicated_input: ServiceModeReplicated
 global: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -7075,14 +7075,14 @@ service.ServiceModeReplicatedOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7275,7 +7275,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceModeReplicatedOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7378,14 +7378,14 @@ service.ServiceRollbackConfigOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceRollbackConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceRollbackConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7583,7 +7583,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceRollbackConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7827,7 +7827,7 @@ service.ServiceTaskSpecContainerSpecConfigsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -7835,7 +7835,7 @@ service.ServiceTaskSpecContainerSpecConfigsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7905,7 +7905,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7942,7 +7942,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | *No description.* |
 
 ---
 
@@ -7976,7 +7976,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecConfigs]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
 
 ---
 
@@ -7998,7 +7998,7 @@ service.ServiceTaskSpecContainerSpecConfigsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -8007,7 +8007,7 @@ service.ServiceTaskSpecContainerSpecConfigsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8219,7 +8219,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8276,7 +8276,7 @@ def reset_file_uid() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.property.fileMode">file_mode</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.property.fileName">file_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.property.fileUid">file_uid</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a></code> | *No description.* |
 
 ---
 
@@ -8430,7 +8430,7 @@ file_uid: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecConfigs
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>
 
 ---
 
@@ -8450,14 +8450,14 @@ service.ServiceTaskSpecContainerSpecDnsConfigOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8651,7 +8651,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8804,14 +8804,14 @@ service.ServiceTaskSpecContainerSpecHealthcheckOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheckOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheckOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheckOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheckOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9007,7 +9007,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheckOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9217,7 +9217,7 @@ service.ServiceTaskSpecContainerSpecHostsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -9225,7 +9225,7 @@ service.ServiceTaskSpecContainerSpecHostsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9295,7 +9295,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9332,7 +9332,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | *No description.* |
 
 ---
 
@@ -9366,7 +9366,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecHosts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
 
 ---
 
@@ -9388,7 +9388,7 @@ service.ServiceTaskSpecContainerSpecHostsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -9397,7 +9397,7 @@ service.ServiceTaskSpecContainerSpecHostsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9605,7 +9605,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9630,7 +9630,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.property.ipInput">ip_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.property.ip">ip</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHostsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a></code> | *No description.* |
 
 ---
 
@@ -9704,7 +9704,7 @@ ip: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecHosts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>
 
 ---
 
@@ -9725,7 +9725,7 @@ service.ServiceTaskSpecContainerSpecLabelsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -9733,7 +9733,7 @@ service.ServiceTaskSpecContainerSpecLabelsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9803,7 +9803,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9840,7 +9840,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -9874,7 +9874,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
 
 ---
 
@@ -9896,7 +9896,7 @@ service.ServiceTaskSpecContainerSpecLabelsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -9905,7 +9905,7 @@ service.ServiceTaskSpecContainerSpecLabelsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10113,7 +10113,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10138,7 +10138,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a></code> | *No description.* |
 
 ---
 
@@ -10212,7 +10212,7 @@ value: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecLabels
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>
 
 ---
 
@@ -10232,14 +10232,14 @@ service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10432,7 +10432,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10536,7 +10536,7 @@ service.ServiceTaskSpecContainerSpecMountsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -10544,7 +10544,7 @@ service.ServiceTaskSpecContainerSpecMountsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10614,7 +10614,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10651,7 +10651,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | *No description.* |
 
 ---
 
@@ -10685,7 +10685,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
 
 ---
 
@@ -10707,7 +10707,7 @@ service.ServiceTaskSpecContainerSpecMountsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -10716,7 +10716,7 @@ service.ServiceTaskSpecContainerSpecMountsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10932,7 +10932,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11028,7 +11028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `labels`<sup>Optional</sup> <a name="labels" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.putVolumeOptions.parameter.labels"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
 
 labels block.
 
@@ -11038,7 +11038,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `no_copy`<sup>Optional</sup> <a name="no_copy" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.putVolumeOptions.parameter.noCopy"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Populate volume with data from the target.
 
@@ -11087,17 +11087,17 @@ def reset_volume_options() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.tmpfsOptions">tmpfs_options</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference">ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.volumeOptions">volume_options</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference">ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.bindOptionsInput">bind_options_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsBindOptions">ServiceTaskSpecContainerSpecMountsBindOptions</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.sourceInput">source_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.targetInput">target_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.tmpfsOptionsInput">tmpfs_options_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptions">ServiceTaskSpecContainerSpecMountsTmpfsOptions</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.volumeOptionsInput">volume_options_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions">ServiceTaskSpecContainerSpecMountsVolumeOptions</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.source">source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.target">target</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a></code> | *No description.* |
 
 ---
 
@@ -11171,7 +11171,7 @@ bind_options_input: ServiceTaskSpecContainerSpecMountsBindOptions
 read_only_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -11231,7 +11231,7 @@ volume_options_input: ServiceTaskSpecContainerSpecMountsVolumeOptions
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -11271,7 +11271,7 @@ type: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecMounts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>
 
 ---
 
@@ -11291,14 +11291,14 @@ service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -11492,7 +11492,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11624,7 +11624,7 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -11632,7 +11632,7 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -11702,7 +11702,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11739,7 +11739,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -11773,7 +11773,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -11795,7 +11795,7 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -11804,7 +11804,7 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12012,7 +12012,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12037,7 +12037,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a></code> | *No description.* |
 
 ---
 
@@ -12111,7 +12111,7 @@ value: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>
 
 ---
 
@@ -12131,14 +12131,14 @@ service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12335,7 +12335,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12359,7 +12359,7 @@ def put_labels(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -12397,11 +12397,11 @@ def reset_no_copy() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.labels">labels</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabelsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.driverNameInput">driver_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.driverOptionsInput">driver_options_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.noCopyInput">no_copy_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.noCopyInput">no_copy_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.driverName">driver_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.driverOptions">driver_options</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.noCopy">no_copy</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.noCopy">no_copy</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptions">ServiceTaskSpecContainerSpecMountsVolumeOptions</a></code> | *No description.* |
 
 ---
@@ -12466,7 +12466,7 @@ driver_options_input: typing.Mapping[str]
 labels_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels">ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -12476,7 +12476,7 @@ labels_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecMountsVolume
 no_copy_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -12506,7 +12506,7 @@ driver_options: typing.Mapping[str]
 no_copy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -12536,14 +12536,14 @@ service.ServiceTaskSpecContainerSpecOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12765,7 +12765,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12789,7 +12789,7 @@ def put_configs(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.putConfigs.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
 
 ---
 
@@ -12905,7 +12905,7 @@ def put_hosts(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.putHosts.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
 
 ---
 
@@ -12919,7 +12919,7 @@ def put_labels(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
 
 ---
 
@@ -12933,7 +12933,7 @@ def put_mounts(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.putMounts.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
 
 ---
 
@@ -12976,7 +12976,7 @@ def put_secrets(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.putSecrets.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
 
 ---
 
@@ -13131,21 +13131,21 @@ def reset_user() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.capAddInput">cap_add_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.capDropInput">cap_drop_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.commandInput">command_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.configsInput">configs_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.configsInput">configs_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.dirInput">dir_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.dnsConfigInput">dns_config_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecDnsConfig">ServiceTaskSpecContainerSpecDnsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.envInput">env_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.groupsInput">groups_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.healthcheckInput">healthcheck_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHealthcheck">ServiceTaskSpecContainerSpecHealthcheck</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.hostnameInput">hostname_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.hostsInput">hosts_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.hostsInput">hosts_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.imageInput">image_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.isolationInput">isolation_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.mountsInput">mounts_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.mountsInput">mounts_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.privilegesInput">privileges_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivileges">ServiceTaskSpecContainerSpecPrivileges</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.secretsInput">secrets_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.secretsInput">secrets_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.stopGracePeriodInput">stop_grace_period_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.stopSignalInput">stop_signal_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.sysctlInput">sysctl_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
@@ -13160,7 +13160,7 @@ def reset_user() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.hostname">hostname</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.image">image</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.isolation">isolation</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.stopGracePeriod">stop_grace_period</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.stopSignal">stop_signal</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecOutputReference.property.sysctl">sysctl</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
@@ -13319,7 +13319,7 @@ command_input: typing.List[str]
 configs_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecConfigs]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
 
 ---
 
@@ -13389,7 +13389,7 @@ hostname_input: str
 hosts_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecHosts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
 
 ---
 
@@ -13419,7 +13419,7 @@ isolation_input: str
 labels_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
 
 ---
 
@@ -13429,7 +13429,7 @@ labels_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecLabels]
 mounts_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
 
 ---
 
@@ -13449,7 +13449,7 @@ privileges_input: ServiceTaskSpecContainerSpecPrivileges
 read_only_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -13459,7 +13459,7 @@ read_only_input: bool | IResolvable
 secrets_input: IResolvable | typing.List[ServiceTaskSpecContainerSpecSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
 
 ---
 
@@ -13609,7 +13609,7 @@ isolation: str
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -13679,14 +13679,14 @@ service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -13880,7 +13880,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -14011,14 +14011,14 @@ service.ServiceTaskSpecContainerSpecPrivilegesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -14214,7 +14214,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -14271,7 +14271,7 @@ def put_se_linux_context(
 
 ###### `disable`<sup>Optional</sup> <a name="disable" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesOutputReference.putSeLinuxContext.parameter.disable"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Disable SELinux.
 
@@ -14436,14 +14436,14 @@ service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -14640,7 +14640,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -14691,12 +14691,12 @@ def reset_user() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.disableInput">disable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.disableInput">disable_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.levelInput">level_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.roleInput">role_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.userInput">user_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.disable">disable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.disable">disable</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.level">level</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.role">role</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
@@ -14735,7 +14735,7 @@ fqn: str
 disable_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -14785,7 +14785,7 @@ user_input: str
 disable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -14856,7 +14856,7 @@ service.ServiceTaskSpecContainerSpecSecretsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -14864,7 +14864,7 @@ service.ServiceTaskSpecContainerSpecSecretsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -14934,7 +14934,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -14971,7 +14971,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]</code> | *No description.* |
 
 ---
 
@@ -15005,7 +15005,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecContainerSpecSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
 
 ---
 
@@ -15027,7 +15027,7 @@ service.ServiceTaskSpecContainerSpecSecretsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -15036,7 +15036,7 @@ service.ServiceTaskSpecContainerSpecSecretsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -15248,7 +15248,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -15305,7 +15305,7 @@ def reset_secret_name() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.property.fileUid">file_uid</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.property.secretId">secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecretsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a></code> | *No description.* |
 
 ---
 
@@ -15459,7 +15459,7 @@ secret_name: str
 internal_value: IResolvable | ServiceTaskSpecContainerSpecSecrets
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>
 
 ---
 
@@ -15479,14 +15479,14 @@ service.ServiceTaskSpecLogDriverOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecLogDriverOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecLogDriverOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecLogDriverOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecLogDriverOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -15679,7 +15679,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecLogDriverOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -15805,7 +15805,7 @@ service.ServiceTaskSpecNetworksAdvancedList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -15813,7 +15813,7 @@ service.ServiceTaskSpecNetworksAdvancedList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -15883,7 +15883,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -15920,7 +15920,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | *No description.* |
 
 ---
 
@@ -15954,7 +15954,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
 
 ---
 
@@ -15976,7 +15976,7 @@ service.ServiceTaskSpecNetworksAdvancedOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -15985,7 +15985,7 @@ service.ServiceTaskSpecNetworksAdvancedOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -16195,7 +16195,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -16234,7 +16234,7 @@ def reset_driver_opts() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.property.aliases">aliases</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.property.driverOpts">driver_opts</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a></code> | *No description.* |
 
 ---
 
@@ -16328,7 +16328,7 @@ name: str
 internal_value: IResolvable | ServiceTaskSpecNetworksAdvanced
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>
 
 ---
 
@@ -16348,14 +16348,14 @@ service.ServiceTaskSpecOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -16560,7 +16560,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -16658,7 +16658,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `configs`<sup>Optional</sup> <a name="configs" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.configs"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecConfigs">ServiceTaskSpecContainerSpecConfigs</a>]
 
 configs block.
 
@@ -16728,7 +16728,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `hosts`<sup>Optional</sup> <a name="hosts" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.hosts"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecHosts">ServiceTaskSpecContainerSpecHosts</a>]
 
 hosts block.
 
@@ -16748,7 +16748,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `labels`<sup>Optional</sup> <a name="labels" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.labels"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecLabels">ServiceTaskSpecContainerSpecLabels</a>]
 
 labels block.
 
@@ -16758,7 +16758,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `mounts`<sup>Optional</sup> <a name="mounts" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.mounts"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecMounts">ServiceTaskSpecContainerSpecMounts</a>]
 
 mounts block.
 
@@ -16778,7 +16778,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `read_only`<sup>Optional</sup> <a name="read_only" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.readOnly"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Mount the container's root filesystem as read only.
 
@@ -16788,7 +16788,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `secrets`<sup>Optional</sup> <a name="secrets" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putContainerSpec.parameter.secrets"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpecSecrets">ServiceTaskSpecContainerSpecSecrets</a>]
 
 secrets block.
 
@@ -16877,7 +16877,7 @@ def put_networks_advanced(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putNetworksAdvanced.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
 
 ---
 
@@ -16914,7 +16914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `platforms`<sup>Optional</sup> <a name="platforms" id="@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.putPlacement.parameter.platforms"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
 
 platforms block.
 
@@ -17072,7 +17072,7 @@ def reset_runtime() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.containerSpecInput">container_spec_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecContainerSpec">ServiceTaskSpecContainerSpec</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.forceUpdateInput">force_update_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.logDriverInput">log_driver_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecLogDriver">ServiceTaskSpecLogDriver</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.networksAdvancedInput">networks_advanced_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.networksAdvancedInput">networks_advanced_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.placementInput">placement_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacement">ServiceTaskSpecPlacement</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.resourcesInput">resources_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResources">ServiceTaskSpecResources</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecOutputReference.property.restartPolicyInput">restart_policy_input</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicy">ServiceTaskSpecRestartPolicy</a></code> | *No description.* |
@@ -17203,7 +17203,7 @@ log_driver_input: ServiceTaskSpecLogDriver
 networks_advanced_input: IResolvable | typing.List[ServiceTaskSpecNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecNetworksAdvanced">ServiceTaskSpecNetworksAdvanced</a>]
 
 ---
 
@@ -17293,14 +17293,14 @@ service.ServiceTaskSpecPlacementOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -17497,7 +17497,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -17521,7 +17521,7 @@ def put_platforms(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.putPlatforms.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
 
 ---
 
@@ -17559,7 +17559,7 @@ def reset_prefs() -> None
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.platforms">platforms</a></code> | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList">ServiceTaskSpecPlacementPlatformsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.constraintsInput">constraints_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.maxReplicasInput">max_replicas_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.platformsInput">platforms_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.platformsInput">platforms_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.prefsInput">prefs_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.constraints">constraints</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementOutputReference.property.maxReplicas">max_replicas</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -17628,7 +17628,7 @@ max_replicas_input: typing.Union[int, float]
 platforms_input: IResolvable | typing.List[ServiceTaskSpecPlacementPlatforms]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
 
 ---
 
@@ -17699,7 +17699,7 @@ service.ServiceTaskSpecPlacementPlatformsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -17707,7 +17707,7 @@ service.ServiceTaskSpecPlacementPlatformsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -17777,7 +17777,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -17814,7 +17814,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]</code> | *No description.* |
 
 ---
 
@@ -17848,7 +17848,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ServiceTaskSpecPlacementPlatforms]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>]
 
 ---
 
@@ -17870,7 +17870,7 @@ service.ServiceTaskSpecPlacementPlatformsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -17879,7 +17879,7 @@ service.ServiceTaskSpecPlacementPlatformsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -18087,7 +18087,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -18112,7 +18112,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.property.osInput">os_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.property.architecture">architecture</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.property.os">os</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatformsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a></code> | *No description.* |
 
 ---
 
@@ -18186,7 +18186,7 @@ os: str
 internal_value: IResolvable | ServiceTaskSpecPlacementPlatforms
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.service.ServiceTaskSpecPlacementPlatforms">ServiceTaskSpecPlacementPlatforms</a>
 
 ---
 
@@ -18206,14 +18206,14 @@ service.ServiceTaskSpecResourcesLimitsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesLimitsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesLimitsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesLimitsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesLimitsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -18407,7 +18407,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesLimitsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -18538,14 +18538,14 @@ service.ServiceTaskSpecResourcesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -18741,7 +18741,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -18941,14 +18941,14 @@ service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -19142,7 +19142,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationGenericResourcesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -19273,14 +19273,14 @@ service.ServiceTaskSpecResourcesReservationOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -19476,7 +19476,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecResourcesReservationOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -19664,14 +19664,14 @@ service.ServiceTaskSpecRestartPolicyOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicyOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicyOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicyOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicyOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -19867,7 +19867,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceTaskSpecRestartPolicyOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -20054,14 +20054,14 @@ service.ServiceUpdateConfigOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.service.ServiceUpdateConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.service.ServiceUpdateConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.service.ServiceUpdateConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.service.ServiceUpdateConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -20259,7 +20259,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.service.ServiceUpdateConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 

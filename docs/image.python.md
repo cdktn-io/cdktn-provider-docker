@@ -36,17 +36,17 @@ image.Image(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the Docker image, including any tags or SHA256 repo digests. |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.buildAttribute">build_attribute</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | build block. |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.forceRemove">force_remove</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the image is removed forcibly when the resource is destroyed. |
-| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.keepLocally">keep_locally</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the Docker image won't be deleted on destroy operation. |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.forceRemove">force_remove</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the image is removed forcibly when the resource is destroyed. |
+| <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.keepLocally">keep_locally</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the Docker image won't be deleted on destroy operation. |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.platform">platform</a></code> | <code>str</code> | The platform to use when pulling the image. Defaults to the platform of the current machine. |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.pullTriggers">pull_triggers</a></code> | <code>typing.List[str]</code> | List of values which cause an image pull when changed. |
 | <code><a href="#@cdktn/provider-docker.image.Image.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | timeouts block. |
@@ -74,43 +74,43 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.image.Image.Initializer.parameter.connection"></a>
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.image.Image.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
 ##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktn/provider-docker.image.Image.Initializer.parameter.dependsOn"></a>
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
 ##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktn/provider-docker.image.Image.Initializer.parameter.forEach"></a>
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
 ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.image.Image.Initializer.parameter.lifecycle"></a>
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
 ##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.image.Image.Initializer.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.image.Image.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `force_remove`<sup>Optional</sup> <a name="force_remove" id="@cdktn/provider-docker.image.Image.Initializer.parameter.forceRemove"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the image is removed forcibly when the resource is destroyed.
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `keep_locally`<sup>Optional</sup> <a name="keep_locally" id="@cdktn/provider-docker.image.Image.Initializer.parameter.keepLocally"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the Docker image won't be deleted on destroy operation.
 
@@ -481,7 +481,7 @@ def import_from(
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.image.Image.importFrom.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -622,7 +622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `auth_config`<sup>Optional</sup> <a name="auth_config" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.authConfig"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
 
 auth_config block.
 
@@ -766,7 +766,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `force_remove`<sup>Optional</sup> <a name="force_remove" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.forceRemove"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Always remove intermediate containers.
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `no_cache`<sup>Optional</sup> <a name="no_cache" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.noCache"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Do not use the cache when building the image.
 
@@ -856,7 +856,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `pull_parent`<sup>Optional</sup> <a name="pull_parent" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.pullParent"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Attempt to pull the image even if an older image exists locally.
 
@@ -876,7 +876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `remove`<sup>Optional</sup> <a name="remove" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.remove"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Remove intermediate containers after a successful build. Defaults to `true`.
 
@@ -886,7 +886,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `secrets`<sup>Optional</sup> <a name="secrets" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.secrets"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
 
 secrets block.
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `squash`<sup>Optional</sup> <a name="squash" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.squash"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true the new layers are squashed into a new image with a single new layer.
 
@@ -936,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `suppress_output`<sup>Optional</sup> <a name="suppress_output" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.suppressOutput"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Suppress the build output and print image ID on success.
 
@@ -966,7 +966,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `ulimit`<sup>Optional</sup> <a name="ulimit" id="@cdktn/provider-docker.image.Image.putBuildAttribute.parameter.ulimit"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
 
 ulimit block.
 
@@ -1067,7 +1067,7 @@ def reset_triggers() -> None
 | <code><a href="#@cdktn/provider-docker.image.Image.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.image.Image.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.image.Image.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a Image resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -1150,7 +1150,7 @@ image.Image.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a Image resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.scope"></a>
 
@@ -1180,7 +1180,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.image.Image.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the Image to import is found.
 
@@ -1191,34 +1191,34 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.buildAttribute">build_attribute</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference">ImageBuildOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.imageId">image_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.repoDigest">repo_digest</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference">ImageTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.buildAttributeInput">build_attribute_input</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemoveInput">force_remove_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocallyInput">keep_locally_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemoveInput">force_remove_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocallyInput">keep_locally_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.platformInput">platform_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.pullTriggersInput">pull_triggers_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.timeoutsInput">timeouts_input</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.triggersInput">triggers_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemove">force_remove</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocally">keep_locally</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.forceRemove">force_remove</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.Image.property.keepLocally">keep_locally</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.platform">platform</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.Image.property.pullTriggers">pull_triggers</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -1244,7 +1244,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -1294,7 +1294,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -1304,7 +1304,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1314,7 +1314,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -1334,7 +1334,7 @@ depends_on: typing.List[str]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1344,7 +1344,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1354,7 +1354,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1364,7 +1364,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -1434,7 +1434,7 @@ build_attribute_input: ImageBuild
 force_remove_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1444,7 +1444,7 @@ force_remove_input: bool | IResolvable
 keep_locally_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1484,7 +1484,7 @@ pull_triggers_input: typing.List[str]
 timeouts_input: IResolvable | ImageTimeouts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
 
 ---
 
@@ -1504,7 +1504,7 @@ triggers_input: typing.Mapping[str]
 force_remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1514,7 +1514,7 @@ force_remove: bool | IResolvable
 keep_locally: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1631,7 +1631,7 @@ image.ImageBuild(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.context">context</a></code> | <code>str</code> | Value to specify the build context. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.authConfig">auth_config</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | auth_config block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.authConfig">auth_config</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | auth_config block. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildArgs">build_args</a></code> | <code>typing.Mapping[str]</code> | Pairs for build-time variables in the form of `ENDPOINT : "https://example.com"`. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.builder">builder</a></code> | <code>str</code> | Set the name of the buildx builder to use. If not set, the legacy builder is used. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildId">build_id</a></code> | <code>str</code> | BuildID is an optional identifier that can be passed together with the build request. |
@@ -1645,27 +1645,27 @@ image.ImageBuild(
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight). |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.dockerfile">dockerfile</a></code> | <code>str</code> | Name of the Dockerfile. Defaults to `Dockerfile`. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.extraHosts">extra_hosts</a></code> | <code>typing.List[str]</code> | A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.forceRemove">force_remove</a></code> | <code>bool \| cdktf.IResolvable</code> | Always remove intermediate containers. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.forceRemove">force_remove</a></code> | <code>bool \| cdktn.IResolvable</code> | Always remove intermediate containers. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.isolation">isolation</a></code> | <code>str</code> | Isolation represents the isolation technology of a container. The supported values are. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.label">label</a></code> | <code>typing.Mapping[str]</code> | Set metadata for an image. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | User-defined key/value metadata. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.memory">memory</a></code> | <code>typing.Union[int, float]</code> | Set memory limit for build. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.memorySwap">memory_swap</a></code> | <code>typing.Union[int, float]</code> | Total memory (memory + swap), -1 to enable unlimited swap. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.networkMode">network_mode</a></code> | <code>str</code> | Set the networking mode for the RUN instructions during build. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.noCache">no_cache</a></code> | <code>bool \| cdktf.IResolvable</code> | Do not use the cache when building the image. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.noCache">no_cache</a></code> | <code>bool \| cdktn.IResolvable</code> | Do not use the cache when building the image. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.platform">platform</a></code> | <code>str</code> | Set the target platform for the build. Defaults to `GOOS/GOARCH`. For more information see the [docker documentation](https://github.com/docker/buildx/blob/master/docs/reference/buildx.md#-set-the-target-platforms-for-the-build---platform). |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.pullParent">pull_parent</a></code> | <code>bool \| cdktf.IResolvable</code> | Attempt to pull the image even if an older image exists locally. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.pullParent">pull_parent</a></code> | <code>bool \| cdktn.IResolvable</code> | Attempt to pull the image even if an older image exists locally. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.remoteContext">remote_context</a></code> | <code>str</code> | A Git repository URI or HTTP/HTTPS context URI. Will be ignored if `builder` is set. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.remove">remove</a></code> | <code>bool \| cdktf.IResolvable</code> | Remove intermediate containers after a successful build. Defaults to `true`. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.secrets">secrets</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | secrets block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.remove">remove</a></code> | <code>bool \| cdktn.IResolvable</code> | Remove intermediate containers after a successful build. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.secrets">secrets</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | secrets block. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.securityOpt">security_opt</a></code> | <code>typing.List[str]</code> | The security options. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.sessionId">session_id</a></code> | <code>str</code> | Set an ID for the build session. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.shmSize">shm_size</a></code> | <code>typing.Union[int, float]</code> | Size of /dev/shm in bytes. The size must be greater than 0. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.squash">squash</a></code> | <code>bool \| cdktf.IResolvable</code> | If true the new layers are squashed into a new image with a single new layer. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.suppressOutput">suppress_output</a></code> | <code>bool \| cdktf.IResolvable</code> | Suppress the build output and print image ID on success. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.squash">squash</a></code> | <code>bool \| cdktn.IResolvable</code> | If true the new layers are squashed into a new image with a single new layer. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.suppressOutput">suppress_output</a></code> | <code>bool \| cdktn.IResolvable</code> | Suppress the build output and print image ID on success. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.tag">tag</a></code> | <code>typing.List[str]</code> | Name and optionally a tag in the 'name:tag' format. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.target">target</a></code> | <code>str</code> | Set the target build stage to build. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.ulimit">ulimit</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | ulimit block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | ulimit block. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.version">version</a></code> | <code>str</code> | Version of the underlying builder to use. |
 
 ---
@@ -1692,7 +1692,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 auth_config: IResolvable | typing.List[ImageBuildAuthConfig]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
 
 auth_config block.
 
@@ -1892,7 +1892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 force_remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Always remove intermediate containers.
 
@@ -1990,7 +1990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 no_cache: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Do not use the cache when building the image.
 
@@ -2018,7 +2018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 pull_parent: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Attempt to pull the image even if an older image exists locally.
 
@@ -2046,7 +2046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Remove intermediate containers after a successful build. Defaults to `true`.
 
@@ -2060,7 +2060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 secrets: IResolvable | typing.List[ImageBuildSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
 
 secrets block.
 
@@ -2116,7 +2116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 squash: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true the new layers are squashed into a new image with a single new layer.
 
@@ -2130,7 +2130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 suppress_output: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Suppress the build output and print image ID on success.
 
@@ -2172,7 +2172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 ulimit: IResolvable | typing.List[ImageBuildUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
 
 ulimit block.
 
@@ -2505,17 +2505,17 @@ image.ImageConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.name">name</a></code> | <code>str</code> | The name of the Docker image, including any tags or SHA256 repo digests. |
 | <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.buildAttribute">build_attribute</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | build block. |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forceRemove">force_remove</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the image is removed forcibly when the resource is destroyed. |
-| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.keepLocally">keep_locally</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the Docker image won't be deleted on destroy operation. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.forceRemove">force_remove</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the image is removed forcibly when the resource is destroyed. |
+| <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.keepLocally">keep_locally</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the Docker image won't be deleted on destroy operation. |
 | <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.platform">platform</a></code> | <code>str</code> | The platform to use when pulling the image. Defaults to the platform of the current machine. |
 | <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.pullTriggers">pull_triggers</a></code> | <code>typing.List[str]</code> | List of values which cause an image pull when changed. |
 | <code><a href="#@cdktn/provider-docker.image.ImageConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | timeouts block. |
@@ -2529,7 +2529,7 @@ image.ImageConfig(
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -2539,7 +2539,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -2549,7 +2549,7 @@ count: typing.Union[int, float] | TerraformCount
 depends_on: typing.List[ITerraformDependable]
 ```
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
@@ -2559,7 +2559,7 @@ depends_on: typing.List[ITerraformDependable]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -2569,7 +2569,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -2579,7 +2579,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -2589,7 +2589,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -2627,7 +2627,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 force_remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the image is removed forcibly when the resource is destroyed.
 
@@ -2641,7 +2641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 keep_locally: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the Docker image won't be deleted on destroy operation.
 
@@ -2789,7 +2789,7 @@ image.ImageBuildAuthConfigList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -2797,7 +2797,7 @@ image.ImageBuildAuthConfigList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -2867,7 +2867,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -2904,7 +2904,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -2938,7 +2938,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ImageBuildAuthConfig]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
 
 ---
 
@@ -2960,7 +2960,7 @@ image.ImageBuildAuthConfigOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -2969,7 +2969,7 @@ image.ImageBuildAuthConfigOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -3184,7 +3184,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -3263,7 +3263,7 @@ def reset_user_name() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.registryToken">registry_token</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.serverAddress">server_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.userName">user_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a></code> | *No description.* |
 
 ---
 
@@ -3457,7 +3457,7 @@ user_name: str
 internal_value: IResolvable | ImageBuildAuthConfig
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>
 
 ---
 
@@ -3477,14 +3477,14 @@ image.ImageBuildOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -3715,7 +3715,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -3739,7 +3739,7 @@ def put_auth_config(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putAuthConfig.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
 
 ---
 
@@ -3753,7 +3753,7 @@ def put_secrets(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putSecrets.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
 
 ---
 
@@ -3767,7 +3767,7 @@ def put_ulimit(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.image.ImageBuildOutputReference.putUlimit.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
 
 ---
 
@@ -3997,7 +3997,7 @@ def reset_version() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfig">auth_config</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildAuthConfigList">ImageBuildAuthConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.secrets">secrets</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList">ImageBuildSecretsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimit">ulimit</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList">ImageBuildUlimitList</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfigInput">auth_config_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.authConfigInput">auth_config_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgsInput">build_args_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.builderInput">builder_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildIdInput">build_id_input</a></code> | <code>str</code> | *No description.* |
@@ -4012,27 +4012,27 @@ def reset_version() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuSharesInput">cpu_shares_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfileInput">dockerfile_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHostsInput">extra_hosts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput">force_remove_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemoveInput">force_remove_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolationInput">isolation_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelInput">label_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memoryInput">memory_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwapInput">memory_swap_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkModeInput">network_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCacheInput">no_cache_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCacheInput">no_cache_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.platformInput">platform_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParentInput">pull_parent_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParentInput">pull_parent_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContextInput">remote_context_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.removeInput">remove_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.secretsInput">secrets_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.removeInput">remove_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.secretsInput">secrets_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOptInput">security_opt_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionIdInput">session_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSizeInput">shm_size_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squashInput">squash_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput">suppress_output_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squashInput">squash_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutputInput">suppress_output_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tagInput">tag_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.targetInput">target_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimitInput">ulimit_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimitInput">ulimit_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.versionInput">version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgs">build_args</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.builder">builder</a></code> | <code>str</code> | *No description.* |
@@ -4048,23 +4048,23 @@ def reset_version() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.dockerfile">dockerfile</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.extraHosts">extra_hosts</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemove">force_remove</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.forceRemove">force_remove</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.isolation">isolation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.label">label</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memory">memory</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.memorySwap">memory_swap</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.networkMode">network_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCache">no_cache</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.noCache">no_cache</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.platform">platform</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParent">pull_parent</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.pullParent">pull_parent</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remoteContext">remote_context</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remove">remove</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.remove">remove</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.securityOpt">security_opt</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.sessionId">session_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.shmSize">shm_size</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squash">squash</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutput">suppress_output</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.squash">squash</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutput">suppress_output</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tag">tag</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.target">target</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.version">version</a></code> | <code>str</code> | *No description.* |
@@ -4132,7 +4132,7 @@ ulimit: ImageBuildUlimitList
 auth_config_input: IResolvable | typing.List[ImageBuildAuthConfig]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>]
 
 ---
 
@@ -4282,7 +4282,7 @@ extra_hosts_input: typing.List[str]
 force_remove_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4352,7 +4352,7 @@ network_mode_input: str
 no_cache_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4372,7 +4372,7 @@ platform_input: str
 pull_parent_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4392,7 +4392,7 @@ remote_context_input: str
 remove_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4402,7 +4402,7 @@ remove_input: bool | IResolvable
 secrets_input: IResolvable | typing.List[ImageBuildSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
 
 ---
 
@@ -4442,7 +4442,7 @@ shm_size_input: typing.Union[int, float]
 squash_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4452,7 +4452,7 @@ squash_input: bool | IResolvable
 suppress_output_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4482,7 +4482,7 @@ target_input: str
 ulimit_input: IResolvable | typing.List[ImageBuildUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
 
 ---
 
@@ -4642,7 +4642,7 @@ extra_hosts: typing.List[str]
 force_remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4712,7 +4712,7 @@ network_mode: str
 no_cache: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4732,7 +4732,7 @@ platform: str
 pull_parent: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4752,7 +4752,7 @@ remote_context: str
 remove: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4792,7 +4792,7 @@ shm_size: typing.Union[int, float]
 squash: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4802,7 +4802,7 @@ squash: bool | IResolvable
 suppress_output: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -4863,7 +4863,7 @@ image.ImageBuildSecretsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -4871,7 +4871,7 @@ image.ImageBuildSecretsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -4941,7 +4941,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildSecretsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -4978,7 +4978,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]</code> | *No description.* |
 
 ---
 
@@ -5012,7 +5012,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ImageBuildSecrets]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>]
 
 ---
 
@@ -5034,7 +5034,7 @@ image.ImageBuildSecretsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -5043,7 +5043,7 @@ image.ImageBuildSecretsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5253,7 +5253,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5292,7 +5292,7 @@ def reset_src() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.env">env</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.src">src</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a></code> | *No description.* |
 
 ---
 
@@ -5386,7 +5386,7 @@ src: str
 internal_value: IResolvable | ImageBuildSecrets
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildSecrets">ImageBuildSecrets</a>
 
 ---
 
@@ -5407,7 +5407,7 @@ image.ImageBuildUlimitList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -5415,7 +5415,7 @@ image.ImageBuildUlimitList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5485,7 +5485,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildUlimitList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5522,7 +5522,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]</code> | *No description.* |
 
 ---
 
@@ -5556,7 +5556,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ImageBuildUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>]
 
 ---
 
@@ -5578,7 +5578,7 @@ image.ImageBuildUlimitOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -5587,7 +5587,7 @@ image.ImageBuildUlimitOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -5795,7 +5795,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -5822,7 +5822,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.hard">hard</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.soft">soft</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a></code> | *No description.* |
 
 ---
 
@@ -5916,7 +5916,7 @@ soft: typing.Union[int, float]
 internal_value: IResolvable | ImageBuildUlimit
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>
 
 ---
 
@@ -5936,14 +5936,14 @@ image.ImageTimeoutsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6138,7 +6138,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6183,7 +6183,7 @@ def reset_update() -> None
 | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -6277,7 +6277,7 @@ update: str
 internal_value: IResolvable | ImageTimeouts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.image.ImageTimeouts">ImageTimeouts</a>
 
 ---
 

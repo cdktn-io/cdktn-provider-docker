@@ -38,22 +38,22 @@ plugin.Plugin(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.name">name</a></code> | <code>str</code> | Docker Plugin name. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Docker Plugin alias. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.enableTimeout">enable_timeout</a></code> | <code>typing.Union[int, float]</code> | HTTP client timeout to enable the plugin. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.env">env</a></code> | <code>typing.List[str]</code> | The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDestroy">force_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDisable">force_disable</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the plugin is disabled forcibly. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantPermissions">grant_permissions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | grant_permissions block. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDestroy">force_destroy</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDisable">force_disable</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the plugin is disabled forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantPermissions">grant_permissions</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | grant_permissions block. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#id Plugin#id}. |
 
 ---
@@ -78,43 +78,43 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.connection"></a>
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
 ##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.dependsOn"></a>
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
 ##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forEach"></a>
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
 ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.lifecycle"></a>
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
 ##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.enabled"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true` the plugin is enabled. Defaults to `true`.
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `force_destroy`<sup>Optional</sup> <a name="force_destroy" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDestroy"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the plugin is destroyed forcibly.
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `force_disable`<sup>Optional</sup> <a name="force_disable" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.forceDisable"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the plugin is disabled forcibly.
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `grant_all_permissions`<sup>Optional</sup> <a name="grant_all_permissions" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantAllPermissions"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, grant all permissions necessary to run the plugin.
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `grant_permissions`<sup>Optional</sup> <a name="grant_permissions" id="@cdktn/provider-docker.plugin.Plugin.Initializer.parameter.grantPermissions"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
 
 grant_permissions block.
 
@@ -501,7 +501,7 @@ def import_from(
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.importFrom.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -594,7 +594,7 @@ def put_grant_permissions(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.plugin.Plugin.putGrantPermissions.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
 
 ---
 
@@ -659,7 +659,7 @@ def reset_id() -> None
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a Plugin resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -742,7 +742,7 @@ plugin.Plugin.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a Plugin resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a Plugin resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.scope"></a>
 
@@ -772,7 +772,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the Plugin to import is found.
 
@@ -783,38 +783,38 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantPermissions">grant_permissions</a></code> | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList">PluginGrantPermissionsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.pluginReference">plugin_reference</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enableTimeoutInput">enable_timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.envInput">env_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroyInput">force_destroy_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisableInput">force_disable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissionsInput">grant_all_permissions_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantPermissionsInput">grant_permissions_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroyInput">force_destroy_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisableInput">force_disable_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissionsInput">grant_all_permissions_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantPermissionsInput">grant_permissions_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.alias">alias</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enabled">enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.enableTimeout">enable_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.env">env</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroy">force_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisable">force_disable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDestroy">force_destroy</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.forceDisable">force_disable</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.Plugin.property.name">name</a></code> | <code>str</code> | *No description.* |
 
@@ -838,7 +838,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -888,7 +888,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -898,7 +898,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -908,7 +908,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -928,7 +928,7 @@ depends_on: typing.List[str]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -938,7 +938,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -948,7 +948,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -958,7 +958,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -998,7 +998,7 @@ alias_input: str
 enabled_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1028,7 +1028,7 @@ env_input: typing.List[str]
 force_destroy_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1038,7 +1038,7 @@ force_destroy_input: bool | IResolvable
 force_disable_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1048,7 +1048,7 @@ force_disable_input: bool | IResolvable
 grant_all_permissions_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1058,7 +1058,7 @@ grant_all_permissions_input: bool | IResolvable
 grant_permissions_input: IResolvable | typing.List[PluginGrantPermissions]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
 
 ---
 
@@ -1098,7 +1098,7 @@ alias: str
 enabled: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1128,7 +1128,7 @@ env: typing.List[str]
 force_destroy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1138,7 +1138,7 @@ force_destroy: bool | IResolvable
 force_disable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1148,7 +1148,7 @@ force_disable: bool | IResolvable
 grant_all_permissions: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -1224,22 +1224,22 @@ plugin.PluginConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.name">name</a></code> | <code>str</code> | Docker Plugin name. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.alias">alias</a></code> | <code>str</code> | Docker Plugin alias. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.enabled">enabled</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true` the plugin is enabled. Defaults to `true`. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.enableTimeout">enable_timeout</a></code> | <code>typing.Union[int, float]</code> | HTTP client timeout to enable the plugin. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.env">env</a></code> | <code>typing.List[str]</code> | The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDestroy">force_destroy</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable">force_disable</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, then the plugin is disabled forcibly. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktf.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions">grant_permissions</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | grant_permissions block. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDestroy">force_destroy</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the plugin is destroyed forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable">force_disable</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, then the plugin is disabled forcibly. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions">grant_all_permissions</a></code> | <code>bool \| cdktn.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions">grant_permissions</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | grant_permissions block. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/plugin#id Plugin#id}. |
 
 ---
@@ -1250,7 +1250,7 @@ plugin.PluginConfig(
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -1260,7 +1260,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -1270,7 +1270,7 @@ count: typing.Union[int, float] | TerraformCount
 depends_on: typing.List[ITerraformDependable]
 ```
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
@@ -1280,7 +1280,7 @@ depends_on: typing.List[ITerraformDependable]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -1290,7 +1290,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -1300,7 +1300,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1310,7 +1310,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -1348,7 +1348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 enabled: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true` the plugin is enabled. Defaults to `true`.
 
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 force_destroy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the plugin is destroyed forcibly.
 
@@ -1404,7 +1404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 force_disable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, then the plugin is disabled forcibly.
 
@@ -1418,7 +1418,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 grant_all_permissions: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If true, grant all permissions necessary to run the plugin.
 
@@ -1432,7 +1432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 grant_permissions: IResolvable | typing.List[PluginGrantPermissions]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
 
 grant_permissions block.
 
@@ -1523,7 +1523,7 @@ plugin.PluginGrantPermissionsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -1531,7 +1531,7 @@ plugin.PluginGrantPermissionsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -1601,7 +1601,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -1638,7 +1638,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]</code> | *No description.* |
 
 ---
 
@@ -1672,7 +1672,7 @@ fqn: str
 internal_value: IResolvable | typing.List[PluginGrantPermissions]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>]
 
 ---
 
@@ -1694,7 +1694,7 @@ plugin.PluginGrantPermissionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -1703,7 +1703,7 @@ plugin.PluginGrantPermissionsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -1911,7 +1911,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -1936,7 +1936,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.valueInput">value_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.value">value</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a></code> | *No description.* |
 
 ---
 
@@ -2010,7 +2010,7 @@ value: typing.List[str]
 internal_value: IResolvable | PluginGrantPermissions
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>
 
 ---
 

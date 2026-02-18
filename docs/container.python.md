@@ -95,16 +95,16 @@ container.Container(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.image">image</a></code> | <code>str</code> | The ID of the image to back this container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the container. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.attach">attach</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.attach">attach</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.capabilities">capabilities</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilities">ContainerCapabilities</a></code> | capabilities block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cgroupnsMode">cgroupns_mode</a></code> | <code>str</code> | Cgroup namespace mode to use for the container. Possible values are: `private`, `host`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cgroupParent">cgroup_parent</a></code> | <code>str</code> | Optional parent cgroup for the container. |
@@ -116,7 +116,7 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.devices">devices</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.devices">devices</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dns">dns</a></code> | <code>typing.List[str]</code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsOpts">dns_opts</a></code> | <code>typing.List[str]</code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsSearch">dns_search</a></code> | <code>typing.List[str]</code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
@@ -126,47 +126,47 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.groupAdd">group_add</a></code> | <code>typing.List[str]</code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.host">host</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#id Container#id}. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.init">init</a></code> | <code>bool \| cdktf.IResolvable</code> | Configured whether an init process should be injected for this container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.logDriver">log_driver</a></code> | <code>str</code> | The logging driver to use for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.logOpts">log_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs to use as options for the logging driver. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.logs">logs</a></code> | <code>bool \| cdktf.IResolvable</code> | Save the container logs (`attach` must be enabled). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.logs">logs</a></code> | <code>bool \| cdktn.IResolvable</code> | Save the container logs (`attach` must be enabled). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.maxRetryCount">max_retry_count</a></code> | <code>typing.Union[int, float]</code> | The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.memory">memory</a></code> | <code>typing.Union[int, float]</code> | The memory limit for the container in MBs. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.memorySwap">memory_swap</a></code> | <code>typing.Union[int, float]</code> | The total memory limit (memory + swap) for the container in MBs. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mounts">mounts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | mounts block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mustRun">must_run</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container will be kept running. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mounts">mounts</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | mounts block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mustRun">must_run</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networkMode">network_mode</a></code> | <code>str</code> | Network mode of the container. See https://docs.docker.com/engine/network/ for more information. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networksAdvanced">networks_advanced</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networksAdvanced">networks_advanced</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.pidMode">pid_mode</a></code> | <code>str</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ports">ports</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.privileged">privileged</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, the container runs in privileged mode. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktf.IResolvable</code> | Publish all ports of the container. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, the container will be started as readonly. Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ports">ports</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | Publish all ports of the container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container will be started as readonly. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.restart">restart</a></code> | <code>str</code> | The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.rm">rm</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the container will be automatically removed when it exits. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.rm">rm</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the container will be automatically removed when it exits. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.runtime">runtime</a></code> | <code>str</code> | Runtime to use for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.securityOpts">security_opts</a></code> | <code>typing.List[str]</code> | List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.shmSize">shm_size</a></code> | <code>typing.Union[int, float]</code> | Size of `/dev/shm` in MBs. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.start">start</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container will be started after creation. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stdinOpen">stdin_open</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.start">start</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be started after creation. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stdinOpen">stdin_open</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stopSignal">stop_signal</a></code> | <code>str</code> | Signal to stop a container (default `SIGTERM`). |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stopTimeout">stop_timeout</a></code> | <code>typing.Union[int, float]</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.storageOpts">storage_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.sysctls">sysctls</a></code> | <code>typing.Mapping[str]</code> | A map of kernel parameters (sysctls) to set in the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tmpfs">tmpfs</a></code> | <code>typing.Mapping[str]</code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tty">tty</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ulimit">ulimit</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.upload">upload</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | upload block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tty">tty</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.upload">upload</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | upload block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.user">user</a></code> | <code>str</code> | User used for run the first process. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.usernsMode">userns_mode</a></code> | <code>str</code> | Sets the usernamespace mode for the container when usernamespace remapping option is enabled. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.volumes">volumes</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | volumes block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container is waited for being healthy state after creation. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.volumes">volumes</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | volumes block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.wait">wait</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container is waited for being healthy state after creation. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.waitTimeout">wait_timeout</a></code> | <code>typing.Union[int, float]</code> | The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.workingDir">working_dir</a></code> | <code>str</code> | The working directory for commands to run in. |
 
@@ -192,43 +192,43 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktn/provider-docker.container.Container.Initializer.parameter.connection"></a>
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.container.Container.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
 ##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktn/provider-docker.container.Container.Initializer.parameter.dependsOn"></a>
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
 ##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktn/provider-docker.container.Container.Initializer.parameter.forEach"></a>
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
 ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktn/provider-docker.container.Container.Initializer.parameter.lifecycle"></a>
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
 ##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.container.Container.Initializer.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktn/provider-docker.container.Container.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -256,7 +256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `attach`<sup>Optional</sup> <a name="attach" id="@cdktn/provider-docker.container.Container.Initializer.parameter.attach"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
@@ -384,7 +384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `devices`<sup>Optional</sup> <a name="devices" id="@cdktn/provider-docker.container.Container.Initializer.parameter.devices"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
 
 devices block.
 
@@ -488,7 +488,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `host`<sup>Optional</sup> <a name="host" id="@cdktn/provider-docker.container.Container.Initializer.parameter.host"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
 
 host block.
 
@@ -519,7 +519,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `init`<sup>Optional</sup> <a name="init" id="@cdktn/provider-docker.container.Container.Initializer.parameter.init"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Configured whether an init process should be injected for this container.
 
@@ -541,7 +541,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `labels`<sup>Optional</sup> <a name="labels" id="@cdktn/provider-docker.container.Container.Initializer.parameter.labels"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
 
 labels block.
 
@@ -571,7 +571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `logs`<sup>Optional</sup> <a name="logs" id="@cdktn/provider-docker.container.Container.Initializer.parameter.logs"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
@@ -613,7 +613,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `mounts`<sup>Optional</sup> <a name="mounts" id="@cdktn/provider-docker.container.Container.Initializer.parameter.mounts"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
 
 mounts block.
 
@@ -623,7 +623,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `must_run`<sup>Optional</sup> <a name="must_run" id="@cdktn/provider-docker.container.Container.Initializer.parameter.mustRun"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container will be kept running.
 
@@ -645,7 +645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `networks_advanced`<sup>Optional</sup> <a name="networks_advanced" id="@cdktn/provider-docker.container.Container.Initializer.parameter.networksAdvanced"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
 
 networks_advanced block.
 
@@ -665,7 +665,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `ports`<sup>Optional</sup> <a name="ports" id="@cdktn/provider-docker.container.Container.Initializer.parameter.ports"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
 
 ports block.
 
@@ -675,7 +675,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `privileged`<sup>Optional</sup> <a name="privileged" id="@cdktn/provider-docker.container.Container.Initializer.parameter.privileged"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, the container runs in privileged mode.
 
@@ -685,7 +685,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `publish_all_ports`<sup>Optional</sup> <a name="publish_all_ports" id="@cdktn/provider-docker.container.Container.Initializer.parameter.publishAllPorts"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Publish all ports of the container.
 
@@ -695,7 +695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `read_only`<sup>Optional</sup> <a name="read_only" id="@cdktn/provider-docker.container.Container.Initializer.parameter.readOnly"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
@@ -705,7 +705,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `remove_volumes`<sup>Optional</sup> <a name="remove_volumes" id="@cdktn/provider-docker.container.Container.Initializer.parameter.removeVolumes"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
@@ -725,7 +725,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `rm`<sup>Optional</sup> <a name="rm" id="@cdktn/provider-docker.container.Container.Initializer.parameter.rm"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
@@ -765,7 +765,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `start`<sup>Optional</sup> <a name="start" id="@cdktn/provider-docker.container.Container.Initializer.parameter.start"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container will be started after creation.
 
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `stdin_open`<sup>Optional</sup> <a name="stdin_open" id="@cdktn/provider-docker.container.Container.Initializer.parameter.stdinOpen"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
@@ -837,7 +837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `tty`<sup>Optional</sup> <a name="tty" id="@cdktn/provider-docker.container.Container.Initializer.parameter.tty"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
@@ -847,7 +847,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `ulimit`<sup>Optional</sup> <a name="ulimit" id="@cdktn/provider-docker.container.Container.Initializer.parameter.ulimit"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
 
 ulimit block.
 
@@ -857,7 +857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `upload`<sup>Optional</sup> <a name="upload" id="@cdktn/provider-docker.container.Container.Initializer.parameter.upload"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
 
 upload block.
 
@@ -889,7 +889,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `volumes`<sup>Optional</sup> <a name="volumes" id="@cdktn/provider-docker.container.Container.Initializer.parameter.volumes"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
 
 volumes block.
 
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ##### `wait`<sup>Optional</sup> <a name="wait" id="@cdktn/provider-docker.container.Container.Initializer.parameter.wait"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container is waited for being healthy state after creation.
 
@@ -1277,7 +1277,7 @@ def import_from(
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.container.Container.importFrom.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -1399,7 +1399,7 @@ def put_devices(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDevices.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
 
 ---
 
@@ -1488,7 +1488,7 @@ def put_host(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putHost.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
 
 ---
 
@@ -1502,7 +1502,7 @@ def put_labels(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
 
 ---
 
@@ -1516,7 +1516,7 @@ def put_mounts(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putMounts.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
 
 ---
 
@@ -1530,7 +1530,7 @@ def put_networks_advanced(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putNetworksAdvanced.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
 
 ---
 
@@ -1544,7 +1544,7 @@ def put_ports(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putPorts.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
 
 ---
 
@@ -1558,7 +1558,7 @@ def put_ulimit(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putUlimit.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
 
 ---
 
@@ -1572,7 +1572,7 @@ def put_upload(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putUpload.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
 
 ---
 
@@ -1586,7 +1586,7 @@ def put_volumes(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putVolumes.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
 
 ---
 
@@ -1987,7 +1987,7 @@ def reset_working_dir() -> None
 | <code><a href="#@cdktn/provider-docker.container.Container.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.container.Container.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Container resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.container.Container.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTN code for importing a Container resource upon running "cdktn plan <stack-name>". |
 
 ---
 
@@ -2070,7 +2070,7 @@ container.Container.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a Container resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a Container resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.container.Container.generateConfigForImport.parameter.scope"></a>
 
@@ -2100,7 +2100,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.container.Container.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ? Optional instance of the provider where the Container to import is found.
 
@@ -2111,19 +2111,19 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.cdktfStack">cdktf_stack</a></code> | <code>cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.bridge">bridge</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.capabilities">capabilities</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference">ContainerCapabilitiesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.containerLogs">container_logs</a></code> | <code>str</code> | *No description.* |
@@ -2139,7 +2139,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ulimit">ulimit</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList">ContainerUlimitList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.upload">upload</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList">ContainerUploadList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.volumes">volumes</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList">ContainerVolumesList</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.attachInput">attach_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.attachInput">attach_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.capabilitiesInput">capabilities_input</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilities">ContainerCapabilities</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cgroupnsModeInput">cgroupns_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cgroupParentInput">cgroup_parent_input</a></code> | <code>str</code> | *No description.* |
@@ -2151,7 +2151,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuSharesInput">cpu_shares_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpusInput">cpus_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.destroyGraceSecondsInput">destroy_grace_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.devicesInput">devices_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.devicesInput">devices_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsInput">dns_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsOptsInput">dns_opts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsSearchInput">dns_search_input</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -2161,52 +2161,52 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.gpusInput">gpus_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.groupAddInput">group_add_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.healthcheckInput">healthcheck_input</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.hostInput">host_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.hostInput">host_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.hostnameInput">hostname_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.imageInput">image_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.initInput">init_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.initInput">init_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ipcModeInput">ipc_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.labelsInput">labels_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logDriverInput">log_driver_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logOptsInput">log_opts_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.logsInput">logs_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.logsInput">logs_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.maxRetryCountInput">max_retry_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memoryInput">memory_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memorySwapInput">memory_swap_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.mountsInput">mounts_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.mustRunInput">must_run_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.mountsInput">mounts_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.mustRunInput">must_run_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkModeInput">network_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvancedInput">networks_advanced_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvancedInput">networks_advanced_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidModeInput">pid_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.portsInput">ports_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.privilegedInput">privileged_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPortsInput">publish_all_ports_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.removeVolumesInput">remove_volumes_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.portsInput">ports_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.privilegedInput">privileged_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPortsInput">publish_all_ports_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.removeVolumesInput">remove_volumes_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.restartInput">restart_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.rmInput">rm_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.rmInput">rm_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.runtimeInput">runtime_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.securityOptsInput">security_opts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.shmSizeInput">shm_size_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.startInput">start_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.stdinOpenInput">stdin_open_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.startInput">start_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.stdinOpenInput">stdin_open_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopSignalInput">stop_signal_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopTimeoutInput">stop_timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.storageOptsInput">storage_opts_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.sysctlsInput">sysctls_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.tmpfsInput">tmpfs_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.ttyInput">tty_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.ulimitInput">ulimit_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.uploadInput">upload_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.ttyInput">tty_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.ulimitInput">ulimit_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.uploadInput">upload_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.userInput">user_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.usernsModeInput">userns_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.volumesInput">volumes_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.waitInput">wait_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.volumesInput">volumes_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.waitInput">wait_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.waitTimeoutInput">wait_timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.workingDirInput">working_dir_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.attach">attach</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.attach">attach</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cgroupnsMode">cgroupns_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cgroupParent">cgroup_parent</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.command">command</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -2228,38 +2228,38 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.hostname">hostname</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.image">image</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.init">init</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ipcMode">ipc_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logDriver">log_driver</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logOpts">log_opts</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.logs">logs</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.logs">logs</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.maxRetryCount">max_retry_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memory">memory</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memorySwap">memory_swap</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.mustRun">must_run</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.mustRun">must_run</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkMode">network_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidMode">pid_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.privileged">privileged</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.restart">restart</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.rm">rm</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.rm">rm</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.runtime">runtime</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.securityOpts">security_opts</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.shmSize">shm_size</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.start">start</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.stdinOpen">stdin_open</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.start">start</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.stdinOpen">stdin_open</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopSignal">stop_signal</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopTimeout">stop_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.storageOpts">storage_opts</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.sysctls">sysctls</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.tmpfs">tmpfs</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.tty">tty</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.tty">tty</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.user">user</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.usernsMode">userns_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.Container.property.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.wait">wait</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.waitTimeout">wait_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.workingDir">working_dir</a></code> | <code>str</code> | *No description.* |
 
@@ -2283,7 +2283,7 @@ The tree node.
 cdktf_stack: TerraformStack
 ```
 
-- *Type:* cdktf.TerraformStack
+- *Type:* cdktn.TerraformStack
 
 ---
 
@@ -2333,7 +2333,7 @@ terraform_resource_type: str
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* cdktf.TerraformProviderGeneratorMetadata
+- *Type:* cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -2343,7 +2343,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -2353,7 +2353,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -2373,7 +2373,7 @@ depends_on: typing.List[str]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -2383,7 +2383,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -2393,7 +2393,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -2403,7 +2403,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -2563,7 +2563,7 @@ volumes: ContainerVolumesList
 attach_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -2683,7 +2683,7 @@ destroy_grace_seconds_input: typing.Union[int, float]
 devices_input: IResolvable | typing.List[ContainerDevices]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
 
 ---
 
@@ -2783,7 +2783,7 @@ healthcheck_input: ContainerHealthcheck
 host_input: IResolvable | typing.List[ContainerHost]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
 
 ---
 
@@ -2823,7 +2823,7 @@ image_input: str
 init_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -2843,7 +2843,7 @@ ipc_mode_input: str
 labels_input: IResolvable | typing.List[ContainerLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
 
 ---
 
@@ -2873,7 +2873,7 @@ log_opts_input: typing.Mapping[str]
 logs_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -2913,7 +2913,7 @@ memory_swap_input: typing.Union[int, float]
 mounts_input: IResolvable | typing.List[ContainerMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
 
 ---
 
@@ -2923,7 +2923,7 @@ mounts_input: IResolvable | typing.List[ContainerMounts]
 must_run_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -2953,7 +2953,7 @@ network_mode_input: str
 networks_advanced_input: IResolvable | typing.List[ContainerNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
 
 ---
 
@@ -2973,7 +2973,7 @@ pid_mode_input: str
 ports_input: IResolvable | typing.List[ContainerPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
 
 ---
 
@@ -2983,7 +2983,7 @@ ports_input: IResolvable | typing.List[ContainerPorts]
 privileged_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -2993,7 +2993,7 @@ privileged_input: bool | IResolvable
 publish_all_ports_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3003,7 +3003,7 @@ publish_all_ports_input: bool | IResolvable
 read_only_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3013,7 +3013,7 @@ read_only_input: bool | IResolvable
 remove_volumes_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3033,7 +3033,7 @@ restart_input: str
 rm_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3073,7 +3073,7 @@ shm_size_input: typing.Union[int, float]
 start_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3083,7 +3083,7 @@ start_input: bool | IResolvable
 stdin_open_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3143,7 +3143,7 @@ tmpfs_input: typing.Mapping[str]
 tty_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3153,7 +3153,7 @@ tty_input: bool | IResolvable
 ulimit_input: IResolvable | typing.List[ContainerUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
 
 ---
 
@@ -3163,7 +3163,7 @@ ulimit_input: IResolvable | typing.List[ContainerUlimit]
 upload_input: IResolvable | typing.List[ContainerUpload]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
 
 ---
 
@@ -3193,7 +3193,7 @@ userns_mode_input: str
 volumes_input: IResolvable | typing.List[ContainerVolumes]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
 
 ---
 
@@ -3203,7 +3203,7 @@ volumes_input: IResolvable | typing.List[ContainerVolumes]
 wait_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3233,7 +3233,7 @@ working_dir_input: str
 attach: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3453,7 +3453,7 @@ image: str
 init: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3493,7 +3493,7 @@ log_opts: typing.Mapping[str]
 logs: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3533,7 +3533,7 @@ memory_swap: typing.Union[int, float]
 must_run: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3573,7 +3573,7 @@ pid_mode: str
 privileged: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3583,7 +3583,7 @@ privileged: bool | IResolvable
 publish_all_ports: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3593,7 +3593,7 @@ publish_all_ports: bool | IResolvable
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3603,7 +3603,7 @@ read_only: bool | IResolvable
 remove_volumes: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3623,7 +3623,7 @@ restart: str
 rm: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3663,7 +3663,7 @@ shm_size: typing.Union[int, float]
 start: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3673,7 +3673,7 @@ start: bool | IResolvable
 stdin_open: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3733,7 +3733,7 @@ tmpfs: typing.Mapping[str]
 tty: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3763,7 +3763,7 @@ userns_mode: str
 wait: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -3946,16 +3946,16 @@ container.ContainerConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.connection">connection</a></code> | <code>cdktn.SSHProvisionerConnection \| cdktn.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktn.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktn.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.forEach">for_each</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.image">image</a></code> | <code>str</code> | The ID of the image to back this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.name">name</a></code> | <code>str</code> | The name of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.attach">attach</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.attach">attach</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.capabilities">capabilities</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilities">ContainerCapabilities</a></code> | capabilities block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cgroupnsMode">cgroupns_mode</a></code> | <code>str</code> | Cgroup namespace mode to use for the container. Possible values are: `private`, `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cgroupParent">cgroup_parent</a></code> | <code>str</code> | Optional parent cgroup for the container. |
@@ -3967,7 +3967,7 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.devices">devices</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.devices">devices</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dns">dns</a></code> | <code>typing.List[str]</code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsOpts">dns_opts</a></code> | <code>typing.List[str]</code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsSearch">dns_search</a></code> | <code>typing.List[str]</code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
@@ -3977,47 +3977,47 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.groupAdd">group_add</a></code> | <code>typing.List[str]</code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#id Container#id}. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>bool \| cdktf.IResolvable</code> | Configured whether an init process should be injected for this container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.logDriver">log_driver</a></code> | <code>str</code> | The logging driver to use for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.logOpts">log_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs to use as options for the logging driver. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.logs">logs</a></code> | <code>bool \| cdktf.IResolvable</code> | Save the container logs (`attach` must be enabled). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.logs">logs</a></code> | <code>bool \| cdktn.IResolvable</code> | Save the container logs (`attach` must be enabled). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.maxRetryCount">max_retry_count</a></code> | <code>typing.Union[int, float]</code> | The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.memory">memory</a></code> | <code>typing.Union[int, float]</code> | The memory limit for the container in MBs. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.memorySwap">memory_swap</a></code> | <code>typing.Union[int, float]</code> | The total memory limit (memory + swap) for the container in MBs. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mounts">mounts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | mounts block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mustRun">must_run</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container will be kept running. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mounts">mounts</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | mounts block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mustRun">must_run</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networkMode">network_mode</a></code> | <code>str</code> | Network mode of the container. See https://docs.docker.com/engine/network/ for more information. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networksAdvanced">networks_advanced</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networksAdvanced">networks_advanced</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pid_mode</a></code> | <code>str</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ports">ports</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.privileged">privileged</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, the container runs in privileged mode. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktf.IResolvable</code> | Publish all ports of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, the container will be started as readonly. Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ports">ports</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | Publish all ports of the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container will be started as readonly. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.removeVolumes">remove_volumes</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.restart">restart</a></code> | <code>str</code> | The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.rm">rm</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the container will be automatically removed when it exits. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.rm">rm</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the container will be automatically removed when it exits. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.runtime">runtime</a></code> | <code>str</code> | Runtime to use for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.securityOpts">security_opts</a></code> | <code>typing.List[str]</code> | List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.shmSize">shm_size</a></code> | <code>typing.Union[int, float]</code> | Size of `/dev/shm` in MBs. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.start">start</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container will be started after creation. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stdinOpen">stdin_open</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.start">start</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be started after creation. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stdinOpen">stdin_open</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stopSignal">stop_signal</a></code> | <code>str</code> | Signal to stop a container (default `SIGTERM`). |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stopTimeout">stop_timeout</a></code> | <code>typing.Union[int, float]</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.storageOpts">storage_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.sysctls">sysctls</a></code> | <code>typing.Mapping[str]</code> | A map of kernel parameters (sysctls) to set in the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tmpfs">tmpfs</a></code> | <code>typing.Mapping[str]</code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tty">tty</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ulimit">ulimit</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.upload">upload</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | upload block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tty">tty</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.upload">upload</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | upload block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.user">user</a></code> | <code>str</code> | User used for run the first process. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.usernsMode">userns_mode</a></code> | <code>str</code> | Sets the usernamespace mode for the container when usernamespace remapping option is enabled. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.volumes">volumes</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | volumes block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, then the Docker container is waited for being healthy state after creation. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.volumes">volumes</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | volumes block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.wait">wait</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container is waited for being healthy state after creation. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.waitTimeout">wait_timeout</a></code> | <code>typing.Union[int, float]</code> | The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.workingDir">working_dir</a></code> | <code>str</code> | The working directory for commands to run in. |
 
@@ -4029,7 +4029,7 @@ container.ContainerConfig(
 connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+- *Type:* cdktn.SSHProvisionerConnection | cdktn.WinrmProvisionerConnection
 
 ---
 
@@ -4039,7 +4039,7 @@ connection: SSHProvisionerConnection | WinrmProvisionerConnection
 count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+- *Type:* typing.Union[int, float] | cdktn.TerraformCount
 
 ---
 
@@ -4049,7 +4049,7 @@ count: typing.Union[int, float] | TerraformCount
 depends_on: typing.List[ITerraformDependable]
 ```
 
-- *Type:* typing.List[cdktf.ITerraformDependable]
+- *Type:* typing.List[cdktn.ITerraformDependable]
 
 ---
 
@@ -4059,7 +4059,7 @@ depends_on: typing.List[ITerraformDependable]
 for_each: ITerraformIterator
 ```
 
-- *Type:* cdktf.ITerraformIterator
+- *Type:* cdktn.ITerraformIterator
 
 ---
 
@@ -4069,7 +4069,7 @@ for_each: ITerraformIterator
 lifecycle: TerraformResourceLifecycle
 ```
 
-- *Type:* cdktf.TerraformResourceLifecycle
+- *Type:* cdktn.TerraformResourceLifecycle
 
 ---
 
@@ -4079,7 +4079,7 @@ lifecycle: TerraformResourceLifecycle
 provider: TerraformProvider
 ```
 
-- *Type:* cdktf.TerraformProvider
+- *Type:* cdktn.TerraformProvider
 
 ---
 
@@ -4089,7 +4089,7 @@ provider: TerraformProvider
 provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+- *Type:* typing.List[cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner]
 
 ---
 
@@ -4129,7 +4129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 attach: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
@@ -4305,7 +4305,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 devices: IResolvable | typing.List[ContainerDevices]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
 
 devices block.
 
@@ -4449,7 +4449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 host: IResolvable | typing.List[ContainerHost]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
 
 host block.
 
@@ -4492,7 +4492,7 @@ If you experience problems setting this value it might not be settable. Please t
 init: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Configured whether an init process should be injected for this container.
 
@@ -4522,7 +4522,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 labels: IResolvable | typing.List[ContainerLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
 
 labels block.
 
@@ -4564,7 +4564,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 logs: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
@@ -4622,7 +4622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 mounts: IResolvable | typing.List[ContainerMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
 
 mounts block.
 
@@ -4636,7 +4636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 must_run: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container will be kept running.
 
@@ -4666,7 +4666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 networks_advanced: IResolvable | typing.List[ContainerNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
 
 networks_advanced block.
 
@@ -4694,7 +4694,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 ports: IResolvable | typing.List[ContainerPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
 
 ports block.
 
@@ -4708,7 +4708,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 privileged: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, the container runs in privileged mode.
 
@@ -4722,7 +4722,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 publish_all_ports: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Publish all ports of the container.
 
@@ -4736,7 +4736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
@@ -4750,7 +4750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 remove_volumes: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
@@ -4778,7 +4778,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 rm: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
@@ -4834,7 +4834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 start: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container will be started after creation.
 
@@ -4850,7 +4850,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 stdin_open: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
@@ -4934,7 +4934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 tty: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
@@ -4948,7 +4948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 ulimit: IResolvable | typing.List[ContainerUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
 
 ulimit block.
 
@@ -4962,7 +4962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 upload: IResolvable | typing.List[ContainerUpload]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
 
 upload block.
 
@@ -5006,7 +5006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 volumes: IResolvable | typing.List[ContainerVolumes]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
 
 volumes block.
 
@@ -5020,7 +5020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 wait: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, then the Docker container is waited for being healthy state after creation.
 
@@ -5365,7 +5365,7 @@ container.ContainerMounts(
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.target">target</a></code> | <code>str</code> | Container path. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.type">type</a></code> | <code>str</code> | The mount type. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.bindOptions">bind_options</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsBindOptions">ContainerMountsBindOptions</a></code> | bind_options block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether the mount should be read-only. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | Whether the mount should be read-only. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.source">source</a></code> | <code>str</code> | Mount source (e.g. a volume name, a host path). |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.tmpfsOptions">tmpfs_options</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptions">ContainerMountsTmpfsOptions</a></code> | tmpfs_options block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMounts.property.volumeOptions">volume_options</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions">ContainerMountsVolumeOptions</a></code> | volume_options block. |
@@ -5420,7 +5420,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Whether the mount should be read-only.
 
@@ -5576,8 +5576,8 @@ container.ContainerMountsVolumeOptions(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.driverName">driver_name</a></code> | <code>str</code> | Name of the driver to use to create the volume. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.driverOptions">driver_options</a></code> | <code>typing.Mapping[str]</code> | key/value map of driver specific options. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.labels">labels</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | labels block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.noCopy">no_copy</a></code> | <code>bool \| cdktf.IResolvable</code> | Populate volume with data from the target. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | labels block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.noCopy">no_copy</a></code> | <code>bool \| cdktn.IResolvable</code> | Populate volume with data from the target. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions.property.subpath">subpath</a></code> | <code>str</code> | Path within the volume to mount. Requires docker server version 1.45 or higher. |
 
 ---
@@ -5616,7 +5616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 labels: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
 
 labels block.
 
@@ -5630,7 +5630,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 no_copy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Populate volume with data from the target.
 
@@ -5970,7 +5970,7 @@ container.ContainerUpload(
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.file">file</a></code> | <code>str</code> | Path to the file in the container where is upload goes to. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.content">content</a></code> | <code>str</code> | Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.contentBase64">content_base64</a></code> | <code>str</code> | Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.executable">executable</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, the file will be uploaded with user executable permission. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.executable">executable</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the file will be uploaded with user executable permission. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.permissions">permissions</a></code> | <code>str</code> | The permission mode for the file in the container. Has precedence over `executable`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.source">source</a></code> | <code>str</code> | A filename that references a file which will be uploaded as the object content. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.sourceHash">source_hash</a></code> | <code>str</code> | If using `source`, this will force an update if the file content has updated but the filename has not. |
@@ -6029,7 +6029,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 executable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
@@ -6104,7 +6104,7 @@ container.ContainerVolumes(
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.containerPath">container_path</a></code> | <code>str</code> | The path in the container where the volume will be mounted. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.fromContainer">from_container</a></code> | <code>str</code> | The container where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.hostPath">host_path</a></code> | <code>str</code> | The path on the host where the volume is coming from. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | If `true`, this volume will be readonly. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, this volume will be readonly. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.volumeName">volume_name</a></code> | <code>str</code> | The name of the docker volume which should be mounted. |
 
 ---
@@ -6157,7 +6157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
@@ -6196,14 +6196,14 @@ container.ContainerCapabilitiesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6397,7 +6397,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6529,7 +6529,7 @@ container.ContainerDevicesList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -6537,7 +6537,7 @@ container.ContainerDevicesList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDevicesList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6607,7 +6607,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDevicesList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6644,7 +6644,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | *No description.* |
 
 ---
 
@@ -6678,7 +6678,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerDevices]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
 
 ---
 
@@ -6700,7 +6700,7 @@ container.ContainerDevicesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -6709,7 +6709,7 @@ container.ContainerDevicesOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDevicesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -6919,7 +6919,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDevicesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -6958,7 +6958,7 @@ def reset_permissions() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.property.containerPath">container_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.property.hostPath">host_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.property.permissions">permissions</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDevicesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a></code> | *No description.* |
 
 ---
 
@@ -7052,7 +7052,7 @@ permissions: str
 internal_value: IResolvable | ContainerDevices
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>
 
 ---
 
@@ -7072,14 +7072,14 @@ container.ContainerHealthcheckOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7276,7 +7276,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7514,7 +7514,7 @@ container.ContainerHostList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHostList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHostList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -7522,7 +7522,7 @@ container.ContainerHostList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerHostList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7592,7 +7592,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerHostList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7629,7 +7629,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHostList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHostList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | *No description.* |
 
 ---
 
@@ -7663,7 +7663,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerHost]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]
 
 ---
 
@@ -7685,7 +7685,7 @@ container.ContainerHostOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -7694,7 +7694,7 @@ container.ContainerHostOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerHostOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -7902,7 +7902,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerHostOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -7927,7 +7927,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.property.ipInput">ip_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.property.ip">ip</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHostOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a></code> | *No description.* |
 
 ---
 
@@ -8001,7 +8001,7 @@ ip: str
 internal_value: IResolvable | ContainerHost
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>
 
 ---
 
@@ -8022,7 +8022,7 @@ container.ContainerLabelsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -8030,7 +8030,7 @@ container.ContainerLabelsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8100,7 +8100,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8137,7 +8137,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -8171,7 +8171,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]
 
 ---
 
@@ -8193,7 +8193,7 @@ container.ContainerLabelsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -8202,7 +8202,7 @@ container.ContainerLabelsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8410,7 +8410,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8435,7 +8435,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a></code> | *No description.* |
 
 ---
 
@@ -8509,7 +8509,7 @@ value: str
 internal_value: IResolvable | ContainerLabels
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>
 
 ---
 
@@ -8529,14 +8529,14 @@ container.ContainerMountsBindOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsBindOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsBindOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsBindOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsBindOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8729,7 +8729,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsBindOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8833,7 +8833,7 @@ container.ContainerMountsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -8841,7 +8841,7 @@ container.ContainerMountsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -8911,7 +8911,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -8948,7 +8948,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]</code> | *No description.* |
 
 ---
 
@@ -8982,7 +8982,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerMounts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>]
 
 ---
 
@@ -9004,7 +9004,7 @@ container.ContainerMountsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -9013,7 +9013,7 @@ container.ContainerMountsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9229,7 +9229,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9324,7 +9324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `labels`<sup>Optional</sup> <a name="labels" id="@cdktn/provider-docker.container.ContainerMountsOutputReference.putVolumeOptions.parameter.labels"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
 
 labels block.
 
@@ -9334,7 +9334,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ###### `no_copy`<sup>Optional</sup> <a name="no_copy" id="@cdktn/provider-docker.container.ContainerMountsOutputReference.putVolumeOptions.parameter.noCopy"></a>
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 Populate volume with data from the target.
 
@@ -9393,17 +9393,17 @@ def reset_volume_options() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.tmpfsOptions">tmpfs_options</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference">ContainerMountsTmpfsOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.volumeOptions">volume_options</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference">ContainerMountsVolumeOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.bindOptionsInput">bind_options_input</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsBindOptions">ContainerMountsBindOptions</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.sourceInput">source_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.targetInput">target_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.tmpfsOptionsInput">tmpfs_options_input</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptions">ContainerMountsTmpfsOptions</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.volumeOptionsInput">volume_options_input</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions">ContainerMountsVolumeOptions</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.source">source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.target">target</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a></code> | *No description.* |
 
 ---
 
@@ -9477,7 +9477,7 @@ bind_options_input: ContainerMountsBindOptions
 read_only_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -9537,7 +9537,7 @@ volume_options_input: ContainerMountsVolumeOptions
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -9577,7 +9577,7 @@ type: str
 internal_value: IResolvable | ContainerMounts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>
 
 ---
 
@@ -9597,14 +9597,14 @@ container.ContainerMountsTmpfsOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -9798,7 +9798,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsTmpfsOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -9930,7 +9930,7 @@ container.ContainerMountsVolumeOptionsLabelsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -9938,7 +9938,7 @@ container.ContainerMountsVolumeOptionsLabelsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10008,7 +10008,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10045,7 +10045,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -10079,7 +10079,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -10101,7 +10101,7 @@ container.ContainerMountsVolumeOptionsLabelsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -10110,7 +10110,7 @@ container.ContainerMountsVolumeOptionsLabelsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10318,7 +10318,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10343,7 +10343,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a></code> | *No description.* |
 
 ---
 
@@ -10417,7 +10417,7 @@ value: str
 internal_value: IResolvable | ContainerMountsVolumeOptionsLabels
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>
 
 ---
 
@@ -10437,14 +10437,14 @@ container.ContainerMountsVolumeOptionsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10642,7 +10642,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -10666,7 +10666,7 @@ def put_labels(
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.putLabels.parameter.value"></a>
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -10710,12 +10710,12 @@ def reset_subpath() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.labels">labels</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabelsList">ContainerMountsVolumeOptionsLabelsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.driverNameInput">driver_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.driverOptionsInput">driver_options_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.noCopyInput">no_copy_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.noCopyInput">no_copy_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.subpathInput">subpath_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.driverName">driver_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.driverOptions">driver_options</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.noCopy">no_copy</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.noCopy">no_copy</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.subpath">subpath</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptions">ContainerMountsVolumeOptions</a></code> | *No description.* |
 
@@ -10781,7 +10781,7 @@ driver_options_input: typing.Mapping[str]
 labels_input: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerMountsVolumeOptionsLabels">ContainerMountsVolumeOptionsLabels</a>]
 
 ---
 
@@ -10791,7 +10791,7 @@ labels_input: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 no_copy_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -10831,7 +10831,7 @@ driver_options: typing.Mapping[str]
 no_copy: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -10872,7 +10872,7 @@ container.ContainerNetworkDataList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -10880,7 +10880,7 @@ container.ContainerNetworkDataList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerNetworkDataList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -10950,7 +10950,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerNetworkDataList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11032,7 +11032,7 @@ container.ContainerNetworkDataOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -11041,7 +11041,7 @@ container.ContainerNetworkDataOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -11249,7 +11249,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerNetworkDataOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11413,7 +11413,7 @@ container.ContainerNetworksAdvancedList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -11421,7 +11421,7 @@ container.ContainerNetworksAdvancedList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -11491,7 +11491,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11528,7 +11528,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | *No description.* |
 
 ---
 
@@ -11562,7 +11562,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerNetworksAdvanced]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]
 
 ---
 
@@ -11584,7 +11584,7 @@ container.ContainerNetworksAdvancedOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -11593,7 +11593,7 @@ container.ContainerNetworksAdvancedOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -11804,7 +11804,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -11851,7 +11851,7 @@ def reset_ipv6_address() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address">ipv4_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6Address">ipv6_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a></code> | *No description.* |
 
 ---
 
@@ -11965,7 +11965,7 @@ name: str
 internal_value: IResolvable | ContainerNetworksAdvanced
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>
 
 ---
 
@@ -11986,7 +11986,7 @@ container.ContainerPortsList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -11994,7 +11994,7 @@ container.ContainerPortsList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerPortsList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12064,7 +12064,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerPortsList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12101,7 +12101,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerPortsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | *No description.* |
 
 ---
 
@@ -12135,7 +12135,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerPorts]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
 
 ---
 
@@ -12157,7 +12157,7 @@ container.ContainerPortsOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -12166,7 +12166,7 @@ container.ContainerPortsOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerPortsOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12377,7 +12377,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerPortsOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12424,7 +12424,7 @@ def reset_protocol() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.property.internal">internal</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.property.ip">ip</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerPortsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a></code> | *No description.* |
 
 ---
 
@@ -12538,7 +12538,7 @@ protocol: str
 internal_value: IResolvable | ContainerPorts
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>
 
 ---
 
@@ -12559,7 +12559,7 @@ container.ContainerUlimitList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -12567,7 +12567,7 @@ container.ContainerUlimitList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerUlimitList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12637,7 +12637,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerUlimitList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12674,7 +12674,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | *No description.* |
 
 ---
 
@@ -12708,7 +12708,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerUlimit]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]
 
 ---
 
@@ -12730,7 +12730,7 @@ container.ContainerUlimitOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -12739,7 +12739,7 @@ container.ContainerUlimitOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerUlimitOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -12947,7 +12947,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerUlimitOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -12974,7 +12974,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.property.hard">hard</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.property.soft">soft</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUlimitOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a></code> | *No description.* |
 
 ---
 
@@ -13068,7 +13068,7 @@ soft: typing.Union[int, float]
 internal_value: IResolvable | ContainerUlimit
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>
 
 ---
 
@@ -13089,7 +13089,7 @@ container.ContainerUploadList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -13097,7 +13097,7 @@ container.ContainerUploadList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerUploadList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -13167,7 +13167,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerUploadList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -13204,7 +13204,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]</code> | *No description.* |
 
 ---
 
@@ -13238,7 +13238,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerUpload]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>]
 
 ---
 
@@ -13260,7 +13260,7 @@ container.ContainerUploadOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -13269,7 +13269,7 @@ container.ContainerUploadOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -13483,7 +13483,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -13542,19 +13542,19 @@ def reset_source_hash() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.contentBase64Input">content_base64_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.contentInput">content_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executableInput">executable_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executableInput">executable_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.fileInput">file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.permissionsInput">permissions_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceHashInput">source_hash_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceInput">source_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.content">content</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.contentBase64">content_base64</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executable">executable</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executable">executable</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.file">file</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.permissions">permissions</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.source">source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceHash">source_hash</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a></code> | *No description.* |
 
 ---
 
@@ -13608,7 +13608,7 @@ content_input: str
 executable_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -13678,7 +13678,7 @@ content_base64: str
 executable: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -13728,7 +13728,7 @@ source_hash: str
 internal_value: IResolvable | ContainerUpload
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerUpload">ContainerUpload</a>
 
 ---
 
@@ -13749,7 +13749,7 @@ container.ContainerVolumesList(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
@@ -13757,7 +13757,7 @@ container.ContainerVolumesList(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerVolumesList.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -13827,7 +13827,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerVolumesList.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -13864,7 +13864,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]</code> | *No description.* |
 
 ---
 
@@ -13898,7 +13898,7 @@ fqn: str
 internal_value: IResolvable | typing.List[ContainerVolumes]
 ```
 
-- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>]
 
 ---
 
@@ -13920,7 +13920,7 @@ container.ContainerVolumesOutputReference(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
@@ -13929,7 +13929,7 @@ container.ContainerVolumesOutputReference(
 
 ##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.Initializer.parameter.terraformResource"></a>
 
-- *Type:* cdktf.IInterpolatingParent
+- *Type:* cdktn.IInterpolatingParent
 
 The parent resource.
 
@@ -14142,7 +14142,7 @@ Produce the Token's value at resolution time.
 
 ###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.resolve.parameter._context"></a>
 
-- *Type:* cdktf.IResolveContext
+- *Type:* cdktn.IResolveContext
 
 ---
 
@@ -14196,14 +14196,14 @@ def reset_volume_name() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.containerPathInput">container_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainerInput">from_container_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPathInput">host_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeNameInput">volume_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.containerPath">container_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainer">from_container</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPath">host_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeName">volume_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a></code> | *No description.* |
 
 ---
 
@@ -14267,7 +14267,7 @@ host_path_input: str
 read_only_input: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -14317,7 +14317,7 @@ host_path: str
 read_only: bool | IResolvable
 ```
 
-- *Type:* bool | cdktf.IResolvable
+- *Type:* bool | cdktn.IResolvable
 
 ---
 
@@ -14337,7 +14337,7 @@ volume_name: str
 internal_value: IResolvable | ContainerVolumes
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a>
 
 ---
 
