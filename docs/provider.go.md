@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.provider.DockerProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 provider.NewDockerProvider(scope Construct, id *string, config DockerProviderConfig) DockerProvider
 ```
@@ -207,14 +207,14 @@ func ResetSshOpts()
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTN code for importing a DockerProvider resource upon running "cdktn plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.provider.DockerProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 provider.DockerProvider_IsConstruct(x interface{}) *bool
 ```
@@ -246,7 +246,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.provider.DockerProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 provider.DockerProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -260,7 +260,7 @@ provider.DockerProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktn/provider-docker.provider.DockerProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 provider.DockerProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -274,12 +274,12 @@ provider.DockerProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 provider.DockerProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
 
-Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a DockerProvider resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport.parameter.scope"></a>
 
@@ -309,7 +309,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-docker.provider.DockerProvider.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider
 
 ? Optional instance of the provider where the DockerProvider to import is found.
 
@@ -320,12 +320,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.metaAttributes">MetaAttributes</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.alias">Alias</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.provider.DockerProvider.property.aliasInput">AliasInput</a></code> | <code>*string</code> | *No description.* |
@@ -368,7 +368,7 @@ The tree node.
 func CdktfStack() TerraformStack
 ```
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformStack
 
 ---
 
@@ -418,7 +418,7 @@ func TerraformResourceType() *string
 func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.provider.DockerProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 &provider.DockerProviderConfig {
 	Alias: *string,
@@ -839,7 +839,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.provider.DockerProviderRegistryAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v12/provider"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/provider"
 
 &provider.DockerProviderRegistryAuth {
 	Address: *string,
