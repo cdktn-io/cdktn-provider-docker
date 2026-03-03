@@ -144,6 +144,13 @@
       }
     ]
   },
+  "cdktf": {
+    "isDeprecated": false,
+    "provider": {
+      "name": "registry.terraform.io/kreuzwerker/docker",
+      "version": "3.6.2"
+    }
+  },
   "cdktn": {
     "isDeprecated": false,
     "provider": {
