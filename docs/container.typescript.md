@@ -4,7 +4,7 @@
 
 ### Container <a name="Container" id="@cdktn/provider-docker.container.Container"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container docker_container}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container docker_container}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.Container.Initializer"></a>
 
@@ -118,6 +118,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktn/provider-docker.container.Container.resetLogs">resetLogs</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetMaxRetryCount">resetMaxRetryCount</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetMemory">resetMemory</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetMemoryReservation">resetMemoryReservation</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetMemorySwap">resetMemorySwap</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetMounts">resetMounts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetMustRun">resetMustRun</a></code> | *No description.* |
@@ -792,6 +793,12 @@ public resetMaxRetryCount(): void
 public resetMemory(): void
 ```
 
+##### `resetMemoryReservation` <a name="resetMemoryReservation" id="@cdktn/provider-docker.container.Container.resetMemoryReservation"></a>
+
+```typescript
+public resetMemoryReservation(): void
+```
+
 ##### `resetMemorySwap` <a name="resetMemorySwap" id="@cdktn/provider-docker.container.Container.resetMemorySwap"></a>
 
 ```typescript
@@ -1087,7 +1094,7 @@ The construct id used in the generated config for the Container to import.
 
 The id of the existing Container that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1166,6 +1173,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logsInput">logsInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.maxRetryCountInput">maxRetryCountInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memoryInput">memoryInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.memoryReservationInput">memoryReservationInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memorySwapInput">memorySwapInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.mountsInput">mountsInput</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.mustRunInput">mustRunInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
@@ -1228,6 +1236,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.logs">logs</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.maxRetryCount">maxRetryCount</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memory">memory</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.memoryReservation">memoryReservation</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.memorySwap">memorySwap</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.mustRun">mustRun</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -1890,6 +1899,16 @@ public readonly memoryInput: number;
 
 ---
 
+##### `memoryReservationInput`<sup>Optional</sup> <a name="memoryReservationInput" id="@cdktn/provider-docker.container.Container.property.memoryReservationInput"></a>
+
+```typescript
+public readonly memoryReservationInput: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `memorySwapInput`<sup>Optional</sup> <a name="memorySwapInput" id="@cdktn/provider-docker.container.Container.property.memorySwapInput"></a>
 
 ```typescript
@@ -2510,6 +2529,16 @@ public readonly memory: number;
 
 ---
 
+##### `memoryReservation`<sup>Required</sup> <a name="memoryReservation" id="@cdktn/provider-docker.container.Container.property.memoryReservation"></a>
+
+```typescript
+public readonly memoryReservation: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `memorySwap`<sup>Required</sup> <a name="memorySwap" id="@cdktn/provider-docker.container.Container.property.memorySwap"></a>
 
 ```typescript
@@ -2829,7 +2858,7 @@ public readonly add: string[];
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -2843,7 +2872,7 @@ public readonly drop: string[];
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -2894,7 +2923,7 @@ const containerConfig: container.ContainerConfig = { ... }
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>[]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">hostname</a></code> | <code>string</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>boolean \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">ipcMode</a></code> | <code>string</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>[]</code> | labels block. |
@@ -2903,10 +2932,11 @@ const containerConfig: container.ContainerConfig = { ... }
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.logs">logs</a></code> | <code>boolean \| cdktn.IResolvable</code> | Save the container logs (`attach` must be enabled). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.maxRetryCount">maxRetryCount</a></code> | <code>number</code> | The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.memory">memory</a></code> | <code>number</code> | The memory limit for the container in MBs. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.memoryReservation">memoryReservation</a></code> | <code>number</code> | The memory-resveration for the container in MBs. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.memorySwap">memorySwap</a></code> | <code>number</code> | The total memory limit (memory + swap) for the container in MBs. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mounts">mounts</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerMounts">ContainerMounts</a>[]</code> | mounts block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mustRun">mustRun</a></code> | <code>boolean \| cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networkMode">networkMode</a></code> | <code>string</code> | Network mode of the container. See https://docs.docker.com/engine/network/ for more information. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networkMode">networkMode</a></code> | <code>string</code> | Network mode of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networksAdvanced">networksAdvanced</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>[]</code> | networks_advanced block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pidMode</a></code> | <code>string</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ports">ports</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>[]</code> | ports block. |
@@ -3020,7 +3050,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -3034,7 +3064,7 @@ public readonly name: string;
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -3048,7 +3078,7 @@ public readonly attach: boolean | IResolvable;
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -3062,7 +3092,7 @@ public readonly capabilities: ContainerCapabilities;
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -3076,7 +3106,7 @@ public readonly cgroupnsMode: string;
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -3090,7 +3120,7 @@ public readonly cgroupParent: string;
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -3106,7 +3136,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -3120,7 +3150,7 @@ public readonly containerReadRefreshTimeoutMilliseconds: number;
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -3134,7 +3164,7 @@ public readonly cpuPeriod: number;
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -3150,7 +3180,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -3166,7 +3196,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -3180,7 +3210,7 @@ public readonly cpuSet: string;
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -3194,7 +3224,7 @@ public readonly cpuShares: number;
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -3210,7 +3240,7 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
 
 ---
 
@@ -3224,7 +3254,7 @@ public readonly devices: IResolvable | ContainerDevices[];
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
 
 ---
 
@@ -3238,7 +3268,7 @@ public readonly dns: string[];
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -3252,7 +3282,7 @@ public readonly dnsOpts: string[];
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -3266,7 +3296,7 @@ public readonly dnsSearch: string[];
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -3280,7 +3310,7 @@ public readonly domainname: string;
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -3296,7 +3326,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -3310,7 +3340,7 @@ public readonly env: string[];
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -3326,7 +3356,7 @@ GPU devices to add to the container.
 
 Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -3340,7 +3370,7 @@ public readonly groupAdd: string[];
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -3354,7 +3384,7 @@ public readonly healthcheck: ContainerHealthcheck;
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -3368,7 +3398,7 @@ public readonly host: IResolvable | ContainerHost[];
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -3382,7 +3412,7 @@ public readonly hostname: string;
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -3394,7 +3424,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -3413,7 +3443,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -3427,7 +3457,7 @@ public readonly ipcMode: string;
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -3441,7 +3471,7 @@ public readonly labels: IResolvable | ContainerLabels[];
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -3455,7 +3485,7 @@ public readonly logDriver: string;
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -3469,7 +3499,7 @@ public readonly logOpts: {[ key: string ]: string};
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -3483,7 +3513,7 @@ public readonly logs: boolean | IResolvable;
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -3497,7 +3527,7 @@ public readonly maxRetryCount: number;
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -3511,7 +3541,23 @@ public readonly memory: number;
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+
+---
+
+##### `memoryReservation`<sup>Optional</sup> <a name="memoryReservation" id="@cdktn/provider-docker.container.ContainerConfig.property.memoryReservation"></a>
+
+```typescript
+public readonly memoryReservation: number;
+```
+
+- *Type:* number
+
+The memory-resveration for the container in MBs.
+
+Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -3527,7 +3573,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -3541,7 +3587,7 @@ public readonly mounts: IResolvable | ContainerMounts[];
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -3557,7 +3603,7 @@ If `true`, then the Docker container will be kept running.
 
 If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -3569,9 +3615,11 @@ public readonly networkMode: string;
 
 - *Type:* string
 
-Network mode of the container. See https://docs.docker.com/engine/network/ for more information.
+Network mode of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#network_mode Container#network_mode}
+Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -3585,7 +3633,7 @@ public readonly networksAdvanced: IResolvable | ContainerNetworksAdvanced[];
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -3599,7 +3647,7 @@ public readonly pidMode: string;
 
 he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
 
 ---
 
@@ -3613,7 +3661,7 @@ public readonly ports: IResolvable | ContainerPorts[];
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -3627,7 +3675,7 @@ public readonly privileged: boolean | IResolvable;
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -3641,7 +3689,7 @@ public readonly publishAllPorts: boolean | IResolvable;
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -3655,7 +3703,7 @@ public readonly readOnly: boolean | IResolvable;
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -3669,7 +3717,7 @@ public readonly removeVolumes: boolean | IResolvable;
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -3683,7 +3731,7 @@ public readonly restart: string;
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -3697,7 +3745,7 @@ public readonly rm: boolean | IResolvable;
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -3711,7 +3759,7 @@ public readonly runtime: string;
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -3725,7 +3773,7 @@ public readonly securityOpts: string[];
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -3739,7 +3787,7 @@ public readonly shmSize: number;
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -3755,7 +3803,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -3769,7 +3817,7 @@ public readonly stdinOpen: boolean | IResolvable;
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -3783,7 +3831,7 @@ public readonly stopSignal: string;
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -3797,7 +3845,7 @@ public readonly stopTimeout: number;
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -3811,7 +3859,7 @@ public readonly storageOpts: {[ key: string ]: string};
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -3825,7 +3873,7 @@ public readonly sysctls: {[ key: string ]: string};
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
 
 ---
 
@@ -3839,7 +3887,7 @@ public readonly tmpfs: {[ key: string ]: string};
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -3853,7 +3901,7 @@ public readonly tty: boolean | IResolvable;
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -3867,7 +3915,7 @@ public readonly ulimit: IResolvable | ContainerUlimit[];
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -3881,7 +3929,7 @@ public readonly upload: IResolvable | ContainerUpload[];
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -3897,7 +3945,7 @@ User used for run the first process.
 
 Format is `user` or `user:group` which user and group can be passed literraly or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -3911,7 +3959,7 @@ public readonly usernsMode: string;
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -3925,7 +3973,7 @@ public readonly volumes: IResolvable | ContainerVolumes[];
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -3941,7 +3989,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -3955,7 +4003,7 @@ public readonly waitTimeout: number;
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -3969,7 +4017,7 @@ public readonly workingDir: string;
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -4003,7 +4051,7 @@ public readonly hostPath: string;
 
 The path on the host where the device is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -4017,7 +4065,7 @@ public readonly containerPath: string;
 
 The path in the container where the device will be bound.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -4031,7 +4079,7 @@ public readonly permissions: string;
 
 The cgroup permissions given to the container to access the device. Defaults to `rwm`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -4070,7 +4118,7 @@ Command to run to check health.
 
 For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#test Container#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -4084,7 +4132,7 @@ public readonly interval: string;
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -4098,7 +4146,7 @@ public readonly retries: number;
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -4112,7 +4160,7 @@ public readonly startInterval: string;
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -4126,7 +4174,7 @@ public readonly startPeriod: string;
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_period Container#start_period}
 
 ---
 
@@ -4140,7 +4188,7 @@ public readonly timeout: string;
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -4173,7 +4221,7 @@ public readonly host: string;
 
 Hostname to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -4187,7 +4235,7 @@ public readonly ip: string;
 
 IP address this hostname should resolve to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -4220,7 +4268,7 @@ public readonly label: string;
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -4234,7 +4282,7 @@ public readonly value: string;
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -4272,7 +4320,7 @@ public readonly target: string;
 
 Container path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#target Container#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#target Container#target}
 
 ---
 
@@ -4286,7 +4334,7 @@ public readonly type: string;
 
 The mount type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#type Container#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#type Container#type}
 
 ---
 
@@ -4300,7 +4348,7 @@ public readonly bindOptions: ContainerMountsBindOptions;
 
 bind_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#bind_options Container#bind_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#bind_options Container#bind_options}
 
 ---
 
@@ -4314,7 +4362,7 @@ public readonly readOnly: boolean | IResolvable;
 
 Whether the mount should be read-only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -4328,7 +4376,7 @@ public readonly source: string;
 
 Mount source (e.g. a volume name, a host path).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -4342,7 +4390,7 @@ public readonly tmpfsOptions: ContainerMountsTmpfsOptions;
 
 tmpfs_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#tmpfs_options Container#tmpfs_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
 
 ---
 
@@ -4356,7 +4404,7 @@ public readonly volumeOptions: ContainerMountsVolumeOptions;
 
 volume_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#volume_options Container#volume_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_options Container#volume_options}
 
 ---
 
@@ -4388,7 +4436,7 @@ public readonly propagation: string;
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -4421,7 +4469,7 @@ public readonly mode: number;
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -4435,7 +4483,7 @@ public readonly sizeBytes: number;
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -4471,7 +4519,7 @@ public readonly driverName: string;
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -4485,7 +4533,7 @@ public readonly driverOptions: {[ key: string ]: string};
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -4499,7 +4547,7 @@ public readonly labels: IResolvable | ContainerMountsVolumeOptionsLabels[];
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -4513,7 +4561,7 @@ public readonly noCopy: boolean | IResolvable;
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -4527,7 +4575,7 @@ public readonly subpath: string;
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -4560,7 +4608,7 @@ public readonly label: string;
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -4574,7 +4622,7 @@ public readonly value: string;
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -4607,6 +4655,7 @@ const containerNetworksAdvanced: container.ContainerNetworksAdvanced = { ... }
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.aliases">aliases</a></code> | <code>string[]</code> | The network aliases of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv4Address">ipv4Address</a></code> | <code>string</code> | The IPV4 address of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv6Address">ipv6Address</a></code> | <code>string</code> | The IPV6 address of the container in the specific network. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.macAddress">macAddress</a></code> | <code>string</code> | The MAC address of the container in the specific network. |
 
 ---
 
@@ -4622,7 +4671,7 @@ The name or id of the network to use.
 
 You can use `name` or `id` attribute from a `docker_network` resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -4636,7 +4685,7 @@ public readonly aliases: string[];
 
 The network aliases of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#aliases Container#aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#aliases Container#aliases}
 
 ---
 
@@ -4650,7 +4699,7 @@ public readonly ipv4Address: string;
 
 The IPV4 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ipv4_address Container#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv4_address Container#ipv4_address}
 
 ---
 
@@ -4664,7 +4713,21 @@ public readonly ipv6Address: string;
 
 The IPV6 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ipv6_address Container#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv6_address Container#ipv6_address}
+
+---
+
+##### `macAddress`<sup>Optional</sup> <a name="macAddress" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.macAddress"></a>
+
+```typescript
+public readonly macAddress: string;
+```
+
+- *Type:* string
+
+The MAC address of the container in the specific network.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mac_address Container#mac_address}
 
 ---
 
@@ -4699,7 +4762,7 @@ public readonly internal: number;
 
 Port within the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#internal Container#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#internal Container#internal}
 
 ---
 
@@ -4713,7 +4776,7 @@ public readonly external: number;
 
 Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#external Container#external}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#external Container#external}
 
 ---
 
@@ -4727,7 +4790,7 @@ public readonly ip: string;
 
 IP address/mask that can access this port. Defaults to `0.0.0.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -4741,7 +4804,7 @@ public readonly protocol: string;
 
 Protocol that can be used over this port. Defaults to `tcp`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#protocol Container#protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#protocol Container#protocol}
 
 ---
 
@@ -4775,7 +4838,7 @@ public readonly hard: number;
 
 The hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#hard Container#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hard Container#hard}
 
 ---
 
@@ -4789,7 +4852,7 @@ public readonly name: string;
 
 The name of the ulimit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -4803,7 +4866,7 @@ public readonly soft: number;
 
 The soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#soft Container#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#soft Container#soft}
 
 ---
 
@@ -4841,7 +4904,7 @@ public readonly file: string;
 
 Path to the file in the container where is upload goes to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#file Container#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#file Container#file}
 
 ---
 
@@ -4857,7 +4920,7 @@ Literal string value to use as the object content, which will be uploaded as UTF
 
 Conflicts with `content_base64` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#content Container#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content Container#content}
 
 ---
 
@@ -4873,7 +4936,7 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 
 This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#content_base64 Container#content_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content_base64 Container#content_base64}
 
 ---
 
@@ -4887,7 +4950,7 @@ public readonly executable: boolean | IResolvable;
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#executable Container#executable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#executable Container#executable}
 
 ---
 
@@ -4901,7 +4964,7 @@ public readonly permissions: string;
 
 The permission mode for the file in the container. Has precedence over `executable`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -4917,7 +4980,7 @@ A filename that references a file which will be uploaded as the object content.
 
 This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -4931,7 +4994,7 @@ public readonly sourceHash: string;
 
 If using `source`, this will force an update if the file content has updated but the filename has not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#source_hash Container#source_hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source_hash Container#source_hash}
 
 ---
 
@@ -4967,7 +5030,7 @@ public readonly containerPath: string;
 
 The path in the container where the volume will be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -4981,7 +5044,7 @@ public readonly fromContainer: string;
 
 The container where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#from_container Container#from_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#from_container Container#from_container}
 
 ---
 
@@ -4995,7 +5058,7 @@ public readonly hostPath: string;
 
 The path on the host where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -5009,7 +5072,7 @@ public readonly readOnly: boolean | IResolvable;
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -5023,7 +5086,7 @@ public readonly volumeName: string;
 
 The name of the docker volume which should be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/container#volume_name Container#volume_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_name Container#volume_name}
 
 ---
 
@@ -10054,6 +10117,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetAliases">resetAliases</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv4Address">resetIpv4Address</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv6Address">resetIpv6Address</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress">resetMacAddress</a></code> | *No description.* |
 
 ---
 
@@ -10225,6 +10289,12 @@ public resetIpv4Address(): void
 public resetIpv6Address(): void
 ```
 
+##### `resetMacAddress` <a name="resetMacAddress" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress"></a>
+
+```typescript
+public resetMacAddress(): void
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -10235,10 +10305,12 @@ public resetIpv6Address(): void
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliasesInput">aliasesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4AddressInput">ipv4AddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6AddressInput">ipv6AddressInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddressInput">macAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliases">aliases</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address">ipv4Address</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6Address">ipv6Address</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddress">macAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.internalValue">internalValue</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a></code> | *No description.* |
 
@@ -10298,6 +10370,16 @@ public readonly ipv6AddressInput: string;
 
 ---
 
+##### `macAddressInput`<sup>Optional</sup> <a name="macAddressInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddressInput"></a>
+
+```typescript
+public readonly macAddressInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.nameInput"></a>
 
 ```typescript
@@ -10332,6 +10414,16 @@ public readonly ipv4Address: string;
 
 ```typescript
 public readonly ipv6Address: string;
+```
+
+- *Type:* string
+
+---
+
+##### `macAddress`<sup>Required</sup> <a name="macAddress" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddress"></a>
+
+```typescript
+public readonly macAddress: string;
 ```
 
 - *Type:* string
