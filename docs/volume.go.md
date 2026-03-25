@@ -4,7 +4,7 @@
 
 ### Volume <a name="Volume" id="@cdktn/provider-docker.volume.Volume"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume docker_volume}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume docker_volume}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.volume.Volume.Initializer"></a>
 
@@ -74,7 +74,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktn/provider-docker.volume.Volume.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktn/provider-docker.volume.Volume.putCluster">PutCluster</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.putLabels">PutLabels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.Volume.resetCluster">ResetCluster</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.resetDriver">ResetDriver</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.resetDriverOpts">ResetDriverOpts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.resetId">ResetId</a></code> | *No description.* |
@@ -392,6 +394,18 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `PutCluster` <a name="PutCluster" id="@cdktn/provider-docker.volume.Volume.putCluster"></a>
+
+```go
+func PutCluster(value VolumeCluster)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.volume.Volume.putCluster.parameter.value"></a>
+
+- *Type:* <a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a>
+
+---
+
 ##### `PutLabels` <a name="PutLabels" id="@cdktn/provider-docker.volume.Volume.putLabels"></a>
 
 ```go
@@ -403,6 +417,12 @@ func PutLabels(value interface{})
 - *Type:* interface{}
 
 ---
+
+##### `ResetCluster` <a name="ResetCluster" id="@cdktn/provider-docker.volume.Volume.resetCluster"></a>
+
+```go
+func ResetCluster()
+```
 
 ##### `ResetDriver` <a name="ResetDriver" id="@cdktn/provider-docker.volume.Volume.resetDriver"></a>
 
@@ -537,7 +557,7 @@ The construct id used in the generated config for the Volume to import.
 
 The id of the existing Volume that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -567,8 +587,10 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.lifecycle">Lifecycle</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.provider">Provider</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.Volume.property.cluster">Cluster</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference">VolumeClusterOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.labels">Labels</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeLabelsList">VolumeLabelsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.mountpoint">Mountpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.Volume.property.clusterInput">ClusterInput</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.driverInput">DriverInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.driverOptsInput">DriverOptsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
@@ -723,6 +745,16 @@ func Provisioners() *[]interface{}
 
 ---
 
+##### `Cluster`<sup>Required</sup> <a name="Cluster" id="@cdktn/provider-docker.volume.Volume.property.cluster"></a>
+
+```go
+func Cluster() VolumeClusterOutputReference
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference">VolumeClusterOutputReference</a>
+
+---
+
 ##### `Labels`<sup>Required</sup> <a name="Labels" id="@cdktn/provider-docker.volume.Volume.property.labels"></a>
 
 ```go
@@ -740,6 +772,16 @@ func Mountpoint() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `ClusterInput`<sup>Optional</sup> <a name="ClusterInput" id="@cdktn/provider-docker.volume.Volume.property.clusterInput"></a>
+
+```go
+func ClusterInput() VolumeCluster
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a>
 
 ---
 
@@ -853,6 +895,172 @@ func TfResourceType() *string
 
 ## Structs <a name="Structs" id="Structs"></a>
 
+### VolumeCluster <a name="VolumeCluster" id="@cdktn/provider-docker.volume.VolumeCluster"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.volume.VolumeCluster.Initializer"></a>
+
+```go
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/volume"
+
+&volume.VolumeCluster {
+	Availability: *string,
+	Group: *string,
+	LimitBytes: *string,
+	RequiredBytes: *string,
+	Scope: *string,
+	Sharing: *string,
+	TopologyPreferred: *string,
+	TopologyRequired: *string,
+	Type: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.availability">Availability</a></code> | <code>*string</code> | Availability of the volume. Can be `active` (default), `pause`, or `drain`. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.group">Group</a></code> | <code>*string</code> | Cluster Volume group. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.limitBytes">LimitBytes</a></code> | <code>*string</code> | Minimum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc). |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.requiredBytes">RequiredBytes</a></code> | <code>*string</code> | Maximum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc). |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.scope">Scope</a></code> | <code>*string</code> | The scope of the volume. Can be `single` (default) or `multi`. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.sharing">Sharing</a></code> | <code>*string</code> | The sharing mode. Can be `none` (default), `readonly`, `onewriter` or `all`. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.topologyPreferred">TopologyPreferred</a></code> | <code>*string</code> | A topology that the Cluster Volume would be preferred in. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.topologyRequired">TopologyRequired</a></code> | <code>*string</code> | A topology that the Cluster Volume must be accessible from. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeCluster.property.type">Type</a></code> | <code>*string</code> | Cluster Volume access type. Can be `mount` or `block` (default). |
+
+---
+
+##### `Availability`<sup>Optional</sup> <a name="Availability" id="@cdktn/provider-docker.volume.VolumeCluster.property.availability"></a>
+
+```go
+Availability *string
+```
+
+- *Type:* *string
+
+Availability of the volume. Can be `active` (default), `pause`, or `drain`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#availability Volume#availability}
+
+---
+
+##### `Group`<sup>Optional</sup> <a name="Group" id="@cdktn/provider-docker.volume.VolumeCluster.property.group"></a>
+
+```go
+Group *string
+```
+
+- *Type:* *string
+
+Cluster Volume group.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#group Volume#group}
+
+---
+
+##### `LimitBytes`<sup>Optional</sup> <a name="LimitBytes" id="@cdktn/provider-docker.volume.VolumeCluster.property.limitBytes"></a>
+
+```go
+LimitBytes *string
+```
+
+- *Type:* *string
+
+Minimum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc).
+
+Must be in format of KiB, MiB, Gib, Tib or PiB.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
+
+---
+
+##### `RequiredBytes`<sup>Optional</sup> <a name="RequiredBytes" id="@cdktn/provider-docker.volume.VolumeCluster.property.requiredBytes"></a>
+
+```go
+RequiredBytes *string
+```
+
+- *Type:* *string
+
+Maximum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc).
+
+Must be in format of KiB, MiB, Gib, Tib or PiB.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#required_bytes Volume#required_bytes}
+
+---
+
+##### `Scope`<sup>Optional</sup> <a name="Scope" id="@cdktn/provider-docker.volume.VolumeCluster.property.scope"></a>
+
+```go
+Scope *string
+```
+
+- *Type:* *string
+
+The scope of the volume. Can be `single` (default) or `multi`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#scope Volume#scope}
+
+---
+
+##### `Sharing`<sup>Optional</sup> <a name="Sharing" id="@cdktn/provider-docker.volume.VolumeCluster.property.sharing"></a>
+
+```go
+Sharing *string
+```
+
+- *Type:* *string
+
+The sharing mode. Can be `none` (default), `readonly`, `onewriter` or `all`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#sharing Volume#sharing}
+
+---
+
+##### `TopologyPreferred`<sup>Optional</sup> <a name="TopologyPreferred" id="@cdktn/provider-docker.volume.VolumeCluster.property.topologyPreferred"></a>
+
+```go
+TopologyPreferred *string
+```
+
+- *Type:* *string
+
+A topology that the Cluster Volume would be preferred in.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
+
+---
+
+##### `TopologyRequired`<sup>Optional</sup> <a name="TopologyRequired" id="@cdktn/provider-docker.volume.VolumeCluster.property.topologyRequired"></a>
+
+```go
+TopologyRequired *string
+```
+
+- *Type:* *string
+
+A topology that the Cluster Volume must be accessible from.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#topology_required Volume#topology_required}
+
+---
+
+##### `Type`<sup>Optional</sup> <a name="Type" id="@cdktn/provider-docker.volume.VolumeCluster.property.type"></a>
+
+```go
+Type *string
+```
+
+- *Type:* *string
+
+Cluster Volume access type. Can be `mount` or `block` (default).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#type Volume#type}
+
+---
+
 ### VolumeConfig <a name="VolumeConfig" id="@cdktn/provider-docker.volume.VolumeConfig"></a>
 
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.volume.VolumeConfig.Initializer"></a>
@@ -868,6 +1076,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/volume"
 	Lifecycle: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformResourceLifecycle,
 	Provider: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider,
 	Provisioners: *[]interface{},
+	Cluster: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.volume.VolumeCluster,
 	Driver: *string,
 	DriverOpts: *map[string]*string,
 	Id: *string,
@@ -887,9 +1096,10 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/volume"
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.provider">Provider</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.cluster">Cluster</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | cluster block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driver">Driver</a></code> | <code>*string</code> | Driver type for the volume. Defaults to `local`. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driverOpts">DriverOpts</a></code> | <code>*map[string]*string</code> | Options specific to the driver. |
-| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#id Volume#id}. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#id Volume#id}. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.labels">Labels</a></code> | <code>interface{}</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker volume (will be generated if not provided). |
 
@@ -965,6 +1175,20 @@ Provisioners *[]interface{}
 
 ---
 
+##### `Cluster`<sup>Optional</sup> <a name="Cluster" id="@cdktn/provider-docker.volume.VolumeConfig.property.cluster"></a>
+
+```go
+Cluster VolumeCluster
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a>
+
+cluster block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#cluster Volume#cluster}
+
+---
+
 ##### `Driver`<sup>Optional</sup> <a name="Driver" id="@cdktn/provider-docker.volume.VolumeConfig.property.driver"></a>
 
 ```go
@@ -975,7 +1199,7 @@ Driver *string
 
 Driver type for the volume. Defaults to `local`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#driver Volume#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#driver Volume#driver}
 
 ---
 
@@ -989,7 +1213,7 @@ DriverOpts *map[string]*string
 
 Options specific to the driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#driver_opts Volume#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#driver_opts Volume#driver_opts}
 
 ---
 
@@ -1001,7 +1225,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#id Volume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#id Volume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1018,7 +1242,7 @@ Labels interface{}
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#labels Volume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#labels Volume#labels}
 
 ---
 
@@ -1032,7 +1256,7 @@ Name *string
 
 The name of the Docker volume (will be generated if not provided).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#name Volume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#name Volume#name}
 
 ---
 
@@ -1068,7 +1292,7 @@ Label *string
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#label Volume#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#label Volume#label}
 
 ---
 
@@ -1082,11 +1306,532 @@ Value *string
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#value Volume#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#value Volume#value}
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### VolumeClusterOutputReference <a name="VolumeClusterOutputReference" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/volume"
+
+volume.NewVolumeClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VolumeClusterOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetAvailability">ResetAvailability</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetGroup">ResetGroup</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetLimitBytes">ResetLimitBytes</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetRequiredBytes">ResetRequiredBytes</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetScope">ResetScope</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetSharing">ResetSharing</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetTopologyPreferred">ResetTopologyPreferred</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetTopologyRequired">ResetTopologyRequired</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetType">ResetType</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAvailability` <a name="ResetAvailability" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetAvailability"></a>
+
+```go
+func ResetAvailability()
+```
+
+##### `ResetGroup` <a name="ResetGroup" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetGroup"></a>
+
+```go
+func ResetGroup()
+```
+
+##### `ResetLimitBytes` <a name="ResetLimitBytes" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetLimitBytes"></a>
+
+```go
+func ResetLimitBytes()
+```
+
+##### `ResetRequiredBytes` <a name="ResetRequiredBytes" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetRequiredBytes"></a>
+
+```go
+func ResetRequiredBytes()
+```
+
+##### `ResetScope` <a name="ResetScope" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetScope"></a>
+
+```go
+func ResetScope()
+```
+
+##### `ResetSharing` <a name="ResetSharing" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetSharing"></a>
+
+```go
+func ResetSharing()
+```
+
+##### `ResetTopologyPreferred` <a name="ResetTopologyPreferred" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetTopologyPreferred"></a>
+
+```go
+func ResetTopologyPreferred()
+```
+
+##### `ResetTopologyRequired` <a name="ResetTopologyRequired" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetTopologyRequired"></a>
+
+```go
+func ResetTopologyRequired()
+```
+
+##### `ResetType` <a name="ResetType" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.resetType"></a>
+
+```go
+func ResetType()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.availabilityInput">AvailabilityInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.groupInput">GroupInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.limitBytesInput">LimitBytesInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.requiredBytesInput">RequiredBytesInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.scopeInput">ScopeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.sharingInput">SharingInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyPreferredInput">TopologyPreferredInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyRequiredInput">TopologyRequiredInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.typeInput">TypeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.availability">Availability</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.group">Group</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.limitBytes">LimitBytes</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.requiredBytes">RequiredBytes</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.scope">Scope</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.sharing">Sharing</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyPreferred">TopologyPreferred</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyRequired">TopologyRequired</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.type">Type</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.id"></a>
+
+```go
+func Id() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AvailabilityInput`<sup>Optional</sup> <a name="AvailabilityInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.availabilityInput"></a>
+
+```go
+func AvailabilityInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `GroupInput`<sup>Optional</sup> <a name="GroupInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.groupInput"></a>
+
+```go
+func GroupInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LimitBytesInput`<sup>Optional</sup> <a name="LimitBytesInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.limitBytesInput"></a>
+
+```go
+func LimitBytesInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RequiredBytesInput`<sup>Optional</sup> <a name="RequiredBytesInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.requiredBytesInput"></a>
+
+```go
+func RequiredBytesInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ScopeInput`<sup>Optional</sup> <a name="ScopeInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.scopeInput"></a>
+
+```go
+func ScopeInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SharingInput`<sup>Optional</sup> <a name="SharingInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.sharingInput"></a>
+
+```go
+func SharingInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TopologyPreferredInput`<sup>Optional</sup> <a name="TopologyPreferredInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyPreferredInput"></a>
+
+```go
+func TopologyPreferredInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TopologyRequiredInput`<sup>Optional</sup> <a name="TopologyRequiredInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyRequiredInput"></a>
+
+```go
+func TopologyRequiredInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TypeInput`<sup>Optional</sup> <a name="TypeInput" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.typeInput"></a>
+
+```go
+func TypeInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Availability`<sup>Required</sup> <a name="Availability" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.availability"></a>
+
+```go
+func Availability() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Group`<sup>Required</sup> <a name="Group" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.group"></a>
+
+```go
+func Group() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LimitBytes`<sup>Required</sup> <a name="LimitBytes" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.limitBytes"></a>
+
+```go
+func LimitBytes() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RequiredBytes`<sup>Required</sup> <a name="RequiredBytes" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.requiredBytes"></a>
+
+```go
+func RequiredBytes() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Scope`<sup>Required</sup> <a name="Scope" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.scope"></a>
+
+```go
+func Scope() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Sharing`<sup>Required</sup> <a name="Sharing" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.sharing"></a>
+
+```go
+func Sharing() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TopologyPreferred`<sup>Required</sup> <a name="TopologyPreferred" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyPreferred"></a>
+
+```go
+func TopologyPreferred() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TopologyRequired`<sup>Required</sup> <a name="TopologyRequired" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.topologyRequired"></a>
+
+```go
+func TopologyRequired() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Type`<sup>Required</sup> <a name="Type" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.type"></a>
+
+```go
+func Type() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktn/provider-docker.volume.VolumeClusterOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() VolumeCluster
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a>
+
+---
+
 
 ### VolumeLabelsList <a name="VolumeLabelsList" id="@cdktn/provider-docker.volume.VolumeLabelsList"></a>
 
