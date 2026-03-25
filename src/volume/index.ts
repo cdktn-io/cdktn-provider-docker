@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume
+// https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface VolumeConfig extends cdktn.TerraformMetaArguments {
   /**
   * Driver type for the volume. Defaults to `local`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#driver Volume#driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#driver Volume#driver}
   */
   readonly driver?: string;
   /**
   * Options specific to the driver.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#driver_opts Volume#driver_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#driver_opts Volume#driver_opts}
   */
   readonly driverOpts?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#id Volume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#id Volume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,27 +34,404 @@ export interface VolumeConfig extends cdktn.TerraformMetaArguments {
   /**
   * The name of the Docker volume (will be generated if not provided).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#name Volume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#name Volume#name}
   */
   readonly name?: string;
   /**
+  * cluster block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#cluster Volume#cluster}
+  */
+  readonly cluster?: VolumeCluster;
+  /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#labels Volume#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#labels Volume#labels}
   */
   readonly labels?: VolumeLabels[] | cdktn.IResolvable;
+}
+export interface VolumeCluster {
+  /**
+  * Availability of the volume. Can be `active` (default), `pause`, or `drain`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#availability Volume#availability}
+  */
+  readonly availability?: string;
+  /**
+  * Cluster Volume group
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#group Volume#group}
+  */
+  readonly group?: string;
+  /**
+  * Minimum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc). Must be in format of KiB, MiB, Gib, Tib or PiB.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
+  */
+  readonly limitBytes?: string;
+  /**
+  * Maximum size of the Cluster Volume in human readable memory bytes (like 128MiB, 2GiB, etc). Must be in format of KiB, MiB, Gib, Tib or PiB.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#required_bytes Volume#required_bytes}
+  */
+  readonly requiredBytes?: string;
+  /**
+  * The scope of the volume. Can be `single` (default) or `multi`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#scope Volume#scope}
+  */
+  readonly scope?: string;
+  /**
+  * The sharing mode. Can be `none` (default), `readonly`, `onewriter` or `all`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#sharing Volume#sharing}
+  */
+  readonly sharing?: string;
+  /**
+  * A topology that the Cluster Volume would be preferred in
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
+  */
+  readonly topologyPreferred?: string;
+  /**
+  * A topology that the Cluster Volume must be accessible from
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#topology_required Volume#topology_required}
+  */
+  readonly topologyRequired?: string;
+  /**
+  * Cluster Volume access type. Can be `mount` or `block` (default).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#type Volume#type}
+  */
+  readonly type?: string;
+}
+
+export function volumeClusterToTerraform(struct?: VolumeClusterOutputReference | VolumeCluster): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    availability: cdktn.stringToTerraform(struct!.availability),
+    group: cdktn.stringToTerraform(struct!.group),
+    limit_bytes: cdktn.stringToTerraform(struct!.limitBytes),
+    required_bytes: cdktn.stringToTerraform(struct!.requiredBytes),
+    scope: cdktn.stringToTerraform(struct!.scope),
+    sharing: cdktn.stringToTerraform(struct!.sharing),
+    topology_preferred: cdktn.stringToTerraform(struct!.topologyPreferred),
+    topology_required: cdktn.stringToTerraform(struct!.topologyRequired),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function volumeClusterToHclTerraform(struct?: VolumeClusterOutputReference | VolumeCluster): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    availability: {
+      value: cdktn.stringToHclTerraform(struct!.availability),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    group: {
+      value: cdktn.stringToHclTerraform(struct!.group),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    limit_bytes: {
+      value: cdktn.stringToHclTerraform(struct!.limitBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required_bytes: {
+      value: cdktn.stringToHclTerraform(struct!.requiredBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scope: {
+      value: cdktn.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sharing: {
+      value: cdktn.stringToHclTerraform(struct!.sharing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    topology_preferred: {
+      value: cdktn.stringToHclTerraform(struct!.topologyPreferred),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    topology_required: {
+      value: cdktn.stringToHclTerraform(struct!.topologyRequired),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class VolumeClusterOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VolumeCluster | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._availability !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availability = this._availability;
+    }
+    if (this._group !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.group = this._group;
+    }
+    if (this._limitBytes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.limitBytes = this._limitBytes;
+    }
+    if (this._requiredBytes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requiredBytes = this._requiredBytes;
+    }
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._sharing !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sharing = this._sharing;
+    }
+    if (this._topologyPreferred !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topologyPreferred = this._topologyPreferred;
+    }
+    if (this._topologyRequired !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topologyRequired = this._topologyRequired;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VolumeCluster | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._availability = undefined;
+      this._group = undefined;
+      this._limitBytes = undefined;
+      this._requiredBytes = undefined;
+      this._scope = undefined;
+      this._sharing = undefined;
+      this._topologyPreferred = undefined;
+      this._topologyRequired = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._availability = value.availability;
+      this._group = value.group;
+      this._limitBytes = value.limitBytes;
+      this._requiredBytes = value.requiredBytes;
+      this._scope = value.scope;
+      this._sharing = value.sharing;
+      this._topologyPreferred = value.topologyPreferred;
+      this._topologyRequired = value.topologyRequired;
+      this._type = value.type;
+    }
+  }
+
+  // availability - computed: false, optional: true, required: false
+  private _availability?: string; 
+  public get availability() {
+    return this.getStringAttribute('availability');
+  }
+  public set availability(value: string) {
+    this._availability = value;
+  }
+  public resetAvailability() {
+    this._availability = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityInput() {
+    return this._availability;
+  }
+
+  // group - computed: false, optional: true, required: false
+  private _group?: string; 
+  public get group() {
+    return this.getStringAttribute('group');
+  }
+  public set group(value: string) {
+    this._group = value;
+  }
+  public resetGroup() {
+    this._group = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupInput() {
+    return this._group;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // limit_bytes - computed: false, optional: true, required: false
+  private _limitBytes?: string; 
+  public get limitBytes() {
+    return this.getStringAttribute('limit_bytes');
+  }
+  public set limitBytes(value: string) {
+    this._limitBytes = value;
+  }
+  public resetLimitBytes() {
+    this._limitBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get limitBytesInput() {
+    return this._limitBytes;
+  }
+
+  // required_bytes - computed: false, optional: true, required: false
+  private _requiredBytes?: string; 
+  public get requiredBytes() {
+    return this.getStringAttribute('required_bytes');
+  }
+  public set requiredBytes(value: string) {
+    this._requiredBytes = value;
+  }
+  public resetRequiredBytes() {
+    this._requiredBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiredBytesInput() {
+    return this._requiredBytes;
+  }
+
+  // scope - computed: false, optional: true, required: false
+  private _scope?: string; 
+  public get scope() {
+    return this.getStringAttribute('scope');
+  }
+  public set scope(value: string) {
+    this._scope = value;
+  }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+
+  // sharing - computed: false, optional: true, required: false
+  private _sharing?: string; 
+  public get sharing() {
+    return this.getStringAttribute('sharing');
+  }
+  public set sharing(value: string) {
+    this._sharing = value;
+  }
+  public resetSharing() {
+    this._sharing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharingInput() {
+    return this._sharing;
+  }
+
+  // topology_preferred - computed: false, optional: true, required: false
+  private _topologyPreferred?: string; 
+  public get topologyPreferred() {
+    return this.getStringAttribute('topology_preferred');
+  }
+  public set topologyPreferred(value: string) {
+    this._topologyPreferred = value;
+  }
+  public resetTopologyPreferred() {
+    this._topologyPreferred = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topologyPreferredInput() {
+    return this._topologyPreferred;
+  }
+
+  // topology_required - computed: false, optional: true, required: false
+  private _topologyRequired?: string; 
+  public get topologyRequired() {
+    return this.getStringAttribute('topology_required');
+  }
+  public set topologyRequired(value: string) {
+    this._topologyRequired = value;
+  }
+  public resetTopologyRequired() {
+    this._topologyRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topologyRequiredInput() {
+    return this._topologyRequired;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface VolumeLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#label Volume#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#label Volume#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#value Volume#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#value Volume#value}
   */
   readonly value: string;
 }
@@ -193,7 +570,7 @@ export class VolumeLabelsList extends cdktn.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume docker_volume}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume docker_volume}
 */
 export class Volume extends cdktn.TerraformResource {
 
@@ -209,7 +586,7 @@ export class Volume extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a Volume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Volume to import
-  * @param importFromId The id of the existing Volume that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Volume that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Volume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -221,7 +598,7 @@ export class Volume extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/volume docker_volume} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/volume docker_volume} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -232,7 +609,7 @@ export class Volume extends cdktn.TerraformResource {
       terraformResourceType: 'docker_volume',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '3.6.2',
+        providerVersion: '3.9.0',
         providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
@@ -247,6 +624,7 @@ export class Volume extends cdktn.TerraformResource {
     this._driverOpts = config.driverOpts;
     this._id = config.id;
     this._name = config.name;
+    this._cluster.internalValue = config.cluster;
     this._labels.internalValue = config.labels;
   }
 
@@ -323,6 +701,22 @@ export class Volume extends cdktn.TerraformResource {
     return this._name;
   }
 
+  // cluster - computed: false, optional: true, required: false
+  private _cluster = new VolumeClusterOutputReference(this, "cluster");
+  public get cluster() {
+    return this._cluster;
+  }
+  public putCluster(value: VolumeCluster) {
+    this._cluster.internalValue = value;
+  }
+  public resetCluster() {
+    this._cluster.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterInput() {
+    return this._cluster.internalValue;
+  }
+
   // labels - computed: false, optional: true, required: false
   private _labels = new VolumeLabelsList(this, "labels", true);
   public get labels() {
@@ -349,6 +743,7 @@ export class Volume extends cdktn.TerraformResource {
       driver_opts: cdktn.hashMapper(cdktn.stringToTerraform)(this._driverOpts),
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
+      cluster: volumeClusterToTerraform(this._cluster.internalValue),
       labels: cdktn.listMapper(volumeLabelsToTerraform, true)(this._labels.internalValue),
     };
   }
@@ -378,6 +773,12 @@ export class Volume extends cdktn.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      cluster: {
+        value: volumeClusterToHclTerraform(this._cluster.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VolumeClusterList",
       },
       labels: {
         value: cdktn.listMapperHcl(volumeLabelsToHclTerraform, true)(this._labels.internalValue),
