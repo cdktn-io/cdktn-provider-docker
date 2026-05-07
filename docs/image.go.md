@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.Image.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImage(scope Construct, id *string, config ImageConfig) Image
 ```
@@ -475,7 +475,7 @@ func ResetTriggers()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.image.Image.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.Image_IsConstruct(x interface{}) *bool
 ```
@@ -507,7 +507,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.image.Image.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.Image_IsTerraformElement(x interface{}) *bool
 ```
@@ -521,7 +521,7 @@ image.Image_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.image.Image.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.Image_IsTerraformResource(x interface{}) *bool
 ```
@@ -535,7 +535,7 @@ image.Image_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.image.Image.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.Image_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -973,7 +973,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuild.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageBuild {
 	Context: *string,
@@ -1623,7 +1623,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageBuildAuthConfig {
 	HostName: *string,
@@ -1769,7 +1769,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildSecrets.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageBuildSecrets {
 	Id: *string,
@@ -1838,7 +1838,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageBuildUlimit.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageBuildUlimit {
 	Hard: *f64,
@@ -1904,7 +1904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageConfig {
 	Connection: interface{},
@@ -1915,12 +1915,12 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
 	Provider: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	BuildAttribute: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.image.ImageBuild,
+	BuildAttribute: github.com/cdktn-io/cdktn-provider-docker-go/docker/v14.image.ImageBuild,
 	ForceRemove: interface{},
 	KeepLocally: interface{},
 	Platform: *string,
 	PullTriggers: *[]*string,
-	Timeouts: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.image.ImageTimeouts,
+	Timeouts: github.com/cdktn-io/cdktn-provider-docker-go/docker/v14.image.ImageTimeouts,
 	Triggers: *map[string]*string,
 }
 ```
@@ -2140,7 +2140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.image.ImageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 &image.ImageTimeouts {
 	Create: *string,
@@ -2202,7 +2202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildAuthConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildAuthConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildAuthConfigList
 ```
@@ -2362,7 +2362,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildAuthConfigOutputReference
 ```
@@ -2854,7 +2854,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ImageBuildOutputReference
 ```
@@ -4266,7 +4266,7 @@ func InternalValue() ImageBuild
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildSecretsList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildSecretsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildSecretsList
 ```
@@ -4426,7 +4426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildSecretsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildSecretsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildSecretsOutputReference
 ```
@@ -4773,7 +4773,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildUlimitList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildUlimitList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ImageBuildUlimitList
 ```
@@ -4933,7 +4933,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageBuildUlimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageBuildUlimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ImageBuildUlimitOutputReference
 ```
@@ -5266,7 +5266,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.ImageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/image"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/image"
 
 image.NewImageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ImageTimeoutsOutputReference
 ```

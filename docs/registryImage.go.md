@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImage.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImage(scope Construct, id *string, config RegistryImageConfig) RegistryImage
 ```
@@ -488,7 +488,7 @@ func ResetTriggers()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.registryImage.RegistryImage.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.RegistryImage_IsConstruct(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.registryImage.RegistryImage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.RegistryImage_IsTerraformElement(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ registryimage.RegistryImage_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.registryImage.RegistryImage.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.RegistryImage_IsTerraformResource(x interface{}) *bool
 ```
@@ -548,7 +548,7 @@ registryimage.RegistryImage_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.registryImage.RegistryImage.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.RegistryImage_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -964,7 +964,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageAuthConfig {
 	Address: *string,
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageBuild.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageBuild {
 	Context: *string,
@@ -1680,7 +1680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageBuildAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageBuildAuthConfig {
 	HostName: *string,
@@ -1826,7 +1826,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageBuildSecrets.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageBuildSecrets {
 	Id: *string,
@@ -1895,7 +1895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageBuildUlimit.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageBuildUlimit {
 	Hard: *f64,
@@ -1961,7 +1961,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageConfig {
 	Connection: interface{},
@@ -1972,12 +1972,12 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
 	Provider: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	AuthConfig: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.registryImage.RegistryImageAuthConfig,
-	BuildAttribute: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.registryImage.RegistryImageBuild,
+	AuthConfig: github.com/cdktn-io/cdktn-provider-docker-go/docker/v14.registryImage.RegistryImageAuthConfig,
+	BuildAttribute: github.com/cdktn-io/cdktn-provider-docker-go/docker/v14.registryImage.RegistryImageBuild,
 	Id: *string,
 	InsecureSkipVerify: interface{},
 	KeepRemotely: interface{},
-	Timeouts: github.com/cdktn-io/cdktn-provider-docker-go/docker/v13.registryImage.RegistryImageTimeouts,
+	Timeouts: github.com/cdktn-io/cdktn-provider-docker-go/docker/v14.registryImage.RegistryImageTimeouts,
 	Triggers: *map[string]*string,
 }
 ```
@@ -2196,7 +2196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.registryImage.RegistryImageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 &registryimage.RegistryImageTimeouts {
 	Create: *string,
@@ -2258,7 +2258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RegistryImageAuthConfigOutputReference
 ```
@@ -2573,7 +2573,7 @@ func InternalValue() RegistryImageAuthConfig
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildAuthConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildAuthConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RegistryImageBuildAuthConfigList
 ```
@@ -2733,7 +2733,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RegistryImageBuildAuthConfigOutputReference
 ```
@@ -3225,7 +3225,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RegistryImageBuildOutputReference
 ```
@@ -4637,7 +4637,7 @@ func InternalValue() RegistryImageBuild
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildSecretsList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildSecretsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RegistryImageBuildSecretsList
 ```
@@ -4797,7 +4797,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildSecretsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildSecretsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RegistryImageBuildSecretsOutputReference
 ```
@@ -5144,7 +5144,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildUlimitList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildUlimitList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RegistryImageBuildUlimitList
 ```
@@ -5304,7 +5304,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageBuildUlimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageBuildUlimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RegistryImageBuildUlimitOutputReference
 ```
@@ -5637,7 +5637,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.registryImage.RegistryImageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v13/registryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/registryimage"
 
 registryimage.NewRegistryImageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RegistryImageTimeoutsOutputReference
 ```
