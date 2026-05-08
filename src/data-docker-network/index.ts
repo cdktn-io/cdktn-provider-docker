@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network
+// https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,9 +15,109 @@ export interface DataDockerNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
   * The name of the Docker network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#name DataDockerNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#name DataDockerNetwork#name}
   */
   readonly name: string;
+}
+export interface DataDockerNetworkContainers {
+}
+
+export function dataDockerNetworkContainersToTerraform(struct?: DataDockerNetworkContainers): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataDockerNetworkContainersToHclTerraform(struct?: DataDockerNetworkContainers): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataDockerNetworkContainersOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataDockerNetworkContainers | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataDockerNetworkContainers | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // container_id - computed: true, optional: false, required: false
+  public get containerId() {
+    return this.getStringAttribute('container_id');
+  }
+
+  // endpoint_id - computed: true, optional: false, required: false
+  public get endpointId() {
+    return this.getStringAttribute('endpoint_id');
+  }
+
+  // ipv4_address - computed: true, optional: false, required: false
+  public get ipv4Address() {
+    return this.getStringAttribute('ipv4_address');
+  }
+
+  // ipv6_address - computed: true, optional: false, required: false
+  public get ipv6Address() {
+    return this.getStringAttribute('ipv6_address');
+  }
+
+  // mac_address - computed: true, optional: false, required: false
+  public get macAddress() {
+    return this.getStringAttribute('mac_address');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
+
+export class DataDockerNetworkContainersList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataDockerNetworkContainersOutputReference {
+    return new DataDockerNetworkContainersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataDockerNetworkIpamConfig {
 }
@@ -112,7 +212,7 @@ export class DataDockerNetworkIpamConfigList extends cdktn.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network docker_network}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network docker_network}
 */
 export class DataDockerNetwork extends cdktn.TerraformDataSource {
 
@@ -128,7 +228,7 @@ export class DataDockerNetwork extends cdktn.TerraformDataSource {
   * Generates CDKTN code for importing a DataDockerNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataDockerNetwork to import
-  * @param importFromId The id of the existing DataDockerNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataDockerNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataDockerNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -140,7 +240,7 @@ export class DataDockerNetwork extends cdktn.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network docker_network} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network docker_network} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -151,8 +251,8 @@ export class DataDockerNetwork extends cdktn.TerraformDataSource {
       terraformResourceType: 'docker_network',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '3.9.0',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.2.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -168,6 +268,12 @@ export class DataDockerNetwork extends cdktn.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // containers - computed: true, optional: false, required: false
+  private _containers = new DataDockerNetworkContainersList(this, "containers", false);
+  public get containers() {
+    return this._containers;
+  }
 
   // driver - computed: true, optional: false, required: false
   public get driver() {

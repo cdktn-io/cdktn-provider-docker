@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container
+// https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,125 +15,125 @@ export interface ContainerConfig extends cdktn.TerraformMetaArguments {
   /**
   * If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#attach Container#attach}
   */
   readonly attach?: boolean | cdktn.IResolvable;
   /**
   * Optional parent cgroup for the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
   */
   readonly cgroupParent?: string;
   /**
   * Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
   */
   readonly cgroupnsMode?: string;
   /**
   * The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#command Container#command}
   */
   readonly command?: string[];
   /**
   * The total number of milliseconds to wait for the container to reach status 'running'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
   */
   readonly containerReadRefreshTimeoutMilliseconds?: number;
   /**
   * Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_period Container#cpu_period}
   */
   readonly cpuPeriod?: number;
   /**
   * Impose a CPU CFS quota on the container (in microseconds). The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_quota Container#cpu_quota}
   */
   readonly cpuQuota?: number;
   /**
   * A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_set Container#cpu_set}
   */
   readonly cpuSet?: string;
   /**
   * CPU shares (relative weight) for the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_shares Container#cpu_shares}
   */
   readonly cpuShares?: number;
   /**
   * Specify how much of the available CPU resources a container can use. e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpus Container#cpus}
   */
   readonly cpus?: string;
   /**
   * If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
   */
   readonly destroyGraceSeconds?: number;
   /**
   * DNS servers to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns Container#dns}
   */
   readonly dns?: string[];
   /**
   * DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_opts Container#dns_opts}
   */
   readonly dnsOpts?: string[];
   /**
   * DNS search domains that are used when bare unqualified hostnames are used inside of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_search Container#dns_search}
   */
   readonly dnsSearch?: string[];
   /**
   * Domain name of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#domainname Container#domainname}
   */
   readonly domainname?: string;
   /**
   * The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#entrypoint Container#entrypoint}
   */
   readonly entrypoint?: string[];
   /**
   * Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#env Container#env}
   */
   readonly env?: string[];
   /**
-  * GPU devices to add to the container. Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
+  * GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gpus Container#gpus}
   */
   readonly gpus?: string;
   /**
   * Additional groups for the container user
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#group_add Container#group_add}
   */
   readonly groupAdd?: string[];
   /**
   * Hostname of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hostname Container#hostname}
   */
   readonly hostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -142,283 +142,325 @@ export interface ContainerConfig extends cdktn.TerraformMetaArguments {
   /**
   * The ID of the image to back this container. The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#image Container#image}
   */
   readonly image: string;
   /**
   * Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#init Container#init}
   */
   readonly init?: boolean | cdktn.IResolvable;
   /**
   * IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipc_mode Container#ipc_mode}
   */
   readonly ipcMode?: string;
   /**
   * The logging driver to use for the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_driver Container#log_driver}
   */
   readonly logDriver?: string;
   /**
   * Key/value pairs to use as options for the logging driver.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_opts Container#log_opts}
   */
   readonly logOpts?: { [key: string]: string };
   /**
   * Save the container logs (`attach` must be enabled). Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#logs Container#logs}
   */
   readonly logs?: boolean | cdktn.IResolvable;
   /**
   * The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#max_retry_count Container#max_retry_count}
   */
   readonly maxRetryCount?: number;
   /**
   * The memory limit for the container in MBs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory Container#memory}
   */
   readonly memory?: number;
   /**
   * The memory-resveration for the container in MBs. Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_reservation Container#memory_reservation}
   */
   readonly memoryReservation?: number;
   /**
   * The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_swap Container#memory_swap}
   */
   readonly memorySwap?: number;
   /**
-  * If `true`, then the Docker container will be kept running. If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
+  * If `true`, then the Docker container will be kept running. If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#must_run Container#must_run}
   */
   readonly mustRun?: boolean | cdktn.IResolvable;
   /**
   * The name of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
   */
   readonly name: string;
   /**
   * Network mode of the container. Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#network_mode Container#network_mode}
   */
   readonly networkMode?: string;
   /**
-  * he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+  * The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#pid_mode Container#pid_mode}
   */
   readonly pidMode?: string;
   /**
+  * Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#platform Container#platform}
+  */
+  readonly platform?: string;
+  /**
   * If `true`, the container runs in privileged mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#privileged Container#privileged}
   */
   readonly privileged?: boolean | cdktn.IResolvable;
   /**
   * Publish all ports of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
   */
   readonly publishAllPorts?: boolean | cdktn.IResolvable;
   /**
   * If `true`, the container will be started as readonly. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
   * If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#remove_volumes Container#remove_volumes}
   */
   readonly removeVolumes?: boolean | cdktn.IResolvable;
   /**
   * The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#restart Container#restart}
   */
   readonly restart?: string;
   /**
   * If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rm Container#rm}
   */
   readonly rm?: boolean | cdktn.IResolvable;
   /**
   * Runtime to use for the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#runtime Container#runtime}
   */
   readonly runtime?: string;
   /**
   * List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#security_opts Container#security_opts}
   */
   readonly securityOpts?: string[];
   /**
   * Size of `/dev/shm` in MBs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#shm_size Container#shm_size}
   */
   readonly shmSize?: number;
   /**
   * If `true`, then the Docker container will be started after creation. If `false`, then the container is only created. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start Container#start}
   */
   readonly start?: boolean | cdktn.IResolvable;
   /**
   * If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stdin_open Container#stdin_open}
   */
   readonly stdinOpen?: boolean | cdktn.IResolvable;
   /**
   * Signal to stop a container (default `SIGTERM`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_signal Container#stop_signal}
   */
   readonly stopSignal?: string;
   /**
   * Timeout (in seconds) to stop a container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_timeout Container#stop_timeout}
   */
   readonly stopTimeout?: number;
   /**
   * Key/value pairs for the storage driver options, e.g. `size`: `120G`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#storage_opts Container#storage_opts}
   */
   readonly storageOpts?: { [key: string]: string };
   /**
   * A map of kernel parameters (sysctls) to set in the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#sysctls Container#sysctls}
   */
   readonly sysctls?: { [key: string]: string };
   /**
   * A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs Container#tmpfs}
   */
   readonly tmpfs?: { [key: string]: string };
   /**
   * If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tty Container#tty}
   */
   readonly tty?: boolean | cdktn.IResolvable;
   /**
-  * User used for run the first process. Format is `user` or `user:group` which user and group can be passed literraly or by name.
+  * User used for run the first process. Format is `user` or `user:group` which user and group can be passed literally or by name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#user Container#user}
   */
   readonly user?: string;
   /**
   * Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#userns_mode Container#userns_mode}
   */
   readonly usernsMode?: string;
   /**
   * If `true`, then the Docker container is waited for being healthy state after creation. This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait Container#wait}
   */
   readonly wait?: boolean | cdktn.IResolvable;
   /**
   * The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait_timeout Container#wait_timeout}
   */
   readonly waitTimeout?: number;
   /**
   * The working directory for commands to run in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#working_dir Container#working_dir}
   */
   readonly workingDir?: string;
   /**
   * capabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
   */
   readonly capabilities?: ContainerCapabilities;
   /**
+  * device_read_bps block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_bps Container#device_read_bps}
+  */
+  readonly deviceReadBps?: ContainerDeviceReadBps[] | cdktn.IResolvable;
+  /**
+  * device_read_iops block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_iops Container#device_read_iops}
+  */
+  readonly deviceReadIops?: ContainerDeviceReadIops[] | cdktn.IResolvable;
+  /**
+  * device_requests block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_requests Container#device_requests}
+  */
+  readonly deviceRequests?: ContainerDeviceRequests[] | cdktn.IResolvable;
+  /**
+  * device_write_bps block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_bps Container#device_write_bps}
+  */
+  readonly deviceWriteBps?: ContainerDeviceWriteBps[] | cdktn.IResolvable;
+  /**
+  * device_write_iops block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_iops Container#device_write_iops}
+  */
+  readonly deviceWriteIops?: ContainerDeviceWriteIops[] | cdktn.IResolvable;
+  /**
   * devices block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#devices Container#devices}
   */
   readonly devices?: ContainerDevices[] | cdktn.IResolvable;
   /**
   * healthcheck block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#healthcheck Container#healthcheck}
   */
   readonly healthcheck?: ContainerHealthcheck;
   /**
   * host block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
   */
   readonly host?: ContainerHost[] | cdktn.IResolvable;
   /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
   */
   readonly labels?: ContainerLabels[] | cdktn.IResolvable;
   /**
   * mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mounts Container#mounts}
   */
   readonly mounts?: ContainerMounts[] | cdktn.IResolvable;
   /**
   * networks_advanced block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#networks_advanced Container#networks_advanced}
   */
   readonly networksAdvanced?: ContainerNetworksAdvanced[] | cdktn.IResolvable;
   /**
   * ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ports Container#ports}
   */
   readonly ports?: ContainerPorts[] | cdktn.IResolvable;
   /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeouts Container#timeouts}
+  */
+  readonly timeouts?: ContainerTimeouts;
+  /**
   * ulimit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ulimit Container#ulimit}
   */
   readonly ulimit?: ContainerUlimit[] | cdktn.IResolvable;
   /**
   * upload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#upload Container#upload}
   */
   readonly upload?: ContainerUpload[] | cdktn.IResolvable;
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volumes Container#volumes}
   */
   readonly volumes?: ContainerVolumes[] | cdktn.IResolvable;
 }
@@ -536,13 +578,13 @@ export interface ContainerCapabilities {
   /**
   * List of linux capabilities to add.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#add Container#add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#add Container#add}
   */
   readonly add?: string[];
   /**
   * List of linux capabilities to drop.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#drop Container#drop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#drop Container#drop}
   */
   readonly drop?: string[];
 }
@@ -653,23 +695,869 @@ export class ContainerCapabilitiesOutputReference extends cdktn.ComplexObject {
     return this._drop;
   }
 }
+export interface ContainerDeviceReadBps {
+  /**
+  * The device path on the host, e.g. `/dev/sda`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+  */
+  readonly path: string;
+  /**
+  * The read rate limit in bytes per second.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+  */
+  readonly rate: number;
+}
+
+export function containerDeviceReadBpsToTerraform(struct?: ContainerDeviceReadBps | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktn.stringToTerraform(struct!.path),
+    rate: cdktn.numberToTerraform(struct!.rate),
+  }
+}
+
+
+export function containerDeviceReadBpsToHclTerraform(struct?: ContainerDeviceReadBps | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rate: {
+      value: cdktn.numberToHclTerraform(struct!.rate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerDeviceReadBpsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerDeviceReadBps | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._rate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rate = this._rate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerDeviceReadBps | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._rate = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._rate = value.rate;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // rate - computed: false, optional: false, required: true
+  private _rate?: number; 
+  public get rate() {
+    return this.getNumberAttribute('rate');
+  }
+  public set rate(value: number) {
+    this._rate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateInput() {
+    return this._rate;
+  }
+}
+
+export class ContainerDeviceReadBpsList extends cdktn.ComplexList {
+  public internalValue? : ContainerDeviceReadBps[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerDeviceReadBpsOutputReference {
+    return new ContainerDeviceReadBpsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerDeviceReadIops {
+  /**
+  * The device path on the host, e.g. `/dev/sda`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+  */
+  readonly path: string;
+  /**
+  * The read IOPS limit.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+  */
+  readonly rate: number;
+}
+
+export function containerDeviceReadIopsToTerraform(struct?: ContainerDeviceReadIops | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktn.stringToTerraform(struct!.path),
+    rate: cdktn.numberToTerraform(struct!.rate),
+  }
+}
+
+
+export function containerDeviceReadIopsToHclTerraform(struct?: ContainerDeviceReadIops | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rate: {
+      value: cdktn.numberToHclTerraform(struct!.rate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerDeviceReadIopsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerDeviceReadIops | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._rate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rate = this._rate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerDeviceReadIops | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._rate = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._rate = value.rate;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // rate - computed: false, optional: false, required: true
+  private _rate?: number; 
+  public get rate() {
+    return this.getNumberAttribute('rate');
+  }
+  public set rate(value: number) {
+    this._rate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateInput() {
+    return this._rate;
+  }
+}
+
+export class ContainerDeviceReadIopsList extends cdktn.ComplexList {
+  public internalValue? : ContainerDeviceReadIops[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerDeviceReadIopsOutputReference {
+    return new ContainerDeviceReadIopsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerDeviceRequests {
+  /**
+  * List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
+  */
+  readonly capabilities?: string[];
+  /**
+  * Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#count Container#count}
+  */
+  readonly count?: number;
+  /**
+  * List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_ids Container#device_ids}
+  */
+  readonly deviceIds?: string[];
+  /**
+  * The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver Container#driver}
+  */
+  readonly driver?: string;
+  /**
+  * Driver-specific options.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#options Container#options}
+  */
+  readonly options?: { [key: string]: string };
+}
+
+export function containerDeviceRequestsToTerraform(struct?: ContainerDeviceRequests | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    capabilities: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.capabilities),
+    count: cdktn.numberToTerraform(struct!.count),
+    device_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.deviceIds),
+    driver: cdktn.stringToTerraform(struct!.driver),
+    options: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.options),
+  }
+}
+
+
+export function containerDeviceRequestsToHclTerraform(struct?: ContainerDeviceRequests | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capabilities: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.capabilities),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    count: {
+      value: cdktn.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    device_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.deviceIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    driver: {
+      value: cdktn.stringToHclTerraform(struct!.driver),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    options: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.options),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerDeviceRequestsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerDeviceRequests | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._capabilities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capabilities = this._capabilities;
+    }
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._deviceIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceIds = this._deviceIds;
+    }
+    if (this._driver !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.driver = this._driver;
+    }
+    if (this._options !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.options = this._options;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerDeviceRequests | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._capabilities = undefined;
+      this._count = undefined;
+      this._deviceIds = undefined;
+      this._driver = undefined;
+      this._options = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._capabilities = value.capabilities;
+      this._count = value.count;
+      this._deviceIds = value.deviceIds;
+      this._driver = value.driver;
+      this._options = value.options;
+    }
+  }
+
+  // capabilities - computed: false, optional: true, required: false
+  private _capabilities?: string[]; 
+  public get capabilities() {
+    return cdktn.Fn.tolist(this.getListAttribute('capabilities'));
+  }
+  public set capabilities(value: string[]) {
+    this._capabilities = value;
+  }
+  public resetCapabilities() {
+    this._capabilities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capabilitiesInput() {
+    return this._capabilities;
+  }
+
+  // count - computed: false, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // device_ids - computed: false, optional: true, required: false
+  private _deviceIds?: string[]; 
+  public get deviceIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('device_ids'));
+  }
+  public set deviceIds(value: string[]) {
+    this._deviceIds = value;
+  }
+  public resetDeviceIds() {
+    this._deviceIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceIdsInput() {
+    return this._deviceIds;
+  }
+
+  // driver - computed: false, optional: true, required: false
+  private _driver?: string; 
+  public get driver() {
+    return this.getStringAttribute('driver');
+  }
+  public set driver(value: string) {
+    this._driver = value;
+  }
+  public resetDriver() {
+    this._driver = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get driverInput() {
+    return this._driver;
+  }
+
+  // options - computed: false, optional: true, required: false
+  private _options?: { [key: string]: string }; 
+  public get options() {
+    return this.getStringMapAttribute('options');
+  }
+  public set options(value: { [key: string]: string }) {
+    this._options = value;
+  }
+  public resetOptions() {
+    this._options = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionsInput() {
+    return this._options;
+  }
+}
+
+export class ContainerDeviceRequestsList extends cdktn.ComplexList {
+  public internalValue? : ContainerDeviceRequests[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerDeviceRequestsOutputReference {
+    return new ContainerDeviceRequestsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerDeviceWriteBps {
+  /**
+  * The device path on the host, e.g. `/dev/sda`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+  */
+  readonly path: string;
+  /**
+  * The write rate limit in bytes per second.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+  */
+  readonly rate: number;
+}
+
+export function containerDeviceWriteBpsToTerraform(struct?: ContainerDeviceWriteBps | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktn.stringToTerraform(struct!.path),
+    rate: cdktn.numberToTerraform(struct!.rate),
+  }
+}
+
+
+export function containerDeviceWriteBpsToHclTerraform(struct?: ContainerDeviceWriteBps | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rate: {
+      value: cdktn.numberToHclTerraform(struct!.rate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerDeviceWriteBpsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerDeviceWriteBps | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._rate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rate = this._rate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerDeviceWriteBps | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._rate = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._rate = value.rate;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // rate - computed: false, optional: false, required: true
+  private _rate?: number; 
+  public get rate() {
+    return this.getNumberAttribute('rate');
+  }
+  public set rate(value: number) {
+    this._rate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateInput() {
+    return this._rate;
+  }
+}
+
+export class ContainerDeviceWriteBpsList extends cdktn.ComplexList {
+  public internalValue? : ContainerDeviceWriteBps[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerDeviceWriteBpsOutputReference {
+    return new ContainerDeviceWriteBpsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerDeviceWriteIops {
+  /**
+  * The device path on the host, e.g. `/dev/sda`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+  */
+  readonly path: string;
+  /**
+  * The write IOPS limit.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+  */
+  readonly rate: number;
+}
+
+export function containerDeviceWriteIopsToTerraform(struct?: ContainerDeviceWriteIops | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktn.stringToTerraform(struct!.path),
+    rate: cdktn.numberToTerraform(struct!.rate),
+  }
+}
+
+
+export function containerDeviceWriteIopsToHclTerraform(struct?: ContainerDeviceWriteIops | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rate: {
+      value: cdktn.numberToHclTerraform(struct!.rate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerDeviceWriteIopsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerDeviceWriteIops | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._rate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rate = this._rate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerDeviceWriteIops | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._rate = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._rate = value.rate;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // rate - computed: false, optional: false, required: true
+  private _rate?: number; 
+  public get rate() {
+    return this.getNumberAttribute('rate');
+  }
+  public set rate(value: number) {
+    this._rate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateInput() {
+    return this._rate;
+  }
+}
+
+export class ContainerDeviceWriteIopsList extends cdktn.ComplexList {
+  public internalValue? : ContainerDeviceWriteIops[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerDeviceWriteIopsOutputReference {
+    return new ContainerDeviceWriteIopsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerDevices {
   /**
-  * The path in the container where the device will be bound.
+  * The path in the container where the device will be bound. If not set, it defaults to the value of `host_path`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
   */
   readonly containerPath?: string;
   /**
   * The path on the host where the device is located.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
   */
   readonly hostPath: string;
   /**
   * The cgroup permissions given to the container to access the device. Defaults to `rwm`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
   */
   readonly permissions?: string;
 }
@@ -842,37 +1730,37 @@ export interface ContainerHealthcheck {
   /**
   * Time between running the check (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#interval Container#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#interval Container#interval}
   */
   readonly interval?: string;
   /**
   * Consecutive failures needed to report unhealthy. Defaults to `0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#retries Container#retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#retries Container#retries}
   */
   readonly retries?: number;
   /**
   * Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_interval Container#start_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_interval Container#start_interval}
   */
   readonly startInterval?: string;
   /**
   * Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_period Container#start_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_period Container#start_period}
   */
   readonly startPeriod?: string;
   /**
-  * Command to run to check health. For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`.
+  * Command to run to check health. For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#test Container#test}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#test Container#test}
   */
-  readonly test: string[];
+  readonly test?: string[];
   /**
   * Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#timeout Container#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeout Container#timeout}
   */
   readonly timeout?: string;
 }
@@ -1067,13 +1955,16 @@ export class ContainerHealthcheckOutputReference extends cdktn.ComplexObject {
     return this._startPeriod;
   }
 
-  // test - computed: false, optional: false, required: true
+  // test - computed: false, optional: true, required: false
   private _test?: string[]; 
   public get test() {
     return this.getListAttribute('test');
   }
   public set test(value: string[]) {
     this._test = value;
+  }
+  public resetTest() {
+    this._test = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get testInput() {
@@ -1100,13 +1991,13 @@ export interface ContainerHost {
   /**
   * Hostname to add
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
   */
   readonly host: string;
   /**
   * IP address this hostname should resolve to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
   */
   readonly ip: string;
 }
@@ -1247,13 +2138,13 @@ export interface ContainerLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
   */
   readonly value: string;
 }
@@ -1394,7 +2285,7 @@ export interface ContainerMountsBindOptions {
   /**
   * A propagation mode with the value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#propagation Container#propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#propagation Container#propagation}
   */
   readonly propagation?: string;
 }
@@ -1480,13 +2371,13 @@ export interface ContainerMountsTmpfsOptions {
   /**
   * The permission mode for the tmpfs mount in an integer.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mode Container#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mode Container#mode}
   */
   readonly mode?: number;
   /**
   * The size for the tmpfs mount in bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#size_bytes Container#size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#size_bytes Container#size_bytes}
   */
   readonly sizeBytes?: number;
 }
@@ -1601,13 +2492,13 @@ export interface ContainerMountsVolumeOptionsLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
   */
   readonly value: string;
 }
@@ -1748,31 +2639,31 @@ export interface ContainerMountsVolumeOptions {
   /**
   * Name of the driver to use to create the volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_name Container#driver_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_name Container#driver_name}
   */
   readonly driverName?: string;
   /**
   * key/value map of driver specific options.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_options Container#driver_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_options Container#driver_options}
   */
   readonly driverOptions?: { [key: string]: string };
   /**
   * Populate volume with data from the target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#no_copy Container#no_copy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#no_copy Container#no_copy}
   */
   readonly noCopy?: boolean | cdktn.IResolvable;
   /**
   * Path within the volume to mount. Requires docker server version 1.45 or higher.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#subpath Container#subpath}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#subpath Container#subpath}
   */
   readonly subpath?: string;
   /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
   */
   readonly labels?: ContainerMountsVolumeOptionsLabels[] | cdktn.IResolvable;
 }
@@ -1974,43 +2865,43 @@ export interface ContainerMounts {
   /**
   * Whether the mount should be read-only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
   * Mount source (e.g. a volume name, a host path).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
   */
   readonly source?: string;
   /**
   * Container path
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#target Container#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#target Container#target}
   */
   readonly target: string;
   /**
   * The mount type
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#type Container#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#type Container#type}
   */
   readonly type: string;
   /**
   * bind_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#bind_options Container#bind_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#bind_options Container#bind_options}
   */
   readonly bindOptions?: ContainerMountsBindOptions;
   /**
   * tmpfs_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
   */
   readonly tmpfsOptions?: ContainerMountsTmpfsOptions;
   /**
   * volume_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_options Container#volume_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_options Container#volume_options}
   */
   readonly volumeOptions?: ContainerMountsVolumeOptions;
 }
@@ -2296,31 +3187,49 @@ export interface ContainerNetworksAdvanced {
   /**
   * The network aliases of the container in the specific network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#aliases Container#aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#aliases Container#aliases}
   */
   readonly aliases?: string[];
   /**
+  * An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_opts Container#driver_opts}
+  */
+  readonly driverOpts?: string[];
+  /**
+  * Gateway priority for this endpoint. The endpoint with the highest priority will provide the default gateway for the container. This is the equivalent to `--gw-priority` for `docker run`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gw_priority Container#gw_priority}
+  */
+  readonly gwPriority?: number;
+  /**
   * The IPV4 address of the container in the specific network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv4_address Container#ipv4_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv4_address Container#ipv4_address}
   */
   readonly ipv4Address?: string;
   /**
   * The IPV6 address of the container in the specific network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv6_address Container#ipv6_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv6_address Container#ipv6_address}
   */
   readonly ipv6Address?: string;
   /**
+  * The link-local IPs of the container in the specific network. This is the equivalent to repeating `--link-local-ip` for `docker run`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#link_local_ips Container#link_local_ips}
+  */
+  readonly linkLocalIps?: string[];
+  /**
   * The MAC address of the container in the specific network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mac_address Container#mac_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mac_address Container#mac_address}
   */
   readonly macAddress?: string;
   /**
   * The name or id of the network to use. You can use `name` or `id` attribute from a `docker_network` resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
   */
   readonly name: string;
 }
@@ -2332,8 +3241,11 @@ export function containerNetworksAdvancedToTerraform(struct?: ContainerNetworksA
   }
   return {
     aliases: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.aliases),
+    driver_opts: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.driverOpts),
+    gw_priority: cdktn.numberToTerraform(struct!.gwPriority),
     ipv4_address: cdktn.stringToTerraform(struct!.ipv4Address),
     ipv6_address: cdktn.stringToTerraform(struct!.ipv6Address),
+    link_local_ips: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.linkLocalIps),
     mac_address: cdktn.stringToTerraform(struct!.macAddress),
     name: cdktn.stringToTerraform(struct!.name),
   }
@@ -2352,6 +3264,18 @@ export function containerNetworksAdvancedToHclTerraform(struct?: ContainerNetwor
       type: "set",
       storageClassType: "stringList",
     },
+    driver_opts: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.driverOpts),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    gw_priority: {
+      value: cdktn.numberToHclTerraform(struct!.gwPriority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
     ipv4_address: {
       value: cdktn.stringToHclTerraform(struct!.ipv4Address),
       isBlock: false,
@@ -2363,6 +3287,12 @@ export function containerNetworksAdvancedToHclTerraform(struct?: ContainerNetwor
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    link_local_ips: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.linkLocalIps),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
     },
     mac_address: {
       value: cdktn.stringToHclTerraform(struct!.macAddress),
@@ -2406,6 +3336,14 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
       hasAnyValues = true;
       internalValueResult.aliases = this._aliases;
     }
+    if (this._driverOpts !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.driverOpts = this._driverOpts;
+    }
+    if (this._gwPriority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gwPriority = this._gwPriority;
+    }
     if (this._ipv4Address !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipv4Address = this._ipv4Address;
@@ -2413,6 +3351,10 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
     if (this._ipv6Address !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipv6Address = this._ipv6Address;
+    }
+    if (this._linkLocalIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkLocalIps = this._linkLocalIps;
     }
     if (this._macAddress !== undefined) {
       hasAnyValues = true;
@@ -2430,8 +3372,11 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._aliases = undefined;
+      this._driverOpts = undefined;
+      this._gwPriority = undefined;
       this._ipv4Address = undefined;
       this._ipv6Address = undefined;
+      this._linkLocalIps = undefined;
       this._macAddress = undefined;
       this._name = undefined;
     }
@@ -2443,8 +3388,11 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._aliases = value.aliases;
+      this._driverOpts = value.driverOpts;
+      this._gwPriority = value.gwPriority;
       this._ipv4Address = value.ipv4Address;
       this._ipv6Address = value.ipv6Address;
+      this._linkLocalIps = value.linkLocalIps;
       this._macAddress = value.macAddress;
       this._name = value.name;
     }
@@ -2464,6 +3412,38 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get aliasesInput() {
     return this._aliases;
+  }
+
+  // driver_opts - computed: false, optional: true, required: false
+  private _driverOpts?: string[]; 
+  public get driverOpts() {
+    return cdktn.Fn.tolist(this.getListAttribute('driver_opts'));
+  }
+  public set driverOpts(value: string[]) {
+    this._driverOpts = value;
+  }
+  public resetDriverOpts() {
+    this._driverOpts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get driverOptsInput() {
+    return this._driverOpts;
+  }
+
+  // gw_priority - computed: false, optional: true, required: false
+  private _gwPriority?: number; 
+  public get gwPriority() {
+    return this.getNumberAttribute('gw_priority');
+  }
+  public set gwPriority(value: number) {
+    this._gwPriority = value;
+  }
+  public resetGwPriority() {
+    this._gwPriority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gwPriorityInput() {
+    return this._gwPriority;
   }
 
   // ipv4_address - computed: false, optional: true, required: false
@@ -2496,6 +3476,22 @@ export class ContainerNetworksAdvancedOutputReference extends cdktn.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get ipv6AddressInput() {
     return this._ipv6Address;
+  }
+
+  // link_local_ips - computed: false, optional: true, required: false
+  private _linkLocalIps?: string[]; 
+  public get linkLocalIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('link_local_ips'));
+  }
+  public set linkLocalIps(value: string[]) {
+    this._linkLocalIps = value;
+  }
+  public resetLinkLocalIps() {
+    this._linkLocalIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkLocalIpsInput() {
+    return this._linkLocalIps;
   }
 
   // mac_address - computed: false, optional: true, required: false
@@ -2551,25 +3547,25 @@ export interface ContainerPorts {
   /**
   * Port exposed out of the container. If not given a free random port `>= 32768` will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#external Container#external}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#external Container#external}
   */
   readonly external?: number;
   /**
   * Port within the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#internal Container#internal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#internal Container#internal}
   */
   readonly internal: number;
   /**
   * IP address/mask that can access this port. Defaults to `0.0.0.0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
   */
   readonly ip?: string;
   /**
   * Protocol that can be used over this port. Defaults to `tcp`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#protocol Container#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#protocol Container#protocol}
   */
   readonly protocol?: string;
 }
@@ -2767,23 +3763,183 @@ export class ContainerPortsList extends cdktn.ComplexList {
     return new ContainerPortsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}
+  */
+  readonly update?: string;
+}
+
+export function containerTimeoutsToTerraform(struct?: ContainerTimeouts | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function containerTimeoutsToHclTerraform(struct?: ContainerTimeouts | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerTimeoutsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): ContainerTimeouts | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerTimeouts | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
 export interface ContainerUlimit {
   /**
   * The hard limit
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hard Container#hard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hard Container#hard}
   */
   readonly hard: number;
   /**
   * The name of the ulimit
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
   */
   readonly name: string;
   /**
   * The soft limit
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#soft Container#soft}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#soft Container#soft}
   */
   readonly soft: number;
 }
@@ -2950,43 +4106,43 @@ export interface ContainerUpload {
   /**
   * Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text. Conflicts with `content_base64` & `source`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content Container#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content Container#content}
   */
   readonly content?: string;
   /**
   * Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content_base64 Container#content_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content_base64 Container#content_base64}
   */
   readonly contentBase64?: string;
   /**
   * If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#executable Container#executable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#executable Container#executable}
   */
   readonly executable?: boolean | cdktn.IResolvable;
   /**
   * Path to the file in the container where is upload goes to
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#file Container#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#file Container#file}
   */
   readonly file: string;
   /**
   * The permission mode for the file in the container. Has precedence over `executable`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
   */
   readonly permissions?: string;
   /**
   * A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
   */
   readonly source?: string;
   /**
   * If using `source`, this will force an update if the file content has updated but the filename has not. 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source_hash Container#source_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source_hash Container#source_hash}
   */
   readonly sourceHash?: string;
 }
@@ -3275,31 +4431,37 @@ export interface ContainerVolumes {
   /**
   * The path in the container where the volume will be mounted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
   */
   readonly containerPath?: string;
   /**
   * The container where the volume is coming from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#from_container Container#from_container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#from_container Container#from_container}
   */
   readonly fromContainer?: string;
   /**
   * The path on the host where the volume is coming from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
   */
   readonly hostPath?: string;
   /**
   * If `true`, this volume will be readonly. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
+  * SELinux relabel mode for bind mounts. Supported values are `z` and `Z`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
+  */
+  readonly selinuxRelabel?: string;
+  /**
   * The name of the docker volume which should be mounted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_name Container#volume_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_name Container#volume_name}
   */
   readonly volumeName?: string;
 }
@@ -3314,6 +4476,7 @@ export function containerVolumesToTerraform(struct?: ContainerVolumes | cdktn.IR
     from_container: cdktn.stringToTerraform(struct!.fromContainer),
     host_path: cdktn.stringToTerraform(struct!.hostPath),
     read_only: cdktn.booleanToTerraform(struct!.readOnly),
+    selinux_relabel: cdktn.stringToTerraform(struct!.selinuxRelabel),
     volume_name: cdktn.stringToTerraform(struct!.volumeName),
   }
 }
@@ -3348,6 +4511,12 @@ export function containerVolumesToHclTerraform(struct?: ContainerVolumes | cdktn
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
+    },
+    selinux_relabel: {
+      value: cdktn.stringToHclTerraform(struct!.selinuxRelabel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     volume_name: {
       value: cdktn.stringToHclTerraform(struct!.volumeName),
@@ -3397,6 +4566,10 @@ export class ContainerVolumesOutputReference extends cdktn.ComplexObject {
       hasAnyValues = true;
       internalValueResult.readOnly = this._readOnly;
     }
+    if (this._selinuxRelabel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selinuxRelabel = this._selinuxRelabel;
+    }
     if (this._volumeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.volumeName = this._volumeName;
@@ -3412,6 +4585,7 @@ export class ContainerVolumesOutputReference extends cdktn.ComplexObject {
       this._fromContainer = undefined;
       this._hostPath = undefined;
       this._readOnly = undefined;
+      this._selinuxRelabel = undefined;
       this._volumeName = undefined;
     }
     else if (cdktn.Tokenization.isResolvable(value)) {
@@ -3425,6 +4599,7 @@ export class ContainerVolumesOutputReference extends cdktn.ComplexObject {
       this._fromContainer = value.fromContainer;
       this._hostPath = value.hostPath;
       this._readOnly = value.readOnly;
+      this._selinuxRelabel = value.selinuxRelabel;
       this._volumeName = value.volumeName;
     }
   }
@@ -3493,6 +4668,22 @@ export class ContainerVolumesOutputReference extends cdktn.ComplexObject {
     return this._readOnly;
   }
 
+  // selinux_relabel - computed: false, optional: true, required: false
+  private _selinuxRelabel?: string; 
+  public get selinuxRelabel() {
+    return this.getStringAttribute('selinux_relabel');
+  }
+  public set selinuxRelabel(value: string) {
+    this._selinuxRelabel = value;
+  }
+  public resetSelinuxRelabel() {
+    this._selinuxRelabel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selinuxRelabelInput() {
+    return this._selinuxRelabel;
+  }
+
   // volume_name - computed: false, optional: true, required: false
   private _volumeName?: string; 
   public get volumeName() {
@@ -3531,7 +4722,7 @@ export class ContainerVolumesList extends cdktn.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container docker_container}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container docker_container}
 */
 export class Container extends cdktn.TerraformResource {
 
@@ -3547,7 +4738,7 @@ export class Container extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a Container resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Container to import
-  * @param importFromId The id of the existing Container that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Container that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Container to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -3559,7 +4750,7 @@ export class Container extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container docker_container} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container docker_container} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3570,8 +4761,8 @@ export class Container extends cdktn.TerraformResource {
       terraformResourceType: 'docker_container',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '3.9.0',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.2.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3616,6 +4807,7 @@ export class Container extends cdktn.TerraformResource {
     this._name = config.name;
     this._networkMode = config.networkMode;
     this._pidMode = config.pidMode;
+    this._platform = config.platform;
     this._privileged = config.privileged;
     this._publishAllPorts = config.publishAllPorts;
     this._readOnly = config.readOnly;
@@ -3639,6 +4831,11 @@ export class Container extends cdktn.TerraformResource {
     this._waitTimeout = config.waitTimeout;
     this._workingDir = config.workingDir;
     this._capabilities.internalValue = config.capabilities;
+    this._deviceReadBps.internalValue = config.deviceReadBps;
+    this._deviceReadIops.internalValue = config.deviceReadIops;
+    this._deviceRequests.internalValue = config.deviceRequests;
+    this._deviceWriteBps.internalValue = config.deviceWriteBps;
+    this._deviceWriteIops.internalValue = config.deviceWriteIops;
     this._devices.internalValue = config.devices;
     this._healthcheck.internalValue = config.healthcheck;
     this._host.internalValue = config.host;
@@ -3646,6 +4843,7 @@ export class Container extends cdktn.TerraformResource {
     this._mounts.internalValue = config.mounts;
     this._networksAdvanced.internalValue = config.networksAdvanced;
     this._ports.internalValue = config.ports;
+    this._timeouts.internalValue = config.timeouts;
     this._ulimit.internalValue = config.ulimit;
     this._upload.internalValue = config.upload;
     this._volumes.internalValue = config.volumes;
@@ -4230,6 +5428,22 @@ export class Container extends cdktn.TerraformResource {
     return this._pidMode;
   }
 
+  // platform - computed: true, optional: true, required: false
+  private _platform?: string; 
+  public get platform() {
+    return this.getStringAttribute('platform');
+  }
+  public set platform(value: string) {
+    this._platform = value;
+  }
+  public resetPlatform() {
+    this._platform = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformInput() {
+    return this._platform;
+  }
+
   // privileged - computed: false, optional: true, required: false
   private _privileged?: boolean | cdktn.IResolvable; 
   public get privileged() {
@@ -4598,6 +5812,86 @@ export class Container extends cdktn.TerraformResource {
     return this._capabilities.internalValue;
   }
 
+  // device_read_bps - computed: false, optional: true, required: false
+  private _deviceReadBps = new ContainerDeviceReadBpsList(this, "device_read_bps", true);
+  public get deviceReadBps() {
+    return this._deviceReadBps;
+  }
+  public putDeviceReadBps(value: ContainerDeviceReadBps[] | cdktn.IResolvable) {
+    this._deviceReadBps.internalValue = value;
+  }
+  public resetDeviceReadBps() {
+    this._deviceReadBps.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceReadBpsInput() {
+    return this._deviceReadBps.internalValue;
+  }
+
+  // device_read_iops - computed: false, optional: true, required: false
+  private _deviceReadIops = new ContainerDeviceReadIopsList(this, "device_read_iops", true);
+  public get deviceReadIops() {
+    return this._deviceReadIops;
+  }
+  public putDeviceReadIops(value: ContainerDeviceReadIops[] | cdktn.IResolvable) {
+    this._deviceReadIops.internalValue = value;
+  }
+  public resetDeviceReadIops() {
+    this._deviceReadIops.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceReadIopsInput() {
+    return this._deviceReadIops.internalValue;
+  }
+
+  // device_requests - computed: false, optional: true, required: false
+  private _deviceRequests = new ContainerDeviceRequestsList(this, "device_requests", true);
+  public get deviceRequests() {
+    return this._deviceRequests;
+  }
+  public putDeviceRequests(value: ContainerDeviceRequests[] | cdktn.IResolvable) {
+    this._deviceRequests.internalValue = value;
+  }
+  public resetDeviceRequests() {
+    this._deviceRequests.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceRequestsInput() {
+    return this._deviceRequests.internalValue;
+  }
+
+  // device_write_bps - computed: false, optional: true, required: false
+  private _deviceWriteBps = new ContainerDeviceWriteBpsList(this, "device_write_bps", true);
+  public get deviceWriteBps() {
+    return this._deviceWriteBps;
+  }
+  public putDeviceWriteBps(value: ContainerDeviceWriteBps[] | cdktn.IResolvable) {
+    this._deviceWriteBps.internalValue = value;
+  }
+  public resetDeviceWriteBps() {
+    this._deviceWriteBps.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceWriteBpsInput() {
+    return this._deviceWriteBps.internalValue;
+  }
+
+  // device_write_iops - computed: false, optional: true, required: false
+  private _deviceWriteIops = new ContainerDeviceWriteIopsList(this, "device_write_iops", true);
+  public get deviceWriteIops() {
+    return this._deviceWriteIops;
+  }
+  public putDeviceWriteIops(value: ContainerDeviceWriteIops[] | cdktn.IResolvable) {
+    this._deviceWriteIops.internalValue = value;
+  }
+  public resetDeviceWriteIops() {
+    this._deviceWriteIops.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceWriteIopsInput() {
+    return this._deviceWriteIops.internalValue;
+  }
+
   // devices - computed: false, optional: true, required: false
   private _devices = new ContainerDevicesList(this, "devices", true);
   public get devices() {
@@ -4710,6 +6004,22 @@ export class Container extends cdktn.TerraformResource {
     return this._ports.internalValue;
   }
 
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new ContainerTimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: ContainerTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
   // ulimit - computed: false, optional: true, required: false
   private _ulimit = new ContainerUlimitList(this, "ulimit", true);
   public get ulimit() {
@@ -4799,6 +6109,7 @@ export class Container extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       network_mode: cdktn.stringToTerraform(this._networkMode),
       pid_mode: cdktn.stringToTerraform(this._pidMode),
+      platform: cdktn.stringToTerraform(this._platform),
       privileged: cdktn.booleanToTerraform(this._privileged),
       publish_all_ports: cdktn.booleanToTerraform(this._publishAllPorts),
       read_only: cdktn.booleanToTerraform(this._readOnly),
@@ -4822,6 +6133,11 @@ export class Container extends cdktn.TerraformResource {
       wait_timeout: cdktn.numberToTerraform(this._waitTimeout),
       working_dir: cdktn.stringToTerraform(this._workingDir),
       capabilities: containerCapabilitiesToTerraform(this._capabilities.internalValue),
+      device_read_bps: cdktn.listMapper(containerDeviceReadBpsToTerraform, true)(this._deviceReadBps.internalValue),
+      device_read_iops: cdktn.listMapper(containerDeviceReadIopsToTerraform, true)(this._deviceReadIops.internalValue),
+      device_requests: cdktn.listMapper(containerDeviceRequestsToTerraform, true)(this._deviceRequests.internalValue),
+      device_write_bps: cdktn.listMapper(containerDeviceWriteBpsToTerraform, true)(this._deviceWriteBps.internalValue),
+      device_write_iops: cdktn.listMapper(containerDeviceWriteIopsToTerraform, true)(this._deviceWriteIops.internalValue),
       devices: cdktn.listMapper(containerDevicesToTerraform, true)(this._devices.internalValue),
       healthcheck: containerHealthcheckToTerraform(this._healthcheck.internalValue),
       host: cdktn.listMapper(containerHostToTerraform, true)(this._host.internalValue),
@@ -4829,6 +6145,7 @@ export class Container extends cdktn.TerraformResource {
       mounts: cdktn.listMapper(containerMountsToTerraform, true)(this._mounts.internalValue),
       networks_advanced: cdktn.listMapper(containerNetworksAdvancedToTerraform, true)(this._networksAdvanced.internalValue),
       ports: cdktn.listMapper(containerPortsToTerraform, true)(this._ports.internalValue),
+      timeouts: containerTimeoutsToTerraform(this._timeouts.internalValue),
       ulimit: cdktn.listMapper(containerUlimitToTerraform, true)(this._ulimit.internalValue),
       upload: cdktn.listMapper(containerUploadToTerraform, true)(this._upload.internalValue),
       volumes: cdktn.listMapper(containerVolumesToTerraform, true)(this._volumes.internalValue),
@@ -5047,6 +6364,12 @@ export class Container extends cdktn.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      platform: {
+        value: cdktn.stringToHclTerraform(this._platform),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       privileged: {
         value: cdktn.booleanToHclTerraform(this._privileged),
         isBlock: false,
@@ -5185,6 +6508,36 @@ export class Container extends cdktn.TerraformResource {
         type: "set",
         storageClassType: "ContainerCapabilitiesList",
       },
+      device_read_bps: {
+        value: cdktn.listMapperHcl(containerDeviceReadBpsToHclTerraform, true)(this._deviceReadBps.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerDeviceReadBpsList",
+      },
+      device_read_iops: {
+        value: cdktn.listMapperHcl(containerDeviceReadIopsToHclTerraform, true)(this._deviceReadIops.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerDeviceReadIopsList",
+      },
+      device_requests: {
+        value: cdktn.listMapperHcl(containerDeviceRequestsToHclTerraform, true)(this._deviceRequests.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerDeviceRequestsList",
+      },
+      device_write_bps: {
+        value: cdktn.listMapperHcl(containerDeviceWriteBpsToHclTerraform, true)(this._deviceWriteBps.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerDeviceWriteBpsList",
+      },
+      device_write_iops: {
+        value: cdktn.listMapperHcl(containerDeviceWriteIopsToHclTerraform, true)(this._deviceWriteIops.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerDeviceWriteIopsList",
+      },
       devices: {
         value: cdktn.listMapperHcl(containerDevicesToHclTerraform, true)(this._devices.internalValue),
         isBlock: true,
@@ -5226,6 +6579,12 @@ export class Container extends cdktn.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ContainerPortsList",
+      },
+      timeouts: {
+        value: containerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ContainerTimeouts",
       },
       ulimit: {
         value: cdktn.listMapperHcl(containerUlimitToHclTerraform, true)(this._ulimit.internalValue),
