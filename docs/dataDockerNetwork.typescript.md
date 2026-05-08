@@ -4,7 +4,7 @@
 
 ### DataDockerNetwork <a name="DataDockerNetwork" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network docker_network}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network docker_network}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataDockerNetwork to impor
 
 The id of the existing DataDockerNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -415,6 +415,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.forEach">forEach</a></code> | <code>cdktn.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.containers">containers</a></code> | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList">DataDockerNetworkContainersList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.driver">driver</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.internal">internal</a></code> | <code>cdktn.IResolvable</code> | *No description.* |
@@ -545,6 +546,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* cdktn.TerraformProvider
+
+---
+
+##### `containers`<sup>Required</sup> <a name="containers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.containers"></a>
+
+```typescript
+public readonly containers: DataDockerNetworkContainersList;
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList">DataDockerNetworkContainersList</a>
 
 ---
 
@@ -753,9 +764,20 @@ public readonly name: string;
 
 The name of the Docker network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#name DataDockerNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#name DataDockerNetwork#name}
 
 ---
+
+### DataDockerNetworkContainers <a name="DataDockerNetworkContainers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers.Initializer"></a>
+
+```typescript
+import { dataDockerNetwork } from '@cdktn/provider-docker'
+
+const dataDockerNetworkContainers: dataDockerNetwork.DataDockerNetworkContainers = { ... }
+```
+
 
 ### DataDockerNetworkIpamConfig <a name="DataDockerNetworkIpamConfig" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfig"></a>
 
@@ -769,6 +791,488 @@ const dataDockerNetworkIpamConfig: dataDockerNetwork.DataDockerNetworkIpamConfig
 
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### DataDockerNetworkContainersList <a name="DataDockerNetworkContainersList" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer"></a>
+
+```typescript
+import { dataDockerNetwork } from '@cdktn/provider-docker'
+
+new dataDockerNetwork.DataDockerNetworkContainersList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey"></a>
+
+```typescript
+public allWithMapKey(mapKeyAttributeName: string): DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get"></a>
+
+```typescript
+public get(index: number): DataDockerNetworkContainersOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get.parameter.index"></a>
+
+- *Type:* number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+
+### DataDockerNetworkContainersOutputReference <a name="DataDockerNetworkContainersOutputReference" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer"></a>
+
+```typescript
+import { dataDockerNetwork } from '@cdktn/provider-docker'
+
+new dataDockerNetwork.DataDockerNetworkContainersOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.containerId">containerId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.endpointId">endpointId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv4Address">ipv4Address</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv6Address">ipv6Address</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.macAddress">macAddress</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers">DataDockerNetworkContainers</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `containerId`<sup>Required</sup> <a name="containerId" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.containerId"></a>
+
+```typescript
+public readonly containerId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `endpointId`<sup>Required</sup> <a name="endpointId" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.endpointId"></a>
+
+```typescript
+public readonly endpointId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `ipv4Address`<sup>Required</sup> <a name="ipv4Address" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv4Address"></a>
+
+```typescript
+public readonly ipv4Address: string;
+```
+
+- *Type:* string
+
+---
+
+##### `ipv6Address`<sup>Required</sup> <a name="ipv6Address" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv6Address"></a>
+
+```typescript
+public readonly ipv6Address: string;
+```
+
+- *Type:* string
+
+---
+
+##### `macAddress`<sup>Required</sup> <a name="macAddress" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.macAddress"></a>
+
+```typescript
+public readonly macAddress: string;
+```
+
+- *Type:* string
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: DataDockerNetworkContainers;
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers">DataDockerNetworkContainers</a>
+
+---
+
 
 ### DataDockerNetworkIpamConfigList <a name="DataDockerNetworkIpamConfigList" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfigList"></a>
 

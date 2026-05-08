@@ -15,11 +15,13 @@ Object.defineProperty(exports, 'secret', { get: function () { return require('./
 Object.defineProperty(exports, 'service', { get: function () { return require('./service'); } });
 Object.defineProperty(exports, 'tag', { get: function () { return require('./tag'); } });
 Object.defineProperty(exports, 'volume', { get: function () { return require('./volume'); } });
+Object.defineProperty(exports, 'dataDockerContainers', { get: function () { return require('./data-docker-containers'); } });
 Object.defineProperty(exports, 'dataDockerImage', { get: function () { return require('./data-docker-image'); } });
 Object.defineProperty(exports, 'dataDockerLogs', { get: function () { return require('./data-docker-logs'); } });
 Object.defineProperty(exports, 'dataDockerNetwork', { get: function () { return require('./data-docker-network'); } });
 Object.defineProperty(exports, 'dataDockerPlugin', { get: function () { return require('./data-docker-plugin'); } });
 Object.defineProperty(exports, 'dataDockerRegistryImage', { get: function () { return require('./data-docker-registry-image'); } });
 Object.defineProperty(exports, 'dataDockerRegistryImageManifests', { get: function () { return require('./data-docker-registry-image-manifests'); } });
+Object.defineProperty(exports, 'dataDockerRegistryImageTags', { get: function () { return require('./data-docker-registry-image-tags'); } });
 Object.defineProperty(exports, 'provider', { get: function () { return require('./provider'); } });
 

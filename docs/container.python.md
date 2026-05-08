@@ -4,7 +4,7 @@
 
 ### Container <a name="Container" id="@cdktn/provider-docker.container.Container"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container docker_container}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container docker_container}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.Container.Initializer"></a>
 
@@ -35,7 +35,12 @@ container.Container(
   cpu_set: str = None,
   cpu_shares: typing.Union[int, float] = None,
   destroy_grace_seconds: typing.Union[int, float] = None,
+  device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps] = None,
+  device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops] = None,
+  device_requests: IResolvable | typing.List[ContainerDeviceRequests] = None,
   devices: IResolvable | typing.List[ContainerDevices] = None,
+  device_write_bps: IResolvable | typing.List[ContainerDeviceWriteBps] = None,
+  device_write_iops: IResolvable | typing.List[ContainerDeviceWriteIops] = None,
   dns: typing.List[str] = None,
   dns_opts: typing.List[str] = None,
   dns_search: typing.List[str] = None,
@@ -63,6 +68,7 @@ container.Container(
   network_mode: str = None,
   networks_advanced: IResolvable | typing.List[ContainerNetworksAdvanced] = None,
   pid_mode: str = None,
+  platform: str = None,
   ports: IResolvable | typing.List[ContainerPorts] = None,
   privileged: bool | IResolvable = None,
   publish_all_ports: bool | IResolvable = None,
@@ -79,6 +85,7 @@ container.Container(
   stop_timeout: typing.Union[int, float] = None,
   storage_opts: typing.Mapping[str] = None,
   sysctls: typing.Mapping[str] = None,
+  timeouts: ContainerTimeouts = None,
   tmpfs: typing.Mapping[str] = None,
   tty: bool | IResolvable = None,
   ulimit: IResolvable | typing.List[ContainerUlimit] = None,
@@ -117,19 +124,24 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadBps">device_read_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | device_read_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadIops">device_read_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | device_read_iops block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceRequests">device_requests</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | device_requests block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.devices">devices</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteBps">device_write_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]</code> | device_write_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteIops">device_write_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]</code> | device_write_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dns">dns</a></code> | <code>typing.List[str]</code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsOpts">dns_opts</a></code> | <code>typing.List[str]</code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsSearch">dns_search</a></code> | <code>typing.List[str]</code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.domainname">domainname</a></code> | <code>str</code> | Domain name of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.entrypoint">entrypoint</a></code> | <code>typing.List[str]</code> | The command to use as the Entrypoint for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.env">env</a></code> | <code>typing.List[str]</code> | Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.groupAdd">group_add</a></code> | <code>typing.List[str]</code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
@@ -144,7 +156,8 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mustRun">must_run</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networkMode">network_mode</a></code> | <code>str</code> | Network mode of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networksAdvanced">networks_advanced</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.pidMode">pid_mode</a></code> | <code>str</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.pidMode">pid_mode</a></code> | <code>str</code> | The PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.platform">platform</a></code> | <code>str</code> | Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ports">ports</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | Publish all ports of the container. |
@@ -161,6 +174,7 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stopTimeout">stop_timeout</a></code> | <code>typing.Union[int, float]</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.storageOpts">storage_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.sysctls">sysctls</a></code> | <code>typing.Mapping[str]</code> | A map of kernel parameters (sysctls) to set in the container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tmpfs">tmpfs</a></code> | <code>typing.Mapping[str]</code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tty">tty</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
@@ -242,7 +256,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -252,7 +266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -262,7 +276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -272,7 +286,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -282,7 +296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -292,7 +306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -304,7 +318,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -314,7 +328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -324,7 +338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -336,7 +350,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -348,7 +362,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -358,7 +372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -368,7 +382,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -380,7 +394,37 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `device_read_bps`<sup>Optional</sup> <a name="device_read_bps" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadBps"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]
+
+device_read_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_bps Container#device_read_bps}
+
+---
+
+##### `device_read_iops`<sup>Optional</sup> <a name="device_read_iops" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadIops"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]
+
+device_read_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_iops Container#device_read_iops}
+
+---
+
+##### `device_requests`<sup>Optional</sup> <a name="device_requests" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceRequests"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]
+
+device_requests block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -390,7 +434,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#devices Container#devices}
+
+---
+
+##### `device_write_bps`<sup>Optional</sup> <a name="device_write_bps" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteBps"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]
+
+device_write_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_bps Container#device_write_bps}
+
+---
+
+##### `device_write_iops`<sup>Optional</sup> <a name="device_write_iops" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteIops"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]
+
+device_write_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -400,7 +464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -410,7 +474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -420,7 +484,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -430,7 +494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -442,7 +506,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -452,7 +516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -460,11 +524,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-GPU devices to add to the container.
+GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -474,7 +536,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -484,7 +546,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -494,7 +556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -504,7 +566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -512,7 +574,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -527,7 +589,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -537,7 +599,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -547,7 +609,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -557,7 +619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -567,7 +629,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -577,7 +639,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -587,7 +649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -597,7 +659,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -609,7 +671,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -621,7 +683,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -631,7 +693,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -641,9 +703,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, then the Docker container will be kept running.
 
-If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
+If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -655,7 +717,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -665,7 +727,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -673,9 +735,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#pid_mode Container#pid_mode}
+
+---
+
+##### `platform`<sup>Optional</sup> <a name="platform" id="@cdktn/provider-docker.container.Container.Initializer.parameter.platform"></a>
+
+- *Type:* str
+
+Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -685,7 +757,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -695,7 +767,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -705,7 +777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -715,7 +787,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -725,7 +797,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -735,7 +807,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -745,7 +817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -755,7 +827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -765,7 +837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -775,7 +847,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -787,7 +859,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -797,7 +869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -807,7 +879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -817,7 +889,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -827,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -837,7 +909,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#sysctls Container#sysctls}
+
+---
+
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktn/provider-docker.container.Container.Initializer.parameter.timeouts"></a>
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
+
+timeouts block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -847,7 +929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -857,7 +939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -867,7 +949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -877,7 +959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -887,9 +969,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 User used for run the first process.
 
-Format is `user` or `user:group` which user and group can be passed literraly or by name.
+Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -899,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -909,7 +991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -921,7 +1003,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -931,7 +1013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -941,7 +1023,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -974,13 +1056,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktn/provider-docker.container.Container.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktn/provider-docker.container.Container.putCapabilities">put_capabilities</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceReadBps">put_device_read_bps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceReadIops">put_device_read_iops</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceRequests">put_device_requests</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putDevices">put_devices</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceWriteBps">put_device_write_bps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceWriteIops">put_device_write_iops</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putHealthcheck">put_healthcheck</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putHost">put_host</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putLabels">put_labels</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putMounts">put_mounts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putNetworksAdvanced">put_networks_advanced</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putPorts">put_ports</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putUlimit">put_ulimit</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putUpload">put_upload</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putVolumes">put_volumes</a></code> | *No description.* |
@@ -996,7 +1084,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuSet">reset_cpu_set</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuShares">reset_cpu_shares</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDestroyGraceSeconds">reset_destroy_grace_seconds</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadBps">reset_device_read_bps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadIops">reset_device_read_iops</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceRequests">reset_device_requests</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDevices">reset_devices</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceWriteBps">reset_device_write_bps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceWriteIops">reset_device_write_iops</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDns">reset_dns</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDnsOpts">reset_dns_opts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDnsSearch">reset_dns_search</a></code> | *No description.* |
@@ -1024,6 +1117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetNetworkMode">reset_network_mode</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetNetworksAdvanced">reset_networks_advanced</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPidMode">reset_pid_mode</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetPlatform">reset_platform</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPorts">reset_ports</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPrivileged">reset_privileged</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPublishAllPorts">reset_publish_all_ports</a></code> | *No description.* |
@@ -1040,6 +1134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetStopTimeout">reset_stop_timeout</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetStorageOpts">reset_storage_opts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetSysctls">reset_sysctls</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetTmpfs">reset_tmpfs</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetTty">reset_tty</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetUlimit">reset_ulimit</a></code> | *No description.* |
@@ -1416,7 +1511,7 @@ def put_capabilities(
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -1426,7 +1521,49 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#drop Container#drop}
+
+---
+
+##### `put_device_read_bps` <a name="put_device_read_bps" id="@cdktn/provider-docker.container.Container.putDeviceReadBps"></a>
+
+```python
+def put_device_read_bps(
+  value: IResolvable | typing.List[ContainerDeviceReadBps]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceReadBps.parameter.value"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]
+
+---
+
+##### `put_device_read_iops` <a name="put_device_read_iops" id="@cdktn/provider-docker.container.Container.putDeviceReadIops"></a>
+
+```python
+def put_device_read_iops(
+  value: IResolvable | typing.List[ContainerDeviceReadIops]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceReadIops.parameter.value"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]
+
+---
+
+##### `put_device_requests` <a name="put_device_requests" id="@cdktn/provider-docker.container.Container.putDeviceRequests"></a>
+
+```python
+def put_device_requests(
+  value: IResolvable | typing.List[ContainerDeviceRequests]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceRequests.parameter.value"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]
 
 ---
 
@@ -1444,30 +1581,46 @@ def put_devices(
 
 ---
 
+##### `put_device_write_bps` <a name="put_device_write_bps" id="@cdktn/provider-docker.container.Container.putDeviceWriteBps"></a>
+
+```python
+def put_device_write_bps(
+  value: IResolvable | typing.List[ContainerDeviceWriteBps]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceWriteBps.parameter.value"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]
+
+---
+
+##### `put_device_write_iops` <a name="put_device_write_iops" id="@cdktn/provider-docker.container.Container.putDeviceWriteIops"></a>
+
+```python
+def put_device_write_iops(
+  value: IResolvable | typing.List[ContainerDeviceWriteIops]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceWriteIops.parameter.value"></a>
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]
+
+---
+
 ##### `put_healthcheck` <a name="put_healthcheck" id="@cdktn/provider-docker.container.Container.putHealthcheck"></a>
 
 ```python
 def put_healthcheck(
-  test: typing.List[str],
   interval: str = None,
   retries: typing.Union[int, float] = None,
   start_interval: str = None,
   start_period: str = None,
+  test: typing.List[str] = None,
   timeout: str = None
 ) -> None
 ```
-
-###### `test`<sup>Required</sup> <a name="test" id="@cdktn/provider-docker.container.Container.putHealthcheck.parameter.test"></a>
-
-- *Type:* typing.List[str]
-
-Command to run to check health.
-
-For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#test Container#test}
-
----
 
 ###### `interval`<sup>Optional</sup> <a name="interval" id="@cdktn/provider-docker.container.Container.putHealthcheck.parameter.interval"></a>
 
@@ -1475,7 +1628,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -1485,7 +1638,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -1495,7 +1648,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -1505,7 +1658,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_period Container#start_period}
+
+---
+
+###### `test`<sup>Optional</sup> <a name="test" id="@cdktn/provider-docker.container.Container.putHealthcheck.parameter.test"></a>
+
+- *Type:* typing.List[str]
+
+Command to run to check health.
+
+For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -1515,7 +1680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -1586,6 +1751,40 @@ def put_ports(
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putPorts.parameter.value"></a>
 
 - *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]
+
+---
+
+##### `put_timeouts` <a name="put_timeouts" id="@cdktn/provider-docker.container.Container.putTimeouts"></a>
+
+```python
+def put_timeouts(
+  create: str = None,
+  delete: str = None,
+  update: str = None
+) -> None
+```
+
+###### `create`<sup>Optional</sup> <a name="create" id="@cdktn/provider-docker.container.Container.putTimeouts.parameter.create"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}.
+
+---
+
+###### `delete`<sup>Optional</sup> <a name="delete" id="@cdktn/provider-docker.container.Container.putTimeouts.parameter.delete"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}.
+
+---
+
+###### `update`<sup>Optional</sup> <a name="update" id="@cdktn/provider-docker.container.Container.putTimeouts.parameter.update"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -1703,10 +1902,40 @@ def reset_cpu_shares() -> None
 def reset_destroy_grace_seconds() -> None
 ```
 
+##### `reset_device_read_bps` <a name="reset_device_read_bps" id="@cdktn/provider-docker.container.Container.resetDeviceReadBps"></a>
+
+```python
+def reset_device_read_bps() -> None
+```
+
+##### `reset_device_read_iops` <a name="reset_device_read_iops" id="@cdktn/provider-docker.container.Container.resetDeviceReadIops"></a>
+
+```python
+def reset_device_read_iops() -> None
+```
+
+##### `reset_device_requests` <a name="reset_device_requests" id="@cdktn/provider-docker.container.Container.resetDeviceRequests"></a>
+
+```python
+def reset_device_requests() -> None
+```
+
 ##### `reset_devices` <a name="reset_devices" id="@cdktn/provider-docker.container.Container.resetDevices"></a>
 
 ```python
 def reset_devices() -> None
+```
+
+##### `reset_device_write_bps` <a name="reset_device_write_bps" id="@cdktn/provider-docker.container.Container.resetDeviceWriteBps"></a>
+
+```python
+def reset_device_write_bps() -> None
+```
+
+##### `reset_device_write_iops` <a name="reset_device_write_iops" id="@cdktn/provider-docker.container.Container.resetDeviceWriteIops"></a>
+
+```python
+def reset_device_write_iops() -> None
 ```
 
 ##### `reset_dns` <a name="reset_dns" id="@cdktn/provider-docker.container.Container.resetDns"></a>
@@ -1871,6 +2100,12 @@ def reset_networks_advanced() -> None
 def reset_pid_mode() -> None
 ```
 
+##### `reset_platform` <a name="reset_platform" id="@cdktn/provider-docker.container.Container.resetPlatform"></a>
+
+```python
+def reset_platform() -> None
+```
+
 ##### `reset_ports` <a name="reset_ports" id="@cdktn/provider-docker.container.Container.resetPorts"></a>
 
 ```python
@@ -1965,6 +2200,12 @@ def reset_storage_opts() -> None
 
 ```python
 def reset_sysctls() -> None
+```
+
+##### `reset_timeouts` <a name="reset_timeouts" id="@cdktn/provider-docker.container.Container.resetTimeouts"></a>
+
+```python
+def reset_timeouts() -> None
 ```
 
 ##### `reset_tmpfs` <a name="reset_tmpfs" id="@cdktn/provider-docker.container.Container.resetTmpfs"></a>
@@ -2141,7 +2382,7 @@ The construct id used in the generated config for the Container to import.
 
 The id of the existing Container that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2174,7 +2415,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.bridge">bridge</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.capabilities">capabilities</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference">ContainerCapabilitiesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.containerLogs">container_logs</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadBps">device_read_bps</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList">ContainerDeviceReadBpsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadIops">device_read_iops</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList">ContainerDeviceReadIopsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceRequests">device_requests</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList">ContainerDeviceRequestsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.devices">devices</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList">ContainerDevicesList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteBps">device_write_bps</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList">ContainerDeviceWriteBpsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteIops">device_write_iops</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList">ContainerDeviceWriteIopsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.exitCode">exit_code</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference">ContainerHealthcheckOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.host">host</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHostList">ContainerHostList</a></code> | *No description.* |
@@ -2183,6 +2429,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkData">network_data</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList">ContainerNetworkDataList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvanced">networks_advanced</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList">ContainerNetworksAdvancedList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ports">ports</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList">ContainerPortsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference">ContainerTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ulimit">ulimit</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList">ContainerUlimitList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.upload">upload</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList">ContainerUploadList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.volumes">volumes</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList">ContainerVolumesList</a></code> | *No description.* |
@@ -2198,7 +2445,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuSharesInput">cpu_shares_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpusInput">cpus_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.destroyGraceSecondsInput">destroy_grace_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadBpsInput">device_read_bps_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadIopsInput">device_read_iops_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceRequestsInput">device_requests_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.devicesInput">devices_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteBpsInput">device_write_bps_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteIopsInput">device_write_iops_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsInput">dns_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsOptsInput">dns_opts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsSearchInput">dns_search_input</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -2228,6 +2480,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkModeInput">network_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvancedInput">networks_advanced_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidModeInput">pid_mode_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.platformInput">platform_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.portsInput">ports_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.privilegedInput">privileged_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPortsInput">publish_all_ports_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
@@ -2244,6 +2497,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopTimeoutInput">stop_timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.storageOptsInput">storage_opts_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.sysctlsInput">sysctls_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.timeoutsInput">timeouts_input</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.tmpfsInput">tmpfs_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ttyInput">tty_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ulimitInput">ulimit_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | *No description.* |
@@ -2289,6 +2543,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkMode">network_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidMode">pid_mode</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.platform">platform</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
@@ -2486,6 +2741,36 @@ container_logs: str
 
 ---
 
+##### `device_read_bps`<sup>Required</sup> <a name="device_read_bps" id="@cdktn/provider-docker.container.Container.property.deviceReadBps"></a>
+
+```python
+device_read_bps: ContainerDeviceReadBpsList
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList">ContainerDeviceReadBpsList</a>
+
+---
+
+##### `device_read_iops`<sup>Required</sup> <a name="device_read_iops" id="@cdktn/provider-docker.container.Container.property.deviceReadIops"></a>
+
+```python
+device_read_iops: ContainerDeviceReadIopsList
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList">ContainerDeviceReadIopsList</a>
+
+---
+
+##### `device_requests`<sup>Required</sup> <a name="device_requests" id="@cdktn/provider-docker.container.Container.property.deviceRequests"></a>
+
+```python
+device_requests: ContainerDeviceRequestsList
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList">ContainerDeviceRequestsList</a>
+
+---
+
 ##### `devices`<sup>Required</sup> <a name="devices" id="@cdktn/provider-docker.container.Container.property.devices"></a>
 
 ```python
@@ -2493,6 +2778,26 @@ devices: ContainerDevicesList
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerDevicesList">ContainerDevicesList</a>
+
+---
+
+##### `device_write_bps`<sup>Required</sup> <a name="device_write_bps" id="@cdktn/provider-docker.container.Container.property.deviceWriteBps"></a>
+
+```python
+device_write_bps: ContainerDeviceWriteBpsList
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList">ContainerDeviceWriteBpsList</a>
+
+---
+
+##### `device_write_iops`<sup>Required</sup> <a name="device_write_iops" id="@cdktn/provider-docker.container.Container.property.deviceWriteIops"></a>
+
+```python
+device_write_iops: ContainerDeviceWriteIopsList
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList">ContainerDeviceWriteIopsList</a>
 
 ---
 
@@ -2573,6 +2878,16 @@ ports: ContainerPortsList
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerPortsList">ContainerPortsList</a>
+
+---
+
+##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktn/provider-docker.container.Container.property.timeouts"></a>
+
+```python
+timeouts: ContainerTimeoutsOutputReference
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference">ContainerTimeoutsOutputReference</a>
 
 ---
 
@@ -2726,6 +3041,36 @@ destroy_grace_seconds_input: typing.Union[int, float]
 
 ---
 
+##### `device_read_bps_input`<sup>Optional</sup> <a name="device_read_bps_input" id="@cdktn/provider-docker.container.Container.property.deviceReadBpsInput"></a>
+
+```python
+device_read_bps_input: IResolvable | typing.List[ContainerDeviceReadBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]
+
+---
+
+##### `device_read_iops_input`<sup>Optional</sup> <a name="device_read_iops_input" id="@cdktn/provider-docker.container.Container.property.deviceReadIopsInput"></a>
+
+```python
+device_read_iops_input: IResolvable | typing.List[ContainerDeviceReadIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]
+
+---
+
+##### `device_requests_input`<sup>Optional</sup> <a name="device_requests_input" id="@cdktn/provider-docker.container.Container.property.deviceRequestsInput"></a>
+
+```python
+device_requests_input: IResolvable | typing.List[ContainerDeviceRequests]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]
+
+---
+
 ##### `devices_input`<sup>Optional</sup> <a name="devices_input" id="@cdktn/provider-docker.container.Container.property.devicesInput"></a>
 
 ```python
@@ -2733,6 +3078,26 @@ devices_input: IResolvable | typing.List[ContainerDevices]
 ```
 
 - *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]
+
+---
+
+##### `device_write_bps_input`<sup>Optional</sup> <a name="device_write_bps_input" id="@cdktn/provider-docker.container.Container.property.deviceWriteBpsInput"></a>
+
+```python
+device_write_bps_input: IResolvable | typing.List[ContainerDeviceWriteBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]
+
+---
+
+##### `device_write_iops_input`<sup>Optional</sup> <a name="device_write_iops_input" id="@cdktn/provider-docker.container.Container.property.deviceWriteIopsInput"></a>
+
+```python
+device_write_iops_input: IResolvable | typing.List[ContainerDeviceWriteIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]
 
 ---
 
@@ -3026,6 +3391,16 @@ pid_mode_input: str
 
 ---
 
+##### `platform_input`<sup>Optional</sup> <a name="platform_input" id="@cdktn/provider-docker.container.Container.property.platformInput"></a>
+
+```python
+platform_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `ports_input`<sup>Optional</sup> <a name="ports_input" id="@cdktn/provider-docker.container.Container.property.portsInput"></a>
 
 ```python
@@ -3183,6 +3558,16 @@ sysctls_input: typing.Mapping[str]
 ```
 
 - *Type:* typing.Mapping[str]
+
+---
+
+##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktn/provider-docker.container.Container.property.timeoutsInput"></a>
+
+```python
+timeouts_input: IResolvable | ContainerTimeouts
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
 
 ---
 
@@ -3636,6 +4021,16 @@ pid_mode: str
 
 ---
 
+##### `platform`<sup>Required</sup> <a name="platform" id="@cdktn/provider-docker.container.Container.property.platform"></a>
+
+```python
+platform: str
+```
+
+- *Type:* str
+
+---
+
 ##### `privileged`<sup>Required</sup> <a name="privileged" id="@cdktn/provider-docker.container.Container.property.privileged"></a>
 
 ```python
@@ -3908,7 +4303,7 @@ add: typing.List[str]
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -3922,7 +4317,7 @@ drop: typing.List[str]
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -3955,7 +4350,12 @@ container.ContainerConfig(
   cpu_set: str = None,
   cpu_shares: typing.Union[int, float] = None,
   destroy_grace_seconds: typing.Union[int, float] = None,
+  device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps] = None,
+  device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops] = None,
+  device_requests: IResolvable | typing.List[ContainerDeviceRequests] = None,
   devices: IResolvable | typing.List[ContainerDevices] = None,
+  device_write_bps: IResolvable | typing.List[ContainerDeviceWriteBps] = None,
+  device_write_iops: IResolvable | typing.List[ContainerDeviceWriteIops] = None,
   dns: typing.List[str] = None,
   dns_opts: typing.List[str] = None,
   dns_search: typing.List[str] = None,
@@ -3983,6 +4383,7 @@ container.ContainerConfig(
   network_mode: str = None,
   networks_advanced: IResolvable | typing.List[ContainerNetworksAdvanced] = None,
   pid_mode: str = None,
+  platform: str = None,
   ports: IResolvable | typing.List[ContainerPorts] = None,
   privileged: bool | IResolvable = None,
   publish_all_ports: bool | IResolvable = None,
@@ -3999,6 +4400,7 @@ container.ContainerConfig(
   stop_timeout: typing.Union[int, float] = None,
   storage_opts: typing.Mapping[str] = None,
   sysctls: typing.Mapping[str] = None,
+  timeouts: ContainerTimeouts = None,
   tmpfs: typing.Mapping[str] = None,
   tty: bool | IResolvable = None,
   ulimit: IResolvable | typing.List[ContainerUlimit] = None,
@@ -4037,19 +4439,24 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadBps">device_read_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | device_read_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadIops">device_read_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | device_read_iops block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceRequests">device_requests</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | device_requests block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.devices">devices</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>]</code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteBps">device_write_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]</code> | device_write_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteIops">device_write_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]</code> | device_write_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dns">dns</a></code> | <code>typing.List[str]</code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsOpts">dns_opts</a></code> | <code>typing.List[str]</code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsSearch">dns_search</a></code> | <code>typing.List[str]</code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.domainname">domainname</a></code> | <code>str</code> | Domain name of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.entrypoint">entrypoint</a></code> | <code>typing.List[str]</code> | The command to use as the Entrypoint for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.env">env</a></code> | <code>typing.List[str]</code> | Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.gpus">gpus</a></code> | <code>str</code> | GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.groupAdd">group_add</a></code> | <code>typing.List[str]</code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
@@ -4064,7 +4471,8 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mustRun">must_run</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networkMode">network_mode</a></code> | <code>str</code> | Network mode of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networksAdvanced">networks_advanced</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>]</code> | networks_advanced block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pid_mode</a></code> | <code>str</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pid_mode</a></code> | <code>str</code> | The PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.platform">platform</a></code> | <code>str</code> | Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ports">ports</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>]</code> | ports block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.privileged">privileged</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.publishAllPorts">publish_all_ports</a></code> | <code>bool \| cdktn.IResolvable</code> | Publish all ports of the container. |
@@ -4081,6 +4489,7 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stopTimeout">stop_timeout</a></code> | <code>typing.Union[int, float]</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.storageOpts">storage_opts</a></code> | <code>typing.Mapping[str]</code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.sysctls">sysctls</a></code> | <code>typing.Mapping[str]</code> | A map of kernel parameters (sysctls) to set in the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tmpfs">tmpfs</a></code> | <code>typing.Mapping[str]</code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tty">tty</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>]</code> | ulimit block. |
@@ -4176,7 +4585,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -4190,7 +4599,7 @@ name: str
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -4204,7 +4613,7 @@ attach: bool | IResolvable
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -4218,7 +4627,7 @@ capabilities: ContainerCapabilities
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -4232,7 +4641,7 @@ cgroupns_mode: str
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -4246,7 +4655,7 @@ cgroup_parent: str
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -4262,7 +4671,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -4276,7 +4685,7 @@ container_read_refresh_timeout_milliseconds: typing.Union[int, float]
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -4290,7 +4699,7 @@ cpu_period: typing.Union[int, float]
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -4306,7 +4715,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -4322,7 +4731,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -4336,7 +4745,7 @@ cpu_set: str
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -4350,7 +4759,7 @@ cpu_shares: typing.Union[int, float]
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -4366,7 +4775,49 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `device_read_bps`<sup>Optional</sup> <a name="device_read_bps" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceReadBps"></a>
+
+```python
+device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]
+
+device_read_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_bps Container#device_read_bps}
+
+---
+
+##### `device_read_iops`<sup>Optional</sup> <a name="device_read_iops" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceReadIops"></a>
+
+```python
+device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]
+
+device_read_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_iops Container#device_read_iops}
+
+---
+
+##### `device_requests`<sup>Optional</sup> <a name="device_requests" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceRequests"></a>
+
+```python
+device_requests: IResolvable | typing.List[ContainerDeviceRequests]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]
+
+device_requests block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -4380,7 +4831,35 @@ devices: IResolvable | typing.List[ContainerDevices]
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#devices Container#devices}
+
+---
+
+##### `device_write_bps`<sup>Optional</sup> <a name="device_write_bps" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteBps"></a>
+
+```python
+device_write_bps: IResolvable | typing.List[ContainerDeviceWriteBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]
+
+device_write_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_bps Container#device_write_bps}
+
+---
+
+##### `device_write_iops`<sup>Optional</sup> <a name="device_write_iops" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteIops"></a>
+
+```python
+device_write_iops: IResolvable | typing.List[ContainerDeviceWriteIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]
+
+device_write_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -4394,7 +4873,7 @@ dns: typing.List[str]
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -4408,7 +4887,7 @@ dns_opts: typing.List[str]
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -4422,7 +4901,7 @@ dns_search: typing.List[str]
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -4436,7 +4915,7 @@ domainname: str
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -4452,7 +4931,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -4466,7 +4945,7 @@ env: typing.List[str]
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -4478,11 +4957,9 @@ gpus: str
 
 - *Type:* str
 
-GPU devices to add to the container.
+GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -4496,7 +4973,7 @@ group_add: typing.List[str]
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -4510,7 +4987,7 @@ healthcheck: ContainerHealthcheck
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -4524,7 +5001,7 @@ host: IResolvable | typing.List[ContainerHost]
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -4538,7 +5015,7 @@ hostname: str
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -4550,7 +5027,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4569,7 +5046,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -4583,7 +5060,7 @@ ipc_mode: str
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -4597,7 +5074,7 @@ labels: IResolvable | typing.List[ContainerLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -4611,7 +5088,7 @@ log_driver: str
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -4625,7 +5102,7 @@ log_opts: typing.Mapping[str]
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -4639,7 +5116,7 @@ logs: bool | IResolvable
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -4653,7 +5130,7 @@ max_retry_count: typing.Union[int, float]
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -4667,7 +5144,7 @@ memory: typing.Union[int, float]
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -4683,7 +5160,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -4699,7 +5176,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -4713,7 +5190,7 @@ mounts: IResolvable | typing.List[ContainerMounts]
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -4727,9 +5204,9 @@ must_run: bool | IResolvable
 
 If `true`, then the Docker container will be kept running.
 
-If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
+If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -4745,7 +5222,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -4759,7 +5236,7 @@ networks_advanced: IResolvable | typing.List[ContainerNetworksAdvanced]
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -4771,9 +5248,23 @@ pid_mode: str
 
 - *Type:* str
 
-he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#pid_mode Container#pid_mode}
+
+---
+
+##### `platform`<sup>Optional</sup> <a name="platform" id="@cdktn/provider-docker.container.ContainerConfig.property.platform"></a>
+
+```python
+platform: str
+```
+
+- *Type:* str
+
+Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -4787,7 +5278,7 @@ ports: IResolvable | typing.List[ContainerPorts]
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -4801,7 +5292,7 @@ privileged: bool | IResolvable
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -4815,7 +5306,7 @@ publish_all_ports: bool | IResolvable
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -4829,7 +5320,7 @@ read_only: bool | IResolvable
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -4843,7 +5334,7 @@ remove_volumes: bool | IResolvable
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -4857,7 +5348,7 @@ restart: str
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -4871,7 +5362,7 @@ rm: bool | IResolvable
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -4885,7 +5376,7 @@ runtime: str
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -4899,7 +5390,7 @@ security_opts: typing.List[str]
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -4913,7 +5404,7 @@ shm_size: typing.Union[int, float]
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -4929,7 +5420,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -4943,7 +5434,7 @@ stdin_open: bool | IResolvable
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -4957,7 +5448,7 @@ stop_signal: str
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -4971,7 +5462,7 @@ stop_timeout: typing.Union[int, float]
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -4985,7 +5476,7 @@ storage_opts: typing.Mapping[str]
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -4999,7 +5490,21 @@ sysctls: typing.Mapping[str]
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#sysctls Container#sysctls}
+
+---
+
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktn/provider-docker.container.ContainerConfig.property.timeouts"></a>
+
+```python
+timeouts: ContainerTimeouts
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
+
+timeouts block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -5013,7 +5518,7 @@ tmpfs: typing.Mapping[str]
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -5027,7 +5532,7 @@ tty: bool | IResolvable
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -5041,7 +5546,7 @@ ulimit: IResolvable | typing.List[ContainerUlimit]
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -5055,7 +5560,7 @@ upload: IResolvable | typing.List[ContainerUpload]
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -5069,9 +5574,9 @@ user: str
 
 User used for run the first process.
 
-Format is `user` or `user:group` which user and group can be passed literraly or by name.
+Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -5085,7 +5590,7 @@ userns_mode: str
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -5099,7 +5604,7 @@ volumes: IResolvable | typing.List[ContainerVolumes]
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -5115,7 +5620,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -5129,7 +5634,7 @@ wait_timeout: typing.Union[int, float]
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -5143,7 +5648,205 @@ working_dir: str
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#working_dir Container#working_dir}
+
+---
+
+### ContainerDeviceReadBps <a name="ContainerDeviceReadBps" id="@cdktn/provider-docker.container.ContainerDeviceReadBps"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadBps(
+  path: str,
+  rate: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps.property.path">path</a></code> | <code>str</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | The read rate limit in bytes per second. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The read rate limit in bytes per second.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceReadIops <a name="ContainerDeviceReadIops" id="@cdktn/provider-docker.container.ContainerDeviceReadIops"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadIops(
+  path: str,
+  rate: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops.property.path">path</a></code> | <code>str</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | The read IOPS limit. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The read IOPS limit.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceRequests <a name="ContainerDeviceRequests" id="@cdktn/provider-docker.container.ContainerDeviceRequests"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceRequests.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceRequests(
+  capabilities: typing.List[str] = None,
+  count: typing.Union[int, float] = None,
+  device_ids: typing.List[str] = None,
+  driver: str = None,
+  options: typing.Mapping[str] = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.capabilities">capabilities</a></code> | <code>typing.List[str]</code> | List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`). |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.deviceIds">device_ids</a></code> | <code>typing.List[str]</code> | List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`). |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.driver">driver</a></code> | <code>str</code> | The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.options">options</a></code> | <code>typing.Mapping[str]</code> | Driver-specific options. |
+
+---
+
+##### `capabilities`<sup>Optional</sup> <a name="capabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.capabilities"></a>
+
+```python
+capabilities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.count"></a>
+
+```python
+count: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#count Container#count}
+
+---
+
+##### `device_ids`<sup>Optional</sup> <a name="device_ids" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.deviceIds"></a>
+
+```python
+device_ids: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_ids Container#device_ids}
+
+---
+
+##### `driver`<sup>Optional</sup> <a name="driver" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.driver"></a>
+
+```python
+driver: str
+```
+
+- *Type:* str
+
+The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver Container#driver}
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.options"></a>
+
+```python
+options: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+Driver-specific options.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#options Container#options}
 
 ---
 
@@ -5181,7 +5884,7 @@ host_path: str
 
 The path on the host where the device is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -5195,7 +5898,9 @@ container_path: str
 
 The path in the container where the device will be bound.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+If not set, it defaults to the value of `host_path`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -5209,7 +5914,107 @@ permissions: str
 
 The cgroup permissions given to the container to access the device. Defaults to `rwm`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
+
+---
+
+### ContainerDeviceWriteBps <a name="ContainerDeviceWriteBps" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteBps(
+  path: str,
+  rate: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.path">path</a></code> | <code>str</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | The write rate limit in bytes per second. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The write rate limit in bytes per second.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceWriteIops <a name="ContainerDeviceWriteIops" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteIops(
+  path: str,
+  rate: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.path">path</a></code> | <code>str</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | The write IOPS limit. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The write IOPS limit.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -5221,11 +6026,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 from cdktn_provider_docker import container
 
 container.ContainerHealthcheck(
-  test: typing.List[str],
   interval: str = None,
   retries: typing.Union[int, float] = None,
   start_interval: str = None,
   start_period: str = None,
+  test: typing.List[str] = None,
   timeout: str = None
 )
 ```
@@ -5234,28 +6039,12 @@ container.ContainerHealthcheck(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.test">test</a></code> | <code>typing.List[str]</code> | Command to run to check health. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.interval">interval</a></code> | <code>str</code> | Time between running the check (ms\|s\|m\|h). Defaults to `0s`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.retries">retries</a></code> | <code>typing.Union[int, float]</code> | Consecutive failures needed to report unhealthy. Defaults to `0`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.startInterval">start_interval</a></code> | <code>str</code> | Interval before the healthcheck starts (ms\|s\|m\|h). Defaults to `0s`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.startPeriod">start_period</a></code> | <code>str</code> | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h). Defaults to `0s`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.test">test</a></code> | <code>typing.List[str]</code> | Command to run to check health. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.timeout">timeout</a></code> | <code>str</code> | Maximum time to allow one check to run (ms\|s\|m\|h). Defaults to `0s`. |
-
----
-
-##### `test`<sup>Required</sup> <a name="test" id="@cdktn/provider-docker.container.ContainerHealthcheck.property.test"></a>
-
-```python
-test: typing.List[str]
-```
-
-- *Type:* typing.List[str]
-
-Command to run to check health.
-
-For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -5269,7 +6058,7 @@ interval: str
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -5283,7 +6072,7 @@ retries: typing.Union[int, float]
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -5297,7 +6086,7 @@ start_interval: str
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -5311,7 +6100,23 @@ start_period: str
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_period Container#start_period}
+
+---
+
+##### `test`<sup>Optional</sup> <a name="test" id="@cdktn/provider-docker.container.ContainerHealthcheck.property.test"></a>
+
+```python
+test: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Command to run to check health.
+
+For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -5325,7 +6130,7 @@ timeout: str
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -5361,7 +6166,7 @@ host: str
 
 Hostname to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -5375,7 +6180,7 @@ ip: str
 
 IP address this hostname should resolve to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5411,7 +6216,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5425,7 +6230,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5471,7 +6276,7 @@ target: str
 
 Container path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#target Container#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#target Container#target}
 
 ---
 
@@ -5485,7 +6290,7 @@ type: str
 
 The mount type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#type Container#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#type Container#type}
 
 ---
 
@@ -5499,7 +6304,7 @@ bind_options: ContainerMountsBindOptions
 
 bind_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#bind_options Container#bind_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#bind_options Container#bind_options}
 
 ---
 
@@ -5513,7 +6318,7 @@ read_only: bool | IResolvable
 
 Whether the mount should be read-only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -5527,7 +6332,7 @@ source: str
 
 Mount source (e.g. a volume name, a host path).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -5541,7 +6346,7 @@ tmpfs_options: ContainerMountsTmpfsOptions
 
 tmpfs_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
 
 ---
 
@@ -5555,7 +6360,7 @@ volume_options: ContainerMountsVolumeOptions
 
 volume_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_options Container#volume_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_options Container#volume_options}
 
 ---
 
@@ -5589,7 +6394,7 @@ propagation: str
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -5625,7 +6430,7 @@ mode: typing.Union[int, float]
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -5639,7 +6444,7 @@ size_bytes: typing.Union[int, float]
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -5681,7 +6486,7 @@ driver_name: str
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -5695,7 +6500,7 @@ driver_options: typing.Mapping[str]
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -5709,7 +6514,7 @@ labels: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -5723,7 +6528,7 @@ no_copy: bool | IResolvable
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -5737,7 +6542,7 @@ subpath: str
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -5773,7 +6578,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5787,7 +6592,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5812,8 +6617,11 @@ from cdktn_provider_docker import container
 container.ContainerNetworksAdvanced(
   name: str,
   aliases: typing.List[str] = None,
+  driver_opts: typing.List[str] = None,
+  gw_priority: typing.Union[int, float] = None,
   ipv4_address: str = None,
   ipv6_address: str = None,
+  link_local_ips: typing.List[str] = None,
   mac_address: str = None
 )
 ```
@@ -5824,8 +6632,11 @@ container.ContainerNetworksAdvanced(
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.name">name</a></code> | <code>str</code> | The name or id of the network to use. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.aliases">aliases</a></code> | <code>typing.List[str]</code> | The network aliases of the container in the specific network. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.driverOpts">driver_opts</a></code> | <code>typing.List[str]</code> | An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.gwPriority">gw_priority</a></code> | <code>typing.Union[int, float]</code> | Gateway priority for this endpoint. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv4Address">ipv4_address</a></code> | <code>str</code> | The IPV4 address of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv6Address">ipv6_address</a></code> | <code>str</code> | The IPV6 address of the container in the specific network. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.linkLocalIps">link_local_ips</a></code> | <code>typing.List[str]</code> | The link-local IPs of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.macAddress">mac_address</a></code> | <code>str</code> | The MAC address of the container in the specific network. |
 
 ---
@@ -5842,7 +6653,7 @@ The name or id of the network to use.
 
 You can use `name` or `id` attribute from a `docker_network` resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -5856,7 +6667,37 @@ aliases: typing.List[str]
 
 The network aliases of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#aliases Container#aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#aliases Container#aliases}
+
+---
+
+##### `driver_opts`<sup>Optional</sup> <a name="driver_opts" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.driverOpts"></a>
+
+```python
+driver_opts: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_opts Container#driver_opts}
+
+---
+
+##### `gw_priority`<sup>Optional</sup> <a name="gw_priority" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.gwPriority"></a>
+
+```python
+gw_priority: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Gateway priority for this endpoint.
+
+The endpoint with the highest priority will provide the default gateway for the container. This is the equivalent to `--gw-priority` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gw_priority Container#gw_priority}
 
 ---
 
@@ -5870,7 +6711,7 @@ ipv4_address: str
 
 The IPV4 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv4_address Container#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv4_address Container#ipv4_address}
 
 ---
 
@@ -5884,7 +6725,23 @@ ipv6_address: str
 
 The IPV6 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv6_address Container#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv6_address Container#ipv6_address}
+
+---
+
+##### `link_local_ips`<sup>Optional</sup> <a name="link_local_ips" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.linkLocalIps"></a>
+
+```python
+link_local_ips: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The link-local IPs of the container in the specific network.
+
+This is the equivalent to repeating `--link-local-ip` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#link_local_ips Container#link_local_ips}
 
 ---
 
@@ -5898,7 +6755,7 @@ mac_address: str
 
 The MAC address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mac_address Container#mac_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mac_address Container#mac_address}
 
 ---
 
@@ -5938,7 +6795,7 @@ internal: typing.Union[int, float]
 
 Port within the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#internal Container#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#internal Container#internal}
 
 ---
 
@@ -5952,7 +6809,7 @@ external: typing.Union[int, float]
 
 Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#external Container#external}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#external Container#external}
 
 ---
 
@@ -5966,7 +6823,7 @@ ip: str
 
 IP address/mask that can access this port. Defaults to `0.0.0.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5980,7 +6837,67 @@ protocol: str
 
 Protocol that can be used over this port. Defaults to `tcp`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#protocol Container#protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#protocol Container#protocol}
+
+---
+
+### ContainerTimeouts <a name="ContainerTimeouts" id="@cdktn/provider-docker.container.ContainerTimeouts"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerTimeouts.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerTimeouts(
+  create: str = None,
+  delete: str = None,
+  update: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}. |
+
+---
+
+##### `create`<sup>Optional</sup> <a name="create" id="@cdktn/provider-docker.container.ContainerTimeouts.property.create"></a>
+
+```python
+create: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}.
+
+---
+
+##### `delete`<sup>Optional</sup> <a name="delete" id="@cdktn/provider-docker.container.ContainerTimeouts.property.delete"></a>
+
+```python
+delete: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}.
+
+---
+
+##### `update`<sup>Optional</sup> <a name="update" id="@cdktn/provider-docker.container.ContainerTimeouts.property.update"></a>
+
+```python
+update: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -6018,7 +6935,7 @@ hard: typing.Union[int, float]
 
 The hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hard Container#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hard Container#hard}
 
 ---
 
@@ -6032,7 +6949,7 @@ name: str
 
 The name of the ulimit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -6046,7 +6963,7 @@ soft: typing.Union[int, float]
 
 The soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#soft Container#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#soft Container#soft}
 
 ---
 
@@ -6092,7 +7009,7 @@ file: str
 
 Path to the file in the container where is upload goes to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#file Container#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#file Container#file}
 
 ---
 
@@ -6108,7 +7025,7 @@ Literal string value to use as the object content, which will be uploaded as UTF
 
 Conflicts with `content_base64` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content Container#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content Container#content}
 
 ---
 
@@ -6124,7 +7041,7 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 
 This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content_base64 Container#content_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content_base64 Container#content_base64}
 
 ---
 
@@ -6138,7 +7055,7 @@ executable: bool | IResolvable
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#executable Container#executable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#executable Container#executable}
 
 ---
 
@@ -6152,7 +7069,7 @@ permissions: str
 
 The permission mode for the file in the container. Has precedence over `executable`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -6168,7 +7085,7 @@ A filename that references a file which will be uploaded as the object content.
 
 This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -6182,7 +7099,7 @@ source_hash: str
 
 If using `source`, this will force an update if the file content has updated but the filename has not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source_hash Container#source_hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source_hash Container#source_hash}
 
 ---
 
@@ -6198,6 +7115,7 @@ container.ContainerVolumes(
   from_container: str = None,
   host_path: str = None,
   read_only: bool | IResolvable = None,
+  selinux_relabel: str = None,
   volume_name: str = None
 )
 ```
@@ -6210,6 +7128,7 @@ container.ContainerVolumes(
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.fromContainer">from_container</a></code> | <code>str</code> | The container where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.hostPath">host_path</a></code> | <code>str</code> | The path on the host where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, this volume will be readonly. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.selinuxRelabel">selinux_relabel</a></code> | <code>str</code> | SELinux relabel mode for bind mounts. Supported values are `z` and `Z`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.volumeName">volume_name</a></code> | <code>str</code> | The name of the docker volume which should be mounted. |
 
 ---
@@ -6224,7 +7143,7 @@ container_path: str
 
 The path in the container where the volume will be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -6238,7 +7157,7 @@ from_container: str
 
 The container where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#from_container Container#from_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#from_container Container#from_container}
 
 ---
 
@@ -6252,7 +7171,7 @@ host_path: str
 
 The path on the host where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -6266,7 +7185,21 @@ read_only: bool | IResolvable
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
+
+---
+
+##### `selinux_relabel`<sup>Optional</sup> <a name="selinux_relabel" id="@cdktn/provider-docker.container.ContainerVolumes.property.selinuxRelabel"></a>
+
+```python
+selinux_relabel: str
+```
+
+- *Type:* str
+
+SELinux relabel mode for bind mounts. Supported values are `z` and `Z`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
 
 ---
 
@@ -6280,7 +7213,7 @@ volume_name: str
 
 The name of the docker volume which should be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_name Container#volume_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_name Container#volume_name}
 
 ---
 
@@ -6614,6 +7547,1631 @@ internal_value: ContainerCapabilities
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerCapabilities">ContainerCapabilities</a>
+
+---
+
+
+### ContainerDeviceReadBpsList <a name="ContainerDeviceReadBpsList" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadBpsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ContainerDeviceReadBpsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | typing.List[ContainerDeviceReadBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]
+
+---
+
+
+### ContainerDeviceReadBpsOutputReference <a name="ContainerDeviceReadBpsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadBpsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rateInput">rate_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `path_input`<sup>Optional</sup> <a name="path_input" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.pathInput"></a>
+
+```python
+path_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate_input`<sup>Optional</sup> <a name="rate_input" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rateInput"></a>
+
+```python
+rate_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerDeviceReadBps
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>
+
+---
+
+
+### ContainerDeviceReadIopsList <a name="ContainerDeviceReadIopsList" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadIopsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ContainerDeviceReadIopsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | typing.List[ContainerDeviceReadIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]
+
+---
+
+
+### ContainerDeviceReadIopsOutputReference <a name="ContainerDeviceReadIopsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceReadIopsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rateInput">rate_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `path_input`<sup>Optional</sup> <a name="path_input" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.pathInput"></a>
+
+```python
+path_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate_input`<sup>Optional</sup> <a name="rate_input" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rateInput"></a>
+
+```python
+rate_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerDeviceReadIops
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>
+
+---
+
+
+### ContainerDeviceRequestsList <a name="ContainerDeviceRequestsList" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceRequestsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ContainerDeviceRequestsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | typing.List[ContainerDeviceRequests]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]
+
+---
+
+
+### ContainerDeviceRequestsOutputReference <a name="ContainerDeviceRequestsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceRequestsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCapabilities">reset_capabilities</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCount">reset_count</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDeviceIds">reset_device_ids</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDriver">reset_driver</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetOptions">reset_options</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_capabilities` <a name="reset_capabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCapabilities"></a>
+
+```python
+def reset_capabilities() -> None
+```
+
+##### `reset_count` <a name="reset_count" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCount"></a>
+
+```python
+def reset_count() -> None
+```
+
+##### `reset_device_ids` <a name="reset_device_ids" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDeviceIds"></a>
+
+```python
+def reset_device_ids() -> None
+```
+
+##### `reset_driver` <a name="reset_driver" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDriver"></a>
+
+```python
+def reset_driver() -> None
+```
+
+##### `reset_options` <a name="reset_options" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetOptions"></a>
+
+```python
+def reset_options() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilitiesInput">capabilities_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.countInput">count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIdsInput">device_ids_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driverInput">driver_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.optionsInput">options_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilities">capabilities</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIds">device_ids</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driver">driver</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.options">options</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `capabilities_input`<sup>Optional</sup> <a name="capabilities_input" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilitiesInput"></a>
+
+```python
+capabilities_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `count_input`<sup>Optional</sup> <a name="count_input" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.countInput"></a>
+
+```python
+count_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `device_ids_input`<sup>Optional</sup> <a name="device_ids_input" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIdsInput"></a>
+
+```python
+device_ids_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `driver_input`<sup>Optional</sup> <a name="driver_input" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driverInput"></a>
+
+```python
+driver_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `options_input`<sup>Optional</sup> <a name="options_input" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.optionsInput"></a>
+
+```python
+options_input: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `capabilities`<sup>Required</sup> <a name="capabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilities"></a>
+
+```python
+capabilities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `count`<sup>Required</sup> <a name="count" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.count"></a>
+
+```python
+count: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `device_ids`<sup>Required</sup> <a name="device_ids" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIds"></a>
+
+```python
+device_ids: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `driver`<sup>Required</sup> <a name="driver" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driver"></a>
+
+```python
+driver: str
+```
+
+- *Type:* str
+
+---
+
+##### `options`<sup>Required</sup> <a name="options" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.options"></a>
+
+```python
+options: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerDeviceRequests
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>
 
 ---
 
@@ -7162,6 +9720,1022 @@ internal_value: IResolvable | ContainerDevices
 ---
 
 
+### ContainerDeviceWriteBpsList <a name="ContainerDeviceWriteBpsList" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteBpsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ContainerDeviceWriteBpsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | typing.List[ContainerDeviceWriteBps]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>]
+
+---
+
+
+### ContainerDeviceWriteBpsOutputReference <a name="ContainerDeviceWriteBpsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteBpsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rateInput">rate_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `path_input`<sup>Optional</sup> <a name="path_input" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.pathInput"></a>
+
+```python
+path_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate_input`<sup>Optional</sup> <a name="rate_input" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rateInput"></a>
+
+```python
+rate_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerDeviceWriteBps
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>
+
+---
+
+
+### ContainerDeviceWriteIopsList <a name="ContainerDeviceWriteIopsList" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteIopsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ContainerDeviceWriteIopsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | typing.List[ContainerDeviceWriteIops]
+```
+
+- *Type:* cdktn.IResolvable | typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>]
+
+---
+
+
+### ContainerDeviceWriteIopsOutputReference <a name="ContainerDeviceWriteIopsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerDeviceWriteIopsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rateInput">rate_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rate">rate</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `path_input`<sup>Optional</sup> <a name="path_input" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.pathInput"></a>
+
+```python
+path_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate_input`<sup>Optional</sup> <a name="rate_input" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rateInput"></a>
+
+```python
+rate_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rate"></a>
+
+```python
+rate: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerDeviceWriteIops
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>
+
+---
+
+
 ### ContainerHealthcheckOutputReference <a name="ContainerHealthcheckOutputReference" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer"></a>
@@ -7219,6 +10793,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetRetries">reset_retries</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetStartInterval">reset_start_interval</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetStartPeriod">reset_start_period</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTest">reset_test</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTimeout">reset_timeout</a></code> | *No description.* |
 
 ---
@@ -7417,6 +10992,12 @@ def reset_start_interval() -> None
 
 ```python
 def reset_start_period() -> None
+```
+
+##### `reset_test` <a name="reset_test" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTest"></a>
+
+```python
+def reset_test() -> None
 ```
 
 ##### `reset_timeout` <a name="reset_timeout" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTimeout"></a>
@@ -9362,7 +12943,7 @@ def put_bind_options(
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -9381,7 +12962,7 @@ def put_tmpfs_options(
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -9391,7 +12972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -9413,7 +12994,7 @@ def put_volume_options(
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -9423,7 +13004,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -9433,7 +13014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -9443,7 +13024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -9453,7 +13034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -11746,8 +15327,11 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetAliases">reset_aliases</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetDriverOpts">reset_driver_opts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetGwPriority">reset_gw_priority</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv4Address">reset_ipv4_address</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv6Address">reset_ipv6_address</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetLinkLocalIps">reset_link_local_ips</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress">reset_mac_address</a></code> | *No description.* |
 
 ---
@@ -11930,6 +15514,18 @@ Returns a reversible string representation.
 def reset_aliases() -> None
 ```
 
+##### `reset_driver_opts` <a name="reset_driver_opts" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetDriverOpts"></a>
+
+```python
+def reset_driver_opts() -> None
+```
+
+##### `reset_gw_priority` <a name="reset_gw_priority" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetGwPriority"></a>
+
+```python
+def reset_gw_priority() -> None
+```
+
 ##### `reset_ipv4_address` <a name="reset_ipv4_address" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv4Address"></a>
 
 ```python
@@ -11940,6 +15536,12 @@ def reset_ipv4_address() -> None
 
 ```python
 def reset_ipv6_address() -> None
+```
+
+##### `reset_link_local_ips` <a name="reset_link_local_ips" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetLinkLocalIps"></a>
+
+```python
+def reset_link_local_ips() -> None
 ```
 
 ##### `reset_mac_address` <a name="reset_mac_address" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress"></a>
@@ -11956,13 +15558,19 @@ def reset_mac_address() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliasesInput">aliases_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOptsInput">driver_opts_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriorityInput">gw_priority_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4AddressInput">ipv4_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6AddressInput">ipv6_address_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIpsInput">link_local_ips_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddressInput">mac_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliases">aliases</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOpts">driver_opts</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriority">gw_priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address">ipv4_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6Address">ipv6_address</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIps">link_local_ips</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddress">mac_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a></code> | *No description.* |
@@ -12003,6 +15611,26 @@ aliases_input: typing.List[str]
 
 ---
 
+##### `driver_opts_input`<sup>Optional</sup> <a name="driver_opts_input" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOptsInput"></a>
+
+```python
+driver_opts_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `gw_priority_input`<sup>Optional</sup> <a name="gw_priority_input" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriorityInput"></a>
+
+```python
+gw_priority_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
 ##### `ipv4_address_input`<sup>Optional</sup> <a name="ipv4_address_input" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4AddressInput"></a>
 
 ```python
@@ -12020,6 +15648,16 @@ ipv6_address_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `link_local_ips_input`<sup>Optional</sup> <a name="link_local_ips_input" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIpsInput"></a>
+
+```python
+link_local_ips_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 
@@ -12053,6 +15691,26 @@ aliases: typing.List[str]
 
 ---
 
+##### `driver_opts`<sup>Required</sup> <a name="driver_opts" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOpts"></a>
+
+```python
+driver_opts: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `gw_priority`<sup>Required</sup> <a name="gw_priority" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriority"></a>
+
+```python
+gw_priority: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
 ##### `ipv4_address`<sup>Required</sup> <a name="ipv4_address" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address"></a>
 
 ```python
@@ -12070,6 +15728,16 @@ ipv6_address: str
 ```
 
 - *Type:* str
+
+---
+
+##### `link_local_ips`<sup>Required</sup> <a name="link_local_ips" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIps"></a>
+
+```python
+link_local_ips: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 
@@ -12673,6 +16341,367 @@ internal_value: IResolvable | ContainerPorts
 ```
 
 - *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>
+
+---
+
+
+### ContainerTimeoutsOutputReference <a name="ContainerTimeoutsOutputReference" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer"></a>
+
+```python
+from cdktn_provider_docker import container
+
+container.ContainerTimeoutsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktn.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_create` <a name="reset_create" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetCreate"></a>
+
+```python
+def reset_create() -> None
+```
+
+##### `reset_delete` <a name="reset_delete" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetDelete"></a>
+
+```python
+def reset_delete() -> None
+```
+
+##### `reset_update` <a name="reset_update" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetUpdate"></a>
+
+```python
+def reset_update() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `create_input`<sup>Optional</sup> <a name="create_input" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.createInput"></a>
+
+```python
+create_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `delete_input`<sup>Optional</sup> <a name="delete_input" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.deleteInput"></a>
+
+```python
+delete_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.updateInput"></a>
+
+```python
+update_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `create`<sup>Required</sup> <a name="create" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.create"></a>
+
+```python
+create: str
+```
+
+- *Type:* str
+
+---
+
+##### `delete`<sup>Required</sup> <a name="delete" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.delete"></a>
+
+```python
+delete: str
+```
+
+- *Type:* str
+
+---
+
+##### `update`<sup>Required</sup> <a name="update" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.update"></a>
+
+```python
+update: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: IResolvable | ContainerTimeouts
+```
+
+- *Type:* cdktn.IResolvable | <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
 
 ---
 
@@ -14114,6 +18143,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetFromContainer">reset_from_container</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetHostPath">reset_host_path</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetReadOnly">reset_read_only</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetSelinuxRelabel">reset_selinux_relabel</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetVolumeName">reset_volume_name</a></code> | *No description.* |
 
 ---
@@ -14314,6 +18344,12 @@ def reset_host_path() -> None
 def reset_read_only() -> None
 ```
 
+##### `reset_selinux_relabel` <a name="reset_selinux_relabel" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetSelinuxRelabel"></a>
+
+```python
+def reset_selinux_relabel() -> None
+```
+
 ##### `reset_volume_name` <a name="reset_volume_name" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetVolumeName"></a>
 
 ```python
@@ -14331,11 +18367,13 @@ def reset_volume_name() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainerInput">from_container_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPathInput">host_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabelInput">selinux_relabel_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeNameInput">volume_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.containerPath">container_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainer">from_container</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPath">host_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnly">read_only</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabel">selinux_relabel</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeName">volume_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.internalValue">internal_value</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a></code> | *No description.* |
 
@@ -14405,6 +18443,16 @@ read_only_input: bool | IResolvable
 
 ---
 
+##### `selinux_relabel_input`<sup>Optional</sup> <a name="selinux_relabel_input" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabelInput"></a>
+
+```python
+selinux_relabel_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `volume_name_input`<sup>Optional</sup> <a name="volume_name_input" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeNameInput"></a>
 
 ```python
@@ -14452,6 +18500,16 @@ read_only: bool | IResolvable
 ```
 
 - *Type:* bool | cdktn.IResolvable
+
+---
+
+##### `selinux_relabel`<sup>Required</sup> <a name="selinux_relabel" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabel"></a>
+
+```python
+selinux_relabel: str
+```
+
+- *Type:* str
 
 ---
 

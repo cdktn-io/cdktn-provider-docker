@@ -4,7 +4,7 @@
 
 ### DataDockerNetwork <a name="DataDockerNetwork" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network docker_network}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network docker_network}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.Initializer"></a>
 
@@ -104,7 +104,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the Docker network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#name DataDockerNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#name DataDockerNetwork#name}
 
 ---
 
@@ -449,7 +449,7 @@ The construct id used in the generated config for the DataDockerNetwork to impor
 
 The id of the existing DataDockerNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -477,6 +477,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.forEach">forEach</a></code> | <code>io.cdktn.cdktn.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.lifecycle">lifecycle</a></code> | <code>io.cdktn.cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.provider">provider</a></code> | <code>io.cdktn.cdktn.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.containers">containers</a></code> | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList">DataDockerNetworkContainersList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.driver">driver</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.internal">internal</a></code> | <code>io.cdktn.cdktn.IResolvable</code> | *No description.* |
@@ -607,6 +608,16 @@ public TerraformProvider getProvider();
 ```
 
 - *Type:* io.cdktn.cdktn.TerraformProvider
+
+---
+
+##### `containers`<sup>Required</sup> <a name="containers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.property.containers"></a>
+
+```java
+public DataDockerNetworkContainersList getContainers();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList">DataDockerNetworkContainersList</a>
 
 ---
 
@@ -824,9 +835,21 @@ public java.lang.String getName();
 
 The name of the Docker network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/data-sources/network#name DataDockerNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/data-sources/network#name DataDockerNetwork#name}
 
 ---
+
+### DataDockerNetworkContainers <a name="DataDockerNetworkContainers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.data_docker_network.DataDockerNetworkContainers;
+
+DataDockerNetworkContainers.builder()
+    .build();
+```
+
 
 ### DataDockerNetworkIpamConfig <a name="DataDockerNetworkIpamConfig" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfig"></a>
 
@@ -841,6 +864,488 @@ DataDockerNetworkIpamConfig.builder()
 
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### DataDockerNetworkContainersList <a name="DataDockerNetworkContainersList" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.data_docker_network.DataDockerNetworkContainersList;
+
+new DataDockerNetworkContainersList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get"></a>
+
+```java
+public DataDockerNetworkContainersOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+
+### DataDockerNetworkContainersOutputReference <a name="DataDockerNetworkContainersOutputReference" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.data_docker_network.DataDockerNetworkContainersOutputReference;
+
+new DataDockerNetworkContainersOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.containerId">containerId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.endpointId">endpointId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv4Address">ipv4Address</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv6Address">ipv6Address</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.macAddress">macAddress</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers">DataDockerNetworkContainers</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `containerId`<sup>Required</sup> <a name="containerId" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.containerId"></a>
+
+```java
+public java.lang.String getContainerId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `endpointId`<sup>Required</sup> <a name="endpointId" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.endpointId"></a>
+
+```java
+public java.lang.String getEndpointId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `ipv4Address`<sup>Required</sup> <a name="ipv4Address" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv4Address"></a>
+
+```java
+public java.lang.String getIpv4Address();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `ipv6Address`<sup>Required</sup> <a name="ipv6Address" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.ipv6Address"></a>
+
+```java
+public java.lang.String getIpv6Address();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `macAddress`<sup>Required</sup> <a name="macAddress" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.macAddress"></a>
+
+```java
+public java.lang.String getMacAddress();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.name"></a>
+
+```java
+public java.lang.String getName();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.property.internalValue"></a>
+
+```java
+public DataDockerNetworkContainers getInternalValue();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers">DataDockerNetworkContainers</a>
+
+---
+
 
 ### DataDockerNetworkIpamConfigList <a name="DataDockerNetworkIpamConfigList" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfigList"></a>
 

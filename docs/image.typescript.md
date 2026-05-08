@@ -4,7 +4,7 @@
 
 ### Image <a name="Image" id="@cdktn/provider-docker.image.Image"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image docker_image}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image docker_image}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.image.Image.Initializer"></a>
 
@@ -564,7 +564,7 @@ The construct id used in the generated config for the Image to import.
 
 The id of the existing Image that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -986,7 +986,7 @@ const imageBuild: image.ImageBuild = { ... }
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.additionalContexts">additionalContexts</a></code> | <code>string[]</code> | A list of additional build contexts. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.authConfig">authConfig</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildAuthConfig">ImageBuildAuthConfig</a>[]</code> | auth_config block. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildArgs">buildArgs</a></code> | <code>{[ key: string ]: string}</code> | Pairs for build-time variables in the form of `ENDPOINT : "https://example.com"`. |
-| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.builder">builder</a></code> | <code>string</code> | Set the name of the buildx builder to use. If not set, the legacy builder is used. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.builder">builder</a></code> | <code>string</code> | The name of the buildx builder to use. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildId">buildId</a></code> | <code>string</code> | BuildID is an optional identifier that can be passed together with the build request. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.buildLogFile">buildLogFile</a></code> | <code>string</code> | Path to a file where the buildx log are written to. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.cacheFrom">cacheFrom</a></code> | <code>string[]</code> | External cache sources (e.g., `user/app:cache`, `type=local,src=path/to/dir`). Only supported when using a buildx builder. |
@@ -1020,6 +1020,7 @@ const imageBuild: image.ImageBuild = { ... }
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.tag">tag</a></code> | <code>string[]</code> | Name and optionally a tag in the 'name:tag' format. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.target">target</a></code> | <code>string</code> | Set the target build stage to build. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.ulimit">ulimit</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>[]</code> | ulimit block. |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.useLegacyBuilder">useLegacyBuilder</a></code> | <code>boolean \| cdktn.IResolvable</code> | Force using the legacy Docker builder for image builds, even if buildx/buildkit would be available. |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuild.property.version">version</a></code> | <code>string</code> | Version of the underlying builder to use. |
 
 ---
@@ -1036,7 +1037,7 @@ Value to specify the build context.
 
 Currently, only a `PATH` context is supported. You can use the helper function '${path.cwd}/context-dir'. This always refers to the local working directory, even when building images on remote hosts. Please see https://docs.docker.com/build/building/context/ for more information about build contexts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#context Image#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#context Image#context}
 
 ---
 
@@ -1052,7 +1053,7 @@ A list of additional build contexts.
 
 Only supported when using a buildx builder. Example: `["name=path", "src = https://example.org"}`. Please see https://docs.docker.com/reference/cli/docker/buildx/build/#build-context for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#additional_contexts Image#additional_contexts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#additional_contexts Image#additional_contexts}
 
 ---
 
@@ -1066,7 +1067,7 @@ public readonly authConfig: IResolvable | ImageBuildAuthConfig[];
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#auth_config Image#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#auth_config Image#auth_config}
 
 ---
 
@@ -1080,7 +1081,7 @@ public readonly buildArgs: {[ key: string ]: string};
 
 Pairs for build-time variables in the form of `ENDPOINT : "https://example.com"`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#build_args Image#build_args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#build_args Image#build_args}
 
 ---
 
@@ -1092,9 +1093,11 @@ public readonly builder: string;
 
 - *Type:* string
 
-Set the name of the buildx builder to use. If not set, the legacy builder is used.
+The name of the buildx builder to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#builder Image#builder}
+If BUILDX_BUILDER environment variable is set, it will be used. If left empty, the provider tries to resolve to the default builder - which might not always work. If you are in Windows, the legacy builder is used.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#builder Image#builder}
 
 ---
 
@@ -1110,7 +1113,7 @@ BuildID is an optional identifier that can be passed together with the build req
 
 The same identifier can be used to gracefully cancel the build with the cancel request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#build_id Image#build_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#build_id Image#build_id}
 
 ---
 
@@ -1126,7 +1129,7 @@ Path to a file where the buildx log are written to.
 
 Only available when `builder` is set. If not set, no logs are available. The path is taken as is, so make sure to use a path that is available.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#build_log_file Image#build_log_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#build_log_file Image#build_log_file}
 
 ---
 
@@ -1140,7 +1143,7 @@ public readonly cacheFrom: string[];
 
 External cache sources (e.g., `user/app:cache`, `type=local,src=path/to/dir`). Only supported when using a buildx builder.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cache_from Image#cache_from}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cache_from Image#cache_from}
 
 ---
 
@@ -1154,7 +1157,7 @@ public readonly cacheTo: string[];
 
 Cache export destinations (e.g., `user/app:cache`, `type=local,dest=path/to/dir`). Only supported when using a buildx builder.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cache_to Image#cache_to}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cache_to Image#cache_to}
 
 ---
 
@@ -1168,7 +1171,7 @@ public readonly cgroupParent: string;
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cgroup_parent Image#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cgroup_parent Image#cgroup_parent}
 
 ---
 
@@ -1182,7 +1185,7 @@ public readonly cpuPeriod: number;
 
 The length of a CPU period in microseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cpu_period Image#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cpu_period Image#cpu_period}
 
 ---
 
@@ -1196,7 +1199,7 @@ public readonly cpuQuota: number;
 
 Microseconds of CPU time that the container can get in a CPU period.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cpu_quota Image#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cpu_quota Image#cpu_quota}
 
 ---
 
@@ -1210,7 +1213,7 @@ public readonly cpuSetCpus: string;
 
 CPUs in which to allow execution (e.g., `0-3`, `0`, `1`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cpu_set_cpus Image#cpu_set_cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cpu_set_cpus Image#cpu_set_cpus}
 
 ---
 
@@ -1224,7 +1227,7 @@ public readonly cpuSetMems: string;
 
 MEMs in which to allow execution (`0-3`, `0`, `1`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cpu_set_mems Image#cpu_set_mems}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cpu_set_mems Image#cpu_set_mems}
 
 ---
 
@@ -1238,7 +1241,7 @@ public readonly cpuShares: number;
 
 CPU shares (relative weight).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#cpu_shares Image#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#cpu_shares Image#cpu_shares}
 
 ---
 
@@ -1252,7 +1255,7 @@ public readonly dockerfile: string;
 
 Name of the Dockerfile. Defaults to `Dockerfile`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#dockerfile Image#dockerfile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#dockerfile Image#dockerfile}
 
 ---
 
@@ -1266,7 +1269,7 @@ public readonly extraHosts: string[];
 
 A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#extra_hosts Image#extra_hosts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#extra_hosts Image#extra_hosts}
 
 ---
 
@@ -1280,7 +1283,7 @@ public readonly forceRemove: boolean | IResolvable;
 
 Always remove intermediate containers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#force_remove Image#force_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#force_remove Image#force_remove}
 
 ---
 
@@ -1294,7 +1297,7 @@ public readonly isolation: string;
 
 Isolation represents the isolation technology of a container. The supported values are.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#isolation Image#isolation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#isolation Image#isolation}
 
 ---
 
@@ -1308,7 +1311,7 @@ public readonly label: {[ key: string ]: string};
 
 Set metadata for an image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#label Image#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#label Image#label}
 
 ---
 
@@ -1322,7 +1325,7 @@ public readonly labels: {[ key: string ]: string};
 
 User-defined key/value metadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#labels Image#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#labels Image#labels}
 
 ---
 
@@ -1336,7 +1339,7 @@ public readonly memory: number;
 
 Set memory limit for build.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#memory Image#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#memory Image#memory}
 
 ---
 
@@ -1350,7 +1353,7 @@ public readonly memorySwap: number;
 
 Total memory (memory + swap), -1 to enable unlimited swap.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#memory_swap Image#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#memory_swap Image#memory_swap}
 
 ---
 
@@ -1364,7 +1367,7 @@ public readonly networkMode: string;
 
 Set the networking mode for the RUN instructions during build.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#network_mode Image#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#network_mode Image#network_mode}
 
 ---
 
@@ -1378,7 +1381,7 @@ public readonly noCache: boolean | IResolvable;
 
 Do not use the cache when building the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#no_cache Image#no_cache}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#no_cache Image#no_cache}
 
 ---
 
@@ -1392,7 +1395,7 @@ public readonly platform: string;
 
 Set the target platform for the build. Defaults to `GOOS/GOARCH`. For more information see the [docker documentation](https://github.com/docker/buildx/blob/master/docs/reference/buildx.md#-set-the-target-platforms-for-the-build---platform).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#platform Image#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#platform Image#platform}
 
 ---
 
@@ -1406,7 +1409,7 @@ public readonly pullParent: boolean | IResolvable;
 
 Attempt to pull the image even if an older image exists locally.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#pull_parent Image#pull_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#pull_parent Image#pull_parent}
 
 ---
 
@@ -1420,7 +1423,7 @@ public readonly remoteContext: string;
 
 A Git repository URI or HTTP/HTTPS context URI. Will be ignored if `builder` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#remote_context Image#remote_context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#remote_context Image#remote_context}
 
 ---
 
@@ -1434,7 +1437,7 @@ public readonly remove: boolean | IResolvable;
 
 Remove intermediate containers after a successful build. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#remove Image#remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#remove Image#remove}
 
 ---
 
@@ -1448,7 +1451,7 @@ public readonly secrets: IResolvable | ImageBuildSecrets[];
 
 secrets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#secrets Image#secrets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#secrets Image#secrets}
 
 ---
 
@@ -1462,7 +1465,7 @@ public readonly securityOpt: string[];
 
 The security options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#security_opt Image#security_opt}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#security_opt Image#security_opt}
 
 ---
 
@@ -1476,7 +1479,7 @@ public readonly sessionId: string;
 
 Set an ID for the build session.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#session_id Image#session_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#session_id Image#session_id}
 
 ---
 
@@ -1490,7 +1493,7 @@ public readonly shmSize: number;
 
 Size of /dev/shm in bytes. The size must be greater than 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#shm_size Image#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#shm_size Image#shm_size}
 
 ---
 
@@ -1504,7 +1507,7 @@ public readonly squash: boolean | IResolvable;
 
 If true the new layers are squashed into a new image with a single new layer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#squash Image#squash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#squash Image#squash}
 
 ---
 
@@ -1518,7 +1521,7 @@ public readonly suppressOutput: boolean | IResolvable;
 
 Suppress the build output and print image ID on success.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#suppress_output Image#suppress_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#suppress_output Image#suppress_output}
 
 ---
 
@@ -1532,7 +1535,7 @@ public readonly tag: string[];
 
 Name and optionally a tag in the 'name:tag' format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#tag Image#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#tag Image#tag}
 
 ---
 
@@ -1546,7 +1549,7 @@ public readonly target: string;
 
 Set the target build stage to build.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#target Image#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#target Image#target}
 
 ---
 
@@ -1560,7 +1563,21 @@ public readonly ulimit: IResolvable | ImageBuildUlimit[];
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#ulimit Image#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#ulimit Image#ulimit}
+
+---
+
+##### `useLegacyBuilder`<sup>Optional</sup> <a name="useLegacyBuilder" id="@cdktn/provider-docker.image.ImageBuild.property.useLegacyBuilder"></a>
+
+```typescript
+public readonly useLegacyBuilder: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktn.IResolvable
+
+Force using the legacy Docker builder for image builds, even if buildx/buildkit would be available.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#use_legacy_builder Image#use_legacy_builder}
 
 ---
 
@@ -1574,7 +1591,7 @@ public readonly version: string;
 
 Version of the underlying builder to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#version Image#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#version Image#version}
 
 ---
 
@@ -1613,7 +1630,7 @@ public readonly hostName: string;
 
 hostname of the registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#host_name Image#host_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#host_name Image#host_name}
 
 ---
 
@@ -1627,7 +1644,7 @@ public readonly auth: string;
 
 the auth token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#auth Image#auth}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#auth Image#auth}
 
 ---
 
@@ -1641,7 +1658,7 @@ public readonly email: string;
 
 the user emal.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#email Image#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#email Image#email}
 
 ---
 
@@ -1655,7 +1672,7 @@ public readonly identityToken: string;
 
 the identity token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#identity_token Image#identity_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#identity_token Image#identity_token}
 
 ---
 
@@ -1669,7 +1686,7 @@ public readonly password: string;
 
 the registry password.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#password Image#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#password Image#password}
 
 ---
 
@@ -1683,7 +1700,7 @@ public readonly registryToken: string;
 
 the registry token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#registry_token Image#registry_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#registry_token Image#registry_token}
 
 ---
 
@@ -1697,7 +1714,7 @@ public readonly serverAddress: string;
 
 the server address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#server_address Image#server_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#server_address Image#server_address}
 
 ---
 
@@ -1711,7 +1728,7 @@ public readonly userName: string;
 
 the registry user name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#user_name Image#user_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#user_name Image#user_name}
 
 ---
 
@@ -1745,7 +1762,7 @@ public readonly id: string;
 
 ID of the secret. By default, secrets are mounted to /run/secrets/<id>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#id Image#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#id Image#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1762,7 +1779,7 @@ public readonly env: string;
 
 Environment variable source of the secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#env Image#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#env Image#env}
 
 ---
 
@@ -1776,7 +1793,7 @@ public readonly src: string;
 
 File source of the secret. Takes precedence over `env`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#src Image#src}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#src Image#src}
 
 ---
 
@@ -1810,7 +1827,7 @@ public readonly hard: number;
 
 soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#hard Image#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#hard Image#hard}
 
 ---
 
@@ -1824,7 +1841,7 @@ public readonly name: string;
 
 type of ulimit, e.g. `nofile`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#name Image#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#name Image#name}
 
 ---
 
@@ -1838,7 +1855,7 @@ public readonly soft: number;
 
 hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#soft Image#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#soft Image#soft}
 
 ---
 
@@ -1954,7 +1971,7 @@ public readonly name: string;
 
 The name of the Docker image, including any tags or SHA256 repo digests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#name Image#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#name Image#name}
 
 ---
 
@@ -1968,7 +1985,7 @@ public readonly buildAttribute: ImageBuild;
 
 build block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#build Image#build}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#build Image#build}
 
 ---
 
@@ -1982,7 +1999,7 @@ public readonly forceRemove: boolean | IResolvable;
 
 If true, then the image is removed forcibly when the resource is destroyed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#force_remove Image#force_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#force_remove Image#force_remove}
 
 ---
 
@@ -1998,7 +2015,7 @@ If true, then the Docker image won't be deleted on destroy operation.
 
 If this is false, it will delete the image from the docker local storage on destroy operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#keep_locally Image#keep_locally}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#keep_locally Image#keep_locally}
 
 ---
 
@@ -2012,7 +2029,7 @@ public readonly platform: string;
 
 The platform to use when pulling the image. Defaults to the platform of the current machine.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#platform Image#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#platform Image#platform}
 
 ---
 
@@ -2028,7 +2045,7 @@ List of values which cause an image pull when changed.
 
 This is used to store the image digest from the registry when using the [docker_registry_image](../data-sources/registry_image.md).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#pull_triggers Image#pull_triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#pull_triggers Image#pull_triggers}
 
 ---
 
@@ -2042,7 +2059,7 @@ public readonly timeouts: ImageTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#timeouts Image#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#timeouts Image#timeouts}
 
 ---
 
@@ -2058,7 +2075,7 @@ A map of arbitrary strings that, when changed, will force the `docker_image` res
 
 This can be used to rebuild an image when contents of source code folders change
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#triggers Image#triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#triggers Image#triggers}
 
 ---
 
@@ -2076,9 +2093,9 @@ const imageTimeouts: image.ImageTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#create Image#create}. |
-| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#delete Image#delete}. |
-| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#update Image#update}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#create Image#create}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#delete Image#delete}. |
+| <code><a href="#@cdktn/provider-docker.image.ImageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#update Image#update}. |
 
 ---
 
@@ -2090,7 +2107,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#create Image#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#create Image#create}.
 
 ---
 
@@ -2102,7 +2119,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#delete Image#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#delete Image#delete}.
 
 ---
 
@@ -2114,7 +2131,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/image#update Image#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/image#update Image#update}.
 
 ---
 
@@ -2862,6 +2879,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetTag">resetTag</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetTarget">resetTarget</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetUlimit">resetUlimit</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetUseLegacyBuilder">resetUseLegacyBuilder</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.resetVersion">resetVersion</a></code> | *No description.* |
 
 ---
@@ -3274,6 +3292,12 @@ public resetTarget(): void
 public resetUlimit(): void
 ```
 
+##### `resetUseLegacyBuilder` <a name="resetUseLegacyBuilder" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetUseLegacyBuilder"></a>
+
+```typescript
+public resetUseLegacyBuilder(): void
+```
+
 ##### `resetVersion` <a name="resetVersion" id="@cdktn/provider-docker.image.ImageBuildOutputReference.resetVersion"></a>
 
 ```typescript
@@ -3328,6 +3352,7 @@ public resetVersion(): void
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tagInput">tagInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.targetInput">targetInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.ulimitInput">ulimitInput</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.image.ImageBuildUlimit">ImageBuildUlimit</a>[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.useLegacyBuilderInput">useLegacyBuilderInput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.versionInput">versionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.additionalContexts">additionalContexts</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.buildArgs">buildArgs</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
@@ -3364,6 +3389,7 @@ public resetVersion(): void
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.suppressOutput">suppressOutput</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.tag">tag</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.target">target</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.useLegacyBuilder">useLegacyBuilder</a></code> | <code>boolean \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.version">version</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.image.ImageBuildOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktn/provider-docker.image.ImageBuild">ImageBuild</a></code> | *No description.* |
 
@@ -3803,6 +3829,16 @@ public readonly ulimitInput: IResolvable | ImageBuildUlimit[];
 
 ---
 
+##### `useLegacyBuilderInput`<sup>Optional</sup> <a name="useLegacyBuilderInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.useLegacyBuilderInput"></a>
+
+```typescript
+public readonly useLegacyBuilderInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktn.IResolvable
+
+---
+
 ##### `versionInput`<sup>Optional</sup> <a name="versionInput" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.versionInput"></a>
 
 ```typescript
@@ -4160,6 +4196,16 @@ public readonly target: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `useLegacyBuilder`<sup>Required</sup> <a name="useLegacyBuilder" id="@cdktn/provider-docker.image.ImageBuildOutputReference.property.useLegacyBuilder"></a>
+
+```typescript
+public readonly useLegacyBuilder: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktn.IResolvable
 
 ---
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config
+// https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * Base64-url-safe-encoded config data
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config#data Config#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#data Config#data}
   */
   readonly data: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config#id Config#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#id Config#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,13 +28,166 @@ export interface ConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * User-defined name of the config
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config#name Config#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#name Config#name}
   */
   readonly name: string;
+  /**
+  * labels block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#labels Config#labels}
+  */
+  readonly labels?: ConfigLabels[] | cdktn.IResolvable;
+}
+export interface ConfigLabels {
+  /**
+  * Name of the label
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#label Config#label}
+  */
+  readonly label: string;
+  /**
+  * Value of the label
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#value Config#value}
+  */
+  readonly value: string;
+}
+
+export function configLabelsToTerraform(struct?: ConfigLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    label: cdktn.stringToTerraform(struct!.label),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function configLabelsToHclTerraform(struct?: ConfigLabels | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktn.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ConfigLabelsOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConfigLabels | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConfigLabels | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._label = undefined;
+      this._value = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._label = value.label;
+      this._value = value.value;
+    }
+  }
+
+  // label - computed: false, optional: false, required: true
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ConfigLabelsList extends cdktn.ComplexList {
+  public internalValue? : ConfigLabels[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConfigLabelsOutputReference {
+    return new ConfigLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config docker_config}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config docker_config}
 */
 export class Config extends cdktn.TerraformResource {
 
@@ -50,7 +203,7 @@ export class Config extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a Config resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Config to import
-  * @param importFromId The id of the existing Config that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Config that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Config to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -62,7 +215,7 @@ export class Config extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/config docker_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config docker_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -73,8 +226,8 @@ export class Config extends cdktn.TerraformResource {
       terraformResourceType: 'docker_config',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '3.9.0',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.2.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -87,6 +240,7 @@ export class Config extends cdktn.TerraformResource {
     this._data = config.data;
     this._id = config.id;
     this._name = config.name;
+    this._labels.internalValue = config.labels;
   }
 
   // ==========
@@ -135,6 +289,22 @@ export class Config extends cdktn.TerraformResource {
     return this._name;
   }
 
+  // labels - computed: false, optional: true, required: false
+  private _labels = new ConfigLabelsList(this, "labels", true);
+  public get labels() {
+    return this._labels;
+  }
+  public putLabels(value: ConfigLabels[] | cdktn.IResolvable) {
+    this._labels.internalValue = value;
+  }
+  public resetLabels() {
+    this._labels.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -144,6 +314,7 @@ export class Config extends cdktn.TerraformResource {
       data: cdktn.stringToTerraform(this._data),
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
+      labels: cdktn.listMapper(configLabelsToTerraform, true)(this._labels.internalValue),
     };
   }
 
@@ -166,6 +337,12 @@ export class Config extends cdktn.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      labels: {
+        value: cdktn.listMapperHcl(configLabelsToHclTerraform, true)(this._labels.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ConfigLabelsList",
       },
     };
 

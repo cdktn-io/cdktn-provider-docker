@@ -4,7 +4,7 @@
 
 ### Container <a name="Container" id="@cdktn/provider-docker.container.Container"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container docker_container}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container docker_container}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.Container.Initializer"></a>
 
@@ -33,7 +33,12 @@ Container.Builder.create(Construct scope, java.lang.String id)
 //  .cpuSet(java.lang.String)
 //  .cpuShares(java.lang.Number)
 //  .destroyGraceSeconds(java.lang.Number)
+//  .deviceReadBps(IResolvable|java.util.List<ContainerDeviceReadBps>)
+//  .deviceReadIops(IResolvable|java.util.List<ContainerDeviceReadIops>)
+//  .deviceRequests(IResolvable|java.util.List<ContainerDeviceRequests>)
 //  .devices(IResolvable|java.util.List<ContainerDevices>)
+//  .deviceWriteBps(IResolvable|java.util.List<ContainerDeviceWriteBps>)
+//  .deviceWriteIops(IResolvable|java.util.List<ContainerDeviceWriteIops>)
 //  .dns(java.util.List<java.lang.String>)
 //  .dnsOpts(java.util.List<java.lang.String>)
 //  .dnsSearch(java.util.List<java.lang.String>)
@@ -61,6 +66,7 @@ Container.Builder.create(Construct scope, java.lang.String id)
 //  .networkMode(java.lang.String)
 //  .networksAdvanced(IResolvable|java.util.List<ContainerNetworksAdvanced>)
 //  .pidMode(java.lang.String)
+//  .platform(java.lang.String)
 //  .ports(IResolvable|java.util.List<ContainerPorts>)
 //  .privileged(java.lang.Boolean|IResolvable)
 //  .publishAllPorts(java.lang.Boolean|IResolvable)
@@ -77,6 +83,7 @@ Container.Builder.create(Construct scope, java.lang.String id)
 //  .stopTimeout(java.lang.Number)
 //  .storageOpts(java.util.Map<java.lang.String, java.lang.String>)
 //  .sysctls(java.util.Map<java.lang.String, java.lang.String>)
+//  .timeouts(ContainerTimeouts)
 //  .tmpfs(java.util.Map<java.lang.String, java.lang.String>)
 //  .tty(java.lang.Boolean|IResolvable)
 //  .ulimit(IResolvable|java.util.List<ContainerUlimit>)
@@ -115,19 +122,24 @@ Container.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuSet">cpuSet</a></code> | <code>java.lang.String</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuShares">cpuShares</a></code> | <code>java.lang.Number</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.destroyGraceSeconds">destroyGraceSeconds</a></code> | <code>java.lang.Number</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadBps">deviceReadBps</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>></code> | device_read_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadIops">deviceReadIops</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>></code> | device_read_iops block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceRequests">deviceRequests</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>></code> | device_requests block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.devices">devices</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>></code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteBps">deviceWriteBps</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>></code> | device_write_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteIops">deviceWriteIops</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>></code> | device_write_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dns">dns</a></code> | <code>java.util.List<java.lang.String></code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsOpts">dnsOpts</a></code> | <code>java.util.List<java.lang.String></code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.dnsSearch">dnsSearch</a></code> | <code>java.util.List<java.lang.String></code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.domainname">domainname</a></code> | <code>java.lang.String</code> | Domain name of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.entrypoint">entrypoint</a></code> | <code>java.util.List<java.lang.String></code> | The command to use as the Entrypoint for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.env">env</a></code> | <code>java.util.List<java.lang.String></code> | Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.gpus">gpus</a></code> | <code>java.lang.String</code> | GPU devices to add to the container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.gpus">gpus</a></code> | <code>java.lang.String</code> | GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.groupAdd">groupAdd</a></code> | <code>java.util.List<java.lang.String></code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.host">host</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>></code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.hostname">hostname</a></code> | <code>java.lang.String</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.init">init</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ipcMode">ipcMode</a></code> | <code>java.lang.String</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.labels">labels</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>></code> | labels block. |
@@ -142,7 +154,8 @@ Container.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.mustRun">mustRun</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networkMode">networkMode</a></code> | <code>java.lang.String</code> | Network mode of the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.networksAdvanced">networksAdvanced</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>></code> | networks_advanced block. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.pidMode">pidMode</a></code> | <code>java.lang.String</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.pidMode">pidMode</a></code> | <code>java.lang.String</code> | The PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.platform">platform</a></code> | <code>java.lang.String</code> | Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ports">ports</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>></code> | ports block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.privileged">privileged</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.publishAllPorts">publishAllPorts</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | Publish all ports of the container. |
@@ -159,6 +172,7 @@ Container.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.stopTimeout">stopTimeout</a></code> | <code>java.lang.Number</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.storageOpts">storageOpts</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.sysctls">sysctls</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of kernel parameters (sysctls) to set in the container. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tmpfs">tmpfs</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.tty">tty</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ulimit">ulimit</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>></code> | ulimit block. |
@@ -240,7 +254,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -250,7 +264,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -260,7 +274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -270,7 +284,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -280,7 +294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -290,7 +304,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -302,7 +316,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -312,7 +326,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -322,7 +336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -334,7 +348,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -346,7 +360,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -356,7 +370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -366,7 +380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -378,7 +392,37 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `deviceReadBps`<sup>Optional</sup> <a name="deviceReadBps" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadBps"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>>
+
+device_read_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_bps Container#device_read_bps}
+
+---
+
+##### `deviceReadIops`<sup>Optional</sup> <a name="deviceReadIops" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadIops"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>>
+
+device_read_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_iops Container#device_read_iops}
+
+---
+
+##### `deviceRequests`<sup>Optional</sup> <a name="deviceRequests" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceRequests"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>>
+
+device_requests block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -388,7 +432,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#devices Container#devices}
+
+---
+
+##### `deviceWriteBps`<sup>Optional</sup> <a name="deviceWriteBps" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteBps"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>>
+
+device_write_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_bps Container#device_write_bps}
+
+---
+
+##### `deviceWriteIops`<sup>Optional</sup> <a name="deviceWriteIops" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceWriteIops"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>>
+
+device_write_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -398,7 +462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -408,7 +472,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -418,7 +482,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -428,7 +492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -440,7 +504,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -450,7 +514,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -458,11 +522,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* java.lang.String
 
-GPU devices to add to the container.
+GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -472,7 +534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -482,7 +544,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -492,7 +554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -502,7 +564,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -510,7 +572,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -525,7 +587,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -535,7 +597,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -545,7 +607,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -555,7 +617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -565,7 +627,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -575,7 +637,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -585,7 +647,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -595,7 +657,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -607,7 +669,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -619,7 +681,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -629,7 +691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -639,9 +701,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, then the Docker container will be kept running.
 
-If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
+If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -653,7 +715,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -663,7 +725,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -671,9 +733,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* java.lang.String
 
-he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#pid_mode Container#pid_mode}
+
+---
+
+##### `platform`<sup>Optional</sup> <a name="platform" id="@cdktn/provider-docker.container.Container.Initializer.parameter.platform"></a>
+
+- *Type:* java.lang.String
+
+Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -683,7 +755,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -693,7 +765,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -703,7 +775,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -713,7 +785,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -723,7 +795,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -733,7 +805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -743,7 +815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -753,7 +825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -763,7 +835,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -773,7 +845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -785,7 +857,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -795,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -805,7 +877,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -815,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -825,7 +897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -835,7 +907,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#sysctls Container#sysctls}
+
+---
+
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktn/provider-docker.container.Container.Initializer.parameter.timeouts"></a>
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
+
+timeouts block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -845,7 +927,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -855,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -865,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -875,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -885,9 +967,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 User used for run the first process.
 
-Format is `user` or `user:group` which user and group can be passed literraly or by name.
+Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -897,7 +979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -907,7 +989,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -919,7 +1001,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -929,7 +1011,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -939,7 +1021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -972,13 +1054,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktn/provider-docker.container.Container.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktn/provider-docker.container.Container.putCapabilities">putCapabilities</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceReadBps">putDeviceReadBps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceReadIops">putDeviceReadIops</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceRequests">putDeviceRequests</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putDevices">putDevices</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceWriteBps">putDeviceWriteBps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putDeviceWriteIops">putDeviceWriteIops</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putHealthcheck">putHealthcheck</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putHost">putHost</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putLabels">putLabels</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putMounts">putMounts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putNetworksAdvanced">putNetworksAdvanced</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putPorts">putPorts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putUlimit">putUlimit</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putUpload">putUpload</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.putVolumes">putVolumes</a></code> | *No description.* |
@@ -994,7 +1082,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuSet">resetCpuSet</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuShares">resetCpuShares</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDestroyGraceSeconds">resetDestroyGraceSeconds</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadBps">resetDeviceReadBps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadIops">resetDeviceReadIops</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceRequests">resetDeviceRequests</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDevices">resetDevices</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceWriteBps">resetDeviceWriteBps</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceWriteIops">resetDeviceWriteIops</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDns">resetDns</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDnsOpts">resetDnsOpts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDnsSearch">resetDnsSearch</a></code> | *No description.* |
@@ -1022,6 +1115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetNetworkMode">resetNetworkMode</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetNetworksAdvanced">resetNetworksAdvanced</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPidMode">resetPidMode</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetPlatform">resetPlatform</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPorts">resetPorts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPrivileged">resetPrivileged</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetPublishAllPorts">resetPublishAllPorts</a></code> | *No description.* |
@@ -1038,6 +1132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetStopTimeout">resetStopTimeout</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetStorageOpts">resetStorageOpts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetSysctls">resetSysctls</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetTmpfs">resetTmpfs</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetTty">resetTty</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetUlimit">resetUlimit</a></code> | *No description.* |
@@ -1374,6 +1469,42 @@ public void putCapabilities(ContainerCapabilities value)
 
 ---
 
+##### `putDeviceReadBps` <a name="putDeviceReadBps" id="@cdktn/provider-docker.container.Container.putDeviceReadBps"></a>
+
+```java
+public void putDeviceReadBps(IResolvable|java.util.List<ContainerDeviceReadBps> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceReadBps.parameter.value"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>>
+
+---
+
+##### `putDeviceReadIops` <a name="putDeviceReadIops" id="@cdktn/provider-docker.container.Container.putDeviceReadIops"></a>
+
+```java
+public void putDeviceReadIops(IResolvable|java.util.List<ContainerDeviceReadIops> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceReadIops.parameter.value"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>>
+
+---
+
+##### `putDeviceRequests` <a name="putDeviceRequests" id="@cdktn/provider-docker.container.Container.putDeviceRequests"></a>
+
+```java
+public void putDeviceRequests(IResolvable|java.util.List<ContainerDeviceRequests> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceRequests.parameter.value"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>>
+
+---
+
 ##### `putDevices` <a name="putDevices" id="@cdktn/provider-docker.container.Container.putDevices"></a>
 
 ```java
@@ -1383,6 +1514,30 @@ public void putDevices(IResolvable|java.util.List<ContainerDevices> value)
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDevices.parameter.value"></a>
 
 - *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>>
+
+---
+
+##### `putDeviceWriteBps` <a name="putDeviceWriteBps" id="@cdktn/provider-docker.container.Container.putDeviceWriteBps"></a>
+
+```java
+public void putDeviceWriteBps(IResolvable|java.util.List<ContainerDeviceWriteBps> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceWriteBps.parameter.value"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>>
+
+---
+
+##### `putDeviceWriteIops` <a name="putDeviceWriteIops" id="@cdktn/provider-docker.container.Container.putDeviceWriteIops"></a>
+
+```java
+public void putDeviceWriteIops(IResolvable|java.util.List<ContainerDeviceWriteIops> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putDeviceWriteIops.parameter.value"></a>
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>>
 
 ---
 
@@ -1455,6 +1610,18 @@ public void putPorts(IResolvable|java.util.List<ContainerPorts> value)
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putPorts.parameter.value"></a>
 
 - *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>>
+
+---
+
+##### `putTimeouts` <a name="putTimeouts" id="@cdktn/provider-docker.container.Container.putTimeouts"></a>
+
+```java
+public void putTimeouts(ContainerTimeouts value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktn/provider-docker.container.Container.putTimeouts.parameter.value"></a>
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
 
 ---
 
@@ -1566,10 +1733,40 @@ public void resetCpuShares()
 public void resetDestroyGraceSeconds()
 ```
 
+##### `resetDeviceReadBps` <a name="resetDeviceReadBps" id="@cdktn/provider-docker.container.Container.resetDeviceReadBps"></a>
+
+```java
+public void resetDeviceReadBps()
+```
+
+##### `resetDeviceReadIops` <a name="resetDeviceReadIops" id="@cdktn/provider-docker.container.Container.resetDeviceReadIops"></a>
+
+```java
+public void resetDeviceReadIops()
+```
+
+##### `resetDeviceRequests` <a name="resetDeviceRequests" id="@cdktn/provider-docker.container.Container.resetDeviceRequests"></a>
+
+```java
+public void resetDeviceRequests()
+```
+
 ##### `resetDevices` <a name="resetDevices" id="@cdktn/provider-docker.container.Container.resetDevices"></a>
 
 ```java
 public void resetDevices()
+```
+
+##### `resetDeviceWriteBps` <a name="resetDeviceWriteBps" id="@cdktn/provider-docker.container.Container.resetDeviceWriteBps"></a>
+
+```java
+public void resetDeviceWriteBps()
+```
+
+##### `resetDeviceWriteIops` <a name="resetDeviceWriteIops" id="@cdktn/provider-docker.container.Container.resetDeviceWriteIops"></a>
+
+```java
+public void resetDeviceWriteIops()
 ```
 
 ##### `resetDns` <a name="resetDns" id="@cdktn/provider-docker.container.Container.resetDns"></a>
@@ -1734,6 +1931,12 @@ public void resetNetworksAdvanced()
 public void resetPidMode()
 ```
 
+##### `resetPlatform` <a name="resetPlatform" id="@cdktn/provider-docker.container.Container.resetPlatform"></a>
+
+```java
+public void resetPlatform()
+```
+
 ##### `resetPorts` <a name="resetPorts" id="@cdktn/provider-docker.container.Container.resetPorts"></a>
 
 ```java
@@ -1828,6 +2031,12 @@ public void resetStorageOpts()
 
 ```java
 public void resetSysctls()
+```
+
+##### `resetTimeouts` <a name="resetTimeouts" id="@cdktn/provider-docker.container.Container.resetTimeouts"></a>
+
+```java
+public void resetTimeouts()
 ```
 
 ##### `resetTmpfs` <a name="resetTmpfs" id="@cdktn/provider-docker.container.Container.resetTmpfs"></a>
@@ -1993,7 +2202,7 @@ The construct id used in the generated config for the Container to import.
 
 The id of the existing Container that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2026,7 +2235,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.bridge">bridge</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.capabilities">capabilities</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerCapabilitiesOutputReference">ContainerCapabilitiesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.containerLogs">containerLogs</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadBps">deviceReadBps</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList">ContainerDeviceReadBpsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadIops">deviceReadIops</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList">ContainerDeviceReadIopsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceRequests">deviceRequests</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList">ContainerDeviceRequestsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.devices">devices</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDevicesList">ContainerDevicesList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteBps">deviceWriteBps</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList">ContainerDeviceWriteBpsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteIops">deviceWriteIops</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList">ContainerDeviceWriteIopsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.exitCode">exitCode</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference">ContainerHealthcheckOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.host">host</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHostList">ContainerHostList</a></code> | *No description.* |
@@ -2035,6 +2249,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkData">networkData</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerNetworkDataList">ContainerNetworkDataList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvanced">networksAdvanced</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedList">ContainerNetworksAdvancedList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ports">ports</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerPortsList">ContainerPortsList</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference">ContainerTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ulimit">ulimit</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUlimitList">ContainerUlimitList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.upload">upload</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerUploadList">ContainerUploadList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.volumes">volumes</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesList">ContainerVolumesList</a></code> | *No description.* |
@@ -2050,7 +2265,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuSharesInput">cpuSharesInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpusInput">cpusInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.destroyGraceSecondsInput">destroyGraceSecondsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadBpsInput">deviceReadBpsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadIopsInput">deviceReadIopsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceRequestsInput">deviceRequestsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.devicesInput">devicesInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteBpsInput">deviceWriteBpsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceWriteIopsInput">deviceWriteIopsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsInput">dnsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsOptsInput">dnsOptsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsSearchInput">dnsSearchInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
@@ -2080,6 +2300,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkModeInput">networkModeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networksAdvancedInput">networksAdvancedInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidModeInput">pidModeInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.platformInput">platformInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.portsInput">portsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.privilegedInput">privilegedInput</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPortsInput">publishAllPortsInput</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
@@ -2096,6 +2317,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.stopTimeoutInput">stopTimeoutInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.storageOptsInput">storageOptsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.sysctlsInput">sysctlsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.timeoutsInput">timeoutsInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.tmpfsInput">tmpfsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ttyInput">ttyInput</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.ulimitInput">ulimitInput</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>></code> | *No description.* |
@@ -2141,6 +2363,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3
 | <code><a href="#@cdktn/provider-docker.container.Container.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.networkMode">networkMode</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.pidMode">pidMode</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.platform">platform</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.privileged">privileged</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.publishAllPorts">publishAllPorts</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.readOnly">readOnly</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
@@ -2338,6 +2561,36 @@ public java.lang.String getContainerLogs();
 
 ---
 
+##### `deviceReadBps`<sup>Required</sup> <a name="deviceReadBps" id="@cdktn/provider-docker.container.Container.property.deviceReadBps"></a>
+
+```java
+public ContainerDeviceReadBpsList getDeviceReadBps();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList">ContainerDeviceReadBpsList</a>
+
+---
+
+##### `deviceReadIops`<sup>Required</sup> <a name="deviceReadIops" id="@cdktn/provider-docker.container.Container.property.deviceReadIops"></a>
+
+```java
+public ContainerDeviceReadIopsList getDeviceReadIops();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList">ContainerDeviceReadIopsList</a>
+
+---
+
+##### `deviceRequests`<sup>Required</sup> <a name="deviceRequests" id="@cdktn/provider-docker.container.Container.property.deviceRequests"></a>
+
+```java
+public ContainerDeviceRequestsList getDeviceRequests();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList">ContainerDeviceRequestsList</a>
+
+---
+
 ##### `devices`<sup>Required</sup> <a name="devices" id="@cdktn/provider-docker.container.Container.property.devices"></a>
 
 ```java
@@ -2345,6 +2598,26 @@ public ContainerDevicesList getDevices();
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerDevicesList">ContainerDevicesList</a>
+
+---
+
+##### `deviceWriteBps`<sup>Required</sup> <a name="deviceWriteBps" id="@cdktn/provider-docker.container.Container.property.deviceWriteBps"></a>
+
+```java
+public ContainerDeviceWriteBpsList getDeviceWriteBps();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList">ContainerDeviceWriteBpsList</a>
+
+---
+
+##### `deviceWriteIops`<sup>Required</sup> <a name="deviceWriteIops" id="@cdktn/provider-docker.container.Container.property.deviceWriteIops"></a>
+
+```java
+public ContainerDeviceWriteIopsList getDeviceWriteIops();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList">ContainerDeviceWriteIopsList</a>
 
 ---
 
@@ -2425,6 +2698,16 @@ public ContainerPortsList getPorts();
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerPortsList">ContainerPortsList</a>
+
+---
+
+##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktn/provider-docker.container.Container.property.timeouts"></a>
+
+```java
+public ContainerTimeoutsOutputReference getTimeouts();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference">ContainerTimeoutsOutputReference</a>
 
 ---
 
@@ -2578,6 +2861,36 @@ public java.lang.Number getDestroyGraceSecondsInput();
 
 ---
 
+##### `deviceReadBpsInput`<sup>Optional</sup> <a name="deviceReadBpsInput" id="@cdktn/provider-docker.container.Container.property.deviceReadBpsInput"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadBps> getDeviceReadBpsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>>
+
+---
+
+##### `deviceReadIopsInput`<sup>Optional</sup> <a name="deviceReadIopsInput" id="@cdktn/provider-docker.container.Container.property.deviceReadIopsInput"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadIops> getDeviceReadIopsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>>
+
+---
+
+##### `deviceRequestsInput`<sup>Optional</sup> <a name="deviceRequestsInput" id="@cdktn/provider-docker.container.Container.property.deviceRequestsInput"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceRequests> getDeviceRequestsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>>
+
+---
+
 ##### `devicesInput`<sup>Optional</sup> <a name="devicesInput" id="@cdktn/provider-docker.container.Container.property.devicesInput"></a>
 
 ```java
@@ -2585,6 +2898,26 @@ public IResolvable|java.util.List<ContainerDevices> getDevicesInput();
 ```
 
 - *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>>
+
+---
+
+##### `deviceWriteBpsInput`<sup>Optional</sup> <a name="deviceWriteBpsInput" id="@cdktn/provider-docker.container.Container.property.deviceWriteBpsInput"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteBps> getDeviceWriteBpsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>>
+
+---
+
+##### `deviceWriteIopsInput`<sup>Optional</sup> <a name="deviceWriteIopsInput" id="@cdktn/provider-docker.container.Container.property.deviceWriteIopsInput"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteIops> getDeviceWriteIopsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>>
 
 ---
 
@@ -2878,6 +3211,16 @@ public java.lang.String getPidModeInput();
 
 ---
 
+##### `platformInput`<sup>Optional</sup> <a name="platformInput" id="@cdktn/provider-docker.container.Container.property.platformInput"></a>
+
+```java
+public java.lang.String getPlatformInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `portsInput`<sup>Optional</sup> <a name="portsInput" id="@cdktn/provider-docker.container.Container.property.portsInput"></a>
 
 ```java
@@ -3035,6 +3378,16 @@ public java.util.Map<java.lang.String, java.lang.String> getSysctlsInput();
 ```
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktn/provider-docker.container.Container.property.timeoutsInput"></a>
+
+```java
+public IResolvable|ContainerTimeouts getTimeoutsInput();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
 
 ---
 
@@ -3488,6 +3841,16 @@ public java.lang.String getPidMode();
 
 ---
 
+##### `platform`<sup>Required</sup> <a name="platform" id="@cdktn/provider-docker.container.Container.property.platform"></a>
+
+```java
+public java.lang.String getPlatform();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `privileged`<sup>Required</sup> <a name="privileged" id="@cdktn/provider-docker.container.Container.property.privileged"></a>
 
 ```java
@@ -3760,7 +4123,7 @@ public java.util.List<java.lang.String> getAdd();
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -3774,7 +4137,7 @@ public java.util.List<java.lang.String> getDrop();
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -3807,7 +4170,12 @@ ContainerConfig.builder()
 //  .cpuSet(java.lang.String)
 //  .cpuShares(java.lang.Number)
 //  .destroyGraceSeconds(java.lang.Number)
+//  .deviceReadBps(IResolvable|java.util.List<ContainerDeviceReadBps>)
+//  .deviceReadIops(IResolvable|java.util.List<ContainerDeviceReadIops>)
+//  .deviceRequests(IResolvable|java.util.List<ContainerDeviceRequests>)
 //  .devices(IResolvable|java.util.List<ContainerDevices>)
+//  .deviceWriteBps(IResolvable|java.util.List<ContainerDeviceWriteBps>)
+//  .deviceWriteIops(IResolvable|java.util.List<ContainerDeviceWriteIops>)
 //  .dns(java.util.List<java.lang.String>)
 //  .dnsOpts(java.util.List<java.lang.String>)
 //  .dnsSearch(java.util.List<java.lang.String>)
@@ -3835,6 +4203,7 @@ ContainerConfig.builder()
 //  .networkMode(java.lang.String)
 //  .networksAdvanced(IResolvable|java.util.List<ContainerNetworksAdvanced>)
 //  .pidMode(java.lang.String)
+//  .platform(java.lang.String)
 //  .ports(IResolvable|java.util.List<ContainerPorts>)
 //  .privileged(java.lang.Boolean|IResolvable)
 //  .publishAllPorts(java.lang.Boolean|IResolvable)
@@ -3851,6 +4220,7 @@ ContainerConfig.builder()
 //  .stopTimeout(java.lang.Number)
 //  .storageOpts(java.util.Map<java.lang.String, java.lang.String>)
 //  .sysctls(java.util.Map<java.lang.String, java.lang.String>)
+//  .timeouts(ContainerTimeouts)
 //  .tmpfs(java.util.Map<java.lang.String, java.lang.String>)
 //  .tty(java.lang.Boolean|IResolvable)
 //  .ulimit(IResolvable|java.util.List<ContainerUlimit>)
@@ -3889,19 +4259,24 @@ ContainerConfig.builder()
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuSet">cpuSet</a></code> | <code>java.lang.String</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuShares">cpuShares</a></code> | <code>java.lang.Number</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.destroyGraceSeconds">destroyGraceSeconds</a></code> | <code>java.lang.Number</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadBps">deviceReadBps</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>></code> | device_read_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadIops">deviceReadIops</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>></code> | device_read_iops block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceRequests">deviceRequests</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>></code> | device_requests block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.devices">devices</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDevices">ContainerDevices</a>></code> | devices block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteBps">deviceWriteBps</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>></code> | device_write_bps block. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteIops">deviceWriteIops</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>></code> | device_write_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dns">dns</a></code> | <code>java.util.List<java.lang.String></code> | DNS servers to use. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsOpts">dnsOpts</a></code> | <code>java.util.List<java.lang.String></code> | DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.dnsSearch">dnsSearch</a></code> | <code>java.util.List<java.lang.String></code> | DNS search domains that are used when bare unqualified hostnames are used inside of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.domainname">domainname</a></code> | <code>java.lang.String</code> | Domain name of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.entrypoint">entrypoint</a></code> | <code>java.util.List<java.lang.String></code> | The command to use as the Entrypoint for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.env">env</a></code> | <code>java.util.List<java.lang.String></code> | Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.gpus">gpus</a></code> | <code>java.lang.String</code> | GPU devices to add to the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.gpus">gpus</a></code> | <code>java.lang.String</code> | GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.groupAdd">groupAdd</a></code> | <code>java.util.List<java.lang.String></code> | Additional groups for the container user. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>></code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">hostname</a></code> | <code>java.lang.String</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">ipcMode</a></code> | <code>java.lang.String</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>></code> | labels block. |
@@ -3916,7 +4291,8 @@ ContainerConfig.builder()
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.mustRun">mustRun</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, then the Docker container will be kept running. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networkMode">networkMode</a></code> | <code>java.lang.String</code> | Network mode of the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.networksAdvanced">networksAdvanced</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a>></code> | networks_advanced block. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pidMode</a></code> | <code>java.lang.String</code> | he PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.pidMode">pidMode</a></code> | <code>java.lang.String</code> | The PID (Process) Namespace mode for the container. Either `container:<name\|id>` or `host`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.platform">platform</a></code> | <code>java.lang.String</code> | Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ports">ports</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>></code> | ports block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.privileged">privileged</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, the container runs in privileged mode. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.publishAllPorts">publishAllPorts</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | Publish all ports of the container. |
@@ -3933,6 +4309,7 @@ ContainerConfig.builder()
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.stopTimeout">stopTimeout</a></code> | <code>java.lang.Number</code> | Timeout (in seconds) to stop a container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.storageOpts">storageOpts</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Key/value pairs for the storage driver options, e.g. `size`: `120G`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.sysctls">sysctls</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of kernel parameters (sysctls) to set in the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tmpfs">tmpfs</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.tty">tty</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ulimit">ulimit</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerUlimit">ContainerUlimit</a>></code> | ulimit block. |
@@ -4028,7 +4405,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -4042,7 +4419,7 @@ public java.lang.String getName();
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -4056,7 +4433,7 @@ public java.lang.Boolean|IResolvable getAttach();
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -4070,7 +4447,7 @@ public ContainerCapabilities getCapabilities();
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -4084,7 +4461,7 @@ public java.lang.String getCgroupnsMode();
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -4098,7 +4475,7 @@ public java.lang.String getCgroupParent();
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -4114,7 +4491,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -4128,7 +4505,7 @@ public java.lang.Number getContainerReadRefreshTimeoutMilliseconds();
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -4142,7 +4519,7 @@ public java.lang.Number getCpuPeriod();
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -4158,7 +4535,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -4174,7 +4551,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -4188,7 +4565,7 @@ public java.lang.String getCpuSet();
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -4202,7 +4579,7 @@ public java.lang.Number getCpuShares();
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -4218,7 +4595,49 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `deviceReadBps`<sup>Optional</sup> <a name="deviceReadBps" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceReadBps"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadBps> getDeviceReadBps();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>>
+
+device_read_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_bps Container#device_read_bps}
+
+---
+
+##### `deviceReadIops`<sup>Optional</sup> <a name="deviceReadIops" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceReadIops"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadIops> getDeviceReadIops();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>>
+
+device_read_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_read_iops Container#device_read_iops}
+
+---
+
+##### `deviceRequests`<sup>Optional</sup> <a name="deviceRequests" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceRequests"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceRequests> getDeviceRequests();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>>
+
+device_requests block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -4232,7 +4651,35 @@ public IResolvable|java.util.List<ContainerDevices> getDevices();
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#devices Container#devices}
+
+---
+
+##### `deviceWriteBps`<sup>Optional</sup> <a name="deviceWriteBps" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteBps"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteBps> getDeviceWriteBps();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>>
+
+device_write_bps block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_bps Container#device_write_bps}
+
+---
+
+##### `deviceWriteIops`<sup>Optional</sup> <a name="deviceWriteIops" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceWriteIops"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteIops> getDeviceWriteIops();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>>
+
+device_write_iops block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -4246,7 +4693,7 @@ public java.util.List<java.lang.String> getDns();
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -4260,7 +4707,7 @@ public java.util.List<java.lang.String> getDnsOpts();
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -4274,7 +4721,7 @@ public java.util.List<java.lang.String> getDnsSearch();
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -4288,7 +4735,7 @@ public java.lang.String getDomainname();
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -4304,7 +4751,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -4318,7 +4765,7 @@ public java.util.List<java.lang.String> getEnv();
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -4330,11 +4777,9 @@ public java.lang.String getGpus();
 
 - *Type:* java.lang.String
 
-GPU devices to add to the container.
+GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Currently, only the value `all` is supported. Passing any other value will result in unexpected behavior.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -4348,7 +4793,7 @@ public java.util.List<java.lang.String> getGroupAdd();
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -4362,7 +4807,7 @@ public ContainerHealthcheck getHealthcheck();
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -4376,7 +4821,7 @@ public IResolvable|java.util.List<ContainerHost> getHost();
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -4390,7 +4835,7 @@ public java.lang.String getHostname();
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -4402,7 +4847,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4421,7 +4866,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -4435,7 +4880,7 @@ public java.lang.String getIpcMode();
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -4449,7 +4894,7 @@ public IResolvable|java.util.List<ContainerLabels> getLabels();
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -4463,7 +4908,7 @@ public java.lang.String getLogDriver();
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -4477,7 +4922,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLogOpts();
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -4491,7 +4936,7 @@ public java.lang.Boolean|IResolvable getLogs();
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -4505,7 +4950,7 @@ public java.lang.Number getMaxRetryCount();
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -4519,7 +4964,7 @@ public java.lang.Number getMemory();
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -4535,7 +4980,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -4551,7 +4996,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -4565,7 +5010,7 @@ public IResolvable|java.util.List<ContainerMounts> getMounts();
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -4579,9 +5024,9 @@ public java.lang.Boolean|IResolvable getMustRun();
 
 If `true`, then the Docker container will be kept running.
 
-If `false`, then as long as the container exists, Terraform assumes it is successful. Defaults to `true`.
+If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -4597,7 +5042,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -4611,7 +5056,7 @@ public IResolvable|java.util.List<ContainerNetworksAdvanced> getNetworksAdvanced
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -4623,9 +5068,23 @@ public java.lang.String getPidMode();
 
 - *Type:* java.lang.String
 
-he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#pid_mode Container#pid_mode}
+
+---
+
+##### `platform`<sup>Optional</sup> <a name="platform" id="@cdktn/provider-docker.container.ContainerConfig.property.platform"></a>
+
+```java
+public java.lang.String getPlatform();
+```
+
+- *Type:* java.lang.String
+
+Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -4639,7 +5098,7 @@ public IResolvable|java.util.List<ContainerPorts> getPorts();
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -4653,7 +5112,7 @@ public java.lang.Boolean|IResolvable getPrivileged();
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -4667,7 +5126,7 @@ public java.lang.Boolean|IResolvable getPublishAllPorts();
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -4681,7 +5140,7 @@ public java.lang.Boolean|IResolvable getReadOnly();
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -4695,7 +5154,7 @@ public java.lang.Boolean|IResolvable getRemoveVolumes();
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -4709,7 +5168,7 @@ public java.lang.String getRestart();
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -4723,7 +5182,7 @@ public java.lang.Boolean|IResolvable getRm();
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -4737,7 +5196,7 @@ public java.lang.String getRuntime();
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -4751,7 +5210,7 @@ public java.util.List<java.lang.String> getSecurityOpts();
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -4765,7 +5224,7 @@ public java.lang.Number getShmSize();
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -4781,7 +5240,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -4795,7 +5254,7 @@ public java.lang.Boolean|IResolvable getStdinOpen();
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -4809,7 +5268,7 @@ public java.lang.String getStopSignal();
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -4823,7 +5282,7 @@ public java.lang.Number getStopTimeout();
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -4837,7 +5296,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStorageOpts();
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -4851,7 +5310,21 @@ public java.util.Map<java.lang.String, java.lang.String> getSysctls();
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#sysctls Container#sysctls}
+
+---
+
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktn/provider-docker.container.ContainerConfig.property.timeouts"></a>
+
+```java
+public ContainerTimeouts getTimeouts();
+```
+
+- *Type:* <a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
+
+timeouts block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -4865,7 +5338,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTmpfs();
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -4879,7 +5352,7 @@ public java.lang.Boolean|IResolvable getTty();
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -4893,7 +5366,7 @@ public IResolvable|java.util.List<ContainerUlimit> getUlimit();
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -4907,7 +5380,7 @@ public IResolvable|java.util.List<ContainerUpload> getUpload();
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -4921,9 +5394,9 @@ public java.lang.String getUser();
 
 User used for run the first process.
 
-Format is `user` or `user:group` which user and group can be passed literraly or by name.
+Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -4937,7 +5410,7 @@ public java.lang.String getUsernsMode();
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -4951,7 +5424,7 @@ public IResolvable|java.util.List<ContainerVolumes> getVolumes();
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -4967,7 +5440,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -4981,7 +5454,7 @@ public java.lang.Number getWaitTimeout();
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -4995,7 +5468,205 @@ public java.lang.String getWorkingDir();
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#working_dir Container#working_dir}
+
+---
+
+### ContainerDeviceReadBps <a name="ContainerDeviceReadBps" id="@cdktn/provider-docker.container.ContainerDeviceReadBps"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadBps;
+
+ContainerDeviceReadBps.builder()
+    .path(java.lang.String)
+    .rate(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps.property.path">path</a></code> | <code>java.lang.String</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps.property.rate">rate</a></code> | <code>java.lang.Number</code> | The read rate limit in bytes per second. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadBps.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+The read rate limit in bytes per second.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceReadIops <a name="ContainerDeviceReadIops" id="@cdktn/provider-docker.container.ContainerDeviceReadIops"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadIops;
+
+ContainerDeviceReadIops.builder()
+    .path(java.lang.String)
+    .rate(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops.property.path">path</a></code> | <code>java.lang.String</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops.property.rate">rate</a></code> | <code>java.lang.Number</code> | The read IOPS limit. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadIops.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+The read IOPS limit.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceRequests <a name="ContainerDeviceRequests" id="@cdktn/provider-docker.container.ContainerDeviceRequests"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceRequests.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceRequests;
+
+ContainerDeviceRequests.builder()
+//  .capabilities(java.util.List<java.lang.String>)
+//  .count(java.lang.Number)
+//  .deviceIds(java.util.List<java.lang.String>)
+//  .driver(java.lang.String)
+//  .options(java.util.Map<java.lang.String, java.lang.String>)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.capabilities">capabilities</a></code> | <code>java.util.List<java.lang.String></code> | List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`). |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.count">count</a></code> | <code>java.lang.Number</code> | Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.deviceIds">deviceIds</a></code> | <code>java.util.List<java.lang.String></code> | List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`). |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.driver">driver</a></code> | <code>java.lang.String</code> | The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequests.property.options">options</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Driver-specific options. |
+
+---
+
+##### `capabilities`<sup>Optional</sup> <a name="capabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.capabilities"></a>
+
+```java
+public java.util.List<java.lang.String> getCapabilities();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#capabilities Container#capabilities}
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.count"></a>
+
+```java
+public java.lang.Number getCount();
+```
+
+- *Type:* java.lang.Number
+
+Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#count Container#count}
+
+---
+
+##### `deviceIds`<sup>Optional</sup> <a name="deviceIds" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.deviceIds"></a>
+
+```java
+public java.util.List<java.lang.String> getDeviceIds();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#device_ids Container#device_ids}
+
+---
+
+##### `driver`<sup>Optional</sup> <a name="driver" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.driver"></a>
+
+```java
+public java.lang.String getDriver();
+```
+
+- *Type:* java.lang.String
+
+The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver Container#driver}
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="@cdktn/provider-docker.container.ContainerDeviceRequests.property.options"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getOptions();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+Driver-specific options.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#options Container#options}
 
 ---
 
@@ -5033,7 +5704,7 @@ public java.lang.String getHostPath();
 
 The path on the host where the device is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -5047,7 +5718,9 @@ public java.lang.String getContainerPath();
 
 The path in the container where the device will be bound.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+If not set, it defaults to the value of `host_path`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -5061,7 +5734,107 @@ public java.lang.String getPermissions();
 
 The cgroup permissions given to the container to access the device. Defaults to `rwm`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
+
+---
+
+### ContainerDeviceWriteBps <a name="ContainerDeviceWriteBps" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteBps;
+
+ContainerDeviceWriteBps.builder()
+    .path(java.lang.String)
+    .rate(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.path">path</a></code> | <code>java.lang.String</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.rate">rate</a></code> | <code>java.lang.Number</code> | The write rate limit in bytes per second. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteBps.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+The write rate limit in bytes per second.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
+
+---
+
+### ContainerDeviceWriteIops <a name="ContainerDeviceWriteIops" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteIops;
+
+ContainerDeviceWriteIops.builder()
+    .path(java.lang.String)
+    .rate(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.path">path</a></code> | <code>java.lang.String</code> | The device path on the host, e.g. `/dev/sda`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.rate">rate</a></code> | <code>java.lang.Number</code> | The write IOPS limit. |
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+The device path on the host, e.g. `/dev/sda`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#path Container#path}
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteIops.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+The write IOPS limit.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -5073,11 +5846,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 import io.cdktn.providers.docker.container.ContainerHealthcheck;
 
 ContainerHealthcheck.builder()
-    .test(java.util.List<java.lang.String>)
 //  .interval(java.lang.String)
 //  .retries(java.lang.Number)
 //  .startInterval(java.lang.String)
 //  .startPeriod(java.lang.String)
+//  .test(java.util.List<java.lang.String>)
 //  .timeout(java.lang.String)
     .build();
 ```
@@ -5086,28 +5859,12 @@ ContainerHealthcheck.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.test">test</a></code> | <code>java.util.List<java.lang.String></code> | Command to run to check health. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.interval">interval</a></code> | <code>java.lang.String</code> | Time between running the check (ms\|s\|m\|h). Defaults to `0s`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.retries">retries</a></code> | <code>java.lang.Number</code> | Consecutive failures needed to report unhealthy. Defaults to `0`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.startInterval">startInterval</a></code> | <code>java.lang.String</code> | Interval before the healthcheck starts (ms\|s\|m\|h). Defaults to `0s`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.startPeriod">startPeriod</a></code> | <code>java.lang.String</code> | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h). Defaults to `0s`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.test">test</a></code> | <code>java.util.List<java.lang.String></code> | Command to run to check health. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck.property.timeout">timeout</a></code> | <code>java.lang.String</code> | Maximum time to allow one check to run (ms\|s\|m\|h). Defaults to `0s`. |
-
----
-
-##### `test`<sup>Required</sup> <a name="test" id="@cdktn/provider-docker.container.ContainerHealthcheck.property.test"></a>
-
-```java
-public java.util.List<java.lang.String> getTest();
-```
-
-- *Type:* java.util.List<java.lang.String>
-
-Command to run to check health.
-
-For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -5121,7 +5878,7 @@ public java.lang.String getInterval();
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -5135,7 +5892,7 @@ public java.lang.Number getRetries();
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -5149,7 +5906,7 @@ public java.lang.String getStartInterval();
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -5163,7 +5920,23 @@ public java.lang.String getStartPeriod();
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#start_period Container#start_period}
+
+---
+
+##### `test`<sup>Optional</sup> <a name="test" id="@cdktn/provider-docker.container.ContainerHealthcheck.property.test"></a>
+
+```java
+public java.util.List<java.lang.String> getTest();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+Command to run to check health.
+
+For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -5177,7 +5950,7 @@ public java.lang.String getTimeout();
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -5213,7 +5986,7 @@ public java.lang.String getHost();
 
 Hostname to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -5227,7 +6000,7 @@ public java.lang.String getIp();
 
 IP address this hostname should resolve to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5263,7 +6036,7 @@ public java.lang.String getLabel();
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5277,7 +6050,7 @@ public java.lang.String getValue();
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5323,7 +6096,7 @@ public java.lang.String getTarget();
 
 Container path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#target Container#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#target Container#target}
 
 ---
 
@@ -5337,7 +6110,7 @@ public java.lang.String getType();
 
 The mount type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#type Container#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#type Container#type}
 
 ---
 
@@ -5351,7 +6124,7 @@ public ContainerMountsBindOptions getBindOptions();
 
 bind_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#bind_options Container#bind_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#bind_options Container#bind_options}
 
 ---
 
@@ -5365,7 +6138,7 @@ public java.lang.Boolean|IResolvable getReadOnly();
 
 Whether the mount should be read-only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -5379,7 +6152,7 @@ public java.lang.String getSource();
 
 Mount source (e.g. a volume name, a host path).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -5393,7 +6166,7 @@ public ContainerMountsTmpfsOptions getTmpfsOptions();
 
 tmpfs_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
 
 ---
 
@@ -5407,7 +6180,7 @@ public ContainerMountsVolumeOptions getVolumeOptions();
 
 volume_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_options Container#volume_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_options Container#volume_options}
 
 ---
 
@@ -5441,7 +6214,7 @@ public java.lang.String getPropagation();
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -5477,7 +6250,7 @@ public java.lang.Number getMode();
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -5491,7 +6264,7 @@ public java.lang.Number getSizeBytes();
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -5533,7 +6306,7 @@ public java.lang.String getDriverName();
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -5547,7 +6320,7 @@ public java.util.Map<java.lang.String, java.lang.String> getDriverOptions();
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -5561,7 +6334,7 @@ public IResolvable|java.util.List<ContainerMountsVolumeOptionsLabels> getLabels(
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -5575,7 +6348,7 @@ public java.lang.Boolean|IResolvable getNoCopy();
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -5589,7 +6362,7 @@ public java.lang.String getSubpath();
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -5625,7 +6398,7 @@ public java.lang.String getLabel();
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5639,7 +6412,7 @@ public java.lang.String getValue();
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5665,8 +6438,11 @@ import io.cdktn.providers.docker.container.ContainerNetworksAdvanced;
 ContainerNetworksAdvanced.builder()
     .name(java.lang.String)
 //  .aliases(java.util.List<java.lang.String>)
+//  .driverOpts(java.util.List<java.lang.String>)
+//  .gwPriority(java.lang.Number)
 //  .ipv4Address(java.lang.String)
 //  .ipv6Address(java.lang.String)
+//  .linkLocalIps(java.util.List<java.lang.String>)
 //  .macAddress(java.lang.String)
     .build();
 ```
@@ -5677,8 +6453,11 @@ ContainerNetworksAdvanced.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.name">name</a></code> | <code>java.lang.String</code> | The name or id of the network to use. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.aliases">aliases</a></code> | <code>java.util.List<java.lang.String></code> | The network aliases of the container in the specific network. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.driverOpts">driverOpts</a></code> | <code>java.util.List<java.lang.String></code> | An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.gwPriority">gwPriority</a></code> | <code>java.lang.Number</code> | Gateway priority for this endpoint. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv4Address">ipv4Address</a></code> | <code>java.lang.String</code> | The IPV4 address of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.ipv6Address">ipv6Address</a></code> | <code>java.lang.String</code> | The IPV6 address of the container in the specific network. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.linkLocalIps">linkLocalIps</a></code> | <code>java.util.List<java.lang.String></code> | The link-local IPs of the container in the specific network. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.macAddress">macAddress</a></code> | <code>java.lang.String</code> | The MAC address of the container in the specific network. |
 
 ---
@@ -5695,7 +6474,7 @@ The name or id of the network to use.
 
 You can use `name` or `id` attribute from a `docker_network` resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -5709,7 +6488,37 @@ public java.util.List<java.lang.String> getAliases();
 
 The network aliases of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#aliases Container#aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#aliases Container#aliases}
+
+---
+
+##### `driverOpts`<sup>Optional</sup> <a name="driverOpts" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.driverOpts"></a>
+
+```java
+public java.util.List<java.lang.String> getDriverOpts();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#driver_opts Container#driver_opts}
+
+---
+
+##### `gwPriority`<sup>Optional</sup> <a name="gwPriority" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.gwPriority"></a>
+
+```java
+public java.lang.Number getGwPriority();
+```
+
+- *Type:* java.lang.Number
+
+Gateway priority for this endpoint.
+
+The endpoint with the highest priority will provide the default gateway for the container. This is the equivalent to `--gw-priority` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#gw_priority Container#gw_priority}
 
 ---
 
@@ -5723,7 +6532,7 @@ public java.lang.String getIpv4Address();
 
 The IPV4 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv4_address Container#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv4_address Container#ipv4_address}
 
 ---
 
@@ -5737,7 +6546,23 @@ public java.lang.String getIpv6Address();
 
 The IPV6 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ipv6_address Container#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ipv6_address Container#ipv6_address}
+
+---
+
+##### `linkLocalIps`<sup>Optional</sup> <a name="linkLocalIps" id="@cdktn/provider-docker.container.ContainerNetworksAdvanced.property.linkLocalIps"></a>
+
+```java
+public java.util.List<java.lang.String> getLinkLocalIps();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The link-local IPs of the container in the specific network.
+
+This is the equivalent to repeating `--link-local-ip` for `docker run`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#link_local_ips Container#link_local_ips}
 
 ---
 
@@ -5751,7 +6576,7 @@ public java.lang.String getMacAddress();
 
 The MAC address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#mac_address Container#mac_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#mac_address Container#mac_address}
 
 ---
 
@@ -5791,7 +6616,7 @@ public java.lang.Number getInternal();
 
 Port within the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#internal Container#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#internal Container#internal}
 
 ---
 
@@ -5805,7 +6630,7 @@ public java.lang.Number getExternal();
 
 Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#external Container#external}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#external Container#external}
 
 ---
 
@@ -5819,7 +6644,7 @@ public java.lang.String getIp();
 
 IP address/mask that can access this port. Defaults to `0.0.0.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5833,7 +6658,67 @@ public java.lang.String getProtocol();
 
 Protocol that can be used over this port. Defaults to `tcp`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#protocol Container#protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#protocol Container#protocol}
+
+---
+
+### ContainerTimeouts <a name="ContainerTimeouts" id="@cdktn/provider-docker.container.ContainerTimeouts"></a>
+
+#### Initializer <a name="Initializer" id="@cdktn/provider-docker.container.ContainerTimeouts.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerTimeouts;
+
+ContainerTimeouts.builder()
+//  .create(java.lang.String)
+//  .delete(java.lang.String)
+//  .update(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}. |
+
+---
+
+##### `create`<sup>Optional</sup> <a name="create" id="@cdktn/provider-docker.container.ContainerTimeouts.property.create"></a>
+
+```java
+public java.lang.String getCreate();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#create Container#create}.
+
+---
+
+##### `delete`<sup>Optional</sup> <a name="delete" id="@cdktn/provider-docker.container.ContainerTimeouts.property.delete"></a>
+
+```java
+public java.lang.String getDelete();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#delete Container#delete}.
+
+---
+
+##### `update`<sup>Optional</sup> <a name="update" id="@cdktn/provider-docker.container.ContainerTimeouts.property.update"></a>
+
+```java
+public java.lang.String getUpdate();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -5871,7 +6756,7 @@ public java.lang.Number getHard();
 
 The hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#hard Container#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#hard Container#hard}
 
 ---
 
@@ -5885,7 +6770,7 @@ public java.lang.String getName();
 
 The name of the ulimit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -5899,7 +6784,7 @@ public java.lang.Number getSoft();
 
 The soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#soft Container#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#soft Container#soft}
 
 ---
 
@@ -5945,7 +6830,7 @@ public java.lang.String getFile();
 
 Path to the file in the container where is upload goes to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#file Container#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#file Container#file}
 
 ---
 
@@ -5961,7 +6846,7 @@ Literal string value to use as the object content, which will be uploaded as UTF
 
 Conflicts with `content_base64` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content Container#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content Container#content}
 
 ---
 
@@ -5977,7 +6862,7 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 
 This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#content_base64 Container#content_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#content_base64 Container#content_base64}
 
 ---
 
@@ -5991,7 +6876,7 @@ public java.lang.Boolean|IResolvable getExecutable();
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#executable Container#executable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#executable Container#executable}
 
 ---
 
@@ -6005,7 +6890,7 @@ public java.lang.String getPermissions();
 
 The permission mode for the file in the container. Has precedence over `executable`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -6021,7 +6906,7 @@ A filename that references a file which will be uploaded as the object content.
 
 This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -6035,7 +6920,7 @@ public java.lang.String getSourceHash();
 
 If using `source`, this will force an update if the file content has updated but the filename has not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#source_hash Container#source_hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#source_hash Container#source_hash}
 
 ---
 
@@ -6051,6 +6936,7 @@ ContainerVolumes.builder()
 //  .fromContainer(java.lang.String)
 //  .hostPath(java.lang.String)
 //  .readOnly(java.lang.Boolean|IResolvable)
+//  .selinuxRelabel(java.lang.String)
 //  .volumeName(java.lang.String)
     .build();
 ```
@@ -6063,6 +6949,7 @@ ContainerVolumes.builder()
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.fromContainer">fromContainer</a></code> | <code>java.lang.String</code> | The container where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.hostPath">hostPath</a></code> | <code>java.lang.String</code> | The path on the host where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.readOnly">readOnly</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | If `true`, this volume will be readonly. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.selinuxRelabel">selinuxRelabel</a></code> | <code>java.lang.String</code> | SELinux relabel mode for bind mounts. Supported values are `z` and `Z`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.volumeName">volumeName</a></code> | <code>java.lang.String</code> | The name of the docker volume which should be mounted. |
 
 ---
@@ -6077,7 +6964,7 @@ public java.lang.String getContainerPath();
 
 The path in the container where the volume will be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -6091,7 +6978,7 @@ public java.lang.String getFromContainer();
 
 The container where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#from_container Container#from_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#from_container Container#from_container}
 
 ---
 
@@ -6105,7 +6992,7 @@ public java.lang.String getHostPath();
 
 The path on the host where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -6119,7 +7006,21 @@ public java.lang.Boolean|IResolvable getReadOnly();
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#read_only Container#read_only}
+
+---
+
+##### `selinuxRelabel`<sup>Optional</sup> <a name="selinuxRelabel" id="@cdktn/provider-docker.container.ContainerVolumes.property.selinuxRelabel"></a>
+
+```java
+public java.lang.String getSelinuxRelabel();
+```
+
+- *Type:* java.lang.String
+
+SELinux relabel mode for bind mounts. Supported values are `z` and `Z`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
 
 ---
 
@@ -6133,7 +7034,7 @@ public java.lang.String getVolumeName();
 
 The name of the docker volume which should be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/container#volume_name Container#volume_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/container#volume_name Container#volume_name}
 
 ---
 
@@ -6442,6 +7343,1520 @@ public ContainerCapabilities getInternalValue();
 ```
 
 - *Type:* <a href="#@cdktn/provider-docker.container.ContainerCapabilities">ContainerCapabilities</a>
+
+---
+
+
+### ContainerDeviceReadBpsList <a name="ContainerDeviceReadBpsList" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadBpsList;
+
+new ContainerDeviceReadBpsList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get"></a>
+
+```java
+public ContainerDeviceReadBpsOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsList.property.internalValue"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadBps> getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>>
+
+---
+
+
+### ContainerDeviceReadBpsOutputReference <a name="ContainerDeviceReadBpsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadBpsOutputReference;
+
+new ContainerDeviceReadBpsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.pathInput">pathInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rateInput">rateInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.path">path</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rate">rate</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `pathInput`<sup>Optional</sup> <a name="pathInput" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.pathInput"></a>
+
+```java
+public java.lang.String getPathInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rateInput`<sup>Optional</sup> <a name="rateInput" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rateInput"></a>
+
+```java
+public java.lang.Number getRateInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceReadBpsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerDeviceReadBps getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>
+
+---
+
+
+### ContainerDeviceReadIopsList <a name="ContainerDeviceReadIopsList" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadIopsList;
+
+new ContainerDeviceReadIopsList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get"></a>
+
+```java
+public ContainerDeviceReadIopsOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsList.property.internalValue"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceReadIops> getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>>
+
+---
+
+
+### ContainerDeviceReadIopsOutputReference <a name="ContainerDeviceReadIopsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceReadIopsOutputReference;
+
+new ContainerDeviceReadIopsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.pathInput">pathInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rateInput">rateInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.path">path</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rate">rate</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `pathInput`<sup>Optional</sup> <a name="pathInput" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.pathInput"></a>
+
+```java
+public java.lang.String getPathInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rateInput`<sup>Optional</sup> <a name="rateInput" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rateInput"></a>
+
+```java
+public java.lang.Number getRateInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceReadIopsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerDeviceReadIops getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>
+
+---
+
+
+### ContainerDeviceRequestsList <a name="ContainerDeviceRequestsList" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceRequestsList;
+
+new ContainerDeviceRequestsList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.get"></a>
+
+```java
+public ContainerDeviceRequestsOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceRequestsList.property.internalValue"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceRequests> getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>>
+
+---
+
+
+### ContainerDeviceRequestsOutputReference <a name="ContainerDeviceRequestsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceRequestsOutputReference;
+
+new ContainerDeviceRequestsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCapabilities">resetCapabilities</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCount">resetCount</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDeviceIds">resetDeviceIds</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDriver">resetDriver</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetOptions">resetOptions</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetCapabilities` <a name="resetCapabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCapabilities"></a>
+
+```java
+public void resetCapabilities()
+```
+
+##### `resetCount` <a name="resetCount" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetCount"></a>
+
+```java
+public void resetCount()
+```
+
+##### `resetDeviceIds` <a name="resetDeviceIds" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDeviceIds"></a>
+
+```java
+public void resetDeviceIds()
+```
+
+##### `resetDriver` <a name="resetDriver" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetDriver"></a>
+
+```java
+public void resetDriver()
+```
+
+##### `resetOptions` <a name="resetOptions" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.resetOptions"></a>
+
+```java
+public void resetOptions()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilitiesInput">capabilitiesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.countInput">countInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIdsInput">deviceIdsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driverInput">driverInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.optionsInput">optionsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilities">capabilities</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIds">deviceIds</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driver">driver</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.options">options</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `capabilitiesInput`<sup>Optional</sup> <a name="capabilitiesInput" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilitiesInput"></a>
+
+```java
+public java.util.List<java.lang.String> getCapabilitiesInput();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `countInput`<sup>Optional</sup> <a name="countInput" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.countInput"></a>
+
+```java
+public java.lang.Number getCountInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `deviceIdsInput`<sup>Optional</sup> <a name="deviceIdsInput" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIdsInput"></a>
+
+```java
+public java.util.List<java.lang.String> getDeviceIdsInput();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `driverInput`<sup>Optional</sup> <a name="driverInput" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driverInput"></a>
+
+```java
+public java.lang.String getDriverInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `optionsInput`<sup>Optional</sup> <a name="optionsInput" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.optionsInput"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getOptionsInput();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `capabilities`<sup>Required</sup> <a name="capabilities" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.capabilities"></a>
+
+```java
+public java.util.List<java.lang.String> getCapabilities();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `count`<sup>Required</sup> <a name="count" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.count"></a>
+
+```java
+public java.lang.Number getCount();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `deviceIds`<sup>Required</sup> <a name="deviceIds" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.deviceIds"></a>
+
+```java
+public java.util.List<java.lang.String> getDeviceIds();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `driver`<sup>Required</sup> <a name="driver" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.driver"></a>
+
+```java
+public java.lang.String getDriver();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `options`<sup>Required</sup> <a name="options" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.options"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getOptions();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceRequestsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerDeviceRequests getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>
 
 ---
 
@@ -6953,6 +9368,948 @@ public IResolvable|ContainerDevices getInternalValue();
 ---
 
 
+### ContainerDeviceWriteBpsList <a name="ContainerDeviceWriteBpsList" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteBpsList;
+
+new ContainerDeviceWriteBpsList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get"></a>
+
+```java
+public ContainerDeviceWriteBpsOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsList.property.internalValue"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteBps> getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>>
+
+---
+
+
+### ContainerDeviceWriteBpsOutputReference <a name="ContainerDeviceWriteBpsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteBpsOutputReference;
+
+new ContainerDeviceWriteBpsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.pathInput">pathInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rateInput">rateInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.path">path</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rate">rate</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `pathInput`<sup>Optional</sup> <a name="pathInput" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.pathInput"></a>
+
+```java
+public java.lang.String getPathInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rateInput`<sup>Optional</sup> <a name="rateInput" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rateInput"></a>
+
+```java
+public java.lang.Number getRateInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceWriteBpsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerDeviceWriteBps getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteBps">ContainerDeviceWriteBps</a>
+
+---
+
+
+### ContainerDeviceWriteIopsList <a name="ContainerDeviceWriteIopsList" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteIopsList;
+
+new ContainerDeviceWriteIopsList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get"></a>
+
+```java
+public ContainerDeviceWriteIopsOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsList.property.internalValue"></a>
+
+```java
+public IResolvable|java.util.List<ContainerDeviceWriteIops> getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|java.util.List<<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>>
+
+---
+
+
+### ContainerDeviceWriteIopsOutputReference <a name="ContainerDeviceWriteIopsOutputReference" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerDeviceWriteIopsOutputReference;
+
+new ContainerDeviceWriteIopsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.pathInput">pathInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rateInput">rateInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.path">path</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rate">rate</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `pathInput`<sup>Optional</sup> <a name="pathInput" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.pathInput"></a>
+
+```java
+public java.lang.String getPathInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rateInput`<sup>Optional</sup> <a name="rateInput" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rateInput"></a>
+
+```java
+public java.lang.Number getRateInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `path`<sup>Required</sup> <a name="path" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rate`<sup>Required</sup> <a name="rate" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.rate"></a>
+
+```java
+public java.lang.Number getRate();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerDeviceWriteIopsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerDeviceWriteIops getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerDeviceWriteIops">ContainerDeviceWriteIops</a>
+
+---
+
+
 ### ContainerHealthcheckOutputReference <a name="ContainerHealthcheckOutputReference" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.Initializer"></a>
@@ -7007,6 +10364,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetRetries">resetRetries</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetStartInterval">resetStartInterval</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetStartPeriod">resetStartPeriod</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTest">resetTest</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTimeout">resetTimeout</a></code> | *No description.* |
 
 ---
@@ -7183,6 +10541,12 @@ public void resetStartInterval()
 
 ```java
 public void resetStartPeriod()
+```
+
+##### `resetTest` <a name="resetTest" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTest"></a>
+
+```java
+public void resetTest()
 ```
 
 ##### `resetTimeout` <a name="resetTimeout" id="@cdktn/provider-docker.container.ContainerHealthcheckOutputReference.resetTimeout"></a>
@@ -11162,8 +14526,11 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetAliases">resetAliases</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetDriverOpts">resetDriverOpts</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetGwPriority">resetGwPriority</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv4Address">resetIpv4Address</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv6Address">resetIpv6Address</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetLinkLocalIps">resetLinkLocalIps</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress">resetMacAddress</a></code> | *No description.* |
 
 ---
@@ -11324,6 +14691,18 @@ Returns a reversible string representation.
 public void resetAliases()
 ```
 
+##### `resetDriverOpts` <a name="resetDriverOpts" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetDriverOpts"></a>
+
+```java
+public void resetDriverOpts()
+```
+
+##### `resetGwPriority` <a name="resetGwPriority" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetGwPriority"></a>
+
+```java
+public void resetGwPriority()
+```
+
 ##### `resetIpv4Address` <a name="resetIpv4Address" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetIpv4Address"></a>
 
 ```java
@@ -11334,6 +14713,12 @@ public void resetIpv4Address()
 
 ```java
 public void resetIpv6Address()
+```
+
+##### `resetLinkLocalIps` <a name="resetLinkLocalIps" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetLinkLocalIps"></a>
+
+```java
+public void resetLinkLocalIps()
 ```
 
 ##### `resetMacAddress` <a name="resetMacAddress" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.resetMacAddress"></a>
@@ -11350,13 +14735,19 @@ public void resetMacAddress()
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliasesInput">aliasesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOptsInput">driverOptsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriorityInput">gwPriorityInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4AddressInput">ipv4AddressInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6AddressInput">ipv6AddressInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIpsInput">linkLocalIpsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddressInput">macAddressInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.aliases">aliases</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOpts">driverOpts</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriority">gwPriority</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address">ipv4Address</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv6Address">ipv6Address</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIps">linkLocalIps</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.macAddress">macAddress</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerNetworksAdvanced">ContainerNetworksAdvanced</a></code> | *No description.* |
@@ -11397,6 +14788,26 @@ public java.util.List<java.lang.String> getAliasesInput();
 
 ---
 
+##### `driverOptsInput`<sup>Optional</sup> <a name="driverOptsInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOptsInput"></a>
+
+```java
+public java.util.List<java.lang.String> getDriverOptsInput();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `gwPriorityInput`<sup>Optional</sup> <a name="gwPriorityInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriorityInput"></a>
+
+```java
+public java.lang.Number getGwPriorityInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
 ##### `ipv4AddressInput`<sup>Optional</sup> <a name="ipv4AddressInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4AddressInput"></a>
 
 ```java
@@ -11414,6 +14825,16 @@ public java.lang.String getIpv6AddressInput();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `linkLocalIpsInput`<sup>Optional</sup> <a name="linkLocalIpsInput" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIpsInput"></a>
+
+```java
+public java.util.List<java.lang.String> getLinkLocalIpsInput();
+```
+
+- *Type:* java.util.List<java.lang.String>
 
 ---
 
@@ -11447,6 +14868,26 @@ public java.util.List<java.lang.String> getAliases();
 
 ---
 
+##### `driverOpts`<sup>Required</sup> <a name="driverOpts" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.driverOpts"></a>
+
+```java
+public java.util.List<java.lang.String> getDriverOpts();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `gwPriority`<sup>Required</sup> <a name="gwPriority" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.gwPriority"></a>
+
+```java
+public java.lang.Number getGwPriority();
+```
+
+- *Type:* java.lang.Number
+
+---
+
 ##### `ipv4Address`<sup>Required</sup> <a name="ipv4Address" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.ipv4Address"></a>
 
 ```java
@@ -11464,6 +14905,16 @@ public java.lang.String getIpv6Address();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `linkLocalIps`<sup>Required</sup> <a name="linkLocalIps" id="@cdktn/provider-docker.container.ContainerNetworksAdvancedOutputReference.property.linkLocalIps"></a>
+
+```java
+public java.util.List<java.lang.String> getLinkLocalIps();
+```
+
+- *Type:* java.util.List<java.lang.String>
 
 ---
 
@@ -12030,6 +15481,342 @@ public IResolvable|ContainerPorts getInternalValue();
 ```
 
 - *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerPorts">ContainerPorts</a>
+
+---
+
+
+### ContainerTimeoutsOutputReference <a name="ContainerTimeoutsOutputReference" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer"></a>
+
+```java
+import io.cdktn.providers.docker.container.ContainerTimeoutsOutputReference;
+
+new ContainerTimeoutsOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>io.cdktn.cdktn.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* io.cdktn.cdktn.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetCreate">resetCreate</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetDelete">resetDelete</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetUpdate">resetUpdate</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* io.cdktn.cdktn.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetCreate` <a name="resetCreate" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetCreate"></a>
+
+```java
+public void resetCreate()
+```
+
+##### `resetDelete` <a name="resetDelete" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetDelete"></a>
+
+```java
+public void resetDelete()
+```
+
+##### `resetUpdate` <a name="resetUpdate" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.resetUpdate"></a>
+
+```java
+public void resetUpdate()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.createInput">createInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.deleteInput">deleteInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.updateInput">updateInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `createInput`<sup>Optional</sup> <a name="createInput" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.createInput"></a>
+
+```java
+public java.lang.String getCreateInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `deleteInput`<sup>Optional</sup> <a name="deleteInput" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.deleteInput"></a>
+
+```java
+public java.lang.String getDeleteInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `updateInput`<sup>Optional</sup> <a name="updateInput" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.updateInput"></a>
+
+```java
+public java.lang.String getUpdateInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `create`<sup>Required</sup> <a name="create" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.create"></a>
+
+```java
+public java.lang.String getCreate();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `delete`<sup>Required</sup> <a name="delete" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.delete"></a>
+
+```java
+public java.lang.String getDelete();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `update`<sup>Required</sup> <a name="update" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.update"></a>
+
+```java
+public java.lang.String getUpdate();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktn/provider-docker.container.ContainerTimeoutsOutputReference.property.internalValue"></a>
+
+```java
+public IResolvable|ContainerTimeouts getInternalValue();
+```
+
+- *Type:* io.cdktn.cdktn.IResolvable|<a href="#@cdktn/provider-docker.container.ContainerTimeouts">ContainerTimeouts</a>
 
 ---
 
@@ -13382,6 +17169,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetFromContainer">resetFromContainer</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetHostPath">resetHostPath</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetReadOnly">resetReadOnly</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetSelinuxRelabel">resetSelinuxRelabel</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetVolumeName">resetVolumeName</a></code> | *No description.* |
 
 ---
@@ -13560,6 +17348,12 @@ public void resetHostPath()
 public void resetReadOnly()
 ```
 
+##### `resetSelinuxRelabel` <a name="resetSelinuxRelabel" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetSelinuxRelabel"></a>
+
+```java
+public void resetSelinuxRelabel()
+```
+
 ##### `resetVolumeName` <a name="resetVolumeName" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.resetVolumeName"></a>
 
 ```java
@@ -13577,11 +17371,13 @@ public void resetVolumeName()
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainerInput">fromContainerInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPathInput">hostPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnlyInput">readOnlyInput</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabelInput">selinuxRelabelInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeNameInput">volumeNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.containerPath">containerPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.fromContainer">fromContainer</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.hostPath">hostPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.readOnly">readOnly</a></code> | <code>java.lang.Boolean\|io.cdktn.cdktn.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabel">selinuxRelabel</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeName">volumeName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.internalValue">internalValue</a></code> | <code>io.cdktn.cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerVolumes">ContainerVolumes</a></code> | *No description.* |
 
@@ -13651,6 +17447,16 @@ public java.lang.Boolean|IResolvable getReadOnlyInput();
 
 ---
 
+##### `selinuxRelabelInput`<sup>Optional</sup> <a name="selinuxRelabelInput" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabelInput"></a>
+
+```java
+public java.lang.String getSelinuxRelabelInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `volumeNameInput`<sup>Optional</sup> <a name="volumeNameInput" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.volumeNameInput"></a>
 
 ```java
@@ -13698,6 +17504,16 @@ public java.lang.Boolean|IResolvable getReadOnly();
 ```
 
 - *Type:* java.lang.Boolean|io.cdktn.cdktn.IResolvable
+
+---
+
+##### `selinuxRelabel`<sup>Required</sup> <a name="selinuxRelabel" id="@cdktn/provider-docker.container.ContainerVolumesOutputReference.property.selinuxRelabel"></a>
+
+```java
+public java.lang.String getSelinuxRelabel();
+```
+
+- *Type:* java.lang.String
 
 ---
 
