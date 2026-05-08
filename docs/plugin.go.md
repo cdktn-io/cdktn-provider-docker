@@ -4,12 +4,12 @@
 
 ### Plugin <a name="Plugin" id="@cdktn/provider-docker.plugin.Plugin"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin docker_plugin}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin docker_plugin}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.Plugin.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.NewPlugin(scope Construct, id *string, config PluginConfig) Plugin
 ```
@@ -476,7 +476,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.plugin.Plugin.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.Plugin_IsConstruct(x interface{}) *bool
 ```
@@ -508,7 +508,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.plugin.Plugin.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.Plugin_IsTerraformElement(x interface{}) *bool
 ```
@@ -522,7 +522,7 @@ plugin.Plugin_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.plugin.Plugin.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.Plugin_IsTerraformResource(x interface{}) *bool
 ```
@@ -536,7 +536,7 @@ plugin.Plugin_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.plugin.Plugin.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.Plugin_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -565,7 +565,7 @@ The construct id used in the generated config for the Plugin to import.
 
 The id of the existing Plugin that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -996,7 +996,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.plugin.PluginConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 &plugin.PluginConfig {
 	Connection: interface{},
@@ -1039,7 +1039,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable">ForceDisable</a></code> | <code>interface{}</code> | If true, then the plugin is disabled forcibly. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions">GrantAllPermissions</a></code> | <code>interface{}</code> | If true, grant all permissions necessary to run the plugin. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions">GrantPermissions</a></code> | <code>interface{}</code> | grant_permissions block. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#id Plugin#id}. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#id Plugin#id}. |
 
 ---
 
@@ -1123,7 +1123,7 @@ Name *string
 
 Docker Plugin name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#name Plugin#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#name Plugin#name}
 
 ---
 
@@ -1137,7 +1137,7 @@ Alias *string
 
 Docker Plugin alias.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#alias Plugin#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#alias Plugin#alias}
 
 ---
 
@@ -1151,7 +1151,7 @@ Enabled interface{}
 
 If `true` the plugin is enabled. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#enabled Plugin#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#enabled Plugin#enabled}
 
 ---
 
@@ -1165,7 +1165,7 @@ EnableTimeout *f64
 
 HTTP client timeout to enable the plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#enable_timeout Plugin#enable_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#enable_timeout Plugin#enable_timeout}
 
 ---
 
@@ -1179,7 +1179,7 @@ Env *[]*string
 
 The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#env Plugin#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#env Plugin#env}
 
 ---
 
@@ -1193,7 +1193,7 @@ ForceDestroy interface{}
 
 If true, then the plugin is destroyed forcibly.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#force_destroy Plugin#force_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#force_destroy Plugin#force_destroy}
 
 ---
 
@@ -1207,7 +1207,7 @@ ForceDisable interface{}
 
 If true, then the plugin is disabled forcibly.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#force_disable Plugin#force_disable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#force_disable Plugin#force_disable}
 
 ---
 
@@ -1221,7 +1221,7 @@ GrantAllPermissions interface{}
 
 If true, grant all permissions necessary to run the plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#grant_all_permissions Plugin#grant_all_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#grant_all_permissions Plugin#grant_all_permissions}
 
 ---
 
@@ -1235,7 +1235,7 @@ GrantPermissions interface{}
 
 grant_permissions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#grant_permissions Plugin#grant_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#grant_permissions Plugin#grant_permissions}
 
 ---
 
@@ -1247,7 +1247,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#id Plugin#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#id Plugin#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1259,7 +1259,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.plugin.PluginGrantPermissions.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 &plugin.PluginGrantPermissions {
 	Name: *string,
@@ -1286,7 +1286,7 @@ Name *string
 
 The name of the permission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#name Plugin#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#name Plugin#name}
 
 ---
 
@@ -1300,7 +1300,7 @@ Value *[]*string
 
 The value of the permission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.9.0/docs/resources/plugin#value Plugin#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#value Plugin#value}
 
 ---
 
@@ -1311,7 +1311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.NewPluginGrantPermissionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PluginGrantPermissionsList
 ```
@@ -1471,7 +1471,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.PluginGrantPermissionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v14/plugin"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/plugin"
 
 plugin.NewPluginGrantPermissionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PluginGrantPermissionsOutputReference
 ```
