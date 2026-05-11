@@ -4,7 +4,7 @@
 
 ### Plugin <a name="Plugin" id="@cdktn/provider-docker.plugin.Plugin"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin docker_plugin}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin docker_plugin}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.plugin.Plugin.Initializer"></a>
 
@@ -565,7 +565,7 @@ The construct id used in the generated config for the Plugin to import.
 
 The id of the existing Plugin that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1021,7 +1021,7 @@ const pluginConfig: plugin.PluginConfig = { ... }
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.forceDisable">forceDisable</a></code> | <code>boolean \| cdktn.IResolvable</code> | If true, then the plugin is disabled forcibly. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantAllPermissions">grantAllPermissions</a></code> | <code>boolean \| cdktn.IResolvable</code> | If true, grant all permissions necessary to run the plugin. |
 | <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.grantPermissions">grantPermissions</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.plugin.PluginGrantPermissions">PluginGrantPermissions</a>[]</code> | grant_permissions block. |
-| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#id Plugin#id}. |
+| <code><a href="#@cdktn/provider-docker.plugin.PluginConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#id Plugin#id}. |
 
 ---
 
@@ -1105,7 +1105,7 @@ public readonly name: string;
 
 Docker Plugin name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#name Plugin#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#name Plugin#name}
 
 ---
 
@@ -1119,7 +1119,7 @@ public readonly alias: string;
 
 Docker Plugin alias.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#alias Plugin#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#alias Plugin#alias}
 
 ---
 
@@ -1133,7 +1133,7 @@ public readonly enabled: boolean | IResolvable;
 
 If `true` the plugin is enabled. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#enabled Plugin#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#enabled Plugin#enabled}
 
 ---
 
@@ -1147,7 +1147,7 @@ public readonly enableTimeout: number;
 
 HTTP client timeout to enable the plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#enable_timeout Plugin#enable_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#enable_timeout Plugin#enable_timeout}
 
 ---
 
@@ -1161,7 +1161,7 @@ public readonly env: string[];
 
 The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#env Plugin#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#env Plugin#env}
 
 ---
 
@@ -1175,7 +1175,7 @@ public readonly forceDestroy: boolean | IResolvable;
 
 If true, then the plugin is destroyed forcibly.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#force_destroy Plugin#force_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#force_destroy Plugin#force_destroy}
 
 ---
 
@@ -1189,7 +1189,7 @@ public readonly forceDisable: boolean | IResolvable;
 
 If true, then the plugin is disabled forcibly.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#force_disable Plugin#force_disable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#force_disable Plugin#force_disable}
 
 ---
 
@@ -1203,7 +1203,7 @@ public readonly grantAllPermissions: boolean | IResolvable;
 
 If true, grant all permissions necessary to run the plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#grant_all_permissions Plugin#grant_all_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#grant_all_permissions Plugin#grant_all_permissions}
 
 ---
 
@@ -1217,7 +1217,7 @@ public readonly grantPermissions: IResolvable | PluginGrantPermissions[];
 
 grant_permissions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#grant_permissions Plugin#grant_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#grant_permissions Plugin#grant_permissions}
 
 ---
 
@@ -1229,7 +1229,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#id Plugin#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#id Plugin#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1265,7 +1265,7 @@ public readonly name: string;
 
 The name of the permission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#name Plugin#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#name Plugin#name}
 
 ---
 
@@ -1279,7 +1279,7 @@ public readonly value: string[];
 
 The value of the permission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/plugin#value Plugin#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/plugin#value Plugin#value}
 
 ---
 
