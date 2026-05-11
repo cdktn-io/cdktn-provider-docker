@@ -4,7 +4,7 @@
 
 ### Config <a name="Config" id="@cdktn/provider-docker.config.Config"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config docker_config}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config docker_config}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.config.Config.Initializer"></a>
 
@@ -21,8 +21,9 @@ config.Config(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
-  data: str,
   name: str,
+  data: str = None,
+  data_raw: str = None,
   id: str = None,
   labels: IResolvable | typing.List[ConfigLabels] = None
 )
@@ -39,9 +40,10 @@ config.Config(
 | <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded config data. |
 | <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.name">name</a></code> | <code>str</code> | User-defined name of the config. |
-| <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#id Config#id}. |
+| <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded config data. |
+| <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.dataRaw">data_raw</a></code> | <code>str</code> | Raw (plain text) config data. |
+| <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}. |
 | <code><a href="#@cdktn/provider-docker.config.Config.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.config.ConfigLabels">ConfigLabels</a>]</code> | labels block. |
 
 ---
@@ -106,23 +108,33 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `data`<sup>Required</sup> <a name="data" id="@cdktn/provider-docker.config.Config.Initializer.parameter.data"></a>
-
-- *Type:* str
-
-Base64-url-safe-encoded config data.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#data Config#data}
-
----
-
 ##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.config.Config.Initializer.parameter.name"></a>
 
 - *Type:* str
 
 User-defined name of the config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#name Config#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#name Config#name}
+
+---
+
+##### `data`<sup>Optional</sup> <a name="data" id="@cdktn/provider-docker.config.Config.Initializer.parameter.data"></a>
+
+- *Type:* str
+
+Base64-url-safe-encoded config data.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data Config#data}
+
+---
+
+##### `data_raw`<sup>Optional</sup> <a name="data_raw" id="@cdktn/provider-docker.config.Config.Initializer.parameter.dataRaw"></a>
+
+- *Type:* str
+
+Raw (plain text) config data.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data_raw Config#data_raw}
 
 ---
 
@@ -130,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#id Config#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +155,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#labels Config#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#labels Config#labels}
 
 ---
 
@@ -176,6 +188,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.config.Config.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktn/provider-docker.config.Config.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktn/provider-docker.config.Config.putLabels">put_labels</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.config.Config.resetData">reset_data</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.config.Config.resetDataRaw">reset_data_raw</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.resetLabels">reset_labels</a></code> | *No description.* |
 
@@ -543,6 +557,18 @@ def put_labels(
 
 ---
 
+##### `reset_data` <a name="reset_data" id="@cdktn/provider-docker.config.Config.resetData"></a>
+
+```python
+def reset_data() -> None
+```
+
+##### `reset_data_raw` <a name="reset_data_raw" id="@cdktn/provider-docker.config.Config.resetDataRaw"></a>
+
+```python
+def reset_data_raw() -> None
+```
+
 ##### `reset_id` <a name="reset_id" id="@cdktn/provider-docker.config.Config.resetId"></a>
 
 ```python
@@ -669,7 +695,7 @@ The construct id used in the generated config for the Config to import.
 
 The id of the existing Config that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -701,10 +727,12 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 | <code><a href="#@cdktn/provider-docker.config.Config.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.labels">labels</a></code> | <code><a href="#@cdktn/provider-docker.config.ConfigLabelsList">ConfigLabelsList</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.dataInput">data_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.config.Config.property.dataRawInput">data_raw_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.labelsInput">labels_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.config.ConfigLabels">ConfigLabels</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.data">data</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.config.Config.property.dataRaw">data_raw</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.Config.property.name">name</a></code> | <code>str</code> | *No description.* |
 
@@ -872,6 +900,16 @@ data_input: str
 
 ---
 
+##### `data_raw_input`<sup>Optional</sup> <a name="data_raw_input" id="@cdktn/provider-docker.config.Config.property.dataRawInput"></a>
+
+```python
+data_raw_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `id_input`<sup>Optional</sup> <a name="id_input" id="@cdktn/provider-docker.config.Config.property.idInput"></a>
 
 ```python
@@ -906,6 +944,16 @@ name_input: str
 
 ```python
 data: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_raw`<sup>Required</sup> <a name="data_raw" id="@cdktn/provider-docker.config.Config.property.dataRaw"></a>
+
+```python
+data_raw: str
 ```
 
 - *Type:* str
@@ -967,8 +1015,9 @@ config.ConfigConfig(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
-  data: str,
   name: str,
+  data: str = None,
+  data_raw: str = None,
   id: str = None,
   labels: IResolvable | typing.List[ConfigLabels] = None
 )
@@ -985,9 +1034,10 @@ config.ConfigConfig(
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded config data. |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.name">name</a></code> | <code>str</code> | User-defined name of the config. |
-| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#id Config#id}. |
+| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded config data. |
+| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.dataRaw">data_raw</a></code> | <code>str</code> | Raw (plain text) config data. |
+| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}. |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.config.ConfigLabels">ConfigLabels</a>]</code> | labels block. |
 
 ---
@@ -1062,20 +1112,6 @@ provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecPro
 
 ---
 
-##### `data`<sup>Required</sup> <a name="data" id="@cdktn/provider-docker.config.ConfigConfig.property.data"></a>
-
-```python
-data: str
-```
-
-- *Type:* str
-
-Base64-url-safe-encoded config data.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#data Config#data}
-
----
-
 ##### `name`<sup>Required</sup> <a name="name" id="@cdktn/provider-docker.config.ConfigConfig.property.name"></a>
 
 ```python
@@ -1086,7 +1122,35 @@ name: str
 
 User-defined name of the config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#name Config#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#name Config#name}
+
+---
+
+##### `data`<sup>Optional</sup> <a name="data" id="@cdktn/provider-docker.config.ConfigConfig.property.data"></a>
+
+```python
+data: str
+```
+
+- *Type:* str
+
+Base64-url-safe-encoded config data.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data Config#data}
+
+---
+
+##### `data_raw`<sup>Optional</sup> <a name="data_raw" id="@cdktn/provider-docker.config.ConfigConfig.property.dataRaw"></a>
+
+```python
+data_raw: str
+```
+
+- *Type:* str
+
+Raw (plain text) config data.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data_raw Config#data_raw}
 
 ---
 
@@ -1098,7 +1162,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#id Config#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1115,7 +1179,7 @@ labels: IResolvable | typing.List[ConfigLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#labels Config#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#labels Config#labels}
 
 ---
 
@@ -1151,7 +1215,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#label Config#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#label Config#label}
 
 ---
 
@@ -1165,7 +1229,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.2.0/docs/resources/config#value Config#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#value Config#value}
 
 ---
 

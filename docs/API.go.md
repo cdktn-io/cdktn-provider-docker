@@ -5,6 +5,7 @@
 The following submodules are available:
 
 - [buildxBuilder](./buildxBuilder.go.md)
+- [compose](./compose.go.md)
 - [config](./config.go.md)
 - [container](./container.go.md)
 - [dataDockerContainers](./dataDockerContainers.go.md)

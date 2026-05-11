@@ -5,6 +5,7 @@
 The following submodules are available:
 
 - [buildxBuilder](./buildxBuilder.typescript.md)
+- [compose](./compose.typescript.md)
 - [config](./config.typescript.md)
 - [container](./container.typescript.md)
 - [dataDockerContainers](./dataDockerContainers.typescript.md)
