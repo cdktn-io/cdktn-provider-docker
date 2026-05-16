@@ -4,7 +4,7 @@
 
 ### Config <a name="Config" id="@cdktn/provider-docker.config.Config"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config docker_config}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config docker_config}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.config.Config.Initializer"></a>
 
@@ -530,7 +530,7 @@ The construct id used in the generated config for the Config to import.
 
 The id of the existing Config that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -859,7 +859,7 @@ const configConfig: config.ConfigConfig = { ... }
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.name">name</a></code> | <code>string</code> | User-defined name of the config. |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.data">data</a></code> | <code>string</code> | Base64-url-safe-encoded config data. |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.dataRaw">dataRaw</a></code> | <code>string</code> | Raw (plain text) config data. |
-| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}. |
+| <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#id Config#id}. |
 | <code><a href="#@cdktn/provider-docker.config.ConfigConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.config.ConfigLabels">ConfigLabels</a>[]</code> | labels block. |
 
 ---
@@ -944,7 +944,7 @@ public readonly name: string;
 
 User-defined name of the config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#name Config#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#name Config#name}
 
 ---
 
@@ -958,7 +958,7 @@ public readonly data: string;
 
 Base64-url-safe-encoded config data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data Config#data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#data Config#data}
 
 ---
 
@@ -972,7 +972,7 @@ public readonly dataRaw: string;
 
 Raw (plain text) config data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#data_raw Config#data_raw}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#data_raw Config#data_raw}
 
 ---
 
@@ -984,7 +984,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#id Config#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#id Config#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1001,7 @@ public readonly labels: IResolvable | ConfigLabels[];
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#labels Config#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#labels Config#labels}
 
 ---
 
@@ -1034,7 +1034,7 @@ public readonly label: string;
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#label Config#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#label Config#label}
 
 ---
 
@@ -1048,7 +1048,7 @@ public readonly value: string;
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/config#value Config#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/config#value Config#value}
 
 ---
 

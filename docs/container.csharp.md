@@ -4,7 +4,7 @@
 
 ### Container <a name="Container" id="@cdktn/provider-docker.container.Container"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container docker_container}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container docker_container}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.Container.Initializer"></a>
 
@@ -1221,7 +1221,7 @@ The construct id used in the generated config for the Container to import.
 
 The id of the existing Container that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -3142,7 +3142,7 @@ public string[] Add { get; set; }
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -3156,7 +3156,7 @@ public string[] Drop { get; set; }
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -3295,7 +3295,7 @@ new ContainerConfig {
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">Healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">Host</a></code> | <code>Io.Cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>[]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">Hostname</a></code> | <code>string</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">Init</a></code> | <code>bool\|Io.Cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">IpcMode</a></code> | <code>string</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">Labels</a></code> | <code>Io.Cdktn.IResolvable\|<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>[]</code> | labels block. |
@@ -3424,7 +3424,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -3438,7 +3438,7 @@ public string Name { get; set; }
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -3452,7 +3452,7 @@ public bool|IResolvable Attach { get; set; }
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -3466,7 +3466,7 @@ public ContainerCapabilities Capabilities { get; set; }
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -3480,7 +3480,7 @@ public string CgroupnsMode { get; set; }
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -3494,7 +3494,7 @@ public string CgroupParent { get; set; }
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -3510,7 +3510,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -3524,7 +3524,7 @@ public double ContainerReadRefreshTimeoutMilliseconds { get; set; }
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -3538,7 +3538,7 @@ public double CpuPeriod { get; set; }
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -3554,7 +3554,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -3570,7 +3570,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -3584,7 +3584,7 @@ public string CpuSet { get; set; }
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -3598,7 +3598,7 @@ public double CpuShares { get; set; }
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -3614,7 +3614,7 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
 
 ---
 
@@ -3628,7 +3628,7 @@ public IResolvable|ContainerDeviceReadBps[] DeviceReadBps { get; set; }
 
 device_read_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_read_bps Container#device_read_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_read_bps Container#device_read_bps}
 
 ---
 
@@ -3642,7 +3642,7 @@ public IResolvable|ContainerDeviceReadIops[] DeviceReadIops { get; set; }
 
 device_read_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_read_iops Container#device_read_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_read_iops Container#device_read_iops}
 
 ---
 
@@ -3656,7 +3656,7 @@ public IResolvable|ContainerDeviceRequests[] DeviceRequests { get; set; }
 
 device_requests block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_requests Container#device_requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -3670,7 +3670,7 @@ public IResolvable|ContainerDevices[] Devices { get; set; }
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#devices Container#devices}
 
 ---
 
@@ -3684,7 +3684,7 @@ public IResolvable|ContainerDeviceWriteBps[] DeviceWriteBps { get; set; }
 
 device_write_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_write_bps Container#device_write_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_write_bps Container#device_write_bps}
 
 ---
 
@@ -3698,7 +3698,7 @@ public IResolvable|ContainerDeviceWriteIops[] DeviceWriteIops { get; set; }
 
 device_write_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_write_iops Container#device_write_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -3712,7 +3712,7 @@ public string[] Dns { get; set; }
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -3726,7 +3726,7 @@ public string[] DnsOpts { get; set; }
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -3740,7 +3740,7 @@ public string[] DnsSearch { get; set; }
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -3754,7 +3754,7 @@ public string Domainname { get; set; }
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -3770,7 +3770,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -3784,7 +3784,7 @@ public string[] Env { get; set; }
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -3798,7 +3798,7 @@ public string Gpus { get; set; }
 
 GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -3812,7 +3812,7 @@ public string[] GroupAdd { get; set; }
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -3826,7 +3826,7 @@ public ContainerHealthcheck Healthcheck { get; set; }
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -3840,7 +3840,7 @@ public IResolvable|ContainerHost[] Host { get; set; }
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -3854,7 +3854,7 @@ public string Hostname { get; set; }
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -3866,7 +3866,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -3885,7 +3885,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -3899,7 +3899,7 @@ public string IpcMode { get; set; }
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -3913,7 +3913,7 @@ public IResolvable|ContainerLabels[] Labels { get; set; }
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -3927,7 +3927,7 @@ public string LogDriver { get; set; }
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -3941,7 +3941,7 @@ public System.Collections.Generic.IDictionary<string, string> LogOpts { get; set
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -3955,7 +3955,7 @@ public bool|IResolvable Logs { get; set; }
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -3969,7 +3969,7 @@ public double MaxRetryCount { get; set; }
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -3983,7 +3983,7 @@ public double Memory { get; set; }
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -3999,7 +3999,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -4015,7 +4015,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -4029,7 +4029,7 @@ public IResolvable|ContainerMounts[] Mounts { get; set; }
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -4045,7 +4045,7 @@ If `true`, then the Docker container will be kept running.
 
 If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -4061,7 +4061,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -4075,7 +4075,7 @@ public IResolvable|ContainerNetworksAdvanced[] NetworksAdvanced { get; set; }
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -4089,7 +4089,7 @@ public string PidMode { get; set; }
 
 The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#pid_mode Container#pid_mode}
 
 ---
 
@@ -4103,7 +4103,7 @@ public string Platform { get; set; }
 
 Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#platform Container#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -4117,7 +4117,7 @@ public IResolvable|ContainerPorts[] Ports { get; set; }
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -4131,7 +4131,7 @@ public bool|IResolvable Privileged { get; set; }
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -4145,7 +4145,7 @@ public bool|IResolvable PublishAllPorts { get; set; }
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -4159,7 +4159,7 @@ public bool|IResolvable ReadOnly { get; set; }
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -4173,7 +4173,7 @@ public bool|IResolvable RemoveVolumes { get; set; }
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -4187,7 +4187,7 @@ public string Restart { get; set; }
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -4201,7 +4201,7 @@ public bool|IResolvable Rm { get; set; }
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -4215,7 +4215,7 @@ public string Runtime { get; set; }
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -4229,7 +4229,7 @@ public string[] SecurityOpts { get; set; }
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -4243,7 +4243,7 @@ public double ShmSize { get; set; }
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -4259,7 +4259,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -4273,7 +4273,7 @@ public bool|IResolvable StdinOpen { get; set; }
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -4287,7 +4287,7 @@ public string StopSignal { get; set; }
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -4301,7 +4301,7 @@ public double StopTimeout { get; set; }
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -4315,7 +4315,7 @@ public System.Collections.Generic.IDictionary<string, string> StorageOpts { get;
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -4329,7 +4329,7 @@ public System.Collections.Generic.IDictionary<string, string> Sysctls { get; set
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#sysctls Container#sysctls}
 
 ---
 
@@ -4343,7 +4343,7 @@ public ContainerTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#timeouts Container#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -4357,7 +4357,7 @@ public System.Collections.Generic.IDictionary<string, string> Tmpfs { get; set; 
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -4371,7 +4371,7 @@ public bool|IResolvable Tty { get; set; }
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -4385,7 +4385,7 @@ public IResolvable|ContainerUlimit[] Ulimit { get; set; }
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -4399,7 +4399,7 @@ public IResolvable|ContainerUpload[] Upload { get; set; }
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -4415,7 +4415,7 @@ User used for run the first process.
 
 Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -4429,7 +4429,7 @@ public string UsernsMode { get; set; }
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -4443,7 +4443,7 @@ public IResolvable|ContainerVolumes[] Volumes { get; set; }
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -4459,7 +4459,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -4473,7 +4473,7 @@ public double WaitTimeout { get; set; }
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -4487,7 +4487,7 @@ public string WorkingDir { get; set; }
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -4523,7 +4523,7 @@ public string Path { get; set; }
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -4537,7 +4537,7 @@ public double Rate { get; set; }
 
 The read rate limit in bytes per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -4573,7 +4573,7 @@ public string Path { get; set; }
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -4587,7 +4587,7 @@ public double Rate { get; set; }
 
 The read IOPS limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -4629,7 +4629,7 @@ public string[] Capabilities { get; set; }
 
 List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -4643,7 +4643,7 @@ public double Count { get; set; }
 
 Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#count Container#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#count Container#count}
 
 ---
 
@@ -4657,7 +4657,7 @@ public string[] DeviceIds { get; set; }
 
 List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#device_ids Container#device_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#device_ids Container#device_ids}
 
 ---
 
@@ -4671,7 +4671,7 @@ public string Driver { get; set; }
 
 The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#driver Container#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#driver Container#driver}
 
 ---
 
@@ -4685,7 +4685,7 @@ public System.Collections.Generic.IDictionary<string, string> Options { get; set
 
 Driver-specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#options Container#options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#options Container#options}
 
 ---
 
@@ -4723,7 +4723,7 @@ public string HostPath { get; set; }
 
 The path on the host where the device is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -4739,7 +4739,7 @@ The path in the container where the device will be bound.
 
 If not set, it defaults to the value of `host_path`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -4753,7 +4753,7 @@ public string Permissions { get; set; }
 
 The cgroup permissions given to the container to access the device. Defaults to `rwm`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -4789,7 +4789,7 @@ public string Path { get; set; }
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -4803,7 +4803,7 @@ public double Rate { get; set; }
 
 The write rate limit in bytes per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -4839,7 +4839,7 @@ public string Path { get; set; }
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -4853,7 +4853,7 @@ public double Rate { get; set; }
 
 The write IOPS limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -4897,7 +4897,7 @@ public string Interval { get; set; }
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -4911,7 +4911,7 @@ public double Retries { get; set; }
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -4925,7 +4925,7 @@ public string StartInterval { get; set; }
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -4939,7 +4939,7 @@ public string StartPeriod { get; set; }
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#start_period Container#start_period}
 
 ---
 
@@ -4955,7 +4955,7 @@ Command to run to check health.
 
 For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#test Container#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -4969,7 +4969,7 @@ public string Timeout { get; set; }
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -5005,7 +5005,7 @@ public string Host { get; set; }
 
 Hostname to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -5019,7 +5019,7 @@ public string Ip { get; set; }
 
 IP address this hostname should resolve to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5055,7 +5055,7 @@ public string Label { get; set; }
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5069,7 +5069,7 @@ public string Value { get; set; }
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5115,7 +5115,7 @@ public string Target { get; set; }
 
 Container path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#target Container#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#target Container#target}
 
 ---
 
@@ -5129,7 +5129,7 @@ public string Type { get; set; }
 
 The mount type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#type Container#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#type Container#type}
 
 ---
 
@@ -5143,7 +5143,7 @@ public ContainerMountsBindOptions BindOptions { get; set; }
 
 bind_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#bind_options Container#bind_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#bind_options Container#bind_options}
 
 ---
 
@@ -5157,7 +5157,7 @@ public bool|IResolvable ReadOnly { get; set; }
 
 Whether the mount should be read-only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -5171,7 +5171,7 @@ public string Source { get; set; }
 
 Mount source (e.g. a volume name, a host path).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -5185,7 +5185,7 @@ public ContainerMountsTmpfsOptions TmpfsOptions { get; set; }
 
 tmpfs_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
 
 ---
 
@@ -5199,7 +5199,7 @@ public ContainerMountsVolumeOptions VolumeOptions { get; set; }
 
 volume_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#volume_options Container#volume_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#volume_options Container#volume_options}
 
 ---
 
@@ -5233,7 +5233,7 @@ public string Propagation { get; set; }
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -5269,7 +5269,7 @@ public double Mode { get; set; }
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -5283,7 +5283,7 @@ public double SizeBytes { get; set; }
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -5325,7 +5325,7 @@ public string DriverName { get; set; }
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -5339,7 +5339,7 @@ public System.Collections.Generic.IDictionary<string, string> DriverOptions { ge
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -5353,7 +5353,7 @@ public IResolvable|ContainerMountsVolumeOptionsLabels[] Labels { get; set; }
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -5367,7 +5367,7 @@ public bool|IResolvable NoCopy { get; set; }
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -5381,7 +5381,7 @@ public string Subpath { get; set; }
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -5417,7 +5417,7 @@ public string Label { get; set; }
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -5431,7 +5431,7 @@ public string Value { get; set; }
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -5494,7 +5494,7 @@ The name or id of the network to use.
 
 You can use `name` or `id` attribute from a `docker_network` resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -5508,7 +5508,7 @@ public string[] Aliases { get; set; }
 
 The network aliases of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#aliases Container#aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#aliases Container#aliases}
 
 ---
 
@@ -5522,7 +5522,7 @@ public string[] DriverOpts { get; set; }
 
 An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#driver_opts Container#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#driver_opts Container#driver_opts}
 
 ---
 
@@ -5538,7 +5538,7 @@ Gateway priority for this endpoint.
 
 The endpoint with the highest priority will provide the default gateway for the container. This is the equivalent to `--gw-priority` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#gw_priority Container#gw_priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#gw_priority Container#gw_priority}
 
 ---
 
@@ -5552,7 +5552,7 @@ public string Ipv4Address { get; set; }
 
 The IPV4 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ipv4_address Container#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ipv4_address Container#ipv4_address}
 
 ---
 
@@ -5566,7 +5566,7 @@ public string Ipv6Address { get; set; }
 
 The IPV6 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ipv6_address Container#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ipv6_address Container#ipv6_address}
 
 ---
 
@@ -5582,7 +5582,7 @@ The link-local IPs of the container in the specific network.
 
 This is the equivalent to repeating `--link-local-ip` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#link_local_ips Container#link_local_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#link_local_ips Container#link_local_ips}
 
 ---
 
@@ -5596,7 +5596,7 @@ public string MacAddress { get; set; }
 
 The MAC address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#mac_address Container#mac_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#mac_address Container#mac_address}
 
 ---
 
@@ -5636,7 +5636,7 @@ public double Internal { get; set; }
 
 Port within the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#internal Container#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#internal Container#internal}
 
 ---
 
@@ -5650,7 +5650,7 @@ public double External { get; set; }
 
 Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#external Container#external}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#external Container#external}
 
 ---
 
@@ -5664,7 +5664,7 @@ public string Ip { get; set; }
 
 IP address/mask that can access this port. Defaults to `0.0.0.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -5678,7 +5678,7 @@ public string Protocol { get; set; }
 
 Protocol that can be used over this port. Defaults to `tcp`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#protocol Container#protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#protocol Container#protocol}
 
 ---
 
@@ -5700,9 +5700,9 @@ new ContainerTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#create Container#create}. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#delete Container#delete}. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#update Container#update}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#create Container#create}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#delete Container#delete}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#update Container#update}. |
 
 ---
 
@@ -5714,7 +5714,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#create Container#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#create Container#create}.
 
 ---
 
@@ -5726,7 +5726,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#delete Container#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#delete Container#delete}.
 
 ---
 
@@ -5738,7 +5738,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#update Container#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -5776,7 +5776,7 @@ public double Hard { get; set; }
 
 The hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#hard Container#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#hard Container#hard}
 
 ---
 
@@ -5790,7 +5790,7 @@ public string Name { get; set; }
 
 The name of the ulimit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -5804,7 +5804,7 @@ public double Soft { get; set; }
 
 The soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#soft Container#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#soft Container#soft}
 
 ---
 
@@ -5850,7 +5850,7 @@ public string File { get; set; }
 
 Path to the file in the container where is upload goes to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#file Container#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#file Container#file}
 
 ---
 
@@ -5866,7 +5866,7 @@ Literal string value to use as the object content, which will be uploaded as UTF
 
 Conflicts with `content_base64` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#content Container#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#content Container#content}
 
 ---
 
@@ -5882,7 +5882,7 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 
 This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#content_base64 Container#content_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#content_base64 Container#content_base64}
 
 ---
 
@@ -5896,7 +5896,7 @@ public bool|IResolvable Executable { get; set; }
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#executable Container#executable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#executable Container#executable}
 
 ---
 
@@ -5910,7 +5910,7 @@ public string Permissions { get; set; }
 
 The permission mode for the file in the container. Has precedence over `executable`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -5926,7 +5926,7 @@ A filename that references a file which will be uploaded as the object content.
 
 This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -5940,7 +5940,7 @@ public string SourceHash { get; set; }
 
 If using `source`, this will force an update if the file content has updated but the filename has not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#source_hash Container#source_hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#source_hash Container#source_hash}
 
 ---
 
@@ -5970,7 +5970,7 @@ new ContainerVolumes {
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.hostPath">HostPath</a></code> | <code>string</code> | The path on the host where the volume is coming from. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.readOnly">ReadOnly</a></code> | <code>bool\|Io.Cdktn.IResolvable</code> | If `true`, this volume will be readonly. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.selinuxRelabel">SelinuxRelabel</a></code> | <code>string</code> | SELinux relabel mode for bind mounts. Supported values are `z` and `Z`. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.volumeName">VolumeName</a></code> | <code>string</code> | The name of the docker volume which should be mounted. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerVolumes.property.volumeName">VolumeName</a></code> | <code>string</code> | The name of the docker volume which should be mounted. Ignored when `host_path` is set. |
 
 ---
 
@@ -5984,7 +5984,7 @@ public string ContainerPath { get; set; }
 
 The path in the container where the volume will be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -5998,7 +5998,7 @@ public string FromContainer { get; set; }
 
 The container where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#from_container Container#from_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#from_container Container#from_container}
 
 ---
 
@@ -6012,7 +6012,9 @@ public string HostPath { get; set; }
 
 The path on the host where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#host_path Container#host_path}
+If `host_path` is set, it takes precedence over `volume_name`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -6026,7 +6028,7 @@ public bool|IResolvable ReadOnly { get; set; }
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -6040,7 +6042,7 @@ public string SelinuxRelabel { get; set; }
 
 SELinux relabel mode for bind mounts. Supported values are `z` and `Z`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
 
 ---
 
@@ -6052,9 +6054,9 @@ public string VolumeName { get; set; }
 
 - *Type:* string
 
-The name of the docker volume which should be mounted.
+The name of the docker volume which should be mounted. Ignored when `host_path` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/container#volume_name Container#volume_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/container#volume_name Container#volume_name}
 
 ---
 
