@@ -4,7 +4,7 @@
 
 ### BuildxBuilder <a name="BuildxBuilder" id="@cdktn/provider-docker.buildxBuilder.BuildxBuilder"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder docker_buildx_builder}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder docker_buildx_builder}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.buildxBuilder.BuildxBuilder.Initializer"></a>
 
@@ -633,7 +633,7 @@ The construct id used in the generated config for the BuildxBuilder to import.
 
 The id of the existing BuildxBuilder that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1210,7 +1210,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/buildxbuilder"
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.driver">Driver</a></code> | <code>*string</code> | The driver to use for the Buildx builder (e.g., docker-container, kubernetes). |
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.driverOptions">DriverOptions</a></code> | <code>*map[string]*string</code> | Additional options for the Buildx driver in the form of `key=value,...`. These options are driver-specific. |
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.endpoint">Endpoint</a></code> | <code>*string</code> | The endpoint or context to use for the Buildx builder, where context is the name of a context from docker context ls and endpoint is the address for Docker socket (eg. |
-| <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#id BuildxBuilder#id}. |
+| <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#id BuildxBuilder#id}. |
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.kubernetes">Kubernetes</a></code> | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderKubernetes">BuildxBuilderKubernetes</a></code> | kubernetes block. |
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Buildx builder. IF not specified, a random name will be generated. |
 | <code><a href="#@cdktn/provider-docker.buildxBuilder.BuildxBuilderConfig.property.nodeAttribute">NodeAttribute</a></code> | <code>*string</code> | Create/modify node with given name. |
@@ -1300,7 +1300,7 @@ Append interface{}
 
 Append a node to builder instead of changing it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#append BuildxBuilder#append}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#append BuildxBuilder#append}
 
 ---
 
@@ -1314,7 +1314,7 @@ Bootstrap interface{}
 
 Automatically boot the builder after creation. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#bootstrap BuildxBuilder#bootstrap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#bootstrap BuildxBuilder#bootstrap}
 
 ---
 
@@ -1328,7 +1328,7 @@ BuildkitConfig *string
 
 BuildKit daemon config file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#buildkit_config BuildxBuilder#buildkit_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#buildkit_config BuildxBuilder#buildkit_config}
 
 ---
 
@@ -1342,7 +1342,7 @@ BuildkitFlags *string
 
 BuildKit flags to set for the builder.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#buildkit_flags BuildxBuilder#buildkit_flags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#buildkit_flags BuildxBuilder#buildkit_flags}
 
 ---
 
@@ -1356,7 +1356,7 @@ DockerContainer BuildxBuilderDockerContainer
 
 docker_container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#docker_container BuildxBuilder#docker_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#docker_container BuildxBuilder#docker_container}
 
 ---
 
@@ -1370,7 +1370,7 @@ Driver *string
 
 The driver to use for the Buildx builder (e.g., docker-container, kubernetes).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#driver BuildxBuilder#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#driver BuildxBuilder#driver}
 
 ---
 
@@ -1384,7 +1384,7 @@ DriverOptions *map[string]*string
 
 Additional options for the Buildx driver in the form of `key=value,...`. These options are driver-specific.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#driver_options BuildxBuilder#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#driver_options BuildxBuilder#driver_options}
 
 ---
 
@@ -1400,7 +1400,7 @@ The endpoint or context to use for the Buildx builder, where context is the name
 
 DOCKER_HOST value). By default, the current Docker configuration is used for determining the context/endpoint value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#endpoint BuildxBuilder#endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#endpoint BuildxBuilder#endpoint}
 
 ---
 
@@ -1412,7 +1412,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#id BuildxBuilder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#id BuildxBuilder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1429,7 +1429,7 @@ Kubernetes BuildxBuilderKubernetes
 
 kubernetes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#kubernetes BuildxBuilder#kubernetes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#kubernetes BuildxBuilder#kubernetes}
 
 ---
 
@@ -1443,7 +1443,7 @@ Name *string
 
 The name of the Buildx builder. IF not specified, a random name will be generated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#name BuildxBuilder#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#name BuildxBuilder#name}
 
 ---
 
@@ -1457,7 +1457,7 @@ NodeAttribute *string
 
 Create/modify node with given name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#node BuildxBuilder#node}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#node BuildxBuilder#node}
 
 ---
 
@@ -1471,7 +1471,7 @@ Platform *[]*string
 
 Fixed platforms for current node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#platform BuildxBuilder#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#platform BuildxBuilder#platform}
 
 ---
 
@@ -1485,7 +1485,7 @@ Remote BuildxBuilderRemote
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#remote BuildxBuilder#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#remote BuildxBuilder#remote}
 
 ---
 
@@ -1499,7 +1499,7 @@ Use interface{}
 
 Set the current builder instance as the default for the current context.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#use BuildxBuilder#use}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#use BuildxBuilder#use}
 
 ---
 
@@ -1557,7 +1557,7 @@ CgroupParent *string
 
 Sets the cgroup parent of the container if Docker is using the "cgroupfs" driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cgroup_parent BuildxBuilder#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cgroup_parent BuildxBuilder#cgroup_parent}
 
 ---
 
@@ -1571,7 +1571,7 @@ CpuPeriod *string
 
 Sets the CPU CFS scheduler period for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpu_period BuildxBuilder#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpu_period BuildxBuilder#cpu_period}
 
 ---
 
@@ -1585,7 +1585,7 @@ CpuQuota *string
 
 Imposes a CPU CFS quota on the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpu_quota BuildxBuilder#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpu_quota BuildxBuilder#cpu_quota}
 
 ---
 
@@ -1599,7 +1599,7 @@ CpusetCpus *string
 
 Limits the set of CPU cores the container can use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpuset_cpus BuildxBuilder#cpuset_cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpuset_cpus BuildxBuilder#cpuset_cpus}
 
 ---
 
@@ -1613,7 +1613,7 @@ CpusetMems *string
 
 Limits the set of CPU memory nodes the container can use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpuset_mems BuildxBuilder#cpuset_mems}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpuset_mems BuildxBuilder#cpuset_mems}
 
 ---
 
@@ -1627,7 +1627,7 @@ CpuShares *string
 
 Configures CPU shares (relative weight) of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpu_shares BuildxBuilder#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpu_shares BuildxBuilder#cpu_shares}
 
 ---
 
@@ -1641,7 +1641,7 @@ DefaultLoad interface{}
 
 Automatically load images to the Docker Engine image store. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
 
 ---
 
@@ -1655,7 +1655,7 @@ Env *map[string]*string
 
 Sets environment variables in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#env BuildxBuilder#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#env BuildxBuilder#env}
 
 ---
 
@@ -1669,7 +1669,7 @@ Image *string
 
 Sets the BuildKit image to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#image BuildxBuilder#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#image BuildxBuilder#image}
 
 ---
 
@@ -1683,7 +1683,7 @@ Memory *string
 
 Sets the amount of memory the container can use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
 
 ---
 
@@ -1697,7 +1697,7 @@ MemorySwap *string
 
 Sets the memory swap limit for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#memory_swap BuildxBuilder#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#memory_swap BuildxBuilder#memory_swap}
 
 ---
 
@@ -1711,7 +1711,7 @@ Network *string
 
 Sets the network mode for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#network BuildxBuilder#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#network BuildxBuilder#network}
 
 ---
 
@@ -1725,7 +1725,7 @@ RestartPolicy *string
 
 Sets the container's restart policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#restart_policy BuildxBuilder#restart_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#restart_policy BuildxBuilder#restart_policy}
 
 ---
 
@@ -1789,7 +1789,7 @@ Annotations *string
 
 Sets additional annotations on the deployments and pods.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#annotations BuildxBuilder#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#annotations BuildxBuilder#annotations}
 
 ---
 
@@ -1803,7 +1803,7 @@ DefaultLoad interface{}
 
 Automatically load images to the Docker Engine image store. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
 
 ---
 
@@ -1817,7 +1817,7 @@ Image *string
 
 Sets the image to use for running BuildKit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#image BuildxBuilder#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#image BuildxBuilder#image}
 
 ---
 
@@ -1831,7 +1831,7 @@ Labels *string
 
 Sets additional labels on the deployments and pods.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#labels BuildxBuilder#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#labels BuildxBuilder#labels}
 
 ---
 
@@ -1845,7 +1845,7 @@ Limits BuildxBuilderKubernetesLimits
 
 limits block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#limits BuildxBuilder#limits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#limits BuildxBuilder#limits}
 
 ---
 
@@ -1859,7 +1859,7 @@ Loadbalance *string
 
 Load-balancing strategy (sticky or random).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#loadbalance BuildxBuilder#loadbalance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#loadbalance BuildxBuilder#loadbalance}
 
 ---
 
@@ -1873,7 +1873,7 @@ Namespace *string
 
 Sets the Kubernetes namespace.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#namespace BuildxBuilder#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#namespace BuildxBuilder#namespace}
 
 ---
 
@@ -1887,7 +1887,7 @@ Nodeselector *string
 
 Sets the pod's nodeSelector label(s).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#nodeselector BuildxBuilder#nodeselector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#nodeselector BuildxBuilder#nodeselector}
 
 ---
 
@@ -1901,7 +1901,7 @@ Qemu BuildxBuilderKubernetesQemu
 
 qemu block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#qemu BuildxBuilder#qemu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#qemu BuildxBuilder#qemu}
 
 ---
 
@@ -1915,7 +1915,7 @@ Replicas *f64
 
 Sets the number of Pod replicas to create.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#replicas BuildxBuilder#replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#replicas BuildxBuilder#replicas}
 
 ---
 
@@ -1929,7 +1929,7 @@ Requests BuildxBuilderKubernetesRequests
 
 requests block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#requests BuildxBuilder#requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#requests BuildxBuilder#requests}
 
 ---
 
@@ -1943,7 +1943,7 @@ Rootless interface{}
 
 Run the container as a non-root user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#rootless BuildxBuilder#rootless}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#rootless BuildxBuilder#rootless}
 
 ---
 
@@ -1957,7 +1957,7 @@ Schedulername *string
 
 Sets the scheduler responsible for scheduling the pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#schedulername BuildxBuilder#schedulername}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#schedulername BuildxBuilder#schedulername}
 
 ---
 
@@ -1971,7 +1971,7 @@ Serviceaccount *string
 
 Sets the pod's serviceAccountName.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#serviceaccount BuildxBuilder#serviceaccount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#serviceaccount BuildxBuilder#serviceaccount}
 
 ---
 
@@ -1985,7 +1985,7 @@ Timeout *string
 
 Set the timeout limit for pod provisioning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#timeout BuildxBuilder#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#timeout BuildxBuilder#timeout}
 
 ---
 
@@ -1999,7 +1999,7 @@ Tolerations *string
 
 Configures the pod's taint toleration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#tolerations BuildxBuilder#tolerations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#tolerations BuildxBuilder#tolerations}
 
 ---
 
@@ -2037,7 +2037,7 @@ Cpu *string
 
 CPU limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
 
 ---
 
@@ -2051,7 +2051,7 @@ EphemeralStorage *string
 
 Ephemeral storage limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
 
 ---
 
@@ -2065,7 +2065,7 @@ Memory *string
 
 Memory limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
 
 ---
 
@@ -2101,7 +2101,7 @@ Image *string
 
 Sets the QEMU emulation image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#image BuildxBuilder#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#image BuildxBuilder#image}
 
 ---
 
@@ -2115,7 +2115,7 @@ Install interface{}
 
 Install QEMU emulation for multi-platform support.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#install BuildxBuilder#install}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#install BuildxBuilder#install}
 
 ---
 
@@ -2153,7 +2153,7 @@ Cpu *string
 
 CPU limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
 
 ---
 
@@ -2167,7 +2167,7 @@ EphemeralStorage *string
 
 Ephemeral storage limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
 
 ---
 
@@ -2181,7 +2181,7 @@ Memory *string
 
 Memory limit for the Kubernetes pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#memory BuildxBuilder#memory}
 
 ---
 
@@ -2223,7 +2223,7 @@ Cacert *string
 
 Absolute path to the TLS certificate authority used for validation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cacert BuildxBuilder#cacert}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cacert BuildxBuilder#cacert}
 
 ---
 
@@ -2237,7 +2237,7 @@ Cert *string
 
 Absolute path to the TLS client certificate to present to buildkitd.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#cert BuildxBuilder#cert}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#cert BuildxBuilder#cert}
 
 ---
 
@@ -2251,7 +2251,7 @@ DefaultLoad interface{}
 
 Automatically load images to the Docker Engine image store. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#default_load BuildxBuilder#default_load}
 
 ---
 
@@ -2265,7 +2265,7 @@ Key *string
 
 Sets the TLS client key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#key BuildxBuilder#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#key BuildxBuilder#key}
 
 ---
 
@@ -2279,7 +2279,7 @@ Servername *string
 
 TLS server name used in requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/buildx_builder#servername BuildxBuilder#servername}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/buildx_builder#servername BuildxBuilder#servername}
 
 ---
 

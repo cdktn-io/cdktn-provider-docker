@@ -4,7 +4,7 @@
 
 ### Tag <a name="Tag" id="@cdktn/provider-docker.tag.Tag"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag docker_tag}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag docker_tag}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.tag.Tag.Initializer"></a>
 
@@ -503,7 +503,7 @@ The construct id used in the generated config for the Tag to import.
 
 The id of the existing Tag that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -832,7 +832,7 @@ new TagConfig {
 | <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.provisioners">Provisioners</a></code> | <code>Io.Cdktn.FileProvisioner\|Io.Cdktn.LocalExecProvisioner\|Io.Cdktn.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.sourceImage">SourceImage</a></code> | <code>string</code> | Name of the source image. |
 | <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.targetImage">TargetImage</a></code> | <code>string</code> | Name of the target image. |
-| <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#id Tag#id}. |
+| <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#id Tag#id}. |
 | <code><a href="#@cdktn/provider-docker.tag.TagConfig.property.tagTriggers">TagTriggers</a></code> | <code>string[]</code> | List of values which cause the tag to be (re)created. |
 
 ---
@@ -917,7 +917,7 @@ public string SourceImage { get; set; }
 
 Name of the source image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#source_image Tag#source_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#source_image Tag#source_image}
 
 ---
 
@@ -931,7 +931,7 @@ public string TargetImage { get; set; }
 
 Name of the target image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#target_image Tag#target_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#target_image Tag#target_image}
 
 ---
 
@@ -943,7 +943,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#id Tag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#id Tag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -962,7 +962,7 @@ List of values which cause the tag to be (re)created.
 
 This is useful for triggering a new tag when the source image changes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/tag#tag_triggers Tag#tag_triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/tag#tag_triggers Tag#tag_triggers}
 
 ---
 

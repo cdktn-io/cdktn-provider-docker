@@ -4,7 +4,7 @@
 
 ### Secret <a name="Secret" id="@cdktn/provider-docker.secret.Secret"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret docker_secret}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret docker_secret}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.secret.Secret.Initializer"></a>
 
@@ -41,7 +41,7 @@ secret.Secret(
 | <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded secret data. |
 | <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.name">name</a></code> | <code>str</code> | User-defined name of the secret. |
-| <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#id Secret#id}. |
+| <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#id Secret#id}. |
 | <code><a href="#@cdktn/provider-docker.secret.Secret.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.secret.SecretLabels">SecretLabels</a>]</code> | labels block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 Base64-url-safe-encoded secret data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#data Secret#data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#data Secret#data}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 User-defined name of the secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#name Secret#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#name Secret#name}
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#id Secret#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#id Secret#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#labels Secret#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#labels Secret#labels}
 
 ---
 
@@ -669,7 +669,7 @@ The construct id used in the generated config for the Secret to import.
 
 The id of the existing Secret that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -987,7 +987,7 @@ secret.SecretConfig(
 | <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.data">data</a></code> | <code>str</code> | Base64-url-safe-encoded secret data. |
 | <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.name">name</a></code> | <code>str</code> | User-defined name of the secret. |
-| <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#id Secret#id}. |
+| <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#id Secret#id}. |
 | <code><a href="#@cdktn/provider-docker.secret.SecretConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.secret.SecretLabels">SecretLabels</a>]</code> | labels block. |
 
 ---
@@ -1072,7 +1072,7 @@ data: str
 
 Base64-url-safe-encoded secret data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#data Secret#data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#data Secret#data}
 
 ---
 
@@ -1086,7 +1086,7 @@ name: str
 
 User-defined name of the secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#name Secret#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#name Secret#name}
 
 ---
 
@@ -1098,7 +1098,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#id Secret#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#id Secret#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1115,7 +1115,7 @@ labels: IResolvable | typing.List[SecretLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#labels Secret#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#labels Secret#labels}
 
 ---
 
@@ -1151,7 +1151,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#label Secret#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#label Secret#label}
 
 ---
 
@@ -1165,7 +1165,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.3.0/docs/resources/secret#value Secret#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/secret#value Secret#value}
 
 ---
 
