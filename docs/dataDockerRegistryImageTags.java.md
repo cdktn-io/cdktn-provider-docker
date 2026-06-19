@@ -4,7 +4,7 @@
 
 ### DataDockerRegistryImageTags <a name="DataDockerRegistryImageTags" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags docker_registry_image_tags}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags docker_registry_image_tags}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.Initializer"></a>
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the Docker image repository, including any tag or digest. For example, `alpine:latest`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#name DataDockerRegistryImageTags#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#name DataDockerRegistryImageTags#name}
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#insecure_skip_verify DataDockerRegistryImageTags#insecure_skip_verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#insecure_skip_verify DataDockerRegistryImageTags#insecure_skip_verify}
 
 ---
 
@@ -130,7 +130,7 @@ If `true`, only stable semantic version tags are returned.
 
 Prerelease tags such as `1.2.3-rc.1` are excluded as well as any other tags that do not conform to the semantic versioning specification. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#strict_semver DataDockerRegistryImageTags#strict_semver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#strict_semver DataDockerRegistryImageTags#strict_semver}
 
 ---
 
@@ -489,7 +489,7 @@ The construct id used in the generated config for the DataDockerRegistryImageTag
 
 The id of the existing DataDockerRegistryImageTags that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -868,7 +868,7 @@ public java.lang.String getName();
 
 The name of the Docker image repository, including any tag or digest. For example, `alpine:latest`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#name DataDockerRegistryImageTags#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#name DataDockerRegistryImageTags#name}
 
 ---
 
@@ -882,7 +882,7 @@ public java.lang.Boolean|IResolvable getInsecureSkipVerify();
 
 If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#insecure_skip_verify DataDockerRegistryImageTags#insecure_skip_verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#insecure_skip_verify DataDockerRegistryImageTags#insecure_skip_verify}
 
 ---
 
@@ -898,7 +898,7 @@ If `true`, only stable semantic version tags are returned.
 
 Prerelease tags such as `1.2.3-rc.1` are excluded as well as any other tags that do not conform to the semantic versioning specification. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_tags#strict_semver DataDockerRegistryImageTags#strict_semver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_tags#strict_semver DataDockerRegistryImageTags#strict_semver}
 
 ---
 

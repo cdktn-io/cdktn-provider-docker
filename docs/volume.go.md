@@ -4,7 +4,7 @@
 
 ### Volume <a name="Volume" id="@cdktn/provider-docker.volume.Volume"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume docker_volume}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume docker_volume}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.volume.Volume.Initializer"></a>
 
@@ -557,7 +557,7 @@ The construct id used in the generated config for the Volume to import.
 
 The id of the existing Volume that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -941,7 +941,7 @@ Availability *string
 
 Availability of the volume. Can be `active` (default), `pause`, or `drain`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#availability Volume#availability}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#availability Volume#availability}
 
 ---
 
@@ -955,7 +955,7 @@ Group *string
 
 Cluster Volume group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#group Volume#group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#group Volume#group}
 
 ---
 
@@ -971,7 +971,7 @@ Minimum size of the Cluster Volume in human readable memory bytes (like 128MiB, 
 
 Must be in format of KiB, MiB, Gib, Tib or PiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
 
 ---
 
@@ -987,7 +987,7 @@ Maximum size of the Cluster Volume in human readable memory bytes (like 128MiB, 
 
 Must be in format of KiB, MiB, Gib, Tib or PiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#required_bytes Volume#required_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#required_bytes Volume#required_bytes}
 
 ---
 
@@ -1001,7 +1001,7 @@ Scope *string
 
 The scope of the volume. Can be `single` (default) or `multi`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#scope Volume#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#scope Volume#scope}
 
 ---
 
@@ -1015,7 +1015,7 @@ Sharing *string
 
 The sharing mode. Can be `none` (default), `readonly`, `onewriter` or `all`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#sharing Volume#sharing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#sharing Volume#sharing}
 
 ---
 
@@ -1029,7 +1029,7 @@ TopologyPreferred *string
 
 A topology that the Cluster Volume would be preferred in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
 
 ---
 
@@ -1043,7 +1043,7 @@ TopologyRequired *string
 
 A topology that the Cluster Volume must be accessible from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#topology_required Volume#topology_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#topology_required Volume#topology_required}
 
 ---
 
@@ -1057,7 +1057,7 @@ Type *string
 
 Cluster Volume access type. Can be `mount` or `block` (default).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#type Volume#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#type Volume#type}
 
 ---
 
@@ -1099,7 +1099,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/volume"
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.cluster">Cluster</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | cluster block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driver">Driver</a></code> | <code>*string</code> | Driver type for the volume. Defaults to `local`. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driverOpts">DriverOpts</a></code> | <code>*map[string]*string</code> | Options specific to the driver. |
-| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.labels">Labels</a></code> | <code>interface{}</code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Docker volume (will be generated if not provided). |
 
@@ -1185,7 +1185,7 @@ Cluster VolumeCluster
 
 cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#cluster Volume#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#cluster Volume#cluster}
 
 ---
 
@@ -1199,7 +1199,7 @@ Driver *string
 
 Driver type for the volume. Defaults to `local`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver Volume#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver Volume#driver}
 
 ---
 
@@ -1213,7 +1213,7 @@ DriverOpts *map[string]*string
 
 Options specific to the driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver_opts Volume#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver_opts Volume#driver_opts}
 
 ---
 
@@ -1225,7 +1225,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1242,7 +1242,7 @@ Labels interface{}
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#labels Volume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#labels Volume#labels}
 
 ---
 
@@ -1256,7 +1256,7 @@ Name *string
 
 The name of the Docker volume (will be generated if not provided).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#name Volume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#name Volume#name}
 
 ---
 
@@ -1292,7 +1292,7 @@ Label *string
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#label Volume#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#label Volume#label}
 
 ---
 
@@ -1306,7 +1306,7 @@ Value *string
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#value Volume#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#value Volume#value}
 
 ---
 

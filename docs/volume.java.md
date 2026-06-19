@@ -4,7 +4,7 @@
 
 ### Volume <a name="Volume" id="@cdktn/provider-docker.volume.Volume"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume docker_volume}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume docker_volume}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.volume.Volume.Initializer"></a>
 
@@ -42,7 +42,7 @@ Volume.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.cluster">cluster</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | cluster block. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.driver">driver</a></code> | <code>java.lang.String</code> | Driver type for the volume. Defaults to `local`. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.driverOpts">driverOpts</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Options specific to the driver. |
-| <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}. |
+| <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.labels">labels</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.volume.VolumeLabels">VolumeLabels</a>></code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.volume.Volume.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name of the Docker volume (will be generated if not provided). |
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#cluster Volume#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#cluster Volume#cluster}
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Driver type for the volume. Defaults to `local`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver Volume#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver Volume#driver}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Options specific to the driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver_opts Volume#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver_opts Volume#driver_opts}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -155,7 +155,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#labels Volume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#labels Volume#labels}
 
 ---
 
@@ -165,7 +165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The name of the Docker volume (will be generated if not provided).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#name Volume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#name Volume#name}
 
 ---
 
@@ -682,7 +682,7 @@ The construct id used in the generated config for the Volume to import.
 
 The id of the existing Volume that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1066,7 +1066,7 @@ public java.lang.String getAvailability();
 
 Availability of the volume. Can be `active` (default), `pause`, or `drain`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#availability Volume#availability}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#availability Volume#availability}
 
 ---
 
@@ -1080,7 +1080,7 @@ public java.lang.String getGroup();
 
 Cluster Volume group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#group Volume#group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#group Volume#group}
 
 ---
 
@@ -1096,7 +1096,7 @@ Minimum size of the Cluster Volume in human readable memory bytes (like 128MiB, 
 
 Must be in format of KiB, MiB, Gib, Tib or PiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#limit_bytes Volume#limit_bytes}
 
 ---
 
@@ -1112,7 +1112,7 @@ Maximum size of the Cluster Volume in human readable memory bytes (like 128MiB, 
 
 Must be in format of KiB, MiB, Gib, Tib or PiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#required_bytes Volume#required_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#required_bytes Volume#required_bytes}
 
 ---
 
@@ -1126,7 +1126,7 @@ public java.lang.String getScope();
 
 The scope of the volume. Can be `single` (default) or `multi`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#scope Volume#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#scope Volume#scope}
 
 ---
 
@@ -1140,7 +1140,7 @@ public java.lang.String getSharing();
 
 The sharing mode. Can be `none` (default), `readonly`, `onewriter` or `all`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#sharing Volume#sharing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#sharing Volume#sharing}
 
 ---
 
@@ -1154,7 +1154,7 @@ public java.lang.String getTopologyPreferred();
 
 A topology that the Cluster Volume would be preferred in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#topology_preferred Volume#topology_preferred}
 
 ---
 
@@ -1168,7 +1168,7 @@ public java.lang.String getTopologyRequired();
 
 A topology that the Cluster Volume must be accessible from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#topology_required Volume#topology_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#topology_required Volume#topology_required}
 
 ---
 
@@ -1182,7 +1182,7 @@ public java.lang.String getType();
 
 Cluster Volume access type. Can be `mount` or `block` (default).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#type Volume#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#type Volume#type}
 
 ---
 
@@ -1224,7 +1224,7 @@ VolumeConfig.builder()
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.cluster">cluster</a></code> | <code><a href="#@cdktn/provider-docker.volume.VolumeCluster">VolumeCluster</a></code> | cluster block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driver">driver</a></code> | <code>java.lang.String</code> | Driver type for the volume. Defaults to `local`. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.driverOpts">driverOpts</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Options specific to the driver. |
-| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}. |
+| <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.labels">labels</a></code> | <code>io.cdktn.cdktn.IResolvable\|java.util.List<<a href="#@cdktn/provider-docker.volume.VolumeLabels">VolumeLabels</a>></code> | labels block. |
 | <code><a href="#@cdktn/provider-docker.volume.VolumeConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name of the Docker volume (will be generated if not provided). |
 
@@ -1310,7 +1310,7 @@ public VolumeCluster getCluster();
 
 cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#cluster Volume#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#cluster Volume#cluster}
 
 ---
 
@@ -1324,7 +1324,7 @@ public java.lang.String getDriver();
 
 Driver type for the volume. Defaults to `local`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver Volume#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver Volume#driver}
 
 ---
 
@@ -1338,7 +1338,7 @@ public java.util.Map<java.lang.String, java.lang.String> getDriverOpts();
 
 Options specific to the driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#driver_opts Volume#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#driver_opts Volume#driver_opts}
 
 ---
 
@@ -1350,7 +1350,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#id Volume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#id Volume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1367,7 +1367,7 @@ public IResolvable|java.util.List<VolumeLabels> getLabels();
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#labels Volume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#labels Volume#labels}
 
 ---
 
@@ -1381,7 +1381,7 @@ public java.lang.String getName();
 
 The name of the Docker volume (will be generated if not provided).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#name Volume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#name Volume#name}
 
 ---
 
@@ -1417,7 +1417,7 @@ public java.lang.String getLabel();
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#label Volume#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#label Volume#label}
 
 ---
 
@@ -1431,7 +1431,7 @@ public java.lang.String getValue();
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/volume#value Volume#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/volume#value Volume#value}
 
 ---
 
