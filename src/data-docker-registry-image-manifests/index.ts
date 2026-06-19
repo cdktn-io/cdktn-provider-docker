@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests
+// https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktn from 'cdktn';
 
 export interface DataDockerRegistryImageManifestsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#id DataDockerRegistryImageManifests#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#id DataDockerRegistryImageManifests#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +22,19 @@ export interface DataDockerRegistryImageManifestsConfig extends cdktn.TerraformM
   /**
   * If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#insecure_skip_verify DataDockerRegistryImageManifests#insecure_skip_verify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#insecure_skip_verify DataDockerRegistryImageManifests#insecure_skip_verify}
   */
   readonly insecureSkipVerify?: boolean | cdktn.IResolvable;
   /**
   * The name of the Docker image, including any tags. e.g. `alpine:latest`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#name DataDockerRegistryImageManifests#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#name DataDockerRegistryImageManifests#name}
   */
   readonly name: string;
   /**
   * auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#auth_config DataDockerRegistryImageManifests#auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#auth_config DataDockerRegistryImageManifests#auth_config}
   */
   readonly authConfig?: DataDockerRegistryImageManifestsAuthConfig;
 }
@@ -44,7 +44,7 @@ export interface DataDockerRegistryImageManifestsManifests {
 export function dataDockerRegistryImageManifestsManifestsToTerraform(struct?: DataDockerRegistryImageManifestsManifests): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
   }
@@ -54,7 +54,7 @@ export function dataDockerRegistryImageManifestsManifestsToTerraform(struct?: Da
 export function dataDockerRegistryImageManifestsManifestsToHclTerraform(struct?: DataDockerRegistryImageManifestsManifests): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
   };
@@ -132,19 +132,19 @@ export interface DataDockerRegistryImageManifestsAuthConfig {
   /**
   * The address of the Docker registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#address DataDockerRegistryImageManifests#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#address DataDockerRegistryImageManifests#address}
   */
   readonly address: string;
   /**
   * The password for the Docker registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#password DataDockerRegistryImageManifests#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#password DataDockerRegistryImageManifests#password}
   */
   readonly password?: string;
   /**
   * The username for the Docker registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#username DataDockerRegistryImageManifests#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#username DataDockerRegistryImageManifests#username}
   */
   readonly username?: string;
 }
@@ -152,7 +152,7 @@ export interface DataDockerRegistryImageManifestsAuthConfig {
 export function dataDockerRegistryImageManifestsAuthConfigToTerraform(struct?: DataDockerRegistryImageManifestsAuthConfigOutputReference | DataDockerRegistryImageManifestsAuthConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     address: cdktn.stringToTerraform(struct!.address),
@@ -165,7 +165,7 @@ export function dataDockerRegistryImageManifestsAuthConfigToTerraform(struct?: D
 export function dataDockerRegistryImageManifestsAuthConfigToHclTerraform(struct?: DataDockerRegistryImageManifestsAuthConfigOutputReference | DataDockerRegistryImageManifestsAuthConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     address: {
@@ -283,7 +283,7 @@ export class DataDockerRegistryImageManifestsAuthConfigOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests docker_registry_image_manifests}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests docker_registry_image_manifests}
 */
 export class DataDockerRegistryImageManifests extends cdktn.TerraformDataSource {
 
@@ -299,7 +299,7 @@ export class DataDockerRegistryImageManifests extends cdktn.TerraformDataSource 
   * Generates CDKTN code for importing a DataDockerRegistryImageManifests resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataDockerRegistryImageManifests to import
-  * @param importFromId The id of the existing DataDockerRegistryImageManifests that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataDockerRegistryImageManifests that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataDockerRegistryImageManifests to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -311,7 +311,7 @@ export class DataDockerRegistryImageManifests extends cdktn.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/data-sources/registry_image_manifests docker_registry_image_manifests} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/registry_image_manifests docker_registry_image_manifests} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -322,7 +322,7 @@ export class DataDockerRegistryImageManifests extends cdktn.TerraformDataSource 
       terraformResourceType: 'docker_registry_image_manifests',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '4.4.0',
+        providerVersion: '4.5.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

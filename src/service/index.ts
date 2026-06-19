@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service
+// https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktn from 'cdktn';
 
 export interface ServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#id Service#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#id Service#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,55 +22,55 @@ export interface ServiceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the service
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#name Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#name Service#name}
   */
   readonly name: string;
   /**
   * auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#auth Service#auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#auth Service#auth}
   */
   readonly auth?: ServiceAuth;
   /**
   * converge_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#converge_config Service#converge_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#converge_config Service#converge_config}
   */
   readonly convergeConfig?: ServiceConvergeConfig;
   /**
   * endpoint_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#endpoint_spec Service#endpoint_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#endpoint_spec Service#endpoint_spec}
   */
   readonly endpointSpec?: ServiceEndpointSpec;
   /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#labels Service#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#labels Service#labels}
   */
   readonly labels?: ServiceLabels[] | cdktn.IResolvable;
   /**
   * mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#mode Service#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#mode Service#mode}
   */
   readonly mode?: ServiceMode;
   /**
   * rollback_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#rollback_config Service#rollback_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#rollback_config Service#rollback_config}
   */
   readonly rollbackConfig?: ServiceRollbackConfig;
   /**
   * task_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#task_spec Service#task_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#task_spec Service#task_spec}
   */
   readonly taskSpec: ServiceTaskSpec;
   /**
   * update_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#update_config Service#update_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#update_config Service#update_config}
   */
   readonly updateConfig?: ServiceUpdateConfig;
 }
@@ -78,19 +78,19 @@ export interface ServiceAuth {
   /**
   * The password
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#password Service#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#password Service#password}
   */
   readonly password?: string;
   /**
   * The address of the server for the authentication
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#server_address Service#server_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#server_address Service#server_address}
   */
   readonly serverAddress: string;
   /**
   * The username
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#username Service#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#username Service#username}
   */
   readonly username?: string;
 }
@@ -98,7 +98,7 @@ export interface ServiceAuth {
 export function serviceAuthToTerraform(struct?: ServiceAuthOutputReference | ServiceAuth): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     password: cdktn.stringToTerraform(struct!.password),
@@ -111,7 +111,7 @@ export function serviceAuthToTerraform(struct?: ServiceAuthOutputReference | Ser
 export function serviceAuthToHclTerraform(struct?: ServiceAuthOutputReference | ServiceAuth): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     password: {
@@ -231,13 +231,13 @@ export interface ServiceConvergeConfig {
   /**
   * The interval to check if the desired state is reached `(ms|s)`. Defaults to `7s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#delay Service#delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#delay Service#delay}
   */
   readonly delay?: string;
   /**
   * The timeout of the service to reach the desired state `(s|m)`. Defaults to `3m`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#timeout Service#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#timeout Service#timeout}
   */
   readonly timeout?: string;
 }
@@ -245,7 +245,7 @@ export interface ServiceConvergeConfig {
 export function serviceConvergeConfigToTerraform(struct?: ServiceConvergeConfigOutputReference | ServiceConvergeConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     delay: cdktn.stringToTerraform(struct!.delay),
@@ -257,7 +257,7 @@ export function serviceConvergeConfigToTerraform(struct?: ServiceConvergeConfigO
 export function serviceConvergeConfigToHclTerraform(struct?: ServiceConvergeConfigOutputReference | ServiceConvergeConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     delay: {
@@ -352,31 +352,31 @@ export interface ServiceEndpointSpecPorts {
   /**
   * A random name for the port
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#name Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#name Service#name}
   */
   readonly name?: string;
   /**
   * Represents the protocol of a port: `tcp`, `udp` or `sctp`. Defaults to `tcp`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#protocol Service#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#protocol Service#protocol}
   */
   readonly protocol?: string;
   /**
   * Represents the mode in which the port is to be published: 'ingress' or 'host'. Defaults to `ingress`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#publish_mode Service#publish_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#publish_mode Service#publish_mode}
   */
   readonly publishMode?: string;
   /**
   * The port on the swarm hosts
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#published_port Service#published_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#published_port Service#published_port}
   */
   readonly publishedPort?: number;
   /**
   * The port inside the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#target_port Service#target_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#target_port Service#target_port}
   */
   readonly targetPort: number;
 }
@@ -384,7 +384,7 @@ export interface ServiceEndpointSpecPorts {
 export function serviceEndpointSpecPortsToTerraform(struct?: ServiceEndpointSpecPorts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
@@ -399,7 +399,7 @@ export function serviceEndpointSpecPortsToTerraform(struct?: ServiceEndpointSpec
 export function serviceEndpointSpecPortsToHclTerraform(struct?: ServiceEndpointSpecPorts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     name: {
@@ -607,13 +607,13 @@ export interface ServiceEndpointSpec {
   /**
   * The mode of resolution to use for internal load balancing between tasks
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#mode Service#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#mode Service#mode}
   */
   readonly mode?: string;
   /**
   * ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#ports Service#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#ports Service#ports}
   */
   readonly ports?: ServiceEndpointSpecPorts[] | cdktn.IResolvable;
 }
@@ -621,7 +621,7 @@ export interface ServiceEndpointSpec {
 export function serviceEndpointSpecToTerraform(struct?: ServiceEndpointSpecOutputReference | ServiceEndpointSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     mode: cdktn.stringToTerraform(struct!.mode),
@@ -633,7 +633,7 @@ export function serviceEndpointSpecToTerraform(struct?: ServiceEndpointSpecOutpu
 export function serviceEndpointSpecToHclTerraform(struct?: ServiceEndpointSpecOutputReference | ServiceEndpointSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mode: {
@@ -728,13 +728,13 @@ export interface ServiceLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#label Service#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#label Service#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#value Service#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#value Service#value}
   */
   readonly value: string;
 }
@@ -742,7 +742,7 @@ export interface ServiceLabels {
 export function serviceLabelsToTerraform(struct?: ServiceLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     label: cdktn.stringToTerraform(struct!.label),
@@ -754,7 +754,7 @@ export function serviceLabelsToTerraform(struct?: ServiceLabels | cdktn.IResolva
 export function serviceLabelsToHclTerraform(struct?: ServiceLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     label: {
@@ -875,7 +875,7 @@ export interface ServiceModeReplicated {
   /**
   * The amount of replicas of the service. Defaults to `1`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#replicas Service#replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#replicas Service#replicas}
   */
   readonly replicas?: number;
 }
@@ -883,7 +883,7 @@ export interface ServiceModeReplicated {
 export function serviceModeReplicatedToTerraform(struct?: ServiceModeReplicatedOutputReference | ServiceModeReplicated): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     replicas: cdktn.numberToTerraform(struct!.replicas),
@@ -894,7 +894,7 @@ export function serviceModeReplicatedToTerraform(struct?: ServiceModeReplicatedO
 export function serviceModeReplicatedToHclTerraform(struct?: ServiceModeReplicatedOutputReference | ServiceModeReplicated): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     replicas: {
@@ -961,13 +961,13 @@ export interface ServiceMode {
   /**
   * The global service mode. Defaults to `false`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#global Service#global}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#global Service#global}
   */
   readonly global?: boolean | cdktn.IResolvable;
   /**
   * replicated block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#replicated Service#replicated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#replicated Service#replicated}
   */
   readonly replicated?: ServiceModeReplicated;
 }
@@ -975,7 +975,7 @@ export interface ServiceMode {
 export function serviceModeToTerraform(struct?: ServiceModeOutputReference | ServiceMode): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     global: cdktn.booleanToTerraform(struct!.global),
@@ -987,7 +987,7 @@ export function serviceModeToTerraform(struct?: ServiceModeOutputReference | Ser
 export function serviceModeToHclTerraform(struct?: ServiceModeOutputReference | ServiceMode): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     global: {
@@ -1082,37 +1082,37 @@ export interface ServiceRollbackConfig {
   /**
   * Delay between task rollbacks (ns|us|ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#delay Service#delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#delay Service#delay}
   */
   readonly delay?: string;
   /**
   * Action on rollback failure: pause | continue. Defaults to `pause`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#failure_action Service#failure_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#failure_action Service#failure_action}
   */
   readonly failureAction?: string;
   /**
   * Failure rate to tolerate during a rollback. Defaults to `0.0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#max_failure_ratio Service#max_failure_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#max_failure_ratio Service#max_failure_ratio}
   */
   readonly maxFailureRatio?: string;
   /**
   * Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h). Defaults to `5s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#monitor Service#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#monitor Service#monitor}
   */
   readonly monitor?: string;
   /**
   * Rollback order: either 'stop-first' or 'start-first'. Defaults to `stop-first`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#order Service#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#order Service#order}
   */
   readonly order?: string;
   /**
   * Maximum number of tasks to be rollbacked in one iteration. Defaults to `1`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#parallelism Service#parallelism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#parallelism Service#parallelism}
   */
   readonly parallelism?: number;
 }
@@ -1120,7 +1120,7 @@ export interface ServiceRollbackConfig {
 export function serviceRollbackConfigToTerraform(struct?: ServiceRollbackConfigOutputReference | ServiceRollbackConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     delay: cdktn.stringToTerraform(struct!.delay),
@@ -1136,7 +1136,7 @@ export function serviceRollbackConfigToTerraform(struct?: ServiceRollbackConfigO
 export function serviceRollbackConfigToHclTerraform(struct?: ServiceRollbackConfigOutputReference | ServiceRollbackConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     delay: {
@@ -1343,37 +1343,37 @@ export interface ServiceTaskSpecContainerSpecConfigs {
   /**
   * ID of the specific config that we're referencing
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#config_id Service#config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#config_id Service#config_id}
   */
   readonly configId: string;
   /**
   * Name of the config that this references, but this is just provided for lookup/display purposes. The config in the reference will be identified by its ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#config_name Service#config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#config_name Service#config_name}
   */
   readonly configName?: string;
   /**
   * Represents the file GID. Defaults to `0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_gid Service#file_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_gid Service#file_gid}
   */
   readonly fileGid?: string;
   /**
   * Represents represents the FileMode of the file. Defaults to `0o444`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_mode Service#file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_mode Service#file_mode}
   */
   readonly fileMode?: number;
   /**
   * Represents the final filename in the filesystem
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_name Service#file_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_name Service#file_name}
   */
   readonly fileName: string;
   /**
   * Represents the file UID. Defaults to `0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_uid Service#file_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_uid Service#file_uid}
   */
   readonly fileUid?: string;
 }
@@ -1381,7 +1381,7 @@ export interface ServiceTaskSpecContainerSpecConfigs {
 export function serviceTaskSpecContainerSpecConfigsToTerraform(struct?: ServiceTaskSpecContainerSpecConfigs | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     config_id: cdktn.stringToTerraform(struct!.configId),
@@ -1397,7 +1397,7 @@ export function serviceTaskSpecContainerSpecConfigsToTerraform(struct?: ServiceT
 export function serviceTaskSpecContainerSpecConfigsToHclTerraform(struct?: ServiceTaskSpecContainerSpecConfigs | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     config_id: {
@@ -1630,19 +1630,19 @@ export interface ServiceTaskSpecContainerSpecDnsConfig {
   /**
   * The IP addresses of the name servers
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#nameservers Service#nameservers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#nameservers Service#nameservers}
   */
   readonly nameservers: string[];
   /**
   * A list of internal resolver variables to be modified (e.g., `debug`, `ndots:3`, etc.)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#options Service#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#options Service#options}
   */
   readonly options?: string[];
   /**
   * A search list for host-name lookup
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#search Service#search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#search Service#search}
   */
   readonly search?: string[];
 }
@@ -1650,7 +1650,7 @@ export interface ServiceTaskSpecContainerSpecDnsConfig {
 export function serviceTaskSpecContainerSpecDnsConfigToTerraform(struct?: ServiceTaskSpecContainerSpecDnsConfigOutputReference | ServiceTaskSpecContainerSpecDnsConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     nameservers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.nameservers),
@@ -1663,7 +1663,7 @@ export function serviceTaskSpecContainerSpecDnsConfigToTerraform(struct?: Servic
 export function serviceTaskSpecContainerSpecDnsConfigToHclTerraform(struct?: ServiceTaskSpecContainerSpecDnsConfigOutputReference | ServiceTaskSpecContainerSpecDnsConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     nameservers: {
@@ -1783,31 +1783,31 @@ export interface ServiceTaskSpecContainerSpecHealthcheck {
   /**
   * Time between running the check (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#interval Service#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#interval Service#interval}
   */
   readonly interval?: string;
   /**
   * Consecutive failures needed to report unhealthy. Defaults to `0`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#retries Service#retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#retries Service#retries}
   */
   readonly retries?: number;
   /**
   * Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#start_period Service#start_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#start_period Service#start_period}
   */
   readonly startPeriod?: string;
   /**
   * The test to perform as list
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#test Service#test}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#test Service#test}
   */
   readonly test?: string[];
   /**
   * Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#timeout Service#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#timeout Service#timeout}
   */
   readonly timeout?: string;
 }
@@ -1815,7 +1815,7 @@ export interface ServiceTaskSpecContainerSpecHealthcheck {
 export function serviceTaskSpecContainerSpecHealthcheckToTerraform(struct?: ServiceTaskSpecContainerSpecHealthcheckOutputReference | ServiceTaskSpecContainerSpecHealthcheck): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     interval: cdktn.stringToTerraform(struct!.interval),
@@ -1830,7 +1830,7 @@ export function serviceTaskSpecContainerSpecHealthcheckToTerraform(struct?: Serv
 export function serviceTaskSpecContainerSpecHealthcheckToHclTerraform(struct?: ServiceTaskSpecContainerSpecHealthcheckOutputReference | ServiceTaskSpecContainerSpecHealthcheck): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     interval: {
@@ -2009,13 +2009,13 @@ export interface ServiceTaskSpecContainerSpecHosts {
   /**
   * The name of the host
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#host Service#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#host Service#host}
   */
   readonly host: string;
   /**
   * The ip of the host
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#ip Service#ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#ip Service#ip}
   */
   readonly ip: string;
 }
@@ -2023,7 +2023,7 @@ export interface ServiceTaskSpecContainerSpecHosts {
 export function serviceTaskSpecContainerSpecHostsToTerraform(struct?: ServiceTaskSpecContainerSpecHosts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     host: cdktn.stringToTerraform(struct!.host),
@@ -2035,7 +2035,7 @@ export function serviceTaskSpecContainerSpecHostsToTerraform(struct?: ServiceTas
 export function serviceTaskSpecContainerSpecHostsToHclTerraform(struct?: ServiceTaskSpecContainerSpecHosts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     host: {
@@ -2156,13 +2156,13 @@ export interface ServiceTaskSpecContainerSpecLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#label Service#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#label Service#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#value Service#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#value Service#value}
   */
   readonly value: string;
 }
@@ -2170,7 +2170,7 @@ export interface ServiceTaskSpecContainerSpecLabels {
 export function serviceTaskSpecContainerSpecLabelsToTerraform(struct?: ServiceTaskSpecContainerSpecLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     label: cdktn.stringToTerraform(struct!.label),
@@ -2182,7 +2182,7 @@ export function serviceTaskSpecContainerSpecLabelsToTerraform(struct?: ServiceTa
 export function serviceTaskSpecContainerSpecLabelsToHclTerraform(struct?: ServiceTaskSpecContainerSpecLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     label: {
@@ -2303,7 +2303,7 @@ export interface ServiceTaskSpecContainerSpecMountsBindOptions {
   /**
   * Bind propagation refers to whether or not mounts created within a given bind-mount or named volume can be propagated to replicas of that mount. See the [docs](https://docs.docker.com/storage/bind-mounts/#configure-bind-propagation) for details. Defaults to `rprivate`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#propagation Service#propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#propagation Service#propagation}
   */
   readonly propagation?: string;
 }
@@ -2311,7 +2311,7 @@ export interface ServiceTaskSpecContainerSpecMountsBindOptions {
 export function serviceTaskSpecContainerSpecMountsBindOptionsToTerraform(struct?: ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference | ServiceTaskSpecContainerSpecMountsBindOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     propagation: cdktn.stringToTerraform(struct!.propagation),
@@ -2322,7 +2322,7 @@ export function serviceTaskSpecContainerSpecMountsBindOptionsToTerraform(struct?
 export function serviceTaskSpecContainerSpecMountsBindOptionsToHclTerraform(struct?: ServiceTaskSpecContainerSpecMountsBindOptionsOutputReference | ServiceTaskSpecContainerSpecMountsBindOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     propagation: {
@@ -2389,13 +2389,13 @@ export interface ServiceTaskSpecContainerSpecMountsTmpfsOptions {
   /**
   * The permission mode for the tmpfs mount in an integer
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#mode Service#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#mode Service#mode}
   */
   readonly mode?: number;
   /**
   * The size for the tmpfs mount in bytes
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#size_bytes Service#size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#size_bytes Service#size_bytes}
   */
   readonly sizeBytes?: number;
 }
@@ -2403,7 +2403,7 @@ export interface ServiceTaskSpecContainerSpecMountsTmpfsOptions {
 export function serviceTaskSpecContainerSpecMountsTmpfsOptionsToTerraform(struct?: ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference | ServiceTaskSpecContainerSpecMountsTmpfsOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     mode: cdktn.numberToTerraform(struct!.mode),
@@ -2415,7 +2415,7 @@ export function serviceTaskSpecContainerSpecMountsTmpfsOptionsToTerraform(struct
 export function serviceTaskSpecContainerSpecMountsTmpfsOptionsToHclTerraform(struct?: ServiceTaskSpecContainerSpecMountsTmpfsOptionsOutputReference | ServiceTaskSpecContainerSpecMountsTmpfsOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mode: {
@@ -2510,13 +2510,13 @@ export interface ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels {
   /**
   * Name of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#label Service#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#label Service#label}
   */
   readonly label: string;
   /**
   * Value of the label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#value Service#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#value Service#value}
   */
   readonly value: string;
 }
@@ -2524,7 +2524,7 @@ export interface ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels {
 export function serviceTaskSpecContainerSpecMountsVolumeOptionsLabelsToTerraform(struct?: ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     label: cdktn.stringToTerraform(struct!.label),
@@ -2536,7 +2536,7 @@ export function serviceTaskSpecContainerSpecMountsVolumeOptionsLabelsToTerraform
 export function serviceTaskSpecContainerSpecMountsVolumeOptionsLabelsToHclTerraform(struct?: ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     label: {
@@ -2657,25 +2657,25 @@ export interface ServiceTaskSpecContainerSpecMountsVolumeOptions {
   /**
   * Name of the driver to use to create the volume
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#driver_name Service#driver_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#driver_name Service#driver_name}
   */
   readonly driverName?: string;
   /**
   * key/value map of driver specific options
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#driver_options Service#driver_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#driver_options Service#driver_options}
   */
   readonly driverOptions?: { [key: string]: string };
   /**
   * Populate volume with data from the target
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#no_copy Service#no_copy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#no_copy Service#no_copy}
   */
   readonly noCopy?: boolean | cdktn.IResolvable;
   /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#labels Service#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#labels Service#labels}
   */
   readonly labels?: ServiceTaskSpecContainerSpecMountsVolumeOptionsLabels[] | cdktn.IResolvable;
 }
@@ -2683,7 +2683,7 @@ export interface ServiceTaskSpecContainerSpecMountsVolumeOptions {
 export function serviceTaskSpecContainerSpecMountsVolumeOptionsToTerraform(struct?: ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference | ServiceTaskSpecContainerSpecMountsVolumeOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     driver_name: cdktn.stringToTerraform(struct!.driverName),
@@ -2697,7 +2697,7 @@ export function serviceTaskSpecContainerSpecMountsVolumeOptionsToTerraform(struc
 export function serviceTaskSpecContainerSpecMountsVolumeOptionsToHclTerraform(struct?: ServiceTaskSpecContainerSpecMountsVolumeOptionsOutputReference | ServiceTaskSpecContainerSpecMountsVolumeOptions): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     driver_name: {
@@ -2848,43 +2848,43 @@ export interface ServiceTaskSpecContainerSpecMounts {
   /**
   * Whether the mount should be read-only
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#read_only Service#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#read_only Service#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
   * Mount source (e.g. a volume name, a host path)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#source Service#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#source Service#source}
   */
   readonly source?: string;
   /**
   * Container path
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#target Service#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#target Service#target}
   */
   readonly target: string;
   /**
   * The mount type
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#type Service#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#type Service#type}
   */
   readonly type: string;
   /**
   * bind_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#bind_options Service#bind_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#bind_options Service#bind_options}
   */
   readonly bindOptions?: ServiceTaskSpecContainerSpecMountsBindOptions;
   /**
   * tmpfs_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#tmpfs_options Service#tmpfs_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#tmpfs_options Service#tmpfs_options}
   */
   readonly tmpfsOptions?: ServiceTaskSpecContainerSpecMountsTmpfsOptions;
   /**
   * volume_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#volume_options Service#volume_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#volume_options Service#volume_options}
   */
   readonly volumeOptions?: ServiceTaskSpecContainerSpecMountsVolumeOptions;
 }
@@ -2892,7 +2892,7 @@ export interface ServiceTaskSpecContainerSpecMounts {
 export function serviceTaskSpecContainerSpecMountsToTerraform(struct?: ServiceTaskSpecContainerSpecMounts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     read_only: cdktn.booleanToTerraform(struct!.readOnly),
@@ -2909,7 +2909,7 @@ export function serviceTaskSpecContainerSpecMountsToTerraform(struct?: ServiceTa
 export function serviceTaskSpecContainerSpecMountsToHclTerraform(struct?: ServiceTaskSpecContainerSpecMounts | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     read_only: {
@@ -3170,13 +3170,13 @@ export interface ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
   /**
   * Load credential spec from this file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file Service#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file Service#file}
   */
   readonly file?: string;
   /**
   * Load credential spec from this value in the Windows registry
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#registry Service#registry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#registry Service#registry}
   */
   readonly registry?: string;
 }
@@ -3184,7 +3184,7 @@ export interface ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
 export function serviceTaskSpecContainerSpecPrivilegesCredentialSpecToTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference | ServiceTaskSpecContainerSpecPrivilegesCredentialSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     file: cdktn.stringToTerraform(struct!.file),
@@ -3196,7 +3196,7 @@ export function serviceTaskSpecContainerSpecPrivilegesCredentialSpecToTerraform(
 export function serviceTaskSpecContainerSpecPrivilegesCredentialSpecToHclTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutputReference | ServiceTaskSpecContainerSpecPrivilegesCredentialSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file: {
@@ -3291,31 +3291,31 @@ export interface ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
   /**
   * Disable SELinux
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#disable Service#disable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#disable Service#disable}
   */
   readonly disable?: boolean | cdktn.IResolvable;
   /**
   * SELinux level label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#level Service#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#level Service#level}
   */
   readonly level?: string;
   /**
   * SELinux role label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#role Service#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#role Service#role}
   */
   readonly role?: string;
   /**
   * SELinux type label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#type Service#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#type Service#type}
   */
   readonly type?: string;
   /**
   * SELinux user label
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#user Service#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#user Service#user}
   */
   readonly user?: string;
 }
@@ -3323,7 +3323,7 @@ export interface ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
 export function serviceTaskSpecContainerSpecPrivilegesSeLinuxContextToTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference | ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     disable: cdktn.booleanToTerraform(struct!.disable),
@@ -3338,7 +3338,7 @@ export function serviceTaskSpecContainerSpecPrivilegesSeLinuxContextToTerraform(
 export function serviceTaskSpecContainerSpecPrivilegesSeLinuxContextToHclTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference | ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     disable: {
@@ -3517,13 +3517,13 @@ export interface ServiceTaskSpecContainerSpecPrivileges {
   /**
   * credential_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#credential_spec Service#credential_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#credential_spec Service#credential_spec}
   */
   readonly credentialSpec?: ServiceTaskSpecContainerSpecPrivilegesCredentialSpec;
   /**
   * se_linux_context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#se_linux_context Service#se_linux_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#se_linux_context Service#se_linux_context}
   */
   readonly seLinuxContext?: ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext;
 }
@@ -3531,7 +3531,7 @@ export interface ServiceTaskSpecContainerSpecPrivileges {
 export function serviceTaskSpecContainerSpecPrivilegesToTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesOutputReference | ServiceTaskSpecContainerSpecPrivileges): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     credential_spec: serviceTaskSpecContainerSpecPrivilegesCredentialSpecToTerraform(struct!.credentialSpec),
@@ -3543,7 +3543,7 @@ export function serviceTaskSpecContainerSpecPrivilegesToTerraform(struct?: Servi
 export function serviceTaskSpecContainerSpecPrivilegesToHclTerraform(struct?: ServiceTaskSpecContainerSpecPrivilegesOutputReference | ServiceTaskSpecContainerSpecPrivileges): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     credential_spec: {
@@ -3638,37 +3638,37 @@ export interface ServiceTaskSpecContainerSpecSecrets {
   /**
   * Represents the file GID. Defaults to `0`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_gid Service#file_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_gid Service#file_gid}
   */
   readonly fileGid?: string;
   /**
   * Represents represents the FileMode of the file. Defaults to `0o444`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_mode Service#file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_mode Service#file_mode}
   */
   readonly fileMode?: number;
   /**
   * Represents the final filename in the filesystem
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_name Service#file_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_name Service#file_name}
   */
   readonly fileName: string;
   /**
   * Represents the file UID. Defaults to `0`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#file_uid Service#file_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#file_uid Service#file_uid}
   */
   readonly fileUid?: string;
   /**
   * ID of the specific secret that we're referencing
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#secret_id Service#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#secret_id Service#secret_id}
   */
   readonly secretId: string;
   /**
   * Name of the secret that this references, but this is just provided for lookup/display purposes. The config in the reference will be identified by its ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#secret_name Service#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#secret_name Service#secret_name}
   */
   readonly secretName?: string;
 }
@@ -3676,7 +3676,7 @@ export interface ServiceTaskSpecContainerSpecSecrets {
 export function serviceTaskSpecContainerSpecSecretsToTerraform(struct?: ServiceTaskSpecContainerSpecSecrets | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     file_gid: cdktn.stringToTerraform(struct!.fileGid),
@@ -3692,7 +3692,7 @@ export function serviceTaskSpecContainerSpecSecretsToTerraform(struct?: ServiceT
 export function serviceTaskSpecContainerSpecSecretsToHclTerraform(struct?: ServiceTaskSpecContainerSpecSecrets | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_gid: {
@@ -3925,139 +3925,145 @@ export interface ServiceTaskSpecContainerSpec {
   /**
   * Arguments to the command
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#args Service#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#args Service#args}
   */
   readonly args?: string[];
   /**
   * List of Linux capabilities to add to the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#cap_add Service#cap_add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#cap_add Service#cap_add}
   */
   readonly capAdd?: string[];
   /**
   * List of Linux capabilities to drop from the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#cap_drop Service#cap_drop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#cap_drop Service#cap_drop}
   */
   readonly capDrop?: string[];
   /**
   * The command/entrypoint to be run in the image. According to the [docker cli](https://github.com/docker/cli/blob/v20.10.7/cli/command/service/opts.go#L705) the override of the entrypoint is also passed to the `command` property and there is no `entrypoint` attribute in the `ContainerSpec` of the service.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#command Service#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#command Service#command}
   */
   readonly command?: string[];
   /**
   * The working directory for commands to run in
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#dir Service#dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#dir Service#dir}
   */
   readonly dir?: string;
   /**
   * A list of environment variables in the form VAR="value"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#env Service#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#env Service#env}
   */
   readonly env?: { [key: string]: string };
   /**
   * A list of additional groups that the container process will run as
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#groups Service#groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#groups Service#groups}
   */
   readonly groups?: string[];
   /**
   * The hostname to use for the container, as a valid RFC 1123 hostname
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#hostname Service#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#hostname Service#hostname}
   */
   readonly hostname?: string;
   /**
   * The image name to use for the containers of the service, like `nginx:1.17.6`. Also use the data-source or resource of `docker_image` with the `repo_digest` or `docker_registry_image` with the `name` attribute for this, as shown in the examples.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#image Service#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#image Service#image}
   */
   readonly image: string;
   /**
+  * Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#init Service#init}
+  */
+  readonly init?: boolean | cdktn.IResolvable;
+  /**
   * Isolation technology of the containers running the service. (Windows only). Defaults to `default`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#isolation Service#isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#isolation Service#isolation}
   */
   readonly isolation?: string;
   /**
   * Mount the container's root filesystem as read only
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#read_only Service#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#read_only Service#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
   * Amount of time to wait for the container to terminate before forcefully removing it (ms|s|m|h). If not specified or '0s' the destroy will not check if all tasks/containers of the service terminate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#stop_grace_period Service#stop_grace_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#stop_grace_period Service#stop_grace_period}
   */
   readonly stopGracePeriod?: string;
   /**
   * Signal to stop the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#stop_signal Service#stop_signal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#stop_signal Service#stop_signal}
   */
   readonly stopSignal?: string;
   /**
   * Sysctls config (Linux only)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#sysctl Service#sysctl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#sysctl Service#sysctl}
   */
   readonly sysctl?: { [key: string]: string };
   /**
   * The user inside the container
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#user Service#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#user Service#user}
   */
   readonly user?: string;
   /**
   * configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#configs Service#configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#configs Service#configs}
   */
   readonly configs?: ServiceTaskSpecContainerSpecConfigs[] | cdktn.IResolvable;
   /**
   * dns_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#dns_config Service#dns_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#dns_config Service#dns_config}
   */
   readonly dnsConfig?: ServiceTaskSpecContainerSpecDnsConfig;
   /**
   * healthcheck block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#healthcheck Service#healthcheck}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#healthcheck Service#healthcheck}
   */
   readonly healthcheck?: ServiceTaskSpecContainerSpecHealthcheck;
   /**
   * hosts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#hosts Service#hosts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#hosts Service#hosts}
   */
   readonly hosts?: ServiceTaskSpecContainerSpecHosts[] | cdktn.IResolvable;
   /**
   * labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#labels Service#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#labels Service#labels}
   */
   readonly labels?: ServiceTaskSpecContainerSpecLabels[] | cdktn.IResolvable;
   /**
   * mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#mounts Service#mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#mounts Service#mounts}
   */
   readonly mounts?: ServiceTaskSpecContainerSpecMounts[] | cdktn.IResolvable;
   /**
   * privileges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#privileges Service#privileges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#privileges Service#privileges}
   */
   readonly privileges?: ServiceTaskSpecContainerSpecPrivileges;
   /**
   * secrets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#secrets Service#secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#secrets Service#secrets}
   */
   readonly secrets?: ServiceTaskSpecContainerSpecSecrets[] | cdktn.IResolvable;
 }
@@ -4065,7 +4071,7 @@ export interface ServiceTaskSpecContainerSpec {
 export function serviceTaskSpecContainerSpecToTerraform(struct?: ServiceTaskSpecContainerSpecOutputReference | ServiceTaskSpecContainerSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     args: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.args),
@@ -4077,6 +4083,7 @@ export function serviceTaskSpecContainerSpecToTerraform(struct?: ServiceTaskSpec
     groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.groups),
     hostname: cdktn.stringToTerraform(struct!.hostname),
     image: cdktn.stringToTerraform(struct!.image),
+    init: cdktn.booleanToTerraform(struct!.init),
     isolation: cdktn.stringToTerraform(struct!.isolation),
     read_only: cdktn.booleanToTerraform(struct!.readOnly),
     stop_grace_period: cdktn.stringToTerraform(struct!.stopGracePeriod),
@@ -4098,7 +4105,7 @@ export function serviceTaskSpecContainerSpecToTerraform(struct?: ServiceTaskSpec
 export function serviceTaskSpecContainerSpecToHclTerraform(struct?: ServiceTaskSpecContainerSpecOutputReference | ServiceTaskSpecContainerSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     args: {
@@ -4154,6 +4161,12 @@ export function serviceTaskSpecContainerSpecToHclTerraform(struct?: ServiceTaskS
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    init: {
+      value: cdktn.booleanToHclTerraform(struct!.init),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     isolation: {
       value: cdktn.stringToHclTerraform(struct!.isolation),
@@ -4295,6 +4308,10 @@ export class ServiceTaskSpecContainerSpecOutputReference extends cdktn.ComplexOb
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
+    if (this._init !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.init = this._init;
+    }
     if (this._isolation !== undefined) {
       hasAnyValues = true;
       internalValueResult.isolation = this._isolation;
@@ -4366,6 +4383,7 @@ export class ServiceTaskSpecContainerSpecOutputReference extends cdktn.ComplexOb
       this._groups = undefined;
       this._hostname = undefined;
       this._image = undefined;
+      this._init = undefined;
       this._isolation = undefined;
       this._readOnly = undefined;
       this._stopGracePeriod = undefined;
@@ -4392,6 +4410,7 @@ export class ServiceTaskSpecContainerSpecOutputReference extends cdktn.ComplexOb
       this._groups = value.groups;
       this._hostname = value.hostname;
       this._image = value.image;
+      this._init = value.init;
       this._isolation = value.isolation;
       this._readOnly = value.readOnly;
       this._stopGracePeriod = value.stopGracePeriod;
@@ -4548,6 +4567,22 @@ export class ServiceTaskSpecContainerSpecOutputReference extends cdktn.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
     return this._image;
+  }
+
+  // init - computed: true, optional: true, required: false
+  private _init?: boolean | cdktn.IResolvable; 
+  public get init() {
+    return this.getBooleanAttribute('init');
+  }
+  public set init(value: boolean | cdktn.IResolvable) {
+    this._init = value;
+  }
+  public resetInit() {
+    this._init = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initInput() {
+    return this._init;
   }
 
   // isolation - computed: false, optional: true, required: false
@@ -4778,13 +4813,13 @@ export interface ServiceTaskSpecLogDriver {
   /**
   * The logging driver to use
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#name Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#name Service#name}
   */
   readonly name: string;
   /**
   * The options for the logging driver
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#options Service#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#options Service#options}
   */
   readonly options?: { [key: string]: string };
 }
@@ -4792,7 +4827,7 @@ export interface ServiceTaskSpecLogDriver {
 export function serviceTaskSpecLogDriverToTerraform(struct?: ServiceTaskSpecLogDriverOutputReference | ServiceTaskSpecLogDriver): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
@@ -4804,7 +4839,7 @@ export function serviceTaskSpecLogDriverToTerraform(struct?: ServiceTaskSpecLogD
 export function serviceTaskSpecLogDriverToHclTerraform(struct?: ServiceTaskSpecLogDriverOutputReference | ServiceTaskSpecLogDriver): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     name: {
@@ -4896,19 +4931,19 @@ export interface ServiceTaskSpecNetworksAdvanced {
   /**
   * The network aliases of the container in the specific network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#aliases Service#aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#aliases Service#aliases}
   */
   readonly aliases?: string[];
   /**
   * An array of driver options for the network, e.g. `opts1=value`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#driver_opts Service#driver_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#driver_opts Service#driver_opts}
   */
   readonly driverOpts?: string[];
   /**
   * The id of the docker network to use. Please use `docker_network.id`. Using the name attribute of the docker network will lead to constant replacements.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#id Service#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#id Service#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4917,7 +4952,7 @@ export interface ServiceTaskSpecNetworksAdvanced {
   /**
   * Deprecated attribute. The name/id of the docker network. Conflicts with `id` attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#name Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#name Service#name}
   */
   readonly name?: string;
 }
@@ -4925,7 +4960,7 @@ export interface ServiceTaskSpecNetworksAdvanced {
 export function serviceTaskSpecNetworksAdvancedToTerraform(struct?: ServiceTaskSpecNetworksAdvanced | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     aliases: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.aliases),
@@ -4939,7 +4974,7 @@ export function serviceTaskSpecNetworksAdvancedToTerraform(struct?: ServiceTaskS
 export function serviceTaskSpecNetworksAdvancedToHclTerraform(struct?: ServiceTaskSpecNetworksAdvanced | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aliases: {
@@ -5122,13 +5157,13 @@ export interface ServiceTaskSpecPlacementPlatforms {
   /**
   * The architecture, e.g. `amd64`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#architecture Service#architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#architecture Service#architecture}
   */
   readonly architecture: string;
   /**
   * The operation system, e.g. `linux`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#os Service#os}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#os Service#os}
   */
   readonly os: string;
 }
@@ -5136,7 +5171,7 @@ export interface ServiceTaskSpecPlacementPlatforms {
 export function serviceTaskSpecPlacementPlatformsToTerraform(struct?: ServiceTaskSpecPlacementPlatforms | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     architecture: cdktn.stringToTerraform(struct!.architecture),
@@ -5148,7 +5183,7 @@ export function serviceTaskSpecPlacementPlatformsToTerraform(struct?: ServiceTas
 export function serviceTaskSpecPlacementPlatformsToHclTerraform(struct?: ServiceTaskSpecPlacementPlatforms | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     architecture: {
@@ -5269,25 +5304,25 @@ export interface ServiceTaskSpecPlacement {
   /**
   * An array of constraints. e.g.: `node.role==manager`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#constraints Service#constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#constraints Service#constraints}
   */
   readonly constraints?: string[];
   /**
   * Maximum number of replicas for per node (default value is `0`, which is unlimited)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#max_replicas Service#max_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#max_replicas Service#max_replicas}
   */
   readonly maxReplicas?: number;
   /**
   * Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#prefs Service#prefs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#prefs Service#prefs}
   */
   readonly prefs?: string[];
   /**
   * platforms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#platforms Service#platforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#platforms Service#platforms}
   */
   readonly platforms?: ServiceTaskSpecPlacementPlatforms[] | cdktn.IResolvable;
 }
@@ -5295,7 +5330,7 @@ export interface ServiceTaskSpecPlacement {
 export function serviceTaskSpecPlacementToTerraform(struct?: ServiceTaskSpecPlacementOutputReference | ServiceTaskSpecPlacement): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     constraints: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.constraints),
@@ -5309,7 +5344,7 @@ export function serviceTaskSpecPlacementToTerraform(struct?: ServiceTaskSpecPlac
 export function serviceTaskSpecPlacementToHclTerraform(struct?: ServiceTaskSpecPlacementOutputReference | ServiceTaskSpecPlacement): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     constraints: {
@@ -5460,13 +5495,13 @@ export interface ServiceTaskSpecResourcesLimits {
   /**
   * The amount of memory in bytes the container allocates
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#memory_bytes Service#memory_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#memory_bytes Service#memory_bytes}
   */
   readonly memoryBytes?: number;
   /**
   * CPU shares in units of `1/1e9` (or `10^-9`) of the CPU. Should be at least `1000000`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#nano_cpus Service#nano_cpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#nano_cpus Service#nano_cpus}
   */
   readonly nanoCpus?: number;
 }
@@ -5474,7 +5509,7 @@ export interface ServiceTaskSpecResourcesLimits {
 export function serviceTaskSpecResourcesLimitsToTerraform(struct?: ServiceTaskSpecResourcesLimitsOutputReference | ServiceTaskSpecResourcesLimits): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     memory_bytes: cdktn.numberToTerraform(struct!.memoryBytes),
@@ -5486,7 +5521,7 @@ export function serviceTaskSpecResourcesLimitsToTerraform(struct?: ServiceTaskSp
 export function serviceTaskSpecResourcesLimitsToHclTerraform(struct?: ServiceTaskSpecResourcesLimitsOutputReference | ServiceTaskSpecResourcesLimits): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     memory_bytes: {
@@ -5581,13 +5616,13 @@ export interface ServiceTaskSpecResourcesReservationGenericResources {
   /**
   * The Integer resources
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#discrete_resources_spec Service#discrete_resources_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#discrete_resources_spec Service#discrete_resources_spec}
   */
   readonly discreteResourcesSpec?: string[];
   /**
   * The String resources
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#named_resources_spec Service#named_resources_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#named_resources_spec Service#named_resources_spec}
   */
   readonly namedResourcesSpec?: string[];
 }
@@ -5595,7 +5630,7 @@ export interface ServiceTaskSpecResourcesReservationGenericResources {
 export function serviceTaskSpecResourcesReservationGenericResourcesToTerraform(struct?: ServiceTaskSpecResourcesReservationGenericResourcesOutputReference | ServiceTaskSpecResourcesReservationGenericResources): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     discrete_resources_spec: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.discreteResourcesSpec),
@@ -5607,7 +5642,7 @@ export function serviceTaskSpecResourcesReservationGenericResourcesToTerraform(s
 export function serviceTaskSpecResourcesReservationGenericResourcesToHclTerraform(struct?: ServiceTaskSpecResourcesReservationGenericResourcesOutputReference | ServiceTaskSpecResourcesReservationGenericResources): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     discrete_resources_spec: {
@@ -5702,19 +5737,19 @@ export interface ServiceTaskSpecResourcesReservation {
   /**
   * The amount of memory in bytes the container allocates
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#memory_bytes Service#memory_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#memory_bytes Service#memory_bytes}
   */
   readonly memoryBytes?: number;
   /**
   * CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least `1000000`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#nano_cpus Service#nano_cpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#nano_cpus Service#nano_cpus}
   */
   readonly nanoCpus?: number;
   /**
   * generic_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#generic_resources Service#generic_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#generic_resources Service#generic_resources}
   */
   readonly genericResources?: ServiceTaskSpecResourcesReservationGenericResources;
 }
@@ -5722,7 +5757,7 @@ export interface ServiceTaskSpecResourcesReservation {
 export function serviceTaskSpecResourcesReservationToTerraform(struct?: ServiceTaskSpecResourcesReservationOutputReference | ServiceTaskSpecResourcesReservation): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     memory_bytes: cdktn.numberToTerraform(struct!.memoryBytes),
@@ -5735,7 +5770,7 @@ export function serviceTaskSpecResourcesReservationToTerraform(struct?: ServiceT
 export function serviceTaskSpecResourcesReservationToHclTerraform(struct?: ServiceTaskSpecResourcesReservationOutputReference | ServiceTaskSpecResourcesReservation): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     memory_bytes: {
@@ -5858,13 +5893,13 @@ export interface ServiceTaskSpecResources {
   /**
   * limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#limits Service#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#limits Service#limits}
   */
   readonly limits?: ServiceTaskSpecResourcesLimits;
   /**
   * reservation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#reservation Service#reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#reservation Service#reservation}
   */
   readonly reservation?: ServiceTaskSpecResourcesReservation;
 }
@@ -5872,7 +5907,7 @@ export interface ServiceTaskSpecResources {
 export function serviceTaskSpecResourcesToTerraform(struct?: ServiceTaskSpecResourcesOutputReference | ServiceTaskSpecResources): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     limits: serviceTaskSpecResourcesLimitsToTerraform(struct!.limits),
@@ -5884,7 +5919,7 @@ export function serviceTaskSpecResourcesToTerraform(struct?: ServiceTaskSpecReso
 export function serviceTaskSpecResourcesToHclTerraform(struct?: ServiceTaskSpecResourcesOutputReference | ServiceTaskSpecResources): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     limits: {
@@ -5979,25 +6014,25 @@ export interface ServiceTaskSpecRestartPolicy {
   /**
   * Condition for restart
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#condition Service#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#condition Service#condition}
   */
   readonly condition?: string;
   /**
   * Delay between restart attempts (ms|s|m|h)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#delay Service#delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#delay Service#delay}
   */
   readonly delay?: string;
   /**
   * Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#max_attempts Service#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#max_attempts Service#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
   * The time window used to evaluate the restart policy (default value is `0`, which is unbounded) (ms|s|m|h)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#window Service#window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#window Service#window}
   */
   readonly window?: string;
 }
@@ -6005,7 +6040,7 @@ export interface ServiceTaskSpecRestartPolicy {
 export function serviceTaskSpecRestartPolicyToTerraform(struct?: ServiceTaskSpecRestartPolicyOutputReference | ServiceTaskSpecRestartPolicy): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     condition: cdktn.stringToTerraform(struct!.condition),
@@ -6019,7 +6054,7 @@ export function serviceTaskSpecRestartPolicyToTerraform(struct?: ServiceTaskSpec
 export function serviceTaskSpecRestartPolicyToHclTerraform(struct?: ServiceTaskSpecRestartPolicyOutputReference | ServiceTaskSpecRestartPolicy): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     condition: {
@@ -6170,49 +6205,49 @@ export interface ServiceTaskSpec {
   /**
   * A counter that triggers an update even if no relevant parameters have been changed. See the [spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#force_update Service#force_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#force_update Service#force_update}
   */
   readonly forceUpdate?: number;
   /**
   * Runtime is the type of runtime specified for the task executor. See the [types](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#runtime Service#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#runtime Service#runtime}
   */
   readonly runtime?: string;
   /**
   * container_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#container_spec Service#container_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#container_spec Service#container_spec}
   */
   readonly containerSpec: ServiceTaskSpecContainerSpec;
   /**
   * log_driver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#log_driver Service#log_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#log_driver Service#log_driver}
   */
   readonly logDriver?: ServiceTaskSpecLogDriver;
   /**
   * networks_advanced block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#networks_advanced Service#networks_advanced}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#networks_advanced Service#networks_advanced}
   */
   readonly networksAdvanced?: ServiceTaskSpecNetworksAdvanced[] | cdktn.IResolvable;
   /**
   * placement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#placement Service#placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#placement Service#placement}
   */
   readonly placement?: ServiceTaskSpecPlacement;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#resources Service#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#resources Service#resources}
   */
   readonly resources?: ServiceTaskSpecResources;
   /**
   * restart_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#restart_policy Service#restart_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#restart_policy Service#restart_policy}
   */
   readonly restartPolicy?: ServiceTaskSpecRestartPolicy;
 }
@@ -6220,7 +6255,7 @@ export interface ServiceTaskSpec {
 export function serviceTaskSpecToTerraform(struct?: ServiceTaskSpecOutputReference | ServiceTaskSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     force_update: cdktn.numberToTerraform(struct!.forceUpdate),
@@ -6238,7 +6273,7 @@ export function serviceTaskSpecToTerraform(struct?: ServiceTaskSpecOutputReferen
 export function serviceTaskSpecToHclTerraform(struct?: ServiceTaskSpecOutputReference | ServiceTaskSpec): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     force_update: {
@@ -6498,37 +6533,37 @@ export interface ServiceUpdateConfig {
   /**
   * Delay between task updates `(ns|us|ms|s|m|h)`. Defaults to `0s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#delay Service#delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#delay Service#delay}
   */
   readonly delay?: string;
   /**
   * Action on update failure: `pause`, `continue` or `rollback`. Defaults to `pause`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#failure_action Service#failure_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#failure_action Service#failure_action}
   */
   readonly failureAction?: string;
   /**
   * Failure rate to tolerate during an update. Defaults to `0.0`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#max_failure_ratio Service#max_failure_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#max_failure_ratio Service#max_failure_ratio}
   */
   readonly maxFailureRatio?: string;
   /**
   * Duration after each task update to monitor for failure (ns|us|ms|s|m|h). Defaults to `5s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#monitor Service#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#monitor Service#monitor}
   */
   readonly monitor?: string;
   /**
   * Update order: either 'stop-first' or 'start-first'. Defaults to `stop-first`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#order Service#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#order Service#order}
   */
   readonly order?: string;
   /**
   * Maximum number of tasks to be updated in one iteration. Defaults to `1`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#parallelism Service#parallelism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#parallelism Service#parallelism}
   */
   readonly parallelism?: number;
 }
@@ -6536,7 +6571,7 @@ export interface ServiceUpdateConfig {
 export function serviceUpdateConfigToTerraform(struct?: ServiceUpdateConfigOutputReference | ServiceUpdateConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     delay: cdktn.stringToTerraform(struct!.delay),
@@ -6552,7 +6587,7 @@ export function serviceUpdateConfigToTerraform(struct?: ServiceUpdateConfigOutpu
 export function serviceUpdateConfigToHclTerraform(struct?: ServiceUpdateConfigOutputReference | ServiceUpdateConfig): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     delay: {
@@ -6757,7 +6792,7 @@ export class ServiceUpdateConfigOutputReference extends cdktn.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service docker_service}
+* Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service docker_service}
 */
 export class Service extends cdktn.TerraformResource {
 
@@ -6773,7 +6808,7 @@ export class Service extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a Service resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Service to import
-  * @param importFromId The id of the existing Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Service to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -6785,7 +6820,7 @@ export class Service extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.4.0/docs/resources/service docker_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/service docker_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -6796,7 +6831,7 @@ export class Service extends cdktn.TerraformResource {
       terraformResourceType: 'docker_service',
       terraformGeneratorMetadata: {
         providerName: 'docker',
-        providerVersion: '4.4.0',
+        providerVersion: '4.5.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
