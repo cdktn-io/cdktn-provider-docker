@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 datadockerregistryimagetags.NewDataDockerRegistryImageTags(scope Construct, id *string, config DataDockerRegistryImageTagsConfig) DataDockerRegistryImageTags
 ```
@@ -312,7 +312,7 @@ func ResetStrictSemver()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 datadockerregistryimagetags.DataDockerRegistryImageTags_IsConstruct(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 datadockerregistryimagetags.DataDockerRegistryImageTags_IsTerraformElement(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ datadockerregistryimagetags.DataDockerRegistryImageTags_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 datadockerregistryimagetags.DataDockerRegistryImageTags_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ datadockerregistryimagetags.DataDockerRegistryImageTags_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTags.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 datadockerregistryimagetags.DataDockerRegistryImageTags_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -667,7 +667,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerRegistryImageTags.DataDockerRegistryImageTagsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimagetags"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimagetags"
 
 &datadockerregistryimagetags.DataDockerRegistryImageTagsConfig {
 	Connection: interface{},
