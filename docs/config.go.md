@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.config.Config.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.NewConfig(scope Construct, id *string, config ConfigConfig) Config
 ```
@@ -441,7 +441,7 @@ func ResetLabels()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.config.Config.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.Config_IsConstruct(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.config.Config.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.Config_IsTerraformElement(x interface{}) *bool
 ```
@@ -487,7 +487,7 @@ config.Config_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.config.Config.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.Config_IsTerraformResource(x interface{}) *bool
 ```
@@ -501,7 +501,7 @@ config.Config_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.config.Config.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.Config_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -840,7 +840,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.config.ConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 &config.ConfigConfig {
 	Connection: interface{},
@@ -1023,7 +1023,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.config.ConfigLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 &config.ConfigLabels {
 	Label: *string,
@@ -1075,7 +1075,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.config.ConfigLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.NewConfigLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConfigLabelsList
 ```
@@ -1235,7 +1235,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.config.ConfigLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/config"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/config"
 
 config.NewConfigLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConfigLabelsOutputReference
 ```

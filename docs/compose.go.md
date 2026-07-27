@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.compose.Compose.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 compose.NewCompose(scope Construct, id *string, config ComposeConfig) Compose
 ```
@@ -449,7 +449,7 @@ func ResetWaitTimeout()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.compose.Compose.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 compose.Compose_IsConstruct(x interface{}) *bool
 ```
@@ -481,7 +481,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.compose.Compose.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 compose.Compose_IsTerraformElement(x interface{}) *bool
 ```
@@ -495,7 +495,7 @@ compose.Compose_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktn/provider-docker.compose.Compose.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 compose.Compose_IsTerraformResource(x interface{}) *bool
 ```
@@ -509,7 +509,7 @@ compose.Compose_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.compose.Compose.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 compose.Compose_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -925,7 +925,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.compose.ComposeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/compose"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/compose"
 
 &compose.ComposeConfig {
 	Connection: interface{},

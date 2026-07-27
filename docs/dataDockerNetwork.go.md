@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.NewDataDockerNetwork(scope Construct, id *string, config DataDockerNetworkConfig) DataDockerNetwork
 ```
@@ -298,7 +298,7 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.DataDockerNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.DataDockerNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ datadockernetwork.DataDockerNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.DataDockerNetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ datadockernetwork.DataDockerNetwork_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.DataDockerNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -664,7 +664,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 &datadockernetwork.DataDockerNetworkConfig {
 	Connection: interface{},
@@ -782,7 +782,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainers.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 &datadockernetwork.DataDockerNetworkContainers {
 
@@ -795,7 +795,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwor
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 &datadockernetwork.DataDockerNetworkIpamConfig {
 
@@ -810,7 +810,7 @@ import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwor
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.NewDataDockerNetworkContainersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataDockerNetworkContainersList
 ```
@@ -959,7 +959,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkContainersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.NewDataDockerNetworkContainersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataDockerNetworkContainersOutputReference
 ```
@@ -1292,7 +1292,7 @@ func InternalValue() DataDockerNetworkContainers
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.NewDataDockerNetworkIpamConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataDockerNetworkIpamConfigList
 ```
@@ -1441,7 +1441,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerNetwork.DataDockerNetworkIpamConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockernetwork"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockernetwork"
 
 datadockernetwork.NewDataDockerNetworkIpamConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataDockerNetworkIpamConfigOutputReference
 ```
