@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 datadockerregistryimage.NewDataDockerRegistryImage(scope Construct, id *string, config DataDockerRegistryImageConfig) DataDockerRegistryImage
 ```
@@ -312,7 +312,7 @@ func ResetInsecureSkipVerify()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 datadockerregistryimage.DataDockerRegistryImage_IsConstruct(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 datadockerregistryimage.DataDockerRegistryImage_IsTerraformElement(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ datadockerregistryimage.DataDockerRegistryImage_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 datadockerregistryimage.DataDockerRegistryImage_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ datadockerregistryimage.DataDockerRegistryImage_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImage.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 datadockerregistryimage.DataDockerRegistryImage_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -656,7 +656,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-docker.dataDockerRegistryImage.DataDockerRegistryImageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v15/datadockerregistryimage"
+import "github.com/cdktn-io/cdktn-provider-docker-go/docker/v16/datadockerregistryimage"
 
 &datadockerregistryimage.DataDockerRegistryImageConfig {
 	Connection: interface{},
