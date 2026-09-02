@@ -4,7 +4,7 @@
 
 ### Compose <a name="Compose" id="@cdktn/provider-docker.compose.Compose"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose docker_compose}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose docker_compose}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.compose.Compose.Initializer"></a>
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 One or more Compose file paths, equivalent to repeating the `-f` flag with `docker compose`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#config_paths Compose#config_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#config_paths Compose#config_paths}
 
 ---
 
@@ -130,7 +130,7 @@ Optional list of env files to load before parsing the Compose configuration.
 
 If omitted, Compose uses the default `.env` behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#env_files Compose#env_files}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#env_files Compose#env_files}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional list of Compose profiles to enable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#profiles Compose#profiles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#profiles Compose#profiles}
 
 ---
 
@@ -152,7 +152,7 @@ Optional project directory used as the Compose working directory.
 
 If omitted, Compose uses the directory of the first file in `config_paths`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#project_directory Compose#project_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_directory Compose#project_directory}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional Compose project name. If omitted, Compose derives the project name the same way as the CLI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#project_name Compose#project_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_name Compose#project_name}
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, remove containers for services that are no longer present in the Compose configuration during apply and destroy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, wait until services reach the running or healthy state before returning from apply.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#wait Compose#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait Compose#wait}
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional duration for `wait`, for example `30s` or `2m`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
 
 ---
 
@@ -690,7 +690,7 @@ The construct id used in the generated config for the Compose to import.
 
 The id of the existing Compose that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1200,7 +1200,7 @@ public java.util.List<java.lang.String> getConfigPaths();
 
 One or more Compose file paths, equivalent to repeating the `-f` flag with `docker compose`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#config_paths Compose#config_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#config_paths Compose#config_paths}
 
 ---
 
@@ -1216,7 +1216,7 @@ Optional list of env files to load before parsing the Compose configuration.
 
 If omitted, Compose uses the default `.env` behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#env_files Compose#env_files}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#env_files Compose#env_files}
 
 ---
 
@@ -1230,7 +1230,7 @@ public java.util.List<java.lang.String> getProfiles();
 
 Optional list of Compose profiles to enable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#profiles Compose#profiles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#profiles Compose#profiles}
 
 ---
 
@@ -1246,7 +1246,7 @@ Optional project directory used as the Compose working directory.
 
 If omitted, Compose uses the directory of the first file in `config_paths`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#project_directory Compose#project_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_directory Compose#project_directory}
 
 ---
 
@@ -1260,7 +1260,7 @@ public java.lang.String getProjectName();
 
 Optional Compose project name. If omitted, Compose derives the project name the same way as the CLI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#project_name Compose#project_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_name Compose#project_name}
 
 ---
 
@@ -1274,7 +1274,7 @@ public java.lang.Boolean|IResolvable getRemoveOrphans();
 
 If `true`, remove containers for services that are no longer present in the Compose configuration during apply and destroy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
 
 ---
 
@@ -1288,7 +1288,7 @@ public java.lang.Boolean|IResolvable getWait();
 
 If `true`, wait until services reach the running or healthy state before returning from apply.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#wait Compose#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait Compose#wait}
 
 ---
 
@@ -1302,7 +1302,7 @@ public java.lang.String getWaitTimeout();
 
 Optional duration for `wait`, for example `30s` or `2m`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
 
 ---
 

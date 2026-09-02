@@ -4,7 +4,7 @@
 
 ### DataDockerContainers <a name="DataDockerContainers" id="@cdktn/provider-docker.dataDockerContainers.DataDockerContainers"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/containers docker_containers}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/data-sources/containers docker_containers}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.dataDockerContainers.DataDockerContainers.Initializer"></a>
 
@@ -477,7 +477,7 @@ The construct id used in the generated config for the DataDockerContainers to im
 
 The id of the existing DataDockerContainers that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/data-sources/containers#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/data-sources/containers#import import section} in the documentation of this resource for the id to use
 
 ---
 
