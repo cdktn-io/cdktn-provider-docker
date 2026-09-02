@@ -4,7 +4,7 @@
 
 ### Container <a name="Container" id="@cdktn/provider-docker.container.Container"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container docker_container}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container docker_container}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.container.Container.Initializer"></a>
 
@@ -35,6 +35,7 @@ container.Container(
   cpu_set: str = None,
   cpu_shares: typing.Union[int, float] = None,
   destroy_grace_seconds: typing.Union[int, float] = None,
+  device_cgroup_rules: typing.List[str] = None,
   device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps] = None,
   device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops] = None,
   device_requests: IResolvable | typing.List[ContainerDeviceRequests] = None,
@@ -124,6 +125,7 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceCgroupRules">device_cgroup_rules</a></code> | <code>typing.List[str]</code> | Cgroup rules to allow access to classes of devices without binding specific device nodes. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadBps">device_read_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | device_read_bps block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceReadIops">device_read_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | device_read_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.deviceRequests">device_requests</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | device_requests block. |
@@ -141,7 +143,7 @@ container.Container(
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.Container.Initializer.parameter.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
@@ -256,7 +258,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -266,7 +268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -276,7 +278,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -286,7 +288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -296,7 +298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -306,7 +308,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -318,7 +320,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -328,7 +330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -338,7 +340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -350,7 +352,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -362,7 +364,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -372,7 +374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -382,7 +384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -394,7 +396,17 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `device_cgroup_rules`<sup>Optional</sup> <a name="device_cgroup_rules" id="@cdktn/provider-docker.container.Container.Initializer.parameter.deviceCgroupRules"></a>
+
+- *Type:* typing.List[str]
+
+Cgroup rules to allow access to classes of devices without binding specific device nodes.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_cgroup_rules Container#device_cgroup_rules}
 
 ---
 
@@ -404,7 +416,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 device_read_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_read_bps Container#device_read_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_read_bps Container#device_read_bps}
 
 ---
 
@@ -414,7 +426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 device_read_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_read_iops Container#device_read_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_read_iops Container#device_read_iops}
 
 ---
 
@@ -424,7 +436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 device_requests block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_requests Container#device_requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -434,7 +446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#devices Container#devices}
 
 ---
 
@@ -444,7 +456,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 device_write_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_write_bps Container#device_write_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_write_bps Container#device_write_bps}
 
 ---
 
@@ -454,7 +466,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 device_write_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_write_iops Container#device_write_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -464,7 +476,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -474,7 +486,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -484,7 +496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -494,7 +506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -506,7 +518,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -516,7 +528,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -526,7 +538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -536,7 +548,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -546,7 +558,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -556,7 +568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -566,7 +578,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -574,7 +586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -589,7 +601,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -599,7 +611,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -609,7 +621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -619,7 +631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -629,7 +641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -639,7 +651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -649,7 +661,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -659,7 +671,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -671,7 +683,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -683,7 +695,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -693,7 +705,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -705,7 +717,7 @@ If `true`, then the Docker container will be kept running.
 
 If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -717,7 +729,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -727,7 +739,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -737,7 +749,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#pid_mode Container#pid_mode}
 
 ---
 
@@ -747,7 +759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#platform Container#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -757,7 +769,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -767,7 +779,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -777,7 +789,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -787,7 +799,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -797,7 +809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -807,7 +819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -817,7 +829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -827,7 +839,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -837,7 +849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -847,7 +859,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -859,7 +871,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -869,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -879,7 +891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -889,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -899,7 +911,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -909,7 +921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#sysctls Container#sysctls}
 
 ---
 
@@ -919,7 +931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#timeouts Container#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -929,7 +941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -939,7 +951,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -949,7 +961,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -959,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -971,7 +983,7 @@ User used for run the first process.
 
 Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -981,7 +993,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -991,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -1003,7 +1015,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -1013,7 +1025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -1023,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -1084,6 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuSet">reset_cpu_set</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetCpuShares">reset_cpu_shares</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDestroyGraceSeconds">reset_destroy_grace_seconds</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceCgroupRules">reset_device_cgroup_rules</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadBps">reset_device_read_bps</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceReadIops">reset_device_read_iops</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.resetDeviceRequests">reset_device_requests</a></code> | *No description.* |
@@ -1511,7 +1524,7 @@ def put_capabilities(
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -1521,7 +1534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -1628,7 +1641,7 @@ def put_healthcheck(
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -1638,7 +1651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -1648,7 +1661,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -1658,7 +1671,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start_period Container#start_period}
 
 ---
 
@@ -1670,7 +1683,7 @@ Command to run to check health.
 
 For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#test Container#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -1680,7 +1693,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -1768,7 +1781,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#create Container#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#create Container#create}.
 
 ---
 
@@ -1776,7 +1789,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#delete Container#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#delete Container#delete}.
 
 ---
 
@@ -1784,7 +1797,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#update Container#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -1900,6 +1913,12 @@ def reset_cpu_shares() -> None
 
 ```python
 def reset_destroy_grace_seconds() -> None
+```
+
+##### `reset_device_cgroup_rules` <a name="reset_device_cgroup_rules" id="@cdktn/provider-docker.container.Container.resetDeviceCgroupRules"></a>
+
+```python
+def reset_device_cgroup_rules() -> None
 ```
 
 ##### `reset_device_read_bps` <a name="reset_device_read_bps" id="@cdktn/provider-docker.container.Container.resetDeviceReadBps"></a>
@@ -2382,7 +2401,7 @@ The construct id used in the generated config for the Container to import.
 
 The id of the existing Container that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2445,6 +2464,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuSharesInput">cpu_shares_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpusInput">cpus_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.destroyGraceSecondsInput">destroy_grace_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceCgroupRulesInput">device_cgroup_rules_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadBpsInput">device_read_bps_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.deviceReadIopsInput">device_read_iops_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.deviceRequestsInput">device_requests_input</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | *No description.* |
@@ -2519,6 +2539,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuSet">cpu_set</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.Container.property.deviceCgroupRules">device_cgroup_rules</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dns">dns</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsOpts">dns_opts</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.Container.property.dnsSearch">dns_search</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -3038,6 +3059,16 @@ destroy_grace_seconds_input: typing.Union[int, float]
 ```
 
 - *Type:* typing.Union[int, float]
+
+---
+
+##### `device_cgroup_rules_input`<sup>Optional</sup> <a name="device_cgroup_rules_input" id="@cdktn/provider-docker.container.Container.property.deviceCgroupRulesInput"></a>
+
+```python
+device_cgroup_rules_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 
@@ -3781,6 +3812,16 @@ destroy_grace_seconds: typing.Union[int, float]
 
 ---
 
+##### `device_cgroup_rules`<sup>Required</sup> <a name="device_cgroup_rules" id="@cdktn/provider-docker.container.Container.property.deviceCgroupRules"></a>
+
+```python
+device_cgroup_rules: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `dns`<sup>Required</sup> <a name="dns" id="@cdktn/provider-docker.container.Container.property.dns"></a>
 
 ```python
@@ -4303,7 +4344,7 @@ add: typing.List[str]
 
 List of linux capabilities to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#add Container#add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#add Container#add}
 
 ---
 
@@ -4317,7 +4358,7 @@ drop: typing.List[str]
 
 List of linux capabilities to drop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#drop Container#drop}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#drop Container#drop}
 
 ---
 
@@ -4350,6 +4391,7 @@ container.ContainerConfig(
   cpu_set: str = None,
   cpu_shares: typing.Union[int, float] = None,
   destroy_grace_seconds: typing.Union[int, float] = None,
+  device_cgroup_rules: typing.List[str] = None,
   device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps] = None,
   device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops] = None,
   device_requests: IResolvable | typing.List[ContainerDeviceRequests] = None,
@@ -4439,6 +4481,7 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuSet">cpu_set</a></code> | <code>str</code> | A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.cpuShares">cpu_shares</a></code> | <code>typing.Union[int, float]</code> | CPU shares (relative weight) for the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.destroyGraceSeconds">destroy_grace_seconds</a></code> | <code>typing.Union[int, float]</code> | If defined will attempt to stop the container before destroying. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceCgroupRules">device_cgroup_rules</a></code> | <code>typing.List[str]</code> | Cgroup rules to allow access to classes of devices without binding specific device nodes. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadBps">device_read_bps</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadBps">ContainerDeviceReadBps</a>]</code> | device_read_bps block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceReadIops">device_read_iops</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceReadIops">ContainerDeviceReadIops</a>]</code> | device_read_iops block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.deviceRequests">device_requests</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerDeviceRequests">ContainerDeviceRequests</a>]</code> | device_requests block. |
@@ -4456,7 +4499,7 @@ container.ContainerConfig(
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.healthcheck">healthcheck</a></code> | <code><a href="#@cdktn/provider-docker.container.ContainerHealthcheck">ContainerHealthcheck</a></code> | healthcheck block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.host">host</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerHost">ContainerHost</a>]</code> | host block. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.hostname">hostname</a></code> | <code>str</code> | Hostname of the container. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#id Container#id}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#id Container#id}. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.init">init</a></code> | <code>bool \| cdktn.IResolvable</code> | Configured whether an init process should be injected for this container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.ipcMode">ipc_mode</a></code> | <code>str</code> | IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name\|id>` or `host`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerConfig.property.labels">labels</a></code> | <code>cdktn.IResolvable \| typing.List[<a href="#@cdktn/provider-docker.container.ContainerLabels">ContainerLabels</a>]</code> | labels block. |
@@ -4585,7 +4628,7 @@ The ID of the image to back this container.
 
 The easiest way to get this value is to use the `image_id` attribute of the `docker_image` resource as is shown in the example.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#image Container#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#image Container#image}
 
 ---
 
@@ -4599,7 +4642,7 @@ name: str
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -4613,7 +4656,7 @@ attach: bool | IResolvable
 
 If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#attach Container#attach}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#attach Container#attach}
 
 ---
 
@@ -4627,7 +4670,7 @@ capabilities: ContainerCapabilities
 
 capabilities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -4641,7 +4684,7 @@ cgroupns_mode: str
 
 Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cgroupns_mode Container#cgroupns_mode}
 
 ---
 
@@ -4655,7 +4698,7 @@ cgroup_parent: str
 
 Optional parent cgroup for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cgroup_parent Container#cgroup_parent}
 
 ---
 
@@ -4671,7 +4714,7 @@ The command to use to start the container.
 
 For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.conf"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#command Container#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#command Container#command}
 
 ---
 
@@ -4685,7 +4728,7 @@ container_read_refresh_timeout_milliseconds: typing.Union[int, float]
 
 The total number of milliseconds to wait for the container to reach status 'running'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
 
 ---
 
@@ -4699,7 +4742,7 @@ cpu_period: typing.Union[int, float]
 
 Specify the CPU CFS scheduler period (in microseconds), which is used alongside `cpu-quota`. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_period Container#cpu_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_period Container#cpu_period}
 
 ---
 
@@ -4715,7 +4758,7 @@ Impose a CPU CFS quota on the container (in microseconds).
 
 The number of microseconds per `cpu-period` that the container is limited to before throttled. Is ignored if `cpus` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_quota Container#cpu_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_quota Container#cpu_quota}
 
 ---
 
@@ -4731,7 +4774,7 @@ Specify how much of the available CPU resources a container can use.
 
 e.g a value of 1.5 means the container is guaranteed at most one and a half of the CPUs. Has precedence over `cpu_period` and `cpu_quota`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpus Container#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpus Container#cpus}
 
 ---
 
@@ -4745,7 +4788,7 @@ cpu_set: str
 
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_set Container#cpu_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_set Container#cpu_set}
 
 ---
 
@@ -4759,7 +4802,7 @@ cpu_shares: typing.Union[int, float]
 
 CPU shares (relative weight) for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#cpu_shares Container#cpu_shares}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#cpu_shares Container#cpu_shares}
 
 ---
 
@@ -4775,7 +4818,21 @@ If defined will attempt to stop the container before destroying.
 
 Container will be destroyed after `n` seconds or on successful stop.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#destroy_grace_seconds Container#destroy_grace_seconds}
+
+---
+
+##### `device_cgroup_rules`<sup>Optional</sup> <a name="device_cgroup_rules" id="@cdktn/provider-docker.container.ContainerConfig.property.deviceCgroupRules"></a>
+
+```python
+device_cgroup_rules: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Cgroup rules to allow access to classes of devices without binding specific device nodes.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_cgroup_rules Container#device_cgroup_rules}
 
 ---
 
@@ -4789,7 +4846,7 @@ device_read_bps: IResolvable | typing.List[ContainerDeviceReadBps]
 
 device_read_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_read_bps Container#device_read_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_read_bps Container#device_read_bps}
 
 ---
 
@@ -4803,7 +4860,7 @@ device_read_iops: IResolvable | typing.List[ContainerDeviceReadIops]
 
 device_read_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_read_iops Container#device_read_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_read_iops Container#device_read_iops}
 
 ---
 
@@ -4817,7 +4874,7 @@ device_requests: IResolvable | typing.List[ContainerDeviceRequests]
 
 device_requests block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_requests Container#device_requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_requests Container#device_requests}
 
 ---
 
@@ -4831,7 +4888,7 @@ devices: IResolvable | typing.List[ContainerDevices]
 
 devices block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#devices Container#devices}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#devices Container#devices}
 
 ---
 
@@ -4845,7 +4902,7 @@ device_write_bps: IResolvable | typing.List[ContainerDeviceWriteBps]
 
 device_write_bps block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_write_bps Container#device_write_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_write_bps Container#device_write_bps}
 
 ---
 
@@ -4859,7 +4916,7 @@ device_write_iops: IResolvable | typing.List[ContainerDeviceWriteIops]
 
 device_write_iops block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_write_iops Container#device_write_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_write_iops Container#device_write_iops}
 
 ---
 
@@ -4873,7 +4930,7 @@ dns: typing.List[str]
 
 DNS servers to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns Container#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns Container#dns}
 
 ---
 
@@ -4887,7 +4944,7 @@ dns_opts: typing.List[str]
 
 DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns_opts Container#dns_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns_opts Container#dns_opts}
 
 ---
 
@@ -4901,7 +4958,7 @@ dns_search: typing.List[str]
 
 DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#dns_search Container#dns_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#dns_search Container#dns_search}
 
 ---
 
@@ -4915,7 +4972,7 @@ domainname: str
 
 Domain name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#domainname Container#domainname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#domainname Container#domainname}
 
 ---
 
@@ -4931,7 +4988,7 @@ The command to use as the Entrypoint for the container.
 
 The Entrypoint allows you to configure a container to run as an executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be `"/usr/bin/myprogram"]`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#entrypoint Container#entrypoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#entrypoint Container#entrypoint}
 
 ---
 
@@ -4945,7 +5002,7 @@ env: typing.List[str]
 
 Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#env Container#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#env Container#env}
 
 ---
 
@@ -4959,7 +5016,7 @@ gpus: str
 
 GPU devices to add to the container. Supported values are `all` or `device=<id[,id...]>`, for example `device=0,2` or `device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#gpus Container#gpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#gpus Container#gpus}
 
 ---
 
@@ -4973,7 +5030,7 @@ group_add: typing.List[str]
 
 Additional groups for the container user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#group_add Container#group_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#group_add Container#group_add}
 
 ---
 
@@ -4987,7 +5044,7 @@ healthcheck: ContainerHealthcheck
 
 healthcheck block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#healthcheck Container#healthcheck}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#healthcheck Container#healthcheck}
 
 ---
 
@@ -5001,7 +5058,7 @@ host: IResolvable | typing.List[ContainerHost]
 
 host block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -5015,7 +5072,7 @@ hostname: str
 
 Hostname of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#hostname Container#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#hostname Container#hostname}
 
 ---
 
@@ -5027,7 +5084,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#id Container#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#id Container#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -5046,7 +5103,7 @@ Configured whether an init process should be injected for this container.
 
 If unset this will default to the `dockerd` defaults.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#init Container#init}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#init Container#init}
 
 ---
 
@@ -5060,7 +5117,7 @@ ipc_mode: str
 
 IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ipc_mode Container#ipc_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ipc_mode Container#ipc_mode}
 
 ---
 
@@ -5074,7 +5131,7 @@ labels: IResolvable | typing.List[ContainerLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -5088,7 +5145,7 @@ log_driver: str
 
 The logging driver to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#log_driver Container#log_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#log_driver Container#log_driver}
 
 ---
 
@@ -5102,7 +5159,7 @@ log_opts: typing.Mapping[str]
 
 Key/value pairs to use as options for the logging driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#log_opts Container#log_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#log_opts Container#log_opts}
 
 ---
 
@@ -5116,7 +5173,7 @@ logs: bool | IResolvable
 
 Save the container logs (`attach` must be enabled). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#logs Container#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#logs Container#logs}
 
 ---
 
@@ -5130,7 +5187,7 @@ max_retry_count: typing.Union[int, float]
 
 The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#max_retry_count Container#max_retry_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#max_retry_count Container#max_retry_count}
 
 ---
 
@@ -5144,7 +5201,7 @@ memory: typing.Union[int, float]
 
 The memory limit for the container in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory Container#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory Container#memory}
 
 ---
 
@@ -5160,7 +5217,7 @@ The memory-resveration for the container in MBs.
 
 Defaults to 0. Allows you to specify a soft limit smaller than `memory` which is activated when Docker detects contention or low memory on the host machine. If you use `memory-reservation`, it must be set lower than `memory` for it to take precedence. Because it is a soft limit, it doesn't guarantee that the container doesn't exceed the limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory_reservation Container#memory_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory_reservation Container#memory_reservation}
 
 ---
 
@@ -5176,7 +5233,7 @@ The total memory limit (memory + swap) for the container in MBs.
 
 This setting may compute to `-1` after `terraform apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#memory_swap Container#memory_swap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#memory_swap Container#memory_swap}
 
 ---
 
@@ -5190,7 +5247,7 @@ mounts: IResolvable | typing.List[ContainerMounts]
 
 mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#mounts Container#mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#mounts Container#mounts}
 
 ---
 
@@ -5206,7 +5263,7 @@ If `true`, then the Docker container will be kept running.
 
 If `false`, Terraform leaves the container alone. This attribute is also used to trigger a restart of a stopped container. If your container is stopped, Terraform will set `must_run` to `false` and this will trigger a change. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#must_run Container#must_run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#must_run Container#must_run}
 
 ---
 
@@ -5222,7 +5279,7 @@ Network mode of the container.
 
 Defaults to `bridge`. If your host OS is any other OS, you need to set this value explicitly, e.g. `nat` when your container will be running on an Windows host. See https://docs.docker.com/engine/network/ for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#network_mode Container#network_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#network_mode Container#network_mode}
 
 ---
 
@@ -5236,7 +5293,7 @@ networks_advanced: IResolvable | typing.List[ContainerNetworksAdvanced]
 
 networks_advanced block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#networks_advanced Container#networks_advanced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#networks_advanced Container#networks_advanced}
 
 ---
 
@@ -5250,7 +5307,7 @@ pid_mode: str
 
 The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#pid_mode Container#pid_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#pid_mode Container#pid_mode}
 
 ---
 
@@ -5264,7 +5321,7 @@ platform: str
 
 Platform in the format `os[/arch[/variant]]` used for image lookup and container runtime, for example `linux/amd64`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#platform Container#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#platform Container#platform}
 
 ---
 
@@ -5278,7 +5335,7 @@ ports: IResolvable | typing.List[ContainerPorts]
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ports Container#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ports Container#ports}
 
 ---
 
@@ -5292,7 +5349,7 @@ privileged: bool | IResolvable
 
 If `true`, the container runs in privileged mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#privileged Container#privileged}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#privileged Container#privileged}
 
 ---
 
@@ -5306,7 +5363,7 @@ publish_all_ports: bool | IResolvable
 
 Publish all ports of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#publish_all_ports Container#publish_all_ports}
 
 ---
 
@@ -5320,7 +5377,7 @@ read_only: bool | IResolvable
 
 If `true`, the container will be started as readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -5334,7 +5391,7 @@ remove_volumes: bool | IResolvable
 
 If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#remove_volumes Container#remove_volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#remove_volumes Container#remove_volumes}
 
 ---
 
@@ -5348,7 +5405,7 @@ restart: str
 
 The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#restart Container#restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#restart Container#restart}
 
 ---
 
@@ -5362,7 +5419,7 @@ rm: bool | IResolvable
 
 If `true`, then the container will be automatically removed when it exits. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rm Container#rm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rm Container#rm}
 
 ---
 
@@ -5376,7 +5433,7 @@ runtime: str
 
 Runtime to use for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#runtime Container#runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#runtime Container#runtime}
 
 ---
 
@@ -5390,7 +5447,7 @@ security_opts: typing.List[str]
 
 List of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#security_opts Container#security_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#security_opts Container#security_opts}
 
 ---
 
@@ -5404,7 +5461,7 @@ shm_size: typing.Union[int, float]
 
 Size of `/dev/shm` in MBs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#shm_size Container#shm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#shm_size Container#shm_size}
 
 ---
 
@@ -5420,7 +5477,7 @@ If `true`, then the Docker container will be started after creation.
 
 If `false`, then the container is only created. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start Container#start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start Container#start}
 
 ---
 
@@ -5434,7 +5491,7 @@ stdin_open: bool | IResolvable
 
 If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stdin_open Container#stdin_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stdin_open Container#stdin_open}
 
 ---
 
@@ -5448,7 +5505,7 @@ stop_signal: str
 
 Signal to stop a container (default `SIGTERM`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stop_signal Container#stop_signal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stop_signal Container#stop_signal}
 
 ---
 
@@ -5462,7 +5519,7 @@ stop_timeout: typing.Union[int, float]
 
 Timeout (in seconds) to stop a container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#stop_timeout Container#stop_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#stop_timeout Container#stop_timeout}
 
 ---
 
@@ -5476,7 +5533,7 @@ storage_opts: typing.Mapping[str]
 
 Key/value pairs for the storage driver options, e.g. `size`: `120G`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#storage_opts Container#storage_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#storage_opts Container#storage_opts}
 
 ---
 
@@ -5490,7 +5547,7 @@ sysctls: typing.Mapping[str]
 
 A map of kernel parameters (sysctls) to set in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#sysctls Container#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#sysctls Container#sysctls}
 
 ---
 
@@ -5504,7 +5561,7 @@ timeouts: ContainerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#timeouts Container#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#timeouts Container#timeouts}
 
 ---
 
@@ -5518,7 +5575,7 @@ tmpfs: typing.Mapping[str]
 
 A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#tmpfs Container#tmpfs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#tmpfs Container#tmpfs}
 
 ---
 
@@ -5532,7 +5589,7 @@ tty: bool | IResolvable
 
 If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#tty Container#tty}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#tty Container#tty}
 
 ---
 
@@ -5546,7 +5603,7 @@ ulimit: IResolvable | typing.List[ContainerUlimit]
 
 ulimit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ulimit Container#ulimit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ulimit Container#ulimit}
 
 ---
 
@@ -5560,7 +5617,7 @@ upload: IResolvable | typing.List[ContainerUpload]
 
 upload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#upload Container#upload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#upload Container#upload}
 
 ---
 
@@ -5576,7 +5633,7 @@ User used for run the first process.
 
 Format is `user` or `user:group` which user and group can be passed literally or by name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#user Container#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#user Container#user}
 
 ---
 
@@ -5590,7 +5647,7 @@ userns_mode: str
 
 Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#userns_mode Container#userns_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#userns_mode Container#userns_mode}
 
 ---
 
@@ -5604,7 +5661,7 @@ volumes: IResolvable | typing.List[ContainerVolumes]
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#volumes Container#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#volumes Container#volumes}
 
 ---
 
@@ -5620,7 +5677,7 @@ If `true`, then the Docker container is waited for being healthy state after cre
 
 This requires your container to have a healthcheck, otherwise this provider will error. If `false`, then the container health state is not checked. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#wait Container#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#wait Container#wait}
 
 ---
 
@@ -5634,7 +5691,7 @@ wait_timeout: typing.Union[int, float]
 
 The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#wait_timeout Container#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#wait_timeout Container#wait_timeout}
 
 ---
 
@@ -5648,7 +5705,7 @@ working_dir: str
 
 The working directory for commands to run in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#working_dir Container#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#working_dir Container#working_dir}
 
 ---
 
@@ -5684,7 +5741,7 @@ path: str
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -5698,7 +5755,7 @@ rate: typing.Union[int, float]
 
 The read rate limit in bytes per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -5734,7 +5791,7 @@ path: str
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -5748,7 +5805,7 @@ rate: typing.Union[int, float]
 
 The read IOPS limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -5790,7 +5847,7 @@ capabilities: typing.List[str]
 
 List of device capabilities. Only used with `nvidia` driver (e.g., `gpu`, `compute`, `utility`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#capabilities Container#capabilities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#capabilities Container#capabilities}
 
 ---
 
@@ -5804,7 +5861,7 @@ count: typing.Union[int, float]
 
 Number of devices to request. Use -1 for all devices. Only used with `nvidia` driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#count Container#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#count Container#count}
 
 ---
 
@@ -5818,7 +5875,7 @@ device_ids: typing.List[str]
 
 List of device IDs or CDI device identifiers (e.g., `nvidia.com/gpu=all`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#device_ids Container#device_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#device_ids Container#device_ids}
 
 ---
 
@@ -5832,7 +5889,7 @@ driver: str
 
 The device driver to use. Common values: `cdi` for CDI devices, `nvidia` for NVIDIA GPU requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver Container#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver Container#driver}
 
 ---
 
@@ -5846,7 +5903,7 @@ options: typing.Mapping[str]
 
 Driver-specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#options Container#options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#options Container#options}
 
 ---
 
@@ -5884,7 +5941,7 @@ host_path: str
 
 The path on the host where the device is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -5900,7 +5957,7 @@ The path in the container where the device will be bound.
 
 If not set, it defaults to the value of `host_path`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -5914,7 +5971,7 @@ permissions: str
 
 The cgroup permissions given to the container to access the device. Defaults to `rwm`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -5950,7 +6007,7 @@ path: str
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -5964,7 +6021,7 @@ rate: typing.Union[int, float]
 
 The write rate limit in bytes per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -6000,7 +6057,7 @@ path: str
 
 The device path on the host, e.g. `/dev/sda`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#path Container#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#path Container#path}
 
 ---
 
@@ -6014,7 +6071,7 @@ rate: typing.Union[int, float]
 
 The write IOPS limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#rate Container#rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#rate Container#rate}
 
 ---
 
@@ -6058,7 +6115,7 @@ interval: str
 
 Time between running the check (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#interval Container#interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#interval Container#interval}
 
 ---
 
@@ -6072,7 +6129,7 @@ retries: typing.Union[int, float]
 
 Consecutive failures needed to report unhealthy. Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#retries Container#retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#retries Container#retries}
 
 ---
 
@@ -6086,7 +6143,7 @@ start_interval: str
 
 Interval before the healthcheck starts (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start_interval Container#start_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start_interval Container#start_interval}
 
 ---
 
@@ -6100,7 +6157,7 @@ start_period: str
 
 Start period for the container to initialize before counting retries towards unstable (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#start_period Container#start_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#start_period Container#start_period}
 
 ---
 
@@ -6116,7 +6173,7 @@ Command to run to check health.
 
 For example, to run `curl -f localhost/health` set the command to be `["CMD", "curl", "-f", "localhost/health"]`. It works in the same way, and has the same default values, as the HEALTHCHECK Dockerfile instruction set by the service's Docker image. Your Compose file can override the values set in the Dockerfile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#test Container#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#test Container#test}
 
 ---
 
@@ -6130,7 +6187,7 @@ timeout: str
 
 Maximum time to allow one check to run (ms|s|m|h). Defaults to `0s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#timeout Container#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#timeout Container#timeout}
 
 ---
 
@@ -6166,7 +6223,7 @@ host: str
 
 Hostname to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#host Container#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#host Container#host}
 
 ---
 
@@ -6180,7 +6237,7 @@ ip: str
 
 IP address this hostname should resolve to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -6216,7 +6273,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -6230,7 +6287,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -6276,7 +6333,7 @@ target: str
 
 Container path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#target Container#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#target Container#target}
 
 ---
 
@@ -6290,7 +6347,7 @@ type: str
 
 The mount type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#type Container#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#type Container#type}
 
 ---
 
@@ -6304,7 +6361,7 @@ bind_options: ContainerMountsBindOptions
 
 bind_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#bind_options Container#bind_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#bind_options Container#bind_options}
 
 ---
 
@@ -6318,7 +6375,7 @@ read_only: bool | IResolvable
 
 Whether the mount should be read-only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -6332,7 +6389,7 @@ source: str
 
 Mount source (e.g. a volume name, a host path).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -6346,7 +6403,7 @@ tmpfs_options: ContainerMountsTmpfsOptions
 
 tmpfs_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#tmpfs_options Container#tmpfs_options}
 
 ---
 
@@ -6360,7 +6417,7 @@ volume_options: ContainerMountsVolumeOptions
 
 volume_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#volume_options Container#volume_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#volume_options Container#volume_options}
 
 ---
 
@@ -6394,7 +6451,7 @@ propagation: str
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -6430,7 +6487,7 @@ mode: typing.Union[int, float]
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -6444,7 +6501,7 @@ size_bytes: typing.Union[int, float]
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -6486,7 +6543,7 @@ driver_name: str
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -6500,7 +6557,7 @@ driver_options: typing.Mapping[str]
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -6514,7 +6571,7 @@ labels: IResolvable | typing.List[ContainerMountsVolumeOptionsLabels]
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -6528,7 +6585,7 @@ no_copy: bool | IResolvable
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -6542,7 +6599,7 @@ subpath: str
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -6578,7 +6635,7 @@ label: str
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#label Container#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#label Container#label}
 
 ---
 
@@ -6592,7 +6649,7 @@ value: str
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#value Container#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#value Container#value}
 
 ---
 
@@ -6653,7 +6710,7 @@ The name or id of the network to use.
 
 You can use `name` or `id` attribute from a `docker_network` resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -6667,7 +6724,7 @@ aliases: typing.List[str]
 
 The network aliases of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#aliases Container#aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#aliases Container#aliases}
 
 ---
 
@@ -6681,7 +6738,7 @@ driver_opts: typing.List[str]
 
 An array of driver options for the network endpoint, e.g. `opts1=value`. This is the equivalent to repeating `--driver-opt` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver_opts Container#driver_opts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver_opts Container#driver_opts}
 
 ---
 
@@ -6697,7 +6754,7 @@ Gateway priority for this endpoint.
 
 The endpoint with the highest priority will provide the default gateway for the container. This is the equivalent to `--gw-priority` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#gw_priority Container#gw_priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#gw_priority Container#gw_priority}
 
 ---
 
@@ -6711,7 +6768,7 @@ ipv4_address: str
 
 The IPV4 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ipv4_address Container#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ipv4_address Container#ipv4_address}
 
 ---
 
@@ -6725,7 +6782,7 @@ ipv6_address: str
 
 The IPV6 address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ipv6_address Container#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ipv6_address Container#ipv6_address}
 
 ---
 
@@ -6741,7 +6798,7 @@ The link-local IPs of the container in the specific network.
 
 This is the equivalent to repeating `--link-local-ip` for `docker run`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#link_local_ips Container#link_local_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#link_local_ips Container#link_local_ips}
 
 ---
 
@@ -6755,7 +6812,7 @@ mac_address: str
 
 The MAC address of the container in the specific network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#mac_address Container#mac_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#mac_address Container#mac_address}
 
 ---
 
@@ -6795,7 +6852,7 @@ internal: typing.Union[int, float]
 
 Port within the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#internal Container#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#internal Container#internal}
 
 ---
 
@@ -6809,7 +6866,7 @@ external: typing.Union[int, float]
 
 Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#external Container#external}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#external Container#external}
 
 ---
 
@@ -6823,7 +6880,7 @@ ip: str
 
 IP address/mask that can access this port. Defaults to `0.0.0.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#ip Container#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#ip Container#ip}
 
 ---
 
@@ -6837,7 +6894,7 @@ protocol: str
 
 Protocol that can be used over this port. Defaults to `tcp`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#protocol Container#protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#protocol Container#protocol}
 
 ---
 
@@ -6859,9 +6916,9 @@ container.ContainerTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#create Container#create}. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#delete Container#delete}. |
-| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#update Container#update}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#create Container#create}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#delete Container#delete}. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#update Container#update}. |
 
 ---
 
@@ -6873,7 +6930,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#create Container#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#create Container#create}.
 
 ---
 
@@ -6885,7 +6942,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#delete Container#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#delete Container#delete}.
 
 ---
 
@@ -6897,7 +6954,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#update Container#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#update Container#update}.
 
 ---
 
@@ -6935,7 +6992,7 @@ hard: typing.Union[int, float]
 
 The hard limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#hard Container#hard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#hard Container#hard}
 
 ---
 
@@ -6949,7 +7006,7 @@ name: str
 
 The name of the ulimit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#name Container#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#name Container#name}
 
 ---
 
@@ -6963,7 +7020,7 @@ soft: typing.Union[int, float]
 
 The soft limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#soft Container#soft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#soft Container#soft}
 
 ---
 
@@ -6979,6 +7036,8 @@ container.ContainerUpload(
   content: str = None,
   content_base64: str = None,
   executable: bool | IResolvable = None,
+  group: str = None,
+  owner: str = None,
   permissions: str = None,
   source: str = None,
   source_hash: str = None
@@ -6993,6 +7052,8 @@ container.ContainerUpload(
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.content">content</a></code> | <code>str</code> | Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.contentBase64">content_base64</a></code> | <code>str</code> | Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.executable">executable</a></code> | <code>bool \| cdktn.IResolvable</code> | If `true`, the file will be uploaded with user executable permission. Defaults to `false`. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.group">group</a></code> | <code>str</code> | The group of the file in the container. |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.owner">owner</a></code> | <code>str</code> | The owner of the file in the container. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.permissions">permissions</a></code> | <code>str</code> | The permission mode for the file in the container. Has precedence over `executable`. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.source">source</a></code> | <code>str</code> | A filename that references a file which will be uploaded as the object content. |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUpload.property.sourceHash">source_hash</a></code> | <code>str</code> | If using `source`, this will force an update if the file content has updated but the filename has not. |
@@ -7009,7 +7070,7 @@ file: str
 
 Path to the file in the container where is upload goes to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#file Container#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#file Container#file}
 
 ---
 
@@ -7025,7 +7086,7 @@ Literal string value to use as the object content, which will be uploaded as UTF
 
 Conflicts with `content_base64` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#content Container#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#content Container#content}
 
 ---
 
@@ -7041,7 +7102,7 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 
 This allows safely uploading non-UTF8 binary data, but is recommended only for larger binary content such as the result of the `base64encode` interpolation function. See [here](https://github.com/terraform-providers/terraform-provider-docker/issues/48#issuecomment-374174588) for the reason. Conflicts with `content` & `source`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#content_base64 Container#content_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#content_base64 Container#content_base64}
 
 ---
 
@@ -7055,7 +7116,39 @@ executable: bool | IResolvable
 
 If `true`, the file will be uploaded with user executable permission. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#executable Container#executable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#executable Container#executable}
+
+---
+
+##### `group`<sup>Optional</sup> <a name="group" id="@cdktn/provider-docker.container.ContainerUpload.property.group"></a>
+
+```python
+group: str
+```
+
+- *Type:* str
+
+The group of the file in the container.
+
+Names are resolved using the Terraform host's group database; numeric IDs can be used directly.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#group Container#group}
+
+---
+
+##### `owner`<sup>Optional</sup> <a name="owner" id="@cdktn/provider-docker.container.ContainerUpload.property.owner"></a>
+
+```python
+owner: str
+```
+
+- *Type:* str
+
+The owner of the file in the container.
+
+Names are resolved using the Terraform host's user database; numeric IDs can be used directly.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#owner Container#owner}
 
 ---
 
@@ -7069,7 +7162,7 @@ permissions: str
 
 The permission mode for the file in the container. Has precedence over `executable`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#permissions Container#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#permissions Container#permissions}
 
 ---
 
@@ -7085,7 +7178,7 @@ A filename that references a file which will be uploaded as the object content.
 
 This allows for large file uploads that do not get stored in state. Conflicts with `content` & `content_base64`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#source Container#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#source Container#source}
 
 ---
 
@@ -7099,7 +7192,7 @@ source_hash: str
 
 If using `source`, this will force an update if the file content has updated but the filename has not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#source_hash Container#source_hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#source_hash Container#source_hash}
 
 ---
 
@@ -7143,7 +7236,7 @@ container_path: str
 
 The path in the container where the volume will be mounted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#container_path Container#container_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#container_path Container#container_path}
 
 ---
 
@@ -7157,7 +7250,7 @@ from_container: str
 
 The container where the volume is coming from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#from_container Container#from_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#from_container Container#from_container}
 
 ---
 
@@ -7173,7 +7266,7 @@ The path on the host where the volume is coming from.
 
 If `host_path` is set, it takes precedence over `volume_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#host_path Container#host_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#host_path Container#host_path}
 
 ---
 
@@ -7187,7 +7280,7 @@ read_only: bool | IResolvable
 
 If `true`, this volume will be readonly. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#read_only Container#read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#read_only Container#read_only}
 
 ---
 
@@ -7201,7 +7294,7 @@ selinux_relabel: str
 
 SELinux relabel mode for bind mounts. Supported values are `z` and `Z`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#selinux_relabel Container#selinux_relabel}
 
 ---
 
@@ -7215,7 +7308,7 @@ volume_name: str
 
 The name of the docker volume which should be mounted. Ignored when `host_path` is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#volume_name Container#volume_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#volume_name Container#volume_name}
 
 ---
 
@@ -12945,7 +13038,7 @@ def put_bind_options(
 
 A propagation mode with the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#propagation Container#propagation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#propagation Container#propagation}
 
 ---
 
@@ -12964,7 +13057,7 @@ def put_tmpfs_options(
 
 The permission mode for the tmpfs mount in an integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#mode Container#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#mode Container#mode}
 
 ---
 
@@ -12974,7 +13067,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 The size for the tmpfs mount in bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#size_bytes Container#size_bytes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#size_bytes Container#size_bytes}
 
 ---
 
@@ -12996,7 +13089,7 @@ def put_volume_options(
 
 Name of the driver to use to create the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver_name Container#driver_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver_name Container#driver_name}
 
 ---
 
@@ -13006,7 +13099,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 key/value map of driver specific options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#driver_options Container#driver_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#driver_options Container#driver_options}
 
 ---
 
@@ -13016,7 +13109,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#labels Container#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#labels Container#labels}
 
 ---
 
@@ -13026,7 +13119,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Populate volume with data from the target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#no_copy Container#no_copy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#no_copy Container#no_copy}
 
 ---
 
@@ -13036,7 +13129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuz
 
 Path within the volume to mount. Requires docker server version 1.45 or higher.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/container#subpath Container#subpath}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/container#subpath Container#subpath}
 
 ---
 
@@ -17484,6 +17577,8 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetContent">reset_content</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetContentBase64">reset_content_base64</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetExecutable">reset_executable</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetGroup">reset_group</a></code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetOwner">reset_owner</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetPermissions">reset_permissions</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetSource">reset_source</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.resetSourceHash">reset_source_hash</a></code> | *No description.* |
@@ -17680,6 +17775,18 @@ def reset_content_base64() -> None
 def reset_executable() -> None
 ```
 
+##### `reset_group` <a name="reset_group" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.resetGroup"></a>
+
+```python
+def reset_group() -> None
+```
+
+##### `reset_owner` <a name="reset_owner" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.resetOwner"></a>
+
+```python
+def reset_owner() -> None
+```
+
 ##### `reset_permissions` <a name="reset_permissions" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.resetPermissions"></a>
 
 ```python
@@ -17709,6 +17816,8 @@ def reset_source_hash() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.contentInput">content_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executableInput">executable_input</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.fileInput">file_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.groupInput">group_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.ownerInput">owner_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.permissionsInput">permissions_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceHashInput">source_hash_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceInput">source_input</a></code> | <code>str</code> | *No description.* |
@@ -17716,6 +17825,8 @@ def reset_source_hash() -> None
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.contentBase64">content_base64</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.executable">executable</a></code> | <code>bool \| cdktn.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.file">file</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.group">group</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.owner">owner</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.permissions">permissions</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.source">source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.container.ContainerUploadOutputReference.property.sourceHash">source_hash</a></code> | <code>str</code> | *No description.* |
@@ -17787,6 +17898,26 @@ file_input: str
 
 ---
 
+##### `group_input`<sup>Optional</sup> <a name="group_input" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.property.groupInput"></a>
+
+```python
+group_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `owner_input`<sup>Optional</sup> <a name="owner_input" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.property.ownerInput"></a>
+
+```python
+owner_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `permissions_input`<sup>Optional</sup> <a name="permissions_input" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.property.permissionsInput"></a>
 
 ```python
@@ -17851,6 +17982,26 @@ executable: bool | IResolvable
 
 ```python
 file: str
+```
+
+- *Type:* str
+
+---
+
+##### `group`<sup>Required</sup> <a name="group" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.property.group"></a>
+
+```python
+group: str
+```
+
+- *Type:* str
+
+---
+
+##### `owner`<sup>Required</sup> <a name="owner" id="@cdktn/provider-docker.container.ContainerUploadOutputReference.property.owner"></a>
+
+```python
+owner: str
 ```
 
 - *Type:* str

@@ -4,7 +4,7 @@
 
 ### Network <a name="Network" id="@cdktn/provider-docker.network.Network"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network docker_network}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network docker_network}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.network.Network.Initializer"></a>
 
@@ -592,7 +592,7 @@ The construct id used in the generated config for the Network to import.
 
 The id of the existing Network that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1086,7 +1086,7 @@ const networkConfig: network.NetworkConfig = { ... }
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.name">name</a></code> | <code>string</code> | The name of the Docker network. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.attachable">attachable</a></code> | <code>boolean \| cdktn.IResolvable</code> | Enable manual container attachment to the network. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.driver">driver</a></code> | <code>string</code> | The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details. |
-| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#id Network#id}. |
+| <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#id Network#id}. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ingress">ingress</a></code> | <code>boolean \| cdktn.IResolvable</code> | Create swarm routing-mesh network. Defaults to `false`. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.internal">internal</a></code> | <code>boolean \| cdktn.IResolvable</code> | Whether the network is internal. |
 | <code><a href="#@cdktn/provider-docker.network.NetworkConfig.property.ipamConfig">ipamConfig</a></code> | <code>cdktn.IResolvable \| <a href="#@cdktn/provider-docker.network.NetworkIpamConfig">NetworkIpamConfig</a>[]</code> | ipam_config block. |
@@ -1178,7 +1178,7 @@ public readonly name: string;
 
 The name of the Docker network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#name Network#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#name Network#name}
 
 ---
 
@@ -1192,7 +1192,7 @@ public readonly attachable: boolean | IResolvable;
 
 Enable manual container attachment to the network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#attachable Network#attachable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#attachable Network#attachable}
 
 ---
 
@@ -1206,7 +1206,7 @@ public readonly driver: string;
 
 The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#driver Network#driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#driver Network#driver}
 
 ---
 
@@ -1218,7 +1218,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#id Network#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#id Network#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1235,7 +1235,7 @@ public readonly ingress: boolean | IResolvable;
 
 Create swarm routing-mesh network. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ingress Network#ingress}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ingress Network#ingress}
 
 ---
 
@@ -1249,7 +1249,7 @@ public readonly internal: boolean | IResolvable;
 
 Whether the network is internal.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#internal Network#internal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#internal Network#internal}
 
 ---
 
@@ -1263,7 +1263,7 @@ public readonly ipamConfig: IResolvable | NetworkIpamConfig[];
 
 ipam_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ipam_config Network#ipam_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ipam_config Network#ipam_config}
 
 ---
 
@@ -1277,7 +1277,7 @@ public readonly ipamDriver: string;
 
 Driver used by the custom IP scheme of the network. Defaults to `default`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ipam_driver Network#ipam_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ipam_driver Network#ipam_driver}
 
 ---
 
@@ -1293,7 +1293,7 @@ Provide explicit options to the IPAM driver.
 
 Valid options vary with `ipam_driver` and refer to that driver's documentation for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ipam_options Network#ipam_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ipam_options Network#ipam_options}
 
 ---
 
@@ -1307,7 +1307,7 @@ public readonly ipv6: boolean | IResolvable;
 
 Enable IPv6 networking. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ipv6 Network#ipv6}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ipv6 Network#ipv6}
 
 ---
 
@@ -1321,7 +1321,7 @@ public readonly labels: IResolvable | NetworkLabels[];
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#labels Network#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#labels Network#labels}
 
 ---
 
@@ -1335,7 +1335,7 @@ public readonly options: {[ key: string ]: string};
 
 Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#options Network#options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#options Network#options}
 
 ---
 
@@ -1370,7 +1370,7 @@ public readonly auxAddress: {[ key: string ]: string};
 
 Auxiliary IPv4 or IPv6 addresses used by Network driver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#aux_address Network#aux_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#aux_address Network#aux_address}
 
 ---
 
@@ -1384,7 +1384,7 @@ public readonly gateway: string;
 
 The IP address of the gateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#gateway Network#gateway}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#gateway Network#gateway}
 
 ---
 
@@ -1398,7 +1398,7 @@ public readonly ipRange: string;
 
 The ip range in CIDR form.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#ip_range Network#ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#ip_range Network#ip_range}
 
 ---
 
@@ -1412,7 +1412,7 @@ public readonly subnet: string;
 
 The subnet in CIDR form.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#subnet Network#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#subnet Network#subnet}
 
 ---
 
@@ -1445,7 +1445,7 @@ public readonly label: string;
 
 Name of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#label Network#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#label Network#label}
 
 ---
 
@@ -1459,7 +1459,7 @@ public readonly value: string;
 
 Value of the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs/resources/network#value Network#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/network#value Network#value}
 
 ---
 
