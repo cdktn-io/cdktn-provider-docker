@@ -4,7 +4,7 @@
 
 ### Compose <a name="Compose" id="@cdktn/provider-docker.compose.Compose"></a>
 
-Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose docker_compose}.
+Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose docker_compose}.
 
 #### Initializers <a name="Initializers" id="@cdktn/provider-docker.compose.Compose.Initializer"></a>
 
@@ -538,7 +538,7 @@ The construct id used in the generated config for the Compose to import.
 
 The id of the existing Compose that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -568,6 +568,7 @@ Refer to the {@link https://registry.terraform.io/providers/kreuzwerker/docker/4
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.lifecycle">lifecycle</a></code> | <code>cdktn.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.provider">provider</a></code> | <code>cdktn.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.provisioners">provisioners</a></code> | <code>cdktn.FileProvisioner \| cdktn.LocalExecProvisioner \| cdktn.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktn/provider-docker.compose.Compose.property.contentHash">contentHash</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.configPathsInput">configPathsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktn/provider-docker.compose.Compose.property.envFilesInput">envFilesInput</a></code> | <code>string[]</code> | *No description.* |
@@ -727,6 +728,16 @@ public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteEx
 ```
 
 - *Type:* cdktn.FileProvisioner | cdktn.LocalExecProvisioner | cdktn.RemoteExecProvisioner[]
+
+---
+
+##### `contentHash`<sup>Required</sup> <a name="contentHash" id="@cdktn/provider-docker.compose.Compose.property.contentHash"></a>
+
+```typescript
+public readonly contentHash: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -1032,7 +1043,7 @@ public readonly configPaths: string[];
 
 One or more Compose file paths, equivalent to repeating the `-f` flag with `docker compose`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#config_paths Compose#config_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#config_paths Compose#config_paths}
 
 ---
 
@@ -1048,7 +1059,7 @@ Optional list of env files to load before parsing the Compose configuration.
 
 If omitted, Compose uses the default `.env` behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#env_files Compose#env_files}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#env_files Compose#env_files}
 
 ---
 
@@ -1062,7 +1073,7 @@ public readonly profiles: string[];
 
 Optional list of Compose profiles to enable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#profiles Compose#profiles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#profiles Compose#profiles}
 
 ---
 
@@ -1078,7 +1089,7 @@ Optional project directory used as the Compose working directory.
 
 If omitted, Compose uses the directory of the first file in `config_paths`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_directory Compose#project_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#project_directory Compose#project_directory}
 
 ---
 
@@ -1092,7 +1103,7 @@ public readonly projectName: string;
 
 Optional Compose project name. If omitted, Compose derives the project name the same way as the CLI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#project_name Compose#project_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#project_name Compose#project_name}
 
 ---
 
@@ -1106,7 +1117,7 @@ public readonly removeOrphans: boolean | IResolvable;
 
 If `true`, remove containers for services that are no longer present in the Compose configuration during apply and destroy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#remove_orphans Compose#remove_orphans}
 
 ---
 
@@ -1120,7 +1131,7 @@ public readonly wait: boolean | IResolvable;
 
 If `true`, wait until services reach the running or healthy state before returning from apply.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait Compose#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#wait Compose#wait}
 
 ---
 
@@ -1134,7 +1145,7 @@ public readonly waitTimeout: string;
 
 Optional duration for `wait`, for example `30s` or `2m`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.6.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/4.7.0/docs/resources/compose#wait_timeout Compose#wait_timeout}
 
 ---
 
